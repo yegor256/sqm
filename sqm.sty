@@ -1,0 +1,79 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ssd}[00.00.0000 0.0.0 This Course Specials]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{paralist}
+\RequirePackage[dry,increment]{crumbs}
+\RequirePackage[static]{clicks}
+\RequirePackage[template,scheme=light]{ppt-slides}
+\RequirePackage[nocn]{ffcode}
+\RequirePackage{to-be-determined}
+\RequirePackage{tikz}
+  \usetikzlibrary{positioning,calc,arrows.meta}
+\RequirePackage{soul}
+\renewcommand\emph[1]{\ul{#1}}
+\tikzstyle{graph} = [
+  node distance=0,
+  every node/.style={draw=black,circle,minimum width=2.2em,thick},
+  every edge/.append style={draw=black,thick,-{Latex[length=2.5mm,width=2mm]},every node/.style={above}},
+  every loop/.append style={draw=black,thick,-{Latex[length=2.5mm,width=2mm]},every node/.style={above}},
+]
+\tikzstyle{terminal} = [rectangle,minimum height=1.5em]
+\tikzstyle{note} = [draw=none,rectangle,midway,font={\small\color{orange}}]
+
+\newcommand\br{\newline}
+
+\newcommand\innoDisclaimer{{%
+  \color{grey}\ttfamily\footnotesize
+  All visual and text materials presented in this slidedeck are
+  either originally made by the author or taken from public Internet
+  sources, such as website. Copyright belongs to their
+  respected authors.\par
+}}
+
+\newcommand\poopTitlePage[1]{%
+  \pptTitle{\thetitle}{\thesubtitle}\par
+  {\scshape Yegor Bugayenko}\par
+  Lecture \##1 out of 24 \br
+  90 minutes\par
+  \innoDisclaimer{}
+}
+
+% 1: cover file
+% 2: author
+% 3: title
+\newcommand\pooBook[3]{%
+  \pptPic{0.4}{books/#1} \br ``#3'' by {\scshape #2}
+}
+
+\newcommand\nospell[1]{#1}
+
+\AtBeginDocument{%
+  \pptLeft{\thetitle{}: \thesubtitle}%
+  \pptRight{@yegor256}%
+}
+
+\endinput
