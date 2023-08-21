@@ -2,7 +2,7 @@
 
 [![latexmk](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml)
 
-There are slides for my series of lectures for HSE University (Moscow, Russia).
+There are slides for my series of lectures for [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
 
 <!-- All recorded videos (so far) are in [this YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08ytf8POIIAkkR4ZsRq8DFiV). -->
 
