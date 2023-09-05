@@ -6,7 +6,7 @@ jobs:
   latexmk:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: yegor256/latexmk-action@0.8.1
         with:
           cmd: make
