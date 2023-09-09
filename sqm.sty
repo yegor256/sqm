@@ -58,6 +58,12 @@
   \sqmDisclaimer{}
 }
 
+\newcounter{thght}
+\newcommand\thought[1]{
+  \addtocounter{thght}{1}
+  \plush{\pptThought{\textcolor{orange}{\Huge\thethght.} #1}}
+}
+
 \newcommand\nospell[1]{#1}
 
 \AtBeginDocument{%
