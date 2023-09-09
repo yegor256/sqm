@@ -41,12 +41,8 @@
   every edge/.append style={draw=black,thick,-{Latex[length=2.5mm,width=2mm]},every node/.style={above}},
   every loop/.append style={draw=black,thick,-{Latex[length=2.5mm,width=2mm]},every node/.style={above}},
 ]
-\tikzstyle{terminal} = [rectangle,minimum height=1.5em]
-\tikzstyle{note} = [draw=none,rectangle,midway,font={\small\color{orange}}]
 
-\newcommand\br{\newline}
-
-\newcommand\innoDisclaimer{{%
+\newcommand\sqmDisclaimer{{%
   \color{grey}\ttfamily\footnotesize
   All visual and text materials presented in this slidedeck are
   either originally made by the author or taken from public Internet
@@ -54,19 +50,12 @@
   respected authors.\par
 }}
 
-\newcommand\poopTitlePage[1]{%
+\newcommand\sqmTitlePage[1]{%
   \pptTitle{\thetitle}{\thesubtitle}\par
   {\scshape Yegor Bugayenko}\par
-  Lecture \##1 out of 24 \br
+  Lecture \##1 out of 24 \newline
   90 minutes\par
-  \innoDisclaimer{}
-}
-
-% 1: cover file
-% 2: author
-% 3: title
-\newcommand\pooBook[3]{%
-  \pptPic{0.4}{books/#1} \br ``#3'' by {\scshape #2}
+  \sqmDisclaimer{}
 }
 
 \newcommand\nospell[1]{#1}

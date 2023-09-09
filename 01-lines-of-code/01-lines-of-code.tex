@@ -1,0 +1,56 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Lines of Code (LoC)}
+\newcommand*\thesubtitle{}
+\begin{document}
+
+\plush{\sqmTitlePage{1}}
+
+\newcounter{thght}
+\newcommand\thought[1]{
+  \addtocounter{thght}{1}
+  \plush{\pptThought{\textcolor{orange}{\Huge\thethght.} #1}}
+}
+
+\thought{Everybody wants higher \emph{quality of code}, but nobody knows how to measure it.}
+
+\thought{Code \emph{maintainability}, probably, is the ultimate objective of increasing the quality of source code.}
+
+\thought{Code \emph{size} makes the biggest negative impact on code maintainability.}
+
+\thought{It \emph{may} be wrong to measure productivity of a programmer by counting lines of code, but for the quality of code the LoC metric is a perfect indicator.}
+
+\thought{Instead of counting lines, it may be more reasonable to count NCSS (Non Commenting Source Statements), but not always.}
+
+\thought{There are \href{https://www.linux.com/news/linux-in-2020-27-8-million-lines-of-code-in-the-kernel-1-3-million-in-systemd/}{27.8M} lines of C code in Linux kernel.}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \href{https://www.yegor256.com/2017/12/26/software-quality-formula.html}{The Formula for Software Quality} (2017)\par
+  \href{https://www.yegor256.com/2014/04/11/cost-of-loc.html}{How Much Do You Pay Per Line of Code?} (2014)\par
+  \href{https://www.yegor256.com/2014/11/14/hits-of-code.html}{Hits-of-Code Instead of SLoC} (2014)\par
+}
+
+\end{document}
