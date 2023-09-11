@@ -51,7 +51,7 @@
 }}
 
 \newcommand\sqmTitlePage[1]{%
-  \pptTitle{\thetitle}{\thesubtitle}\par
+  \pptTitle{\thetitle}{}\par
   {\scshape Yegor Bugayenko}\par
   Lecture \##1 out of 24 \newline
   90 minutes\par
@@ -67,7 +67,7 @@
 \newcommand\nospell[1]{#1}
 
 \AtBeginDocument{%
-  \pptLeft{\thetitle{}: \thesubtitle}%
+  \pptLeft{\thetitle{}}%
   \pptRight{@yegor256}%
 }
 
