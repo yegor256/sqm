@@ -1,0 +1,70 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Cognitive Complexity}
+\begin{document}
+
+\plush{\sqmTitlePage{3}}
+
+\thought{Cyclomatic complexity is highly inaccurate if being compared with code readability evaluated by a human.}
+
+\pitch{\pptQuote{ann-campbell.jpg}{A guiding principle in the formulation of Cognitive Complexity has been that it should incent good coding practices. That is, it should either ignore or discount features that make code more readable}{G. Ann Campbell, Sonar Source S.A., 2017}}
+
+\pitch{
+\pptBanner{Cyclomatic Complexity (CoCo)}
+\pptPic{.9}{motive-before.png}\par
+``The mathematical model underlying Cyclomatic Complexity gives these two
+methods equal weight, yet it is intuitively obvious that the control flow of
+\ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}'' --- G. Ann Campbell}
+
+\pitch{
+\pptBanner{Cognitive Complexity}
+\pptPic{.9}{motive-after.png}\par
+``The Cognitive Complexity algorithm gives these two methods markedly different
+scores, ones that are far more reflective of their relative understandability.'' --- G. Ann Campbell}
+
+\pitch{
+``Being able to find statistical correlations between code understandability and source code measures would be greatly beneficial for the software development process, which involves a great deal of activities involving program comprehension'' --- \textit{An Empirical Evaluation of the ``Cognitive Complexity'' Measure as a Predictor of Code Understandability}, Journal of Systems and Software (197), 2023.}
+
+\pitch{CoCo is supported in a few static analyzers:
+\begin{itemize}
+\item in PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
+\item in Rubocop \href{https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity}{since 0.25} (called ``perceived complexity'')
+\item in ESLint via \href{https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md}{SonarSource plugin}
+\item in Flake8 via \href{https://github.com/Melevir/flake8-cognitive-complexity}{this plugin}
+\item in Clippy \href{https://rust-lang.github.io/rust-clippy/master/\#/cognitive_complexity}{since 1.35.0}
+\item in PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
+\end{itemize}}
+
+\thought{``Perceived complexity'' is human's impression and conceptualization of a system as being complex.}
+
+\pitch{``\emph{Social code analysis} enriches our understanding of the code quality by overlaying a \emph{developer's behavior} with the \emph{structural analysis} of the code'' --- \href{https://www.thoughtworks.com/en-de/radar/techniques/social-code-analysis}{Technology Radar} of ThoughtWorks, March 2017}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \href{https://dl.acm.org/doi/abs/10.1145/3194164.3194186}{Cognitive complexity: an overview and evaluation}, G. Ann Campbell, Proceedings of the International Conference on Technical Debt, 2018\par
+  \href{https://dl.acm.org/doi/abs/10.1145/3460348}{Neural Software Analysis} by Michael Pradel et al., Communications of the ACM 65(1), 2022\par
+}
+
+\end{document}
