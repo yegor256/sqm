@@ -1,0 +1,104 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Halstead Complexity}
+\begin{document}
+
+\plush{\sqmTitlePage{4}}
+
+\pitch{\pptQuote{maurice-halstead.jpg}{Any attempt to find a universal set of metrics that could be applied to any computer program, might at first glance appear destined to be unfruitful, if not merely difficult. But, without universal, measurable parameters, we would be in the position of trying to develop the science of thermodynamics before the advent of a temperature scale.}{Maurice H. Halstead, \newline \textit{Elements of Software Science}, 1977}}
+
+\plush{
+\pptBanner{Inputs}
+\begin{itemize}
+\item \(\eta_1\) --- the number of distinct \emph{operators}
+\item \(\eta_2\) --- the number of distinct \emph{operands}
+\item \(N_{1}\) --- the total number of operators
+\item \(N_{2}\) --- the total number of operands
+\end{itemize}
+}
+
+\pitch{
+\pptBanner{Operators and Operands}
+``When a program is translated from one language to another, as from FORTRAN to machine language for example, the actual operators and operands may indeed change, but both versions must still consist of combinations of operators and operands. \emph{No other category} of entities need be present.'' --- \textit{Advances in Software Science}, Maurice Halstead, Advances in Computers, Volume 18, 1979
+}
+
+\pitch{
+\pptBanner{Length and Vocabulary}
+\begin{itemize}
+\item \(N_1 + N_2\) = Length
+\item \(\eta_1 + \eta_2\) = Vocabulary
+\item \(\eta_1 \times \log_2 \eta_1 + \eta_2 \times \log_2 \eta_2\) = Estimated Length
+\end{itemize}
+}
+
+\pitch{
+\pptBanner{Length vs. Vocabulary}
+\pptPic{.45}{estimated-length.png}\par
+``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.'' --- \textit{A Software Science Analysis of Programming Size}, Charles P. Smith, IBM, 1980.
+}
+
+\pitch{
+\pptBanner{Volume, Difficulty, and Effort}
+\begin{itemize}
+\item \(N\) = Length
+\item \(\eta\) = Vocabulary
+\item \(N \times \log_2 \eta\) = Volume
+\item \(\eta_1/2 + N_2/\eta_2\) = Difficulty
+\item \(D \times V\) = Effort
+\end{itemize}
+}
+
+\pitch{
+\pptBanner{Effort vs. Understandability}
+``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses. '' --- \textit{Review and Evaluation of Software Science}, Ann Fitzsimmons and Tom Love, Computing Surveys, Vol. 10, No. 1, 1978.
+}
+
+\pitch{
+\pptBanner{Time and Bugs Estimate}
+\begin{itemize}
+\item \(E\) = Effort
+\item \(E / 18\) = Time (in seconds)
+\item \(V / 3000\) = Bugs
+\end{itemize}
+}
+
+\pitch{
+\pptQuote{bill-curtis.jpg}{In studying some error data provided us by Rome Air Development Center, Phil Milliman and I found Halstead's metric a remarkably accurate predictor of delivered bugs in a system developed with modern programming practices and tools}{\textit{Program Complexity and Software Errors: \newline A Front End for Reliability}, \newline Bill Curtis (father of SEI CMM), 1979}
+}
+
+\pitch{Halstead Complexity is supported by a few tools:
+\begin{itemize}
+\item \href{https://pypi.org/project/multimetric/}{multimetric} for C++, Java, Python, and many others
+\item \href{http://www.virtualmachinery.com/jhawkmetricslist.htm}{JHawk} (not free) for Java
+\item \href{https://sourceforge.net/projects/halsteadmetricstool/}{Halstead Metrics Tool} for Java
+\item \href{https://www.jetbrains.com/help/phpstorm/php-halstead-metric.html}{PhpStorm} for PHP
+\end{itemize}}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \textit{Advances in Software Science}, Maurice Halstead, Advances in Computers, Volume 18, 1979\par
+}
+
+\end{document}
