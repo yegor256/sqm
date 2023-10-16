@@ -1,0 +1,116 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Maintainability Index}
+\begin{document}
+
+\plush{\sqmTitlePage{5}}
+
+\pitch{\pptQuote{fred-brooks.jpg}{The total cost of maintaining a widely used program is typically 40 percent or more of the cost of developing it}{Fred Brooks, \textit{The Mythical Man-Month: Essays on Software Engineering}, 1982}}
+
+\pitch{\pptQuote{anonymous-2.png}{Before developers can claim that they are building maintainable systems, there must be some way to \emph{measure} maintainability}{Don Coleman and Dan Ash (Hewlett Packard), Bruce Lowther (Micron Semiconductor), \emph{Paul Oman} (University of Idaho), \textit{Using Metrics to Evaluate Software System Maintainability}, 1994}}
+
+\pitch{\pptQuote{paper-1.png}{The factors of software that determine or influence maintainability can be organized into a \emph{hierarchical} structure of measurable attribute. Our hierarchy serves as a taxonomic definition for software maintainability that is compatible with the 35 published works upon which it is based.}{Paul Oman and Jack Hagemeister, \newline \textit{Metrics for Assessing a Software System's Maintainability}, International Conference on Software Maintenance (ICSM), 1992}}
+
+\plush{
+\pptBanner{Software Maintainability Taxonomy}
+\pptPic{.6}{tree.png}\par
+{\scriptsize \textit{Metrics for Assessing a Software System's Maintainability}, Paul Oman and Jack Hagemeister, ICSM, 1992\par}}
+
+\plush{
+\pptBanner{Maintainability Formula}
+\begin{multicols}{2}
+\pptPic{.8}{formula-1.png}\par
+{\scriptsize \textit{Metrics for Assessing a Software System's Maintainability}, Paul Oman and Jack Hagemeister, ICSM, 1992\par}
+\par\columnbreak\par
+``This formula represents the product of the weighted dimensions, where each dimension is measured as the average deviation from a known value of 'goodness' for that maintainability attribute.''
+\end{multicols}
+}
+
+\pitch{\pptQuote{paper-2.png}{A software maintainability model is only useful if it can provide developers and maintainers in an industrial setting with more information about the system}{Don Coleman, Dan Ash, Bruce Lowther, Paul Oman, \textit{Using Metrics to Evaluate Software System Maintainability}, 1994}}
+
+\plush{
+\pptBanner{First Approximation}
+\begin{multicols}{2}
+\pptPic{.95}{formula-2.png}
+\par\columnbreak\par
+``Approximately 50 regression models were constructed in an attempt to identify simple models that could be calculated from existing tools and still be generic enough to apply to a wide range of software systems. The regression model that seemed most applicable was a four-metric polynomial based on  \begin{inparaenum}[1)]\item Halstead’s effort, \item extended cyclomatic complexity, \item lines of code, and \item number of comments.\end{inparaenum}''
+\end{multicols}
+}
+
+\plush{
+\pptBanner{The Formula of Maintainability Index}
+\begin{multicols}{2}
+\pptPic{.95}{formula-3.png}
+\par\columnbreak\par
+\textit{aveVol} --- average Halstead Volume in a module\par
+\textit{ave V(g')} --- average total cyclomatic complexity in a module\par
+\textit{aveLOC} --- average lines of code in a module\par
+\textit{perCM} --- average percent of comments in a module\par
+\end{multicols}
+}
+
+\plush{
+\pptBanner{Maintainability Index by Visual Studio}
+\begin{multicols}{2}
+\pptPic{.95}{vs-formula.png}\par
+{\scriptsize Source: \href{https://radon.readthedocs.io/en/latest/intro.html}{Introduction to Code Metrics}, by Radon\par}
+\pptPic{.95}{vs-grades.png}\par
+{\scriptsize Source: \href{https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/}{Think Twice Before Using the ``Maintainability Index''}, by Arie van Deursen\par}
+\par\columnbreak\par
+``We decided to be conservative with the thresholds. The desire was that if the index showed red then we would be saying with a high degree of confidence that there was an issue with the code.'' --- \href{https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=vs-2022}{Code metrics --- Maintainability index range and meaning} by Microsoft, 2011.
+\end{multicols}
+}
+
+\pitch{\pptQuote{rainer-niedermayr.jpg}{We are convinced that Maintainability Index is \emph{nonsense}. We think that it is not sensible to reduce the maintainability of a whole software system to one single indicator.}{Rainer Niedermayr, \textit{Why we don’t use the Software Maintainability Index}, 2016, \href{https://www.cqse.eu/de/news/blog/maintainability-index/}{link}}}
+
+\plush{\pptThought{``The Maintainability Index does not provide information about the impact on development activities. A value of 57 does not express which maintainability aspects are affected by a bad value.'' --- Rainer Niedermayr}}
+
+\pitch{\pptQuote{arie-van-deursen.jpg}{If you are a researcher, \emph{think twice} before using the maintainability index in your experiments. Make sure you study and fully understand the original papers published about it.}{Arie van Deursen, \textit{Think Twice Before Using the ``Maintainability Index''}, 2014, \href{https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/}{link}}}
+
+\plush{\pptThought{``Tool smiths and vendors used the exact same formula and coefficients as the 1994 experiments, without any recalibration.'' --- Arie van Deursen}}
+
+\pitch{\pptQuote{tim-gilboy.jpg}{If we're going to use the Maintainability Index we should use it to measure relative maintainability within our project rather than use it as an absolute metric.}{Tim Gilboy, \textit{Maintainability Index - What is it and where does it fall short?}, 2022, \href{https://sourcery.ai/blog/maintainability-index/}{link}}}
+
+\plush{\pptThought{\raggedright``Extending the length can significantly decrease Maintainability Index, even if all of the changes cause the code to be clearer and more understandable.'' --- Tim Gilboy}}
+
+\pitch{\pptQuote{hericko.png}{When comparing maintainability measurements from several Index variants, the perception of maintainability could be impacted by the choice of the Index variant used.}{Tja\u{s}a Heri\u{c}ko et al., \textit{Exploring Maintainability Index Variants for Software Maintainability Measurement in Object-Oriented Systems}, Applied Sciences, 2023}}
+
+\pitch{Maintainability Index is supported by a few tools:
+\begin{itemize}
+\item \href{https://visualstudio.microsoft.com/}{Visual Studio} for C++ and others
+\item \href{https://www.sonarsource.com/products/sonarqube/}{SonarQube} for Java
+\item \href{https://www.verifysoft.com/en_maintainability.html}{Testwell} for Java and C++
+\item \href{https://radon.readthedocs.io/en/latest/index.html}{Radon} for Python
+\item \href{https://www.npmjs.com/package/jscomplexity}{jscomplexity} for JavaScript
+\end{itemize}}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \textit{Metrics for Assessing a Software System's Maintainability}, Paul Oman and Jack Hagemeister, Proceedings of the International Conference on Software Maintenance (ICSM), 1992\par
+  \textit{Using Metrics to Evaluate Software System Maintainability}, Don Coleman et al., Computer, Volume 18, Issue 8, 1994\par
+  \textit{Exploring Maintainability Index Variants for Software Maintainability Measurement in Object-Oriented Systems}, Tja\u{s}a Heri\u{c}ko and Bo\u{s}tjan \u{S}umak, Applied Sciences, 2023\par
+}
+
+\end{document}
