@@ -89,6 +89,10 @@
 \pptBanner{Fear of Decoupling}
 \begin{multicols}{2}
 {\scriptsize\begin{ffcode}
+interface Money {
+  double cents();
+}
+
 void send(Money m) {
   double c = m.cents();
   // Send them over via the API...
@@ -126,7 +130,7 @@ class EmployeeHourlyRate
 Tight coupling (\textcolor{red}{not good}):\par
 {\small\begin{ffcode}
 List<String> list =
-  new LinkedList();
+  new LinkedList<>();
 Foo.append(list, "Jeff");
 Foo.append(list, "Walter");
 return list;
@@ -137,7 +141,7 @@ Loose coupling (\textcolor{green}{good}):\par
 {\small\begin{ffcode}
 return Foo.with(
   Foo.with(
-    new LinkedList(),
+    new LinkedList<>(),
     "Jeff"
   ),
   "Walter"
