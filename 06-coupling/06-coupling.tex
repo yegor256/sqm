@@ -33,15 +33,19 @@
 \pptPic{.8}{coupling.png}\par
 {\scriptsize Source: \url{https://www.geeksforgeeks.org/coupling-in-java/}\par}}
 
+\pitch{\pptQuote{glenford-myers.jpg}{Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \emph{complicates} a system since a module is harder to \emph{understand}, \emph{change}, or \emph{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}{Wayne P. Stevens, \emph{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+
 \plush{
 \pptPic{.8}{coupling-2.png}\par
 {\scriptsize Source: \url{https://www.javatpoint.com/software-engineering-coupling-and-cohesion}\par}}
 
-\pitch{\pptQuote{glenford-myers.jpg}{Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \emph{complicates} a system since a module is harder to \emph{understand}, \emph{change}, or \emph{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}{Wayne P. Stevens, \emph{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
-
 \pitch{\pptQuote{wayne-stevens.jpg}{The degree of coupling established by a particular connection is a function of several factors, and thus it is \emph{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}{\emph{Wayne P. Stevens}, Glenford J. Myers, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
-\pitch{\pptQuote{cbo.png}{\emph{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A metrics suite for object oriented design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
+\plush{
+\pptPic{.8}{coupling-3.png}\par
+{\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
+
+\pitch{\pptQuote{cbo.png}{\emph{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
 
 \pitch{\pptQuote{dcc.png}{\emph{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}{Jagdish Bansiya and Carl G. Davis, \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment}, IEEE Transactions on Software Engineering, 28.1, 2002}}
 
@@ -53,7 +57,7 @@
 \pptPic{.95}{kokash.png}\par
 {\scriptsize (c) Natalia Kokash, Leiden Institute of Advanced Computer Science\par}}
 
-\pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An evolutionary study of fan-in and fan-out metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
+\pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
 
 \pitch{Fan-out, as a metric, is supported by a few tools:
 \begin{itemize}
@@ -62,30 +66,64 @@
 \item \href{https://pypi.org/project/module-coupling-metrics/}{module-coupling-metrics} for Python
 \end{itemize}}
 
+\pitch{\pptQuote{derek-comartin.jpg}{Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}{Derek Comartin, \href{https://codeopinion.com/write-stable-code-using-coupling-metrics/}{Write Stable Code using Coupling Metrics}, 2021}}
+
+\plush{
+\pptBanner{Types of Coupling (some of them)}
+\begin{pptWide}{2}
+\scriptsize\begin{itemize}
+\item \emph{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
+\item \emph{Global Coupling} is when two modules share the same global data (e.g., a global variable).
+\item \emph{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
+\item \emph{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
+\item \emph{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
+\item \emph{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
+\item \emph{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
+\item \emph{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
+\item \emph{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
+\end{itemize}
+\end{pptWide}
+{\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}
+}
+
 \pptBanner{Fear of Decoupling}
 \begin{multicols}{2}
 {\scriptsize\begin{ffcode}
-class Temperature {
-  private int t;
-  public String toString() {
-    return String.format("%d F", this.t);
-  }
+void send(Money m) {
+  double c = m.cents();
+  // Send them over via the API...
 }
 
-Temperature x = new Temperature();
-String txt = x.toString();
-String[] parts = txt.split(" ");
-int t = Integer.parseInt(parts[0]);
+class OneDollar implements Money {
+  @Override
+  double cents() {
+    return 100.0d;
+  }
+}
 \end{ffcode}
 }
 \par\columnbreak\par
-``The larger the number (or the mean of all numbers), the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \emph{distance metric} will tell us exactly that: how many times, and by how much, we violated the principle of loose coupling.''\par
-{\scriptsize \url{https://www.yegor256.com/2020/10/27/distance-of-coupling.html}\par}
+{\scriptsize\begin{ffcode}
+class EmployeeHourlyRate
+  implements Money {
+  @Override
+  double cents() {
+    // Fetch the exchange rate;
+    // Update the database;
+    // Calculate the hourly rate;
+    // Return the value.
+  }
+}
+\end{ffcode}
+}
+\par
+``Polymorphism makes sofware more fragile ... to make it more robust!''
 \end{multicols}
 \plush{}
 
 \pptBanner{Temporal Coupling}
 \begin{multicols}{2}
+Tight coupling (\textcolor{red}{not good}):\par
 {\small\begin{ffcode}
 List<String> list =
   new LinkedList();
@@ -95,6 +133,7 @@ return list;
 \end{ffcode}
 }
 \par\columnbreak\par
+Loose coupling (\textcolor{green}{good}):\par
 {\small\begin{ffcode}
 return Foo.with(
   Foo.with(
@@ -133,9 +172,19 @@ int t = Integer.parseInt(parts[0]);
 
 \plush{
   \pptBanner{Read this:}\par
-  \textit{Structured Design}, Wayne P. Stevens, et al., IBM Systems Journal, 13.2, 1974\par
-  \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment}, Jagdish Bansiya and Carl G. Davis, IEEE Transactions on Software Engineering, 28.1, 2022\par
-  \textit{An Overview of Various Object Oriented Metrics}, Brij Mohan Goel and Pradeep Kumar Bhatia, International Journal of Information Technology \& Systems, 2.1, 2014\par
+  \small
+  \textit{Structured Design},
+    Wayne P. Stevens, et al.,
+    IBM Systems Journal, 13.2, 1974\par
+  \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment},
+    Jagdish Bansiya et al.,
+    IEEE Transactions on Software Engineering, 28.1, 2022\par
+  \textit{An Overview of Various Object Oriented Metrics},
+    Brij Mohan Goel et al.,
+    International Journal of Information Technology \& Systems, 2.1, 2014\par
+  \textit{Analysing the Contribution of Coupling Metrics for the Development and Management of Process Architectures},
+    Daniel Braunnagel et al.,
+    ECIS, 2015\par
   \href{https://www.yegor256.com/2020/10/27/distance-of-coupling.html}{New Metric: the Distance of Coupling} (2020)\par
   \href{https://www.yegor256.com/2018/09/18/fear-of-coupling.html}{Fear of Decoupling} (2018)\par
   \href{https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html}{Reflection Means Hidden Coupling} (2022)\par
