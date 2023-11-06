@@ -1,0 +1,110 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{TCC and LCC}
+\begin{document}
+
+\plush{\sqmTitlePage{8}}
+
+\pitch{\pptQuote{james-bieman.jpg}{We define two measures of class cohesion based on the \emph{direct} and \emph{indirect} connections of method pairs: TCC and LCC.}{\emph{James M. Bieman} and Byung-Kyoo Kang, \textit{Cohesion and Reuse in an Object-Oriented System}, Proceedings of the Symposium on Software Reusability (SSR), 1995}}
+
+\pptBanner{TCC and LCC}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Rectangle
+  int x, y, w, h;
+  int area()
+    return w * h;
+  int move(int dx, dy)
+    x += dx; y += dy;
+  int resize(int dx, dy)
+    w += dx; h += dy;
+  bool fit()
+    return w < 100
+      && x < 100;
+\end{ffcode}
+}
+\par\columnbreak\par
+Max possible connections (\texttt{NP}): \\
+\( N \times (N-1) / 2 = 4 \times 3 / 2 = 6\)
+\par
+Directly connected (\(\texttt{NDC}=4\)): \\
+\texttt{area+fit}, \texttt{area+resize}, \texttt{move+fit}, \texttt{resize+fit}
+\par
+Indirectly connected (\(\texttt{NIC}=2\)): \\
+\texttt{area+move}, \texttt{move+resize}
+\par
+\(\texttt{TCC} = \texttt{NDC} / \texttt{NP} = 4/6 = 0.66 \) \\
+\(\texttt{LCC} = (\texttt{NDC} + \texttt{NIC}) / \texttt{NP} = 6/6 = 1.00 \) \\
+\end{multicols}
+\plush{}
+
+\plush{\pptThought{If a class is designed in \emph{ad hoc manner} and unrelated components are included in the class, the class represents more than one concept and does not \emph{model an entity}. The cohesion value of such a class is likely to be less than 0.5}}
+
+\pptBanner{Inheritance vs. Cohesion}
+\begin{multicols}{2}
+\includegraphics[width=.9\columnwidth]{graphs.png}
+\par\columnbreak\par
+``Our results show that the classes that are heavily \emph{reused} via inheritance exhibit \emph{lower cohesion}. We expected to find that the most reused classes would be the most cohesive ones.'' --- James M. Bieman and Byung-Kyoo Kang
+\end{multicols}
+\plush{}
+
+\pptBanner{Abstraction}
+\begin{multicols}{2}
+\includegraphics[width=1.3in]{apple.jpg}
+\begin{itemize}\setlength\itemsep{0em}
+\item Color: red
+\item Weight: 120g
+\item Price: \$0.99
+\end{itemize}
+\par\columnbreak\par
+\includegraphics[width=0.8in]{file-on-disc.jpg}
+\par
+{\small\begin{ffcode}
+var file = {
+  path: '/tmp/data.txt',
+  read: function() { ... },
+  write: function(txt) { ... }
+}
+\end{ffcode}
+}
+\end{multicols}
+\par
+{\scriptsize The slide is taken from the \href{https://github.com/yegor256/painofoop}{``Pain of OOP''} (2023) course.\par}
+\plush{}
+
+\pitch{TCC+LCC can be calculated by a few tools:
+\begin{itemize}
+\item \href{https://www.jpeek.org}{jPeek} for Java
+\end{itemize}}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \small
+  \textit{Cohesion and Reuse in an Object-Oriented System},
+    James M. Bieman and Byung-Kyoo Kang,
+    Proceedings of the Symposium on Software Reusability (SSR), 1995 \par
+}
+
+\end{document}
