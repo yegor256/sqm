@@ -27,6 +27,8 @@
 
 \plush{\sqmTitlePage{8}}
 
+\pitch{\pptQuote{edward-yourdon.jpg}{Module cohesion may be conceptualized as the \emph{cement} that holds the processing elements of a module together. In a sense, a high degree of module cohesion is an indication of \emph{close approximation} of inherent problem structure.}{\emph{Edward Yourdon} and Larry Constantine, \textit{Structured Design: Fundamentals of a Discipline of Computer Program and Systems Design}, Prentice Hall, 1979}}
+
 \pitch{\pptQuote{james-bieman.jpg}{We define two measures of class cohesion based on the \emph{direct} and \emph{indirect} connections of method pairs: TCC and LCC.}{\emph{James M. Bieman} and Byung-Kyoo Kang, \textit{Cohesion and Reuse in an Object-Oriented System}, Proceedings of the Symposium on Software Reusability (SSR), 1995}}
 
 \pptBanner{Tight and Loose Class Cohesion (TCC+LCC)}
@@ -61,6 +63,8 @@ Indirectly connected (\(\texttt{NIC}=2\)): \\
 \plush{}
 
 \pitch{\pptQuote{paper.png}{If a class is designed in \emph{ad hoc manner} and unrelated components are included in the class, the class represents more than one concept and does not \emph{model an entity}. The cohesion value of such a class is likely to be less than 0.5.}{\emph{James M. Bieman} and Byung-Kyoo Kang, \textit{Cohesion and Reuse in an Object-Oriented System}, Proceedings of the Symposium on Software Reusability (SSR), 1995}}
+
+\pitch{\pptQuote{../06-coupling/steve-mcconnell.jpg}{Cohesion refers to how closely all the routines in a class or all the code in a routine support a \emph{central purpose}---how focused the class is. The ideas of \emph{abstraction} and cohesion are closely related---a class interface that presents a good abstraction usually has strong cohesion.}{Steven McConnell, \textit{Code Complete}, 2004}}
 
 \pptBanner{Abstraction}
 \begin{multicols}{2}
@@ -154,6 +158,10 @@ class Article
 \pitch{TCC+LCC can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://www.jpeek.org}{jPeek} for Java
+\item C++ --- don't know
+\item Python --- don't know
+\item JavaScript --- don't know
+\item C\# --- don't know
 \end{itemize}}
 
 \plush{

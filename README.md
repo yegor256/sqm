@@ -4,9 +4,9 @@
 
 There are slides for my series of lectures for [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
 
-<!-- All recorded videos (so far) are in [this YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08ytf8POIIAkkR4ZsRq8DFiV). -->
+All recorded videos (so far) are in [this YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl).
 
-<!-- All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/). -->
+All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/).
 
 To compile everything just run:
 
