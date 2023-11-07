@@ -29,7 +29,7 @@
 
 \pitch{\pptQuote{james-bieman.jpg}{We define two measures of class cohesion based on the \emph{direct} and \emph{indirect} connections of method pairs: TCC and LCC.}{\emph{James M. Bieman} and Byung-Kyoo Kang, \textit{Cohesion and Reuse in an Object-Oriented System}, Proceedings of the Symposium on Software Reusability (SSR), 1995}}
 
-\pptBanner{TCC and LCC}
+\pptBanner{Tight and Loose Class Cohesion (TCC+LCC)}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class Rectangle
@@ -60,15 +60,7 @@ Indirectly connected (\(\texttt{NIC}=2\)): \\
 \end{multicols}
 \plush{}
 
-\plush{\pptThought{If a class is designed in \emph{ad hoc manner} and unrelated components are included in the class, the class represents more than one concept and does not \emph{model an entity}. The cohesion value of such a class is likely to be less than 0.5}}
-
-\pptBanner{Inheritance vs. Cohesion}
-\begin{multicols}{2}
-\includegraphics[width=.9\columnwidth]{graphs.png}
-\par\columnbreak\par
-``Our results show that the classes that are heavily \emph{reused} via inheritance exhibit \emph{lower cohesion}. We expected to find that the most reused classes would be the most cohesive ones.'' --- James M. Bieman and Byung-Kyoo Kang
-\end{multicols}
-\plush{}
+\pitch{\pptQuote{paper.png}{If a class is designed in \emph{ad hoc manner} and unrelated components are included in the class, the class represents more than one concept and does not \emph{model an entity}. The cohesion value of such a class is likely to be less than 0.5.}{\emph{James M. Bieman} and Byung-Kyoo Kang, \textit{Cohesion and Reuse in an Object-Oriented System}, Proceedings of the Symposium on Software Reusability (SSR), 1995}}
 
 \pptBanner{Abstraction}
 \begin{multicols}{2}
@@ -94,6 +86,71 @@ var file = {
 {\scriptsize The slide is taken from the \href{https://github.com/yegor256/painofoop}{``Pain of OOP''} (2023) course.\par}
 \plush{}
 
+\pptBanner{Inheritance vs. Cohesion}
+\begin{multicols}{2}
+\includegraphics[width=.9\columnwidth]{graphs.png}
+\par\columnbreak\par
+``Our results show that the classes that are heavily \emph{reused} via inheritance exhibit \emph{lower cohesion}. We expected to find that the most reused classes would be the most cohesive ones.'' --- James M. Bieman and Byung-Kyoo Kang
+\end{multicols}
+\plush{}
+
+\pptBanner{Inheritance is Code Reuse}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Manuscript {
+  protected String body;
+  void print(Console console) {
+    console.println(this.body);
+  }
+}
+class Article
+  extends Manuscript {
+  void submit(Conference cnf) {
+    cnf.send(this.body);
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+``The \ff{Article} copies method \ff{print()} and attribute body from the \ff{Manuscript}, as if it’s not a living organism, but rather a dead one from which we \emph{inherit} its parts.''\par
+``Implementation inheritance was created as a mechanism for code reuse. It doesn't fit into OOP at all.''\par
+{\scriptsize Source: \href{https://www.yegor256.com/2016/09/13/inheritance-is-procedural.html}{Inheritance Is a Procedural Technique for Code Reuse (2016)}\par}
+\end{multicols}
+\plush{}
+
+\pptBanner{Composition over Inheritance}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Manuscript
+  protected String body;
+  void print(Console console)
+    console.println(this.body);
+
+class Article
+  extends Manuscript
+  void submit(Conference cnf)
+    cnf.send(this.body);
+\end{ffcode}
+}
+\par\columnbreak\par
+{\small\begin{ffcode}
+class Manuscript
+  protected String body;
+  void print(Console console)
+    console.println(this.body);
+
+class Article
+  Manuscript manuscript;
+  Article(Manuscript m)
+    this.manuscript = m;
+  void submit(Conference cnf)
+    cnf.send(this.body);
+\end{ffcode}
+}
+\end{multicols}\par
+{\scriptsize Wikipedia: \url{https://en.wikipedia.org/wiki/Composition_over_inheritance}\par}
+\plush{}
+
 \pitch{TCC+LCC can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://www.jpeek.org}{jPeek} for Java
@@ -105,6 +162,7 @@ var file = {
   \textit{Cohesion and Reuse in an Object-Oriented System},
     James M. Bieman and Byung-Kyoo Kang,
     Proceedings of the Symposium on Software Reusability (SSR), 1995 \par
+  \href{https://www.yegor256.com/2016/09/13/inheritance-is-procedural.html}{Inheritance Is a Procedural Technique for Code Reuse} (2016)
 }
 
 \end{document}
