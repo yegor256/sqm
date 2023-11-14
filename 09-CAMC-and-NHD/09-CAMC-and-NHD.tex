@@ -1,0 +1,84 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\usepackage{amsmath}
+\usepackage{relsize}
+\newcommand*\thetitle{CAMC and NHD}
+\begin{document}
+
+\plush{\sqmTitlePage{9}}
+
+\pitch{\pptBanner{CAMC}\pptQuote{jagdish-bansiya.jpg}{Cohesion Among Methods of Classes (CAMC) evaluates the relatedness of methods in the interface of a class using the parameter lists defined for the methods. It can be applied earlier in the development than can traditional cohesiveness metrics because it relies only on method prototypes declared in a class.}{\textit{A Class Cohesion Metric for Object-Oriented Designs}, \emph{Jagdish Bansiya}, Letha Etzkorn, Carl Davis and Wei Li, Journal of Object-Oriented Programming, vol.~11, no.~8, 1999}}
+
+\plush{\begin{pptWide}{2}
+\includegraphics[width=\columnwidth]{nhd-1.png}\par
+\(k\) --- total number of methods\par
+\(l\) --- total number of types\par
+\(\texttt{CAMC} = \frac{1}{k \times l} \times \mathlarger{\sum}_{i=1}^{k} \mathlarger{\sum}_{j=1}^{l} o_{ij}\)\par
+\par\columnbreak\par
+\includegraphics[width=.9\columnwidth]{nhd-2.png}\par
+\end{pptWide}}
+
+\pitch{\pptBanner{NHD}\pptQuote{steve-counsell.jpg}{The hamming distance (HD) provides a measure of disagreement between rows in a binary matrix. The Normalised Hamming Distance (NHD) metric measures agreement between rows in a binary matrix.}{\textit{The Interpretation and utility of three cohesion metrics for object-oriented design}, \emph{Steve Counsell}, Stephen Swift, Jason Crampton, ACM Transactions on Software Engineering and Methodology (TOSEM), vol.~15, no.~2, 2006}}
+
+\plush{\begin{pptWide}{2}
+\includegraphics[width=\columnwidth]{nhd-1.png}\par
+\(k\) --- total number of methods\par
+\(l\) --- total number of types\par
+\(\texttt{NHD} = \frac{2}{l \times k \times (k - 1)} \times \mathlarger{\sum}_{j=1}^{k-1} \mathlarger{\sum}_{i=j+1}^{k} a_{ij}\)\par
+\par\columnbreak\par
+\includegraphics[width=.9\columnwidth]{nhd-2.png}\par
+\includegraphics[width=.9\columnwidth]{nhd-3.png}\par
+\end{pptWide}}
+
+\pitch{\pptBanner{Interface Segregation Principle}\pptQuote{robert-martin.jpg}{Classes that have 'fat' interfaces are classes whose interfaces are not \emph{cohesive}. In other words, the interfaces of the class can be broken up into groups of methods.}{\textit{Agile Software Development, Principles, Patterns, and Practices},  Robert C. Martin, 2002}}
+
+\pitch{
+\pptBanner{Also Known As...}
+\begin{multicols}{2}
+\begin{itemize}
+  \item ``interface'' in Java
+  \item ``protocol'' in Swift
+  \item ``interface'' in C\#
+  \item ``abstract class'' in C++
+  \item absent in Python
+  \item absent in JavaScript
+  \item ``interface'' in Go
+  \item ``trait'' in Rust
+\end{itemize}\end{multicols}}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \small
+  \textit{A Class Cohesion Metric for Object-Oriented Designs},
+    Jagdish Bansiya, Letha Etzkorn, Carl Davis and Wei Li,
+    Journal of Object-Oriented Programming, vol.~11, no.~8, 1999\par
+  \textit{The Interpretation and utility of three cohesion metrics for object-oriented design},
+    Steve Counsell, Stephen Swift, Jason Crampton
+    ACM Transactions on Software Engineering and Methodology (TOSEM), vol.~15, no.~2, 2006\par
+  \textit{Agile Software Development, Principles, Patterns, and Practices},
+    Robert C. Martin, 2002\par
+}
+
+\end{document}
