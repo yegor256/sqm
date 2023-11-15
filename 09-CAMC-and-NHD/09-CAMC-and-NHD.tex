@@ -29,6 +29,37 @@
 
 \plush{\sqmTitlePage{9}}
 
+\pitch{
+\pptBanner{Rational Unified Process (RUP)}
+\pptPic{.7}{rup.png}}
+
+\pptBanner{Decoupling via Interfaces (in Java)}
+\begin{pptWide}{2}
+{\small\begin{ffcode}
+interface Shape
+  double area();
+
+class Circle implements Shape
+  int r;
+  @Override
+  double area()
+    return r * r * 3.14d;
+
+void main(Shape s)
+  double a = s.area();
+\end{ffcode}
+}
+\par\columnbreak\par
+\begin{tikzpicture}[graph]
+\node[rectangle] (shape) {Shape};
+\node[rectangle, below=3em of shape] (circle) {Circle};
+\node[rectangle, left=3em of shape] (main) {main()};
+\draw (main) edge[-triangle 45] (shape);
+\draw (circle) edge[-open triangle 60] (shape);
+\end{tikzpicture}
+\end{pptWide}
+\plush{}
+
 \pitch{\pptBanner{CAMC}\pptQuote{jagdish-bansiya.jpg}{Cohesion Among Methods of Classes (CAMC) evaluates the relatedness of methods in the interface of a class using the parameter lists defined for the methods. It can be applied earlier in the development than can traditional cohesiveness metrics because it relies only on method prototypes declared in a class.}{\textit{A Class Cohesion Metric for Object-Oriented Designs}, \emph{Jagdish Bansiya}, Letha Etzkorn, Carl Davis and Wei Li, Journal of Object-Oriented Programming, vol.~11, no.~8, 1999}}
 
 \plush{\begin{pptWide}{2}
@@ -59,7 +90,7 @@
 \begin{multicols}{2}
 \begin{itemize}
   \item ``interface'' in Java
-  \item ``protocol'' in Swift
+  \item ``protocol'' in Objective-C
   \item ``interface'' in C\#
   \item ``abstract class'' in C++
   \item absent in Python
