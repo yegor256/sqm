@@ -85,6 +85,46 @@ void main(Shape s)
 
 \pitch{\pptBanner{Interface Segregation Principle}\pptQuote{robert-martin.jpg}{Classes that have 'fat' interfaces are classes whose interfaces are not \emph{cohesive}. In other words, the interfaces of the class can be broken up into groups of methods.}{\textit{Agile Software Development, Principles, Patterns, and Practices},  Robert C. Martin, 2002}}
 
+\pptBanner{InputStream in Java}
+\begin{pptWide}{2}
+\textcolor{red}{Bad}:
+{\scriptsize\begin{ffcode}
+abstract class InputStream
+  int read();
+  int read(byte[] b);
+  int read(byte[] b, int o, int l);
+
+class FileInputStream
+  implements InputStream
+  native int read();
+  native int read(byte[] b, int o, int l);
+  int read(byte[] b)
+    return read(b, 0, b.length);
+\end{ffcode}
+}
+\par\columnbreak\par
+\textcolor{green}{Better} (but slower!):
+{\scriptsize\begin{ffcode}
+interface InputStream {
+  int read(byte[] b, int o, int l);
+
+class FileInputStream
+  implements InputStream
+  native int read(byte[] b, int o, int l);
+
+class OneByteStream
+  InputStream s;
+  int read()
+    byte[] b = new byte[1];
+    s.read(b, 0, 1);
+    return (int) b[0];
+\end{ffcode}
+}
+\end{pptWide}
+{\scriptsize Source: \href{https://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html}{Why InputStream Design Is Wrong} (2016)\par}
+\plush{}
+
+
 \pitch{
 \pptBanner{Also Known As...}
 \begin{multicols}{2}
@@ -101,7 +141,7 @@ void main(Shape s)
 
 \plush{
   \pptBanner{Read this:}\par
-  \small
+  \scriptsize
   \textit{A Class Cohesion Metric for Object-Oriented Designs},
     Jagdish Bansiya, Letha Etzkorn, Carl Davis and Wei Li,
     Journal of Object-Oriented Programming, vol.~11, no.~8, 1999\par
@@ -113,6 +153,7 @@ void main(Shape s)
   \href{https://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html}{Why InputStream Design Is Wrong} (2016)\par
   \href{https://www.yegor256.com/2020/02/19/fat-skinny-design.html}{Fat vs. Skinny Design} (2020)\par
   \href{https://www.yegor256.com/2018/09/18/fear-of-coupling.html}{Fear of Decoupling} (2018)\par
+  \href{https://www.yegor256.com/2017/12/19/srp-is-hoax.html}{SRP is a Hoax} (2017) \par
 }
 
 \end{document}
