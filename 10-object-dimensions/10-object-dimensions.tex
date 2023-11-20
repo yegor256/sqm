@@ -1,0 +1,272 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\usepackage{amsmath}
+\usepackage{relsize}
+\newcommand*\thetitle{Object Dimensions}
+\begin{document}
+
+\plush{\sqmTitlePage{10}}
+
+\plush{
+\pptBanner{Object Metrics}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Number of attributes, methods, constructors, destructors
+  \item Number of static attributes, methods
+  \item Number of types/interfaces
+  \item Number of parent and child classes
+  \item Number of annotations
+  \item Number of static blocks
+  \item Number of nested classes
+  \item Number of type parameters (generics)
+\end{itemize}
+}
+
+\pitch{\pptBanner{Metrics for Object-Oriented Design (MOOD)}\pptQuote{fernando-brito-e-abreu.jpg}{Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \emph{heuristics}.}{\textit{Object-oriented software engineering: Measuring and controlling the development process}, \emph{Fernando Brito e Abreu} and Rog{\'e}rio Carapu{\c{c}}a, Proceedings of the 4th International Conference on Software Quality, 1994}}
+
+\pptBanner{Method Hiding Factor (MHF)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Book {
+  public String title() {
+    return this.read() + ".";
+  }
+  private String read() {
+    // read from database
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{MHF} = 1/2\)\par
+``MHF is defined as the ratio of the sum of the \emph{invisibilities} of all methods
+defined in all classes to the total number of methods defined in the system
+under consideration.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Attribute Hiding Factor (AHF)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Book {
+  public int id;
+  private File path;
+  public String title() {
+    var txt = Files.read(path);
+    // 1. Find title by 'id'
+    // 2. Return it
+  }
+}
+
+var b = new Book();
+b.id = 42;
+var t = b.title();
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{AHF} = 1/2\)\par
+``AHF is defined as the ratio of the sum of the \emph{invisibilities} of all attributes
+defined in all classes to the total number of attributes defined in the system
+under consideration.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Method Inheritance Factor (MIF)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Book extends Material {
+  @Override
+  public String content() {
+    return "Hello, world!";
+  }
+  public String title() {
+    return "David West";
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{MIF} = 1/2\)\par
+``MIF is defined as the ratio of the sum of the \emph{inherited} methods in all classes of
+the system under consideration to the total number of available methods
+(locally defined plus inherited) for all classes.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Attribute Inheritance Factor (AIF)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Material {
+  protected String content;
+}
+
+class Book extends Material {
+  private String title;
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{AIF} = 1/2\)\par
+``AIF is defined as the ratio of the sum of \emph{inherited} attributes in all classes of
+the system under consideration to the total number of available attributes
+(locally defined plus inherited) for all classes.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Polymorphism Factor (PF)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Material {
+  public String content() {
+    return "Hello, world!";
+  }
+}
+
+class Book extends Material {
+  public String title() {
+    return "David";
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{PF} = 0/1\)\par
+``PF is the number of methods that \emph{redefine} inherited methods, divided by the
+maximum number of possible distinct polymorphic situations.''
+\end{multicols}
+\plush{}
+
+\pitch{\pptQuote{../07-LCOM/chris-kemerer.jpg}{The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \emph{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}{Shyam R. Chidamber and \emph{Chris F. Kemerer}, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
+
+\pptBanner{Depth of Inheritance Tree (DIT)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Material {
+  public String content() {
+    return "Hello, world!";
+  }
+}
+
+class Book extends Material {
+  public String title() {
+    return "David";
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{DIT}_\texttt{Material} = 0\)\par
+\(\texttt{DIT}_\texttt{Book} = 1\)\par
+``DIT is a measure of how many ancestor classes can potentially affect this class.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Number of Children (NOC)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Material {
+  public String content() {
+    return "Hello, world!";
+  }
+}
+
+class Book extends Material {
+  public String title() {
+    return "David";
+  }
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{NOC}_\texttt{Material} = 1\)\par
+\(\texttt{NOC}_\texttt{Book} = 0\)\par
+``NOC is a measure of how many sub-classes are going to inherit the methods of the parent class.''
+\end{multicols}
+\plush{}
+
+\pptBanner{Response For a Class (RFC)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Trim
+  String value()
+
+class Book
+  public String title()
+    return new Trim(
+      this.read()
+    ).value();
+  private String read()
+    // read from the DB
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{RFC}_\texttt{Material} = 3\)\par
+``RFC is the count of the set of \emph{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
+\end{multicols}
+\plush{}
+
+\pitch{\pptQuote{book.jpg}{A small number of classes may be responsible for a large number of the methods that executed in an application, and that if testing effort were concentrated on these outlier classes, a bulk of the dynamic behavior of the object oriented systems can be checked for customer acceptance.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
+
+\pitch{\pptQuote{mark-lorenz.jpg}{Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.}{\textit{Object-Oriented Software Metrics: a Practical Guide}, \emph{Mark Lorenz} and Jeff Kidd, Prentice-Hall, Inc., 1994}}
+
+\pptBanner{Response For a Class (RFC)}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+class Trim
+  String value()
+
+class Book
+  public String title()
+    return new Trim(
+      this.read()
+    ).value();
+  private String read()
+    // read from the DB
+\end{ffcode}
+}
+\par\columnbreak\par
+\(\texttt{NOM}_\texttt{title} = 3\)\par
+``Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.''
+\end{multicols}
+\plush{}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \small
+  \textit{Evaluating the Impact of Object-Oriented Design on Software Quality},
+    Fernando Brito e Abreu and Walc\'{e}lio Melo,
+    Proceedings of the 3rd International Software Metrics Symposium (METRICS'96), IEEE, 1996\par
+  \textit{An Overview of Object-Oriented Design Metrics},
+    Daniel Rodriguez and Rachel Harrison,
+    The University of Reading, 2001 \par
+  \textit{Object-Oriented Software Metrics: a Practical Guide},
+    Mark Lorenz and Jeff Kidd,
+    Prentice-Hall, Inc., 1994 \par
+  \href{https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html}{OOP Alternative to Utility Classes} (2014) \par
+  \href{https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html}{Java Annotations Are a Big Mistake} (2016) \par
+  \href{https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html}{How Much Your Objects Encapsulate?} (2014) \par
+}
+
+\end{document}
