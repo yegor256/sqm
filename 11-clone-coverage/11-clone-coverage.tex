@@ -24,12 +24,12 @@
 \usepackage{../sqm}
 \usepackage{amsmath}
 \usepackage{relsize}
-\newcommand*\thetitle{Code Duplication}
+\newcommand*\thetitle{Clone Coverage}
 \begin{document}
 
 \plush{\sqmTitlePage{11}}
 
-\pitch{\pptQuote{qurat-ul-ain.jpg}{If a bug is identified in one segment of code, all the similar segments need to be checked for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}{\textit{A Systematic Review on Code Clone Detection}, \emph{Qurat Ul Ain}, Wasi Haider Butt, Muhammad Waseem Anwar, Farooque Azam, Bilal Maqbool, IEEE Access, 2019}}
+\pitch{\pptQuote{qurat-ul-ain.jpg}{If a bug is identified in one segment of code, all the similar segments need to be \emph{checked} for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}{\textit{A Systematic Review on Code Clone Detection}, \emph{Qurat Ul Ain}, Wasi Haider Butt, Muhammad Waseem Anwar, Farooque Azam, Bilal Maqbool, IEEE Access, 2019}}
 
 \pitch{\pptQuote{rainer-koschke.jpg}{The problem with code cloning is that errors in the original must be fixed in every copy. Other kinds of maintenance changes, for instance, extensions or adaptations, must be applied \emph{multiple times}, too. Yet, it is usually not documented \emph{where} code was copied.}{\textit{Comparison and Evaluation of Clone Detection Tools}, Stefan Bellon, \emph{Rainer Koschke}, Giuliano Antoniol, Jens Krinke, Ettore Merlo, IEEE Transactions on Software Engineering, 2007}}
 
@@ -107,6 +107,8 @@ duplicated.
 \pitch{\pptBanner{Don't Repeat Yourself (DRY)}\pptQuote{andy-hunt.jpg}{Every piece of knowledge must have a \emph{single}, unambiguous, authoritative representation within a system.}{\textit{The Pragmatic Programmer: From Journeyman to Master}, \emph{Andrew Hunt} and David Thomas, Addison-Wesley, 1999}}
 
 \pitch{\pptBanner{The Rule of Three}\pptQuote{kent-beck.jpg}{The \emph{first} time you do something, you just do it. The \emph{second} time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The \emph{third} time you do something similar, you refactor.}{\textit{Refactoring}, Martin Fowler and \emph{Kent Beck}, Addison-Wesley, 1999}}
+
+\pitch{\pptBanner{Clone Coverage}\pptQuote{yoshiki-higo.jpg}{Code-clone analysis is a good vehicle to quantitatively understand the differences and improvements between two versions of the same software system}{\textit{Analysis of the linux kernel evolution using code clone coverage}, Simone Livieri, \emph{Yoshiki Higo}, Makoto Matsushita, Katsuro Inoue, International Workshop on Mining Software Repositories (MSR), 2007}}
 
 \pitch{\pptQuote{wasi-haider-butt.jpg}{We identified and analyzed 26 Code Clone Detection (CCD) tools, i.e., 13 existing and 13 proposed/developed. Moreover, 62 open-source subject systems whose source code is utilized for the CCD are presented.}{\textit{A Systematic Review on Code Clone Detection}, Ain, Qurat Ul, \emph{Wasi Haider Butt}, Muhammad Waseem Anwar, Farooque Azam, Bilal Maqbool, IEEE Access, 2019}}
 
@@ -190,13 +192,34 @@ More than one code segments that are functionally similar but implemented by dif
 \end{multicols}
 \plush{}
 
+\plush{\pptBanner{Clones in Linux Kernel}\pptPic{.9}{clones.png}\par\textit{Identifying Clones in the Linux Kernel}, Gerardo Casazza, Giuliano Antoniol, Umberto Villano, Ettore Merlo, Massimiliano Di Penta, Proceedings of the International Workshop on Source Code Analysis and Manipulation, 2001}
+
+\plush{
+  \pptBanner{Methods of clone detection:}
+  \begin{enumerate}
+    \item Using text
+    \item Using tokens
+    \item Using metrics
+    \item Using ``tree matching''
+    \item Using Program Dependency Graphs (PDG)
+    \item Using Machine Learning (ML)
+  \end{enumerate}
+}
+
+\pitch{\pptQuote{jens-krinke.jpg}{For the three Java systems studied, the following results were found: 1)~cloned code is usually \emph{older} than non-cloned code, 2)~cloned code in a file is usually older than the non-cloned code in the same file. Both results suggest that cloned code is \emph{more stable} than non-cloned code.}{\textit{Is cloned code older than non-cloned code?}, Jens Krinke, Proceedings of the International Workshop on Software Clones, 2011}}
+
 \plush{
   \pptBanner{These tools can help detecting duplicate code:}
   \begin{enumerate}
     \item IntelliJ IDEA by JetBrains
     \item Copy/Paste Detector (\href{https://pmd.sourceforge.io/pmd-5.5.2/usage/cpd-usage.html}{CPD}) by PMD for Java
+    \item SonarQube
+    \item \href{http://www.semdesigns.com/products/clone/}{CloneDR} by Semantic Designs
+    \item \href{https://simian.quandarypeak.com/download/}{Simian} by Quandary Peak Research
   \end{enumerate}
 }
+
+\plush{\pptBanner{Simian 4.0.0}\includegraphics[width=.9\textwidth]{simian.png}}
 
 \plush{
   \pptBanner{Read this:}\par
@@ -204,9 +227,6 @@ More than one code segments that are functionally similar but implemented by dif
   \textit{A Program for Identifying Duplicated Code},
     Brenda S. Baker,
     Computing Science and Statistics, 1993\par
-  \textit{A Systematic Review on Code Clone Detection},
-    Qurat Ul Ain, Wasi Haider Butt, Muhammad Waseem Anwar, Farooque Azam, Bilal Maqbool,
-    IEEE Access, 2019 \par
   \textit{A Systematic Review on Code Clone Detection},
     Qurat Ul Ain, Wasi Haider Butt, Muhammad Waseem Anwar, Farooque Azam, Bilal Maqbool,
     IEEE Access, 2019 \par
