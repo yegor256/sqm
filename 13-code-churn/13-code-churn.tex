@@ -27,6 +27,19 @@
 
 \plush{\sqmTitlePage{13}}
 
+\pitch{\pptBanner{History of Version Control Systems}
+\begin{itemize}\setlength\itemsep{0pt}
+  \item The Librarian by ADR: 1969
+  \item Panvalet by Computer Associates: 1969
+  \item SCCS by Bell Labs: 1973
+  \item RCS by GNU: 1982
+  \item CVS: 1986
+  \item ClearCase by IBM: 1992
+  \item Apache Subversion: 2000
+  \item Mercurial: 2005
+  \item Git: 2005
+\end{itemize}}
+
 \pitch{\pptQuote{sebastian-elbaum.jpg}{We can measure the increase or decrease in system complexity as measured by a selected metric, \emph{code delta}, or we can measure the total amount of \emph{change} the system has undergone between builds, \emph{code churn}.}{\textit{Code Churn: A Measure for Estimating the Impact of Code Change}, \emph{Sebastian G. Elbaum} and John C. Munson, Proceedings of the International Conference on Software Maintenance (ICSM), 1998}}
 
 \pptBanner{Motivating Example}
@@ -89,6 +102,17 @@ delta for the system will be close to zero.''
 
 \pitch{\pptQuote{rudolf-ferenc.jpg}{We can conclude that committing files with higher cumulative code churn values (i.e. those of longer change history) is more likely to result in negative maintainability change.}{\textit{Cumulative Code Churn: Impact on Maintainability}, Csaba Farag{\'o}, P{\'e}ter Heged{\H{u}}s, \emph{Rudolf Ferenc}, Proceedings of the International Working Conference on Source Code Analysis and Manipulation (SCAM), 2015}}
 
+\pitch{\pptQuote{tobias-olsson.jpg}{Non-normal code churn can be a tangible and measurable \emph{effect} of architectural violations in source code. However, more research is needed to better understand this connection, e.g., if violations are the \emph{cause}, the size of the effect, the cost of refactoring, and whether it is generalizable to other system.}{\textit{The Relationship of Code Churn and Architectural Violations in
+the Open Source Software JabRef}, Tobias Olsson, Morgan Ericsson, Anna Wingkvist, Proceedings of the 11th European Conference on Software Architecture: Companion Proceedings, 2017}}
+
+\pitch{\pptBanner{CodeClimate.com Interpretation of Code Churn}
+\begin{multicols}{2}
+\includegraphics[width=.98\columnwidth]{codeclimate.png}
+\par\columnbreak\par
+``When we have finished analyzing your default branch, you will see churn metrics for the files in your repository. This churn metric is approximately the \emph{number of times a file has changed} in the last 90 days, calculated by counting the number of distinct versions of that file across commits from that time.''\par
+{\scriptsize Source: \href{https://docs.codeclimate.com/docs/churn}{their blog}\par}
+\end{multicols}}
+
 \pptBanner{HitsOfCode.com}
 \begin{multicols}{2}
 \includegraphics[width=.9\columnwidth]{hitsofcode.png}
@@ -102,8 +126,9 @@ and inspired by the blog post of mine:
 \plush{
   \pptBanner{Read this:}\par
   \small
-  \textit{},
-     \par
+  \textit{Code Churn: A Measure for Estimating the Impact of Code Change},
+    Sebastian G. Elbaum and John C. Munson,
+    Proceedings of the International Conference on Software Maintenance (ICSM), 1998\par
   \href{https://www.yegor256.com/2014/11/14/hits-of-code.html}{Hits-of-Code Instead of SLoC} (2014) \par
 }
 
