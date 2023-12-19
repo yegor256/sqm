@@ -27,7 +27,7 @@
 
 \plush{\sqmTitlePage{14}}
 
-\pitch{\pptQuote{../05-maintainability-index/ward-cunningham.jpg}{Shipping first time code is like going into \emph{debt}. A little debt speeds development so long as it is paid back promptly with a rewrite. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt.}{Ward Cunningham, \textit{Experience Report --- The WyCash portfolio management system}, OOPSLA, 1992}}
+\pitch{\pptQuote{../05-maintainability-index/ward-cunningham.jpg}{Shipping first time code is like going into \emph{debt}. A little debt speeds development so long as it is paid back promptly with a rewrite. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as \emph{interest} on that debt.}{Ward Cunningham, \textit{Experience Report --- The WyCash portfolio management system}, OOPSLA, 1992}}
 
 \pptBanner{Puzzle Driven Development: Motivating Example}
 \begin{pptWide}{3}
@@ -88,8 +88,17 @@ assert fibonacci(10) == 55;
 \end{pptWide}
 \plush{}
 
+\plush{
+\pptBanner{Break-and-Fix Cycle}
+\includegraphics[width=.7\textwidth]{time-and-mess-diagram.png}\par
+{\scriptsize Source: \url{https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html}\par}}
+
+\plush{
+\pptBanner{\texttt{www.0pdd.com}}
+\includegraphics[width=.8\textwidth]{0pdd-front.png}}
+
 \plush{\pptBanner{PDD Pipeline}
-\begin{tikzpicture}[node distance=7em, every edge/.style={line width=.1em, draw, ->}, every node/.style={fill=white}]
+\begin{tikzpicture}[node distance=6em, every edge/.style={line width=.1em, draw, ->}, every node/.style={fill=white}]
 \tikzstyle{actor} = [draw, line width=.1em,font={\Large},outer sep=.2em]
 \node[actor] (coder1) {Coder \#1};
 \node[actor,right=of coder1] (git) {Git};
@@ -104,12 +113,19 @@ assert fibonacci(10) == 55;
 \end{tikzpicture}}
 
 \plush{
+\pptBanner{250+ Puzzles in \texttt{objectionary/eo}}
+\includegraphics[width=.6\textwidth]{0pdd-screenshot.png}\par
+{\small Source: \url{https://www.0pdd.com/p?name=objectionary/eo}\par}}
+
+\plush{
   \pptBanner{Read this:}\par
   \small
   \textit{Automatically Prioritizing and Assigning Tasks from Code Repositories in Puzzle Driven Development},
     Yegor Bugayenko, Ayomide Bakare, Arina Cheverda, Mirko Farina, Artem Kruglov, Yaroslav Plaksin, Giancarlo Succi, and Witold Pedrycz,
     Proceedings of the International Mining Software Repositories (MSR), 2022\par
   \href{https://www.yegor256.com/2010/03/04/pdd.html}{Puzzle Driven Development} (2010) \par
+  \href{https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html}{PDD by Roles} (2014) \par
+  \href{https://www.yegor256.com/2017/04/05/pdd-in-action.html}{PDD in Action} (2017) \par
 }
 
 \end{document}
