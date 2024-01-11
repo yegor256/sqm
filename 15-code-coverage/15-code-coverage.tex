@@ -84,10 +84,17 @@ assert fibonacci(10) == 55;
 \end{multicols}
 \plush{}
 
-% Statement
-% Branch/Decision
-% Modified Condition/Decision Coverage (MC/DC)
-% LCSAJ (Linear Code Sequence and Jump)
+\pitch{\pptBanner{Some Kinds of Code Coverage}
+\begin{itemize}\setlength\itemsep{0em}
+\item Line Coverage
+\item Statement Coverage
+\item Branch Coverage
+\item Decision Coverage
+\item Function Coverage
+\item Linear Code Sequence and Jump (LCSAJ) Coverage
+\item Modified Condition / Decision Coverage (MC/DC)
+\item Multi Condition Coverage
+\end{itemize}}
 
 \pitch{\pptQuote{william-elmendorf.jpg}{A disciplined test control process is composed of five steps: 1) establish the intended extent of testing; 2) create a list of functional \emph{variations} eligible for testing; 3) rank and subset the \emph{eligible} variations so that test resources can be directed at those with the higher payoff; 4) calculate the \emph{test coverage} of the test case library; and 5) verify attainment of the \emph{planned} test coverage.}{William Robert Elmendorf, \textit{Controlling the Functional Testing of an Operating System}, IEEE Transactions on Systems Science and Cybernetics, 5(4), 1969}}
 
@@ -104,6 +111,28 @@ assert fibonacci(10) == 55;
 \pitch{\pptBanner{Code Coverage Threshold Levels in Google}\includegraphics[width=.7\textwidth]{levels.png}}
 
 \pitch{\pptQuote{adam-bender.jpg}{Code coverage \emph{does not guarantee} that the covered lines or branches have been tested correctly, it just guarantees that they have been executed by a test. But a low code coverage number \emph{does guarantee} that large areas of the product are going completely untested by automation on every single deployment.}{\textit{Code Coverage Best Practices}, Carlos Arguelles, Marko Ivankovi{\'c}, \emph{Adam Bender}, \href{https://testing.googleblog.com/2020/08/code-coverage-best-practices.html}{Google Blog}, 2020}}
+
+\pitch{\pptBanner{Industry Standards that Require Code Coverage}
+\begin{itemize}
+\item ISO-26262: ``Road Vehicles'' functional safety (Switzerland)
+\item IEC 61508: ``Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems'' (UK)
+\item DO-178C: ``Software Considerations in Airborne Systems and Equipment Certification'' (USA)
+\item IEC 62304: ``Medical Device Software'' (UK)
+\end{itemize}}
+
+\pitch{
+\begin{pptWide}{2}
+ISO-26262:\\
+\includegraphics[width=.9\linewidth]{iso-26262.png}\par
+IEC 61508:\\
+\includegraphics[width=.9\linewidth]{iec-61508.png}\par
+\par\columnbreak\par
+DO-178C:\\
+\includegraphics[width=.9\linewidth]{do-178c.png}\par
+IEC 62304:\\
+\includegraphics[width=.9\linewidth]{iso-26262.png}\par
+\end{pptWide}
+}
 
 \pitch{\pptBanner{Codecov.io}\includegraphics[width=.7\textwidth]{codecov.png}}
 
