@@ -89,40 +89,37 @@ assert fibonacci(10) == 55;
 \item Line Coverage
 \item Statement Coverage
 \item Branch Coverage
-\item Decision Coverage
+\item Condition Coverage
 \item Function Coverage
 \item Linear Code Sequence and Jump (LCSAJ) Coverage
 \item Modified Condition / Decision Coverage (MC/DC)
-\item Multi Condition Coverage
 \end{itemize}}
 
-\pptBanner{Example, Part I}
+\pptBanner{Four Kinds of Coverage}
 \begin{multicols}{2}
 Live Code:\par
 {\small\begin{ffcode}
-int fibonacci(int n) {
-  if (n <= 0) {
-    return 0;
-  }
-  if (n <= 2) {
+int foo(int x) {
+  if (x < 0) { return x; }
+  if (x > 10 || x == 0) {
+    return 42 / x;
+  } else {
     return 1;
   }
-  return fibonacci(n-1)
-    + fibonacci(n-2);
 }
 \end{ffcode}
 }
 \par\columnbreak\par
 Test Code:\par
 {\small\begin{ffcode}
-assert fibonacci(1) == 1;
-assert fibonacci(2) == 1;
-
-assert fibonacci(9) == 34;
-assert fibonacci(10) == 55;
+assert foo(1) == 1;
+assert foo(50) == 42;
 \end{ffcode}
 }
-\( C = 5/10 = 50\% \)
+\( C_{\texttt{line}} = 6/6 = 100\% \)\par
+\( C_{\texttt{statement}} = 5/6 = 83\% \)\par
+\( C_{\texttt{branch}} = 3/4 = 75\% \)\par
+\( C_{\texttt{condition}} = 3/5 = 60\% \)\par
 \end{multicols}
 \plush{}
 
@@ -134,7 +131,7 @@ assert fibonacci(10) == 55;
 
 \pitch{\pptQuote{../06-coupling/martin-fowler.jpg}{I would be suspicious of anything like 100\% --- it would smell of someone writing tests to make the coverage \emph{numbers happy}, but not thinking about what they are doing.}{Martin Fowler, \href{https://martinfowler.com/bliki/TestCoverage.html}{\textit{Test Coverage}}, 1997}}
 
-\pitch{\pptQuote{cem-kaner.jpg}{As you get near 100 percent line coverage, that doesn't tell you the product is near release. It just tells you that the product is no longer obviously far from release according to this measure.}{\emph{Cem Kaner}, James Bach, Bret Pettichord, \textit{Lessons Learned in Software Testing: A Context-Driven Approach}, 2002}}
+\pitch{\pptQuote{cem-kaner.jpg}{As you get near 100 percent line coverage, that doesn't tell you the product is near release. It just tells you that the product is no longer \emph{obviously far} from release according to \emph{this measure}.}{\emph{Cem Kaner}, James Bach, Bret Pettichord, \textit{Lessons Learned in Software Testing: A Context-Driven Approach}, 2002}}
 
 \pitch{\pptQuote{pavneet-singh-kochhar.jpg}{Our results show that coverage has an \emph{insignificant correlation} with the number of bugs that are found after the release of the software at the project level, and \emph{no such correlation} at the file level.}{\textit{Code Coverage and Postrelease Defects: A Large-Scale Study on Open Source Projects}, Pavneet Singh Kochhar, David Lo, Julia Lawall, Nachiappan Nagappan, IEEE Transactions on Reliability, 66(4), 2017}}
 
