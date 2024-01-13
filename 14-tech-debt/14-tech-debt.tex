@@ -32,26 +32,26 @@
 \pptBanner{Puzzle Driven Development: Motivating Example}
 \begin{pptWide}{3}
 Commit \#1:\par
-{\scriptsize\begin{ffcode*}{highlightlines={5-9,14}}
+{\scriptsize\begin{ffcode}
 int fibonacci(int n) {
   if (n <= 2) {
     return 1;
   }
-  // @todo I don't know
-  // what to do when "n"
-  // is larger than "2".
-  // Implement it and uncomment
-  // the assertion below.
+  (*@\textcolor{orange}{// @todo I don't know}@*)
+  (*@\textcolor{orange}{// what to do when "n"}@*)
+  (*@\textcolor{orange}{// is larger than "2".}@*)
+  (*@\textcolor{orange}{// Implement it and uncomment}@*)
+  (*@\textcolor{orange}{// the assertion below.}@*)
   return 0;
 }
 assert fibonacci(0) == 1;
 assert fibonacci(2) == 1;
-// assert fibonacci(9) == 34;
-\end{ffcode*}
+(*@\textcolor{orange}{// assert fibonacci(9) == 34;}@*)
+\end{ffcode}
 }
 \par\columnbreak\par
 Commit \#2:\par
-{\scriptsize\begin{ffcode*}{highlightlines={8-10,15}}
+{\scriptsize\begin{ffcode}
 int fibonacci(int n) {
   if (n <= 2) {
     return 1;
@@ -59,19 +59,19 @@ int fibonacci(int n) {
   if (n == 9) {
     return 34;
   }
-  // @todo Implement others
-  // too, but I don't know
-  // how to do it right.
+  (*@\textcolor{orange}{// @todo Implement others}@*)
+  (*@\textcolor{orange}{// too, but I don't know}@*)
+  (*@\textcolor{orange}{// how to do it right.}@*)
   return 0;
 }
 assert fibonacci(2) == 1;
 assert fibonacci(9) == 34;
-// assert fibonacci(10) == 55;
+(*@\textcolor{orange}{// assert fibonacci(10) == 55;}@*)
 \end{ffcode*}
 }
 \par\columnbreak\par
 Commit \#3:\par
-{\scriptsize\begin{ffcode*}{}
+{\scriptsize\begin{ffcode}
 int fibonacci(int n) {
   if (n <= 2) {
     return 1;
@@ -83,7 +83,7 @@ assert fibonacci(0) == 1;
 assert fibonacci(2) == 1;
 assert fibonacci(9) == 34;
 assert fibonacci(10) == 55;
-\end{ffcode*}
+\end{ffcode}
 }
 \end{pptWide}
 \plush{}

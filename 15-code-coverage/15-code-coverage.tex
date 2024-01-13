@@ -30,55 +30,55 @@
 \pptBanner{Example, Part I}
 \begin{multicols}{2}
 Live Code:\par
-{\small\begin{ffcode*}{highlightlines={1,5-6}}
+{\small\begin{ffcode}
 int fibonacci(int n) {
-  if (n <= 0) {
-    return 0;
-  }
+  (*@\textcolor{green}{if (n <= 0) \{} @*)
+    (*@\textcolor{green}{return 0;} @*)
+  (*@\textcolor{green}{\}} @*)
   if (n <= 2) {
     return 1;
   }
   return fibonacci(n-1)
     + fibonacci(n-2);
 }
-\end{ffcode*}
+\end{ffcode}
 }
 \par\columnbreak\par
 Test Code:\par
-{\small\begin{ffcode*}{}
+{\small\begin{ffcode}
 assert fibonacci(1) == 1;
 assert fibonacci(2) == 1;
-\end{ffcode*}
+\end{ffcode}
 }
 \( C = 3/10 = 30\% \)
 \end{multicols}
 \plush{}
 
-\pptBanner{Example, Part I}
+\pptBanner{Example, Part II}
 \begin{multicols}{2}
 Live Code:\par
-{\small\begin{ffcode*}{highlightlines={1,5-6,8-9}}
+{\small\begin{ffcode}
 int fibonacci(int n) {
-  if (n <= 0) {
-    return 0;
-  }
+  (*@\textcolor{green}{if (n <= 0) \{} @*)
+    (*@\textcolor{green}{return 0;} @*)
+  (*@\textcolor{green}{\}} @*)
   if (n <= 2) {
     return 1;
   }
-  return fibonacci(n-1)
-    + fibonacci(n-2);
+  (*@\textcolor{green}{return fibonacci(n-1)}@*)
+    (*@\textcolor{green}{+ fibonacci(n-2);}@*)
 }
-\end{ffcode*}
+\end{ffcode}
 }
 \par\columnbreak\par
 Test Code:\par
-{\small\begin{ffcode*}{}
+{\small\begin{ffcode}
 assert fibonacci(1) == 1;
 assert fibonacci(2) == 1;
 
 assert fibonacci(9) == 34;
 assert fibonacci(10) == 55;
-\end{ffcode*}
+\end{ffcode}
 }
 \( C = 5/10 = 50\% \)
 \end{multicols}
@@ -95,6 +95,36 @@ assert fibonacci(10) == 55;
 \item Modified Condition / Decision Coverage (MC/DC)
 \item Multi Condition Coverage
 \end{itemize}}
+
+\pptBanner{Example, Part I}
+\begin{multicols}{2}
+Live Code:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 0) {
+    return 0;
+  }
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n-1)
+    + fibonacci(n-2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Test Code:\par
+{\small\begin{ffcode}
+assert fibonacci(1) == 1;
+assert fibonacci(2) == 1;
+
+assert fibonacci(9) == 34;
+assert fibonacci(10) == 55;
+\end{ffcode}
+}
+\( C = 5/10 = 50\% \)
+\end{multicols}
+\plush{}
 
 \pitch{\pptQuote{william-elmendorf.jpg}{A disciplined test control process is composed of five steps: 1) establish the intended extent of testing; 2) create a list of functional \emph{variations} eligible for testing; 3) rank and subset the \emph{eligible} variations so that test resources can be directed at those with the higher payoff; 4) calculate the \emph{test coverage} of the test case library; and 5) verify attainment of the \emph{planned} test coverage.}{William Robert Elmendorf, \textit{Controlling the Functional Testing of an Operating System}, IEEE Transactions on Systems Science and Cybernetics, 5(4), 1969}}
 
@@ -139,6 +169,96 @@ IEC 62304:\\
 \pitch{\pptBanner{Line Coverage}\includegraphics[width=.7\textwidth]{lines.png}}
 
 \pitch{\pptBanner{Tarpaulin for Rust}\includegraphics[width=.7\textwidth]{tarpaulin.png}}
+
+\pptBanner{Code Coverage Threshold, JaCoCo Example}
+\begin{multicols}{2}
+{\tiny\begin{ffcode}
+<project>
+  [...]
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.11</version>
+        <executions>
+          <execution>
+            <id>jacoco-initialize</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>jacoco-check</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <rules>
+                (*@\textcolor{orange}{[...] \(\leftarrow\) Next slide}@*)
+              </rules>
+            </configuration>
+          </execution>
+          <execution>
+            <id>report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+\end{ffcode}
+}
+\end{multicols}
+\plush{}
+
+\pptBanner{Code Coverage Threshold, JaCoCo Rules}
+\begin{multicols}{2}
+{\tiny\begin{ffcode}
+<rules>
+  <rule>
+    <element>BUNDLE</element>
+    <limits>
+      <limit>
+        <counter>(*@\textcolor{orange}{INSTRUCTION}@*)</counter>
+        <value>COVEREDRATIO</value>
+        <minimum>0.67</minimum>
+      </limit>
+      <limit>
+        <counter>(*@\textcolor{orange}{LINE}@*)</counter>
+        <value>COVEREDRATIO</value>
+        <minimum>0.84</minimum>
+      </limit>
+      <limit>
+        <counter>(*@\textcolor{orange}{BRANCH}@*)</counter>
+        <value>COVEREDRATIO</value>
+        <minimum>0.47</minimum>
+      </limit>
+      <limit>
+        <counter>(*@\textcolor{orange}{COMPLEXITY}@*)</counter>
+        <value>COVEREDRATIO</value>
+        <minimum>0.57</minimum>
+      </limit>
+      <limit>
+        <counter>(*@\textcolor{orange}{METHOD}@*)</counter>
+        <value>COVEREDRATIO</value>
+        <minimum>0.76</minimum>
+      </limit>
+      <limit>
+        <counter>(*@\textcolor{orange}{CLASS}@*)</counter>
+        <value>MISSEDCOUNT</value>
+        <maximum>2</maximum>
+      </limit>
+    </limits>
+  </rule>
+</rules>
+\end{ffcode}
+}
+\end{multicols}
+\plush{}
 
 \pitch{Code Coverage can be calculated by a few tools:
 \begin{itemize}
