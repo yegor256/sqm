@@ -31,16 +31,16 @@
 \begin{multicols}{2}
 Live Code:\par
 {\small\begin{ffcode}
-int fibonacci(int n) {
+(*@\textcolor{green}{int fibonacci(int n) \{} @*)
   (*@\textcolor{green}{if (n <= 0) \{} @*)
-    (*@\textcolor{green}{return 0;} @*)
+    return 0;
   (*@\textcolor{green}{\}} @*)
-  if (n <= 2) {
-    return 1;
-  }
+  (*@\textcolor{green}{if (n <= 2) \{} @*)
+    (*@\textcolor{green}{return 1;} @*)
+  (*@\textcolor{green}{\}} @*)
   return fibonacci(n-1)
     + fibonacci(n-2);
-}
+(*@\textcolor{green}{\}}@*)
 \end{ffcode}
 }
 \par\columnbreak\par
@@ -50,7 +50,7 @@ assert fibonacci(1) == 1;
 assert fibonacci(2) == 1;
 \end{ffcode}
 }
-\( C = 3/10 = 30\% \)
+\( C = 7/10 = 70\% \)
 \end{multicols}
 \plush{}
 
@@ -58,16 +58,16 @@ assert fibonacci(2) == 1;
 \begin{multicols}{2}
 Live Code:\par
 {\small\begin{ffcode}
-int fibonacci(int n) {
+(*@\textcolor{green}{int fibonacci(int n) \{} @*)
   (*@\textcolor{green}{if (n <= 0) \{} @*)
-    (*@\textcolor{green}{return 0;} @*)
+    return 0;
   (*@\textcolor{green}{\}} @*)
-  if (n <= 2) {
-    return 1;
-  }
+  (*@\textcolor{green}{if (n <= 2) \{} @*)
+    (*@\textcolor{green}{return 1;} @*)
+  (*@\textcolor{green}{\}} @*)
   (*@\textcolor{green}{return fibonacci(n-1)}@*)
     (*@\textcolor{green}{+ fibonacci(n-2);}@*)
-}
+(*@\textcolor{green}{\}}@*)
 \end{ffcode}
 }
 \par\columnbreak\par
@@ -80,7 +80,7 @@ assert fibonacci(9) == 34;
 assert fibonacci(10) == 55;
 \end{ffcode}
 }
-\( C = 5/10 = 50\% \)
+\( C = 9/10 = 90\% \)
 \end{multicols}
 \plush{}
 
@@ -125,7 +125,7 @@ assert foo(50) == 42;
 
 \pitch{\pptQuote{william-elmendorf.jpg}{A disciplined test control process is composed of five steps: 1) establish the intended extent of testing; 2) create a list of functional \emph{variations} eligible for testing; 3) rank and subset the \emph{eligible} variations so that test resources can be directed at those with the higher payoff; 4) calculate the \emph{test coverage} of the test case library; and 5) verify attainment of the \emph{planned} test coverage.}{William Robert Elmendorf, \textit{Controlling the Functional Testing of an Operating System}, IEEE Transactions on Systems Science and Cybernetics, 5(4), 1969}}
 
-\pitch{\pptQuote{david-gelperin.jpg}{However, only half regularly document their test designs, only half regularly save their tests for reuse after software changes, and an extremely small five percent provide regular measurements of code coverage.}{\textit{The Growth of Software Testing}, \emph{David Gelperin} and Bill Hetzel, Communications of the ACM, 31(6), 1988}}
+\pitch{\pptQuote{david-gelperin.jpg}{However, only half regularly document their test designs, only half regularly save their tests for reuse after software changes, and an extremely small five percent provide regular \emph{measurements} of code coverage.}{\textit{The Growth of Software Testing}, \emph{David Gelperin} and Bill Hetzel, Communications of the ACM, 31(6), 1988}}
 
 \plush{
 \begin{multicols}{2}
@@ -273,6 +273,7 @@ IEC 62304:\\
 \end{ffcode}
 }
 \end{multicols}
+{\scriptsize Source: \url{https://github.com/volodya-lombrozo/jtcop}\par}
 \plush{}
 
 \pitch{Code Coverage can be calculated by a few tools:
