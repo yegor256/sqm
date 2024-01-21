@@ -1,0 +1,157 @@
+% (The MIT License)
+%
+% Copyright (c) 2023-2024 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Mutation Coverage}
+\begin{document}
+
+\plush{\sqmTitlePage{16}}
+
+\pptBanner{Example, Part I}
+\begin{multicols}{2}
+Live Code:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Test Code:\par
+{\small\begin{ffcode}
+assert fibonacci(2) == 1;
+assert fibonacci(5) > 5;
+\end{ffcode}
+}
+\( \texttt{Cov} = 7/7 = 100\% \)
+\end{multicols}
+\plush{}
+
+\pptBanner{Example, Part II}
+\begin{pptWide}{3}
+Live Code:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Mutant \#1:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n (*@\textcolor{red}{\textbf{+}}@*) 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par
+Test Code:\par
+{\small\begin{ffcode}
+assert fibonacci(2) == 1;
+assert fibonacci(5) > 5;
+\end{ffcode}
+}
+\par\columnbreak\par
+Mutant \#2:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n (*@\textcolor{red}{\textbf{==}}@*) 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
+\pitch{\pptBanner{Mutation Operators}
+\begin{itemize}
+\item Statement deletion
+\item Statement duplication or insertion
+\item Replacement of boolean subexpressions with \texttt{TRUE} and \texttt{FALSE}
+\item Replacement of some arithmetic operations, e.g. \texttt{+} to \texttt{*}, \texttt{-} to \texttt{/}
+\item Replacement of some boolean relations, e.g. \texttt{>} to \texttt{>=}, \texttt{==} to \texttt{<=}
+\item Replacement of variables with others from the same scope
+\item Remove method body
+\end{itemize}}
+
+\pitch{\pptQuote{richard-hamlet.jpg}{???}{Richard G. Hamlet, \textit{Testing Programs with the Aid of a Compiler}, IEEE Transactions on Software Engineering, 4, 1977}}
+
+\pitch{\pptQuote{richard-demillo.jpg}{Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has adequately tested a Fortran program by direct measurement of the number and kinds of errors it is capable of uncovering.}{\emph{Richard A. DeMillo}, Richard J. Lipton, Frederick G. Sayward, \textit{Hints on test Data Selection: Help for the Practicing Programmer}, IEEE Computer 11(4), 1978}}
+
+\pitch{\pptQuote{william-howden.jpg}{In weak mutation testing method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}{William E. Howden, \textit{Weak Mutation Testing and Completeness of Test Sets}, IEEE Transactions on Software Engineering 4, 1982}}
+
+\pitch{\pptQuote{jeff-offutt.jpg}{Our results indicate that \emph{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}{Jeff Offutt and Stephen D. Lee, \textit{An Empirical Evaluation of Weak Mutation}, IEEE Transactions on Software Engineering 20(5), 1994}}
+
+\pitch{\pptQuote{lionel-briand.jpg}{Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \emph{good indication} of the fault detection \emph{ability} of a test suite.}{James H. Andrews, \emph{Lionel C. Briand} and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005}}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{faults.png}
+\par\columnbreak\par
+``Average differences range from 6\% to 34\%, with an average of 22\%. ''\par
+{\scriptsize Source: James H. Andrews, Lionel C. Briand and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005\par}
+\end{multicols}}
+
+\pitch{\pptQuote{yu-seung-ma.jpg}{Comparing with previous mutation systems for procedural programs, \emph{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}{\emph{Yu-Seung Ma}, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006}}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=.9\linewidth]{operators.png}
+\par\columnbreak\par
+``\emph{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \emph{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
+{\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
+\end{multicols}}
+
+\pitch{\pptQuote{paul-ammann.jpg}{... RIP Model ...}{\emph{Paul Ammann} and Jeff Offutt, \textit{Introduction to Software Testing}, 2016}}
+
+\pitch{Mutation Coverage can be calculated by a few tools:
+\begin{itemize}
+\item \href{https://pitest.org/}{PIT} for Java
+\item \href{https://github.com/stryker-mutator/stryker-js}{StrykerJS} for JavaScript
+\item \href{https://github.com/nlohmann/mutate_cpp}{Mutate++} for C++
+\item \href{https://github.com/EvanKepner/mutatest}{mutatest} for Python
+\item \href{https://github.com/mbj/mutant}{mutant} for Ruby
+\end{itemize}}
+
+\plush{
+  \pptBanner{Read this:}\par
+  \small
+  % \textit{Code Coverage Best Practices},
+  %   Carlos Arguelles, Marko Ivankovi{\'c}, Adam Bender,
+  %   \href{https://testing.googleblog.com/2020/08/code-coverage-best-practices.html}{Google Blog}, 2020 \par
+}
+
+\end{document}
