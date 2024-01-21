@@ -27,7 +27,7 @@
 
 \plush{\sqmTitlePage{16}}
 
-\pptBanner{Example, Part I}
+\pptBanner{Example, Part I: Code Coverage}
 \begin{multicols}{2}
 Live Code:\par
 {\small\begin{ffcode}
@@ -47,11 +47,14 @@ assert fibonacci(2) == 1;
 assert fibonacci(5) > 5;
 \end{ffcode}
 }
-\( \texttt{Cov} = 7/7 = 100\% \)
+\( C_{\texttt{Line}} = 7/7 = 100\% \)\par
+\( C_{\texttt{Statement}} = 6/6 = 100\% \)\par
+\( C_{\texttt{Branch}} = 2/2 = 100\% \)\par
+\( C_{\texttt{Condition}} = 2/2 = 100\% \)\par
 \end{multicols}
 \plush{}
 
-\pptBanner{Example, Part II}
+\pptBanner{Example, Part II: Mutation Coverage}
 \begin{pptWide}{3}
 Live Code:\par
 {\small\begin{ffcode}
@@ -98,7 +101,7 @@ int fibonacci(int n) {
 \end{pptWide}
 \plush{}
 
-\pitch{\pptBanner{Mutation Operators}
+\pitch{\pptBanner{Some Mutation Operators}
 \begin{itemize}
 \item Statement deletion
 \item Statement duplication or insertion
@@ -111,18 +114,93 @@ int fibonacci(int n) {
 
 \pitch{\pptQuote{richard-hamlet.jpg}{???}{Richard G. Hamlet, \textit{Testing Programs with the Aid of a Compiler}, IEEE Transactions on Software Engineering, 4, 1977}}
 
-\pitch{\pptQuote{richard-demillo.jpg}{Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has adequately tested a Fortran program by direct measurement of the number and kinds of errors it is capable of uncovering.}{\emph{Richard A. DeMillo}, Richard J. Lipton, Frederick G. Sayward, \textit{Hints on test Data Selection: Help for the Practicing Programmer}, IEEE Computer 11(4), 1978}}
+\pitch{\pptQuote{richard-lipton.jpg}{Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has \emph{adequately} tested a Fortran program by direct measurement of the number and kinds of errors it is \emph{capable} of uncovering.}{Richard A. DeMillo, \emph{Richard J. Lipton}, Frederick G. Sayward, \textit{Hints on test Data Selection: Help for the Practicing Programmer}, IEEE Computer 11(4), 1978}}
+
+\pitch{\pptQuote{timothy-budd.jpg}{A test set is \emph{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \emph{small} syntactic modifications to the subject program.}{Timothy A. Budd, \textit{Mutation analysis: Ideas, examples, problems and prospects}, North-Holland Publishing Company, Amsterdam, Netherlands, 1981}}
 
 \pitch{\pptQuote{william-howden.jpg}{In weak mutation testing method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}{William E. Howden, \textit{Weak Mutation Testing and Completeness of Test Sets}, IEEE Transactions on Software Engineering 4, 1982}}
 
+\pitch{\pptQuote{richard-demillo.jpg}{A mutant operator mutates one syntactic entity of a program. Further, only one mutant operator
+is applied at a time to the program under test.}{Hiralal Agrawal, \emph{Richard A. DeMillo}, R. Hathaway, William Hsu, Wynne Hsu, Edward W. Krauser, Rhonda J. Martin, Aditya P.Mathur, Eugene Spafford, \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989}}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=.8\linewidth]{c-operators.png}\par
+\par\columnbreak\par
+``Each mutant operator belongs to one of the following categories:
+1. statement mutations,
+2. operator mutations,
+3. variable mutations, and
+4. constant mutations.
+''\par
+{\scriptsize Source: Hiralal Agrawal et al., \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989\par}
+\end{multicols}}
+
 \pitch{\pptQuote{jeff-offutt.jpg}{Our results indicate that \emph{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}{Jeff Offutt and Stephen D. Lee, \textit{An Empirical Evaluation of Weak Mutation}, IEEE Transactions on Software Engineering 20(5), 1994}}
+
+\pitch{\pptQuote{phyllis-frankl.jpg}{Those mutants that compute precisely the same function are called \emph{equivalent} mutants and the others are called \emph{inequivalent} mutants.}{\emph{Phyllis G. Frankl}, Stewart N. Weiss, and Cang Hu, \textit{All-Uses vs Mutation Testing: An Experimental Comparison of Effectiveness?}, Journal of Systems and Software 38(3), 1997}}
+
+\pptBanner{Equivalent Mutants, Example}
+\begin{pptWide}{3}
+Live Code:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par
+Tests:\par
+{\small\begin{ffcode}
+fibonacci(2) == 1;
+fibonacci(14) == 377;
+\end{ffcode}
+}
+\par\columnbreak\par
+Inequivalent Mutant:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n (*@\textcolor{red}{\textbf{+}}@*) 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Equivalent Mutant:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - (*@\textcolor{red}{\textbf{2}}@*))
+    + fibonacci(n - (*@\textcolor{red}{\textbf{1}}@*));
+}
+\end{ffcode}
+}
+\par
+You \textbf{can't kill} this one!
+\end{pptWide}
+\plush{}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{duas.png}\par
+{\scriptsize Source: \emph{Phyllis G. Frankl}, Stewart N. Weiss, and Cang Hu, \textit{All-Uses vs Mutation Testing: An Experimental Comparison of Effectiveness?}, Journal of Systems and Software 38(3), 1997\par}
+\par\columnbreak\par
+``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\emph{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
+\end{multicols}}
 
 \pitch{\pptQuote{lionel-briand.jpg}{Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \emph{good indication} of the fault detection \emph{ability} of a test suite.}{James H. Andrews, \emph{Lionel C. Briand} and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005}}
 
 \pitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{faults.png}
 \par\columnbreak\par
-``Average differences range from 6\% to 34\%, with an average of 22\%. ''\par
+``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \emph{seeded faults}.''\par
 {\scriptsize Source: James H. Andrews, Lionel C. Briand and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005\par}
 \end{multicols}}
 
@@ -134,6 +212,8 @@ int fibonacci(int n) {
 ``\emph{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \emph{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
 {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
 \end{multicols}}
+
+\pitch{\pptQuote{yue-jia.jpg}{One \emph{problem} that prevents mutation testing from becoming a practical testing technique is the \emph{high computational cost} of executing the enormous number of mutants against a test set.}{Yue Jia and Mark Harman, \textit{An Analysis and Survey of the Development of Mutation Testing}, IEEE Transactions on Software Engineering 37(5), 2010}}
 
 \pitch{\pptQuote{paul-ammann.jpg}{... RIP Model ...}{\emph{Paul Ammann} and Jeff Offutt, \textit{Introduction to Software Testing}, 2016}}
 
