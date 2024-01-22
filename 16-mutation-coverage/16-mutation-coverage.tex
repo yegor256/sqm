@@ -25,7 +25,7 @@
 \newcommand*\thetitle{Mutation Coverage}
 \begin{document}
 
-\plush{\sqmTitlePage{16}}
+\plush{\sqmTitlePage{16}{}}
 
 \pptBanner{Example, Part I: Code Coverage}
 \begin{multicols}{2}
@@ -44,7 +44,7 @@ int fibonacci(int n) {
 Test Code:\par
 {\small\begin{ffcode}
 assert fibonacci(2) == 1;
-assert fibonacci(5) > 5;
+assert fibonacci(3) > 0;
 \end{ffcode}
 }
 \( C_{\texttt{Line}} = 7/7 = 100\% \)\par
@@ -67,6 +67,13 @@ int fibonacci(int n) {
 }
 \end{ffcode}
 }
+\par
+Test Code:\par
+{\small\begin{ffcode}
+assert fibonacci(2) == 1;
+assert fibonacci(3) > 0;
+\end{ffcode}
+}
 \par\columnbreak\par
 Mutant \#1:\par
 {\small\begin{ffcode}
@@ -74,30 +81,25 @@ int fibonacci(int n) {
   if (n <= 2) {
     return 1;
   }
-  return fibonacci(n (*@\textcolor{red}{\textbf{+}}@*) 1)
+  return fibonacci(n - (*@\textcolor{red}{\textbf{2}}@*))
     + fibonacci(n - 2);
 }
-\end{ffcode}
-}
-\par
-Test Code:\par
-{\small\begin{ffcode}
-assert fibonacci(2) == 1;
-assert fibonacci(5) > 5;
 \end{ffcode}
 }
 \par\columnbreak\par
 Mutant \#2:\par
 {\small\begin{ffcode}
 int fibonacci(int n) {
-  if (n (*@\textcolor{red}{\textbf{==}}@*) 2) {
+  if (n <= 2) {
     return 1;
   }
   return fibonacci(n - 1)
-    + fibonacci(n - 2);
+    (*@\textcolor{red}{\textbf{*}}@*) fibonacci(n - 2);
 }
 \end{ffcode}
 }
+\par
+\( C_{\texttt{Mutants}} = 0/2 = 0\% \)\par
 \end{pptWide}
 \plush{}
 
@@ -112,30 +114,67 @@ int fibonacci(int n) {
 \item Remove method body
 \end{itemize}}
 
-\pitch{\pptQuote{richard-hamlet.jpg}{???}{Richard G. Hamlet, \textit{Testing Programs with the Aid of a Compiler}, IEEE Transactions on Software Engineering, 4, 1977}}
+\pitch{\pptQuote{richard-hamlet.jpg}{???}{Richard G. Hamlet, \textit{Testing Programs with the Aid of a Compiler}, IEEE Transactions on Software Engineering, 4, 1977\par\vspace*{1em}{\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \emph{the first mutation-like testing system}.'' --- Jefferson A. Offutt and Stephen D. Lee, \textit{How strong is weak mutation?}, Proceedings of the Symposium on Testing, Analysis, and Verification, 1991\par}}}
 
 \pitch{\pptQuote{richard-lipton.jpg}{Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has \emph{adequately} tested a Fortran program by direct measurement of the number and kinds of errors it is \emph{capable} of uncovering.}{Richard A. DeMillo, \emph{Richard J. Lipton}, Frederick G. Sayward, \textit{Hints on test Data Selection: Help for the Practicing Programmer}, IEEE Computer 11(4), 1978}}
 
 \pitch{\pptQuote{timothy-budd.jpg}{A test set is \emph{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \emph{small} syntactic modifications to the subject program.}{Timothy A. Budd, \textit{Mutation analysis: Ideas, examples, problems and prospects}, North-Holland Publishing Company, Amsterdam, Netherlands, 1981}}
 
-\pitch{\pptQuote{william-howden.jpg}{In weak mutation testing method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}{William E. Howden, \textit{Weak Mutation Testing and Completeness of Test Sets}, IEEE Transactions on Software Engineering 4, 1982}}
+\pitch{\pptQuote{william-howden.jpg}{In \emph{weak mutation testing} method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}{William E. Howden, \textit{Weak Mutation Testing and Completeness of Test Sets}, IEEE Transactions on Software Engineering 4, 1982}}
 
-\pitch{\pptQuote{richard-demillo.jpg}{A mutant operator mutates one syntactic entity of a program. Further, only one mutant operator
+\pptBanner{Weak vs. Strong Mutation Testing}
+\begin{pptWide}{3}
+Live Code:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Mutant:\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= (*@\textcolor{red}{\textbf{1}}@*)) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Tests Suite:\par
+{\small\begin{ffcode}
+fibonacci(10) == 55;
+fibonacci(11) == 89;
+fibonacci(12) == 144;
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
+\pitch{\pptQuote{jeff-offutt.jpg}{Our results indicate that \emph{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}{Jeff Offutt and Stephen D. Lee, \textit{An Empirical Evaluation of Weak Mutation}, IEEE Transactions on Software Engineering 20(5), 1994}}
+
+\pitch{\pptQuote{richard-demillo.jpg}{A mutant operator mutates \emph{one syntactic entity} of a program. Further, only one mutant operator
 is applied at a time to the program under test.}{Hiralal Agrawal, \emph{Richard A. DeMillo}, R. Hathaway, William Hsu, Wynne Hsu, Edward W. Krauser, Rhonda J. Martin, Aditya P.Mathur, Eugene Spafford, \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989}}
 
 \pitch{\begin{multicols}{2}
 \includegraphics[width=.8\linewidth]{c-operators.png}\par
 \par\columnbreak\par
 ``Each mutant operator belongs to one of the following categories:
-1. statement mutations,
-2. operator mutations,
-3. variable mutations, and
-4. constant mutations.
+1)~statement mutations,
+2)~operator mutations,
+3)~variable mutations,
+and
+4)~constant mutations.
 ''\par
 {\scriptsize Source: Hiralal Agrawal et al., \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989\par}
 \end{multicols}}
-
-\pitch{\pptQuote{jeff-offutt.jpg}{Our results indicate that \emph{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}{Jeff Offutt and Stephen D. Lee, \textit{An Empirical Evaluation of Weak Mutation}, IEEE Transactions on Software Engineering 20(5), 1994}}
 
 \pitch{\pptQuote{phyllis-frankl.jpg}{Those mutants that compute precisely the same function are called \emph{equivalent} mutants and the others are called \emph{inequivalent} mutants.}{\emph{Phyllis G. Frankl}, Stewart N. Weiss, and Cang Hu, \textit{All-Uses vs Mutation Testing: An Experimental Comparison of Effectiveness?}, Journal of Systems and Software 38(3), 1997}}
 
@@ -184,7 +223,7 @@ int fibonacci(int n) {
 \end{ffcode}
 }
 \par
-You \textbf{can't kill} this one!
+\(\uparrow\) You \textbf{can't kill} this one!
 \end{pptWide}
 \plush{}
 
@@ -213,13 +252,16 @@ You \textbf{can't kill} this one!
 {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
 \end{multicols}}
 
+\pitch{\pptQuote{paul-ammann.jpg}{Three conditions must be present for a failure to be observed:
+1)~The location in the program that contains the fault must be reached (\emph{\textbf{R}eachability}).
+2)~After executing the location, the state of the program must be incorrect (\textbf{I}nfection).
+3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}{\emph{Paul Ammann} and Jeff Offutt, \textit{Introduction to Software Testing}, 2008}}
+
 \pitch{\pptQuote{mark-harman.jpg}{Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \emph{Higher order mutants} are created by the insertion of two or more faults.}{Yue Jia and \emph{Mark Harman}, \textit{Higher Order Mutation Testing}, Information and Software Technology 51(10), 2009}}
 
 \pitch{\pptQuote{yue-jia.jpg}{One \emph{problem} that prevents mutation testing from becoming a practical testing technique is the \emph{high computational cost} of executing the enormous number of mutants against a test set.}{\emph{Yue Jia} and Mark Harman, \textit{An Analysis and Survey of the Development of Mutation Testing}, IEEE Transactions on Software Engineering 37(5), 2010}}
 
-\pitch{\pptQuote{paul-ammann.jpg}{... RIP Model ...}{\emph{Paul Ammann} and Jeff Offutt, \textit{Introduction to Software Testing}, 2016}}
-
-\pitch{\pptQuote{jie-zhang.jpg}{PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT predicts the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}{\emph{Jie Zhang}, Ziyi Wang, Lingming Zhang, Dan Hao, Lei Zang, Shiyang Cheng, and Lu Zhang, \textit{Predictive Mutation Testing}, Proceedings of the 25th International Symposium on Software Testing and Analysis, 2016}}
+\pitch{\pptQuote{jie-zhang.jpg}{PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \emph{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}{\emph{Jie Zhang}, Ziyi Wang, Lingming Zhang, Dan Hao, Lei Zang, Shiyang Cheng, and Lu Zhang, \textit{Predictive Mutation Testing}, Proceedings of the 25th International Symposium on Software Testing and Analysis, 2016}}
 
 \pitch{Mutation Coverage can be calculated by a few tools:
 \begin{itemize}
@@ -229,13 +271,5 @@ You \textbf{can't kill} this one!
 \item \href{https://github.com/EvanKepner/mutatest}{mutatest} for Python
 \item \href{https://github.com/mbj/mutant}{mutant} for Ruby
 \end{itemize}}
-
-\plush{
-  \pptBanner{Read this:}\par
-  \small
-  % \textit{Code Coverage Best Practices},
-  %   Carlos Arguelles, Marko Ivankovi{\'c}, Adam Bender,
-  %   \href{https://testing.googleblog.com/2020/08/code-coverage-best-practices.html}{Google Blog}, 2020 \par
-}
 
 \end{document}

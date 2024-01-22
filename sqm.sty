@@ -51,11 +51,16 @@
   respected authors.\par
 }}
 
-\newcommand\sqmTitlePage[1]{\begin{pptMiddle}%
+\newcommand\sqmTitlePage[2]{\begin{pptMiddle}%
   \pptTitle{\thetitle}{}\par
   {\scshape Yegor Bugayenko}\par
   Lecture \##1 out of 24 \newline
   80 minutes\par
+  \def\param{#2}%
+  \ifx\param\empty\else%
+    The slidedeck was presented by the author in this
+    \textcolor{red}{\href{https://www.youtube.com/watch?v=#2}{YouTube Video}}\par
+  \fi%
   \sqmDisclaimer{}
 \end{pptMiddle}}
 
