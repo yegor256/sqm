@@ -21,7 +21,7 @@
 % SOFTWARE.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{ssd}[00.00.0000 0.0.0 This Course Specials]
+\ProvidesPackage{sqm}[00.00.0000 0.0.0 This Course Specials]
 
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
@@ -31,7 +31,6 @@
 \RequirePackage[static]{clicks}
 \RequirePackage[template,scheme=light]{ppt-slides}
 \RequirePackage[nocn,novert]{ffcode}
-\RequirePackage{to-be-determined}
 \RequirePackage{tikz}
   \usetikzlibrary{positioning,calc,arrows,arrows.meta}
 \RequirePackage{soul}
@@ -71,12 +70,23 @@
 }
 
 \newcommand\pitch[1]{\plush{\begin{pptMiddle} #1 \end{pptMiddle}}}
-
-\newcommand\nospell[1]{#1}
+\newcommand\qte[4][]{\pitch{\pptQuote[\scriptsize\scshape\color{gray}{#1}]{#2}{#3}{\color{gray}\rmfamily\scriptsize\bibentry{#4}}}}
 
 \AtBeginDocument{%
   \pptLeft{\thetitle{}}%
   \pptRight{@yegor256}%
+  \nobibliography*
+  \bibliographystyle{plainnat}
+}
+
+\RequirePackage{bibentry}
+\RequirePackage{natbib}
+\AtEndDocument{%
+  \begin{multicols}{2}
+  \setlength{\bibsep}{.2em}
+  \renewcommand{\bibfont}{\scriptsize}
+  \bibliography{../main}
+  \end{multicols}
 }
 
 \endinput
