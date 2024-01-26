@@ -58,7 +58,7 @@ class Book
 \end{multicols}
 \plush{}
 
-\pitch{\pptQuote{mika-mantyla.jpg}{Dead code is code that has been used in the past, but is currently never executed. Dead code \emph{hinders} code \emph{comprehension} and makes the current program structure \emph{less obvious}.}{\textit{A Taxonomy and an Initial Empirical Study of Bad Smells in Code}, \emph{Mika M\"{a}ntyl\"{a}}, Jari Vanhanen, Casper Lassenius, Proceedings of the 19th International Conference on Software Maintenance (ICSM), 2003}}
+\pitch{\pptQuote{mika-mantyla.jpg}{Dead code is code that has been used in the past, but is currently never executed. Dead code \ul{hinders} code \ul{comprehension} and makes the current program structure \ul{less obvious}.}{\textit{A Taxonomy and an Initial Empirical Study of Bad Smells in Code}, \ul{Mika M\"{a}ntyl\"{a}}, Jari Vanhanen, Casper Lassenius, Proceedings of the 19th International Conference on Software Maintenance (ICSM), 2003}}
 
 \pptBanner{Dead Code Elimination (Compiler Optimization)}
 \begin{multicols}{2}
@@ -75,17 +75,17 @@ void main(int x) {
 \end{ffcode}
 }
 \par\columnbreak\par
-``Dead code refers to computations whose \emph{results are never used}. Code that is dead can be eliminated without affecting the behavior of the program.''\par
+``Dead code refers to computations whose \ul{results are never used}. Code that is dead can be eliminated without affecting the behavior of the program.''\par
 {\scriptsize Source: \textit{Compiler Techniques for Code Compaction}, Saumya K. Debray, William Evans, Robert Muth, Bjorn De Sutter, ACM Transactions on Programming languages and Systems (TOPLAS), 22(2), 2000 \par}
 \end{multicols}
 \plush{}
 
 
-\pitch{\pptQuote{simone-romano.jpg}{Although there is some consensus on the fact that dead code is a common phenomenon, it could be \emph{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}{\textit{A Multi-Study Investigation Into Dead Code}, \emph{Simone Romano}, Christopher Vendome, Giuseppe Scanniello, Denys Poshyvanyk, IEEE Transactions on Software Engineering, 2018}}
+\pitch{\pptQuote{simone-romano.jpg}{Although there is some consensus on the fact that dead code is a common phenomenon, it could be \ul{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}{\textit{A Multi-Study Investigation Into Dead Code}, \ul{Simone Romano}, Christopher Vendome, Giuseppe Scanniello, Denys Poshyvanyk, IEEE Transactions on Software Engineering, 2018}}
 
 \plush{\pptBanner{Unreachable/Dead Methods in Java}\pptPic{.9}{unreachable.png}\par{\scriptsize Source: \textit{A Graph-based Approach to Detect Unreachable Methods in Java Software}, Simone Romano, Giuseppe Scanniello, Carlo Sartiani, Michele Risi, Proceedings of the 31st Annual ACM Symposium on Applied Computing, 2016\par}}
 
-\pitch{\pptQuote{sebastian-eder.jpg}{We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \emph{25\% of all methods} were never used during the complete period.}{\textit{How Much Does Unused Code Matter for Maintenance?}, \emph{Sebastian Eder}, Maximilian Junker, Benedikt Hauptmann, Elmar Juergens, Rudolf Vaas, Karl-Heinz Prommer, Proceedings of the International Conference on Software Engineering (ICSE), 2012}}
+\pitch{\pptQuote{sebastian-eder.jpg}{We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \ul{25\% of all methods} were never used during the complete period.}{\textit{How Much Does Unused Code Matter for Maintenance?}, \ul{Sebastian Eder}, Maximilian Junker, Benedikt Hauptmann, Elmar Juergens, Rudolf Vaas, Karl-Heinz Prommer, Proceedings of the International Conference on Software Engineering (ICSE), 2012}}
 
 \plush{
 \pptBanner{Volatility Metric}
@@ -135,13 +135,13 @@ and the smaller the amount of the abandoned code inside it.''
 \end{description}}\par
 {\scriptsize Source: \textit{Advantages and Disadvantages of a Monolithic Repository: A case study at Google}, Ciera Jaspan et al., ICSE, 2018\par}}
 
-\pitch{\pptQuote{ciera-jaspan.jpg}{Our survey results show that engineers at Google strongly prefer our monolithic repo, and that \emph{visibility} of the codebase and simple \emph{dependency management} were the primary factors for this preference.}{\textit{Advantages and Disadvantages of a Monolithic Repository: A case study at Google}, \emph{Ciera Jaspan}, Matthew Jorde, Andrea Knight, Caitlin Sadowski, Edward K. Smith, Collin Winter, Emerson Murphy-Hill, ICSE, 2018}}
+\pitch{\pptQuote{ciera-jaspan.jpg}{Our survey results show that engineers at Google strongly prefer our monolithic repo, and that \ul{visibility} of the codebase and simple \ul{dependency management} were the primary factors for this preference.}{\textit{Advantages and Disadvantages of a Monolithic Repository: A case study at Google}, \ul{Ciera Jaspan}, Matthew Jorde, Andrea Knight, Caitlin Sadowski, Edward K. Smith, Collin Winter, Emerson Murphy-Hill, ICSE, 2018}}
 
-\pitch{\pptQuote{rachel-potvin.jpg}{The Google codebase includes approximately \emph{one billion files} and has a history of approximately 35 million commits spanning Google's entire 18-year existence. The repository contains \emph{86TBa} of data, including approximately \emph{two billion lines of code} in nine million unique source files.}{\textit{Why Google Stores Billions of Lines of Code in a Single Repository}, Rachel Potvin and Josh Levenberg, Communications of the ACM 59.7, 2016}}
+\pitch{\pptQuote{rachel-potvin.jpg}{The Google codebase includes approximately \ul{one billion files} and has a history of approximately 35 million commits spanning Google's entire 18-year existence. The repository contains \ul{86TBa} of data, including approximately \ul{two billion lines of code} in nine million unique source files.}{\textit{Why Google Stores Billions of Lines of Code in a Single Repository}, Rachel Potvin and Josh Levenberg, Communications of the ACM 59.7, 2016}}
 
-\pitch{\pptQuote{durham-goode.jpg}{Facebook's main source repository is enormous---many times larger than even the Linux kernel, which checked in at \emph{17 million lines of code} and \emph{44,000 files} in 2013.}{\href{https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/}{\textit{Scaling Mercurial at Facebook}}, Durham Goode et al., 2014}}
+\pitch{\pptQuote{durham-goode.jpg}{Facebook's main source repository is enormous---many times larger than even the Linux kernel, which checked in at \ul{17 million lines of code} and \ul{44,000 files} in 2013.}{\href{https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/}{\textit{Scaling Mercurial at Facebook}}, Durham Goode et al., 2014}}
 
-\pitch{\pptQuote{tomas-votruba.jpg}{Before monorepo, I had to upgrade every package manually, which resulted in dissonance: one package used Symfony\textbackslash{}Console 3.2, but other only 2.8 and it got messy \emph{for no reason}.}{\textit{How Monolithic Repository in Open Source saved my Laziness}, Tomas Votruba, 2017}}
+\pitch{\pptQuote{tomas-votruba.jpg}{Before monorepo, I had to upgrade every package manually, which resulted in dissonance: one package used Symfony\textbackslash{}Console 3.2, but other only 2.8 and it got messy \ul{for no reason}.}{\textit{How Monolithic Repository in Open Source saved my Laziness}, Tomas Votruba, 2017}}
 
 \pitch{\pptBanner{Benefits of ``Manyrepo'' Approach}
 {\small\begin{description}

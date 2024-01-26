@@ -27,7 +27,7 @@
 
 \plush{\sqmTitlePage{7}{74YigDo8_BE}}
 
-\pitch{\pptQuote{../06-coupling/larry-constantine.jpg}{Coupling is reduced when the relationships among elements not in the same module are minimized. There are two ways of achieving this- minimizing the relationships among modules and \emph{maximizing relationships} among elements in the same module.}{Wayne P. Stevens, Glenford J. Myers, and \emph{Larry L. Constantine}, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\pitch{\pptQuote{../06-coupling/larry-constantine.jpg}{Coupling is reduced when the relationships among elements not in the same module are minimized. There are two ways of achieving this- minimizing the relationships among modules and \ul{maximizing relationships} among elements in the same module.}{Wayne P. Stevens, Glenford J. Myers, and \ul{Larry L. Constantine}, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \plush{
 \pptPic{.8}{cohesion-1.png}\par
@@ -43,13 +43,13 @@
 4)~Communicational,
 5)~Sequential,
 and
-6)~Functional.}{Wayne P. Stevens, \emph{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+6)~Functional.}{Wayne P. Stevens, \ul{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \plush{
 \pptPic{.8}{cohesion-3.png}\par
 {\scriptsize Source: \url{https://logicmojo.com/cohesion-and-coupling-in-oops}\par}}
 
-\pitch{\pptQuote{../06-coupling/wayne-stevens.jpg}{One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \emph{form should follow function}.}{\emph{Wayne P. Stevens}, Glenford J. Myers, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\pitch{\pptQuote{../06-coupling/wayne-stevens.jpg}{One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \ul{form should follow function}.}{\ul{Wayne P. Stevens}, Glenford J. Myers, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \pptBanner{Coincidental Binding}
 \begin{multicols}{2}
@@ -180,7 +180,7 @@ int v = new SQLResult()
 \end{multicols}
 {\scriptsize Source: \url{https://enterprisecraftsmanship.com/posts/cohesion-coupling-difference/}\par}}
 
-\pitch{\pptQuote{chris-kemerer.jpg}{Consider a class with methods \(m_1, m_2, \dots, m_n\). Let \(V_i\) be a set of instance variables used by method \(m_i\). There are \(n\) such sets \(V_1, V_2, \dots, V_n\). LCOM is the number of disjoint sets formed by the intersection of the \(n\) sets. The number of disjoint sets provides a measure for the disparate nature of methods in the class. Fewer disjoint sets implies greater similarity of methods.}{\textit{Towards a Metrics Suite for Object Oriented Design}, Shyam R. Chidamber and \emph{Chris F. Kemerer}, OOPSLA, 1991}}
+\pitch{\pptQuote{chris-kemerer.jpg}{Consider a class with methods \(m_1, m_2, \dots, m_n\). Let \(V_i\) be a set of instance variables used by method \(m_i\). There are \(n\) such sets \(V_1, V_2, \dots, V_n\). LCOM is the number of disjoint sets formed by the intersection of the \(n\) sets. The number of disjoint sets provides a measure for the disparate nature of methods in the class. Fewer disjoint sets implies greater similarity of methods.}{\textit{Towards a Metrics Suite for Object Oriented Design}, Shyam R. Chidamber and \ul{Chris F. Kemerer}, OOPSLA, 1991}}
 
 \pptBanner{LCOM Example (not working)}
 \begin{multicols}{2}
@@ -269,7 +269,7 @@ class Rectangle {
 \end{multicols}
 \plush{}
 
-\pitch{\pptQuote{../06-coupling/larry-constantine.jpg}{LCOM3 is defined as a normalized measure that considers the number of methods in the class, the number of attributes, and the average number of methods that access each attribute. (by ChatGPT)}{\textit{Coupling and Cohesion (Towards a Valid Metrics Suite for Object-Oriented Analysis and Design)}, Brian Henderson-Sellers, \emph{Larry Constantine}, and Ian Graham, Object-Oriented Systems, 3.3, 1996}}
+\pitch{\pptQuote{../06-coupling/larry-constantine.jpg}{LCOM3 is defined as a normalized measure that considers the number of methods in the class, the number of attributes, and the average number of methods that access each attribute. (by ChatGPT)}{\textit{Coupling and Cohesion (Towards a Valid Metrics Suite for Object-Oriented Analysis and Design)}, Brian Henderson-Sellers, \ul{Larry Constantine}, and Ian Graham, Object-Oriented Systems, 3.3, 1996}}
 
 \pptBanner{LCOM3 Example}
 \begin{multicols}{2}
@@ -295,7 +295,7 @@ where\par
 \end{multicols}
 \plush{}
 
-\pitch{\pptQuote{martin-hitz.jpg}{LCOM4 measures the number of 'connected components' in a class. A connected component is a set of related methods (and class-level variables). Methods A and B are related if: they both access the same class-level variable, or A calls B or vice versa.}{\textit{Measuring Coupling and Cohesion In Object-Oriented Systems}, \emph{Martin Hitz} and Behzad Montazeri, University of Vienna, 1995}}
+\pitch{\pptQuote{martin-hitz.jpg}{LCOM4 measures the number of 'connected components' in a class. A connected component is a set of related methods (and class-level variables). Methods A and B are related if: they both access the same class-level variable, or A calls B or vice versa.}{\textit{Measuring Coupling and Cohesion In Object-Oriented Systems}, \ul{Martin Hitz} and Behzad Montazeri, University of Vienna, 1995}}
 
 \pptBanner{LCOM4 Example}
 \begin{multicols}{2}

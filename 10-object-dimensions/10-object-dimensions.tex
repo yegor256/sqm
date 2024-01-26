@@ -44,7 +44,7 @@
 \end{itemize}
 }
 
-\pitch{\pptBanner{Metrics for Object-Oriented Design (MOOD)}\pptQuote{fernando-brito-e-abreu.jpg}{Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \emph{heuristics}.}{\textit{Object-oriented software engineering: Measuring and controlling the development process}, \emph{Fernando Brito e Abreu} and Rog{\'e}rio Carapu{\c{c}}a, Proceedings of the 4th International Conference on Software Quality, 1994}}
+\pitch{\pptBanner{Metrics for Object-Oriented Design (MOOD)}\pptQuote{fernando-brito-e-abreu.jpg}{Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \ul{heuristics}.}{\textit{Object-oriented software engineering: Measuring and controlling the development process}, \ul{Fernando Brito e Abreu} and Rog{\'e}rio Carapu{\c{c}}a, Proceedings of the 4th International Conference on Software Quality, 1994}}
 
 \pptBanner{Method Hiding Factor (MHF)}
 \begin{multicols}{2}
@@ -61,7 +61,7 @@ class Book {
 }
 \par\columnbreak\par
 \(\texttt{MHF} = 1/2\)\par
-``MHF is defined as the ratio of the sum of the \emph{invisibilities} of all methods
+``MHF is defined as the ratio of the sum of the \ul{invisibilities} of all methods
 defined in all classes to the total number of methods defined in the system
 under consideration.''
 \end{multicols}
@@ -87,7 +87,7 @@ var t = b.title();
 }
 \par\columnbreak\par
 \(\texttt{AHF} = 1/2\)\par
-``AHF is defined as the ratio of the sum of the \emph{invisibilities} of all attributes
+``AHF is defined as the ratio of the sum of the \ul{invisibilities} of all attributes
 defined in all classes to the total number of attributes defined in the system
 under consideration.''
 \end{multicols}
@@ -109,7 +109,7 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{MIF} = 1/2\)\par
-``MIF is defined as the ratio of the sum of the \emph{inherited} methods in all classes of
+``MIF is defined as the ratio of the sum of the \ul{inherited} methods in all classes of
 the system under consideration to the total number of available methods
 (locally defined plus inherited) for all classes.''
 \end{multicols}
@@ -129,7 +129,7 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{AIF} = 1/2\)\par
-``AIF is defined as the ratio of the sum of \emph{inherited} attributes in all classes of
+``AIF is defined as the ratio of the sum of \ul{inherited} attributes in all classes of
 the system under consideration to the total number of available attributes
 (locally defined plus inherited) for all classes.''
 \end{multicols}
@@ -153,12 +153,12 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{PF} = 0/1\)\par
-``PF is the number of methods that \emph{redefine} inherited methods, divided by the
+``PF is the number of methods that \ul{redefine} inherited methods, divided by the
 maximum number of possible distinct polymorphic situations.''
 \end{multicols}
 \plush{}
 
-\pitch{\pptQuote{../07-LCOM/chris-kemerer.jpg}{The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \emph{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}{Shyam R. Chidamber and \emph{Chris F. Kemerer}, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
+\pitch{\pptQuote{../07-LCOM/chris-kemerer.jpg}{The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \ul{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}{Shyam R. Chidamber and \ul{Chris F. Kemerer}, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
 
 \pptBanner{Depth of Inheritance Tree (DIT)}
 \begin{multicols}{2}
@@ -223,13 +223,13 @@ class Book
 }
 \par\columnbreak\par
 \(\texttt{RFC}_\texttt{Material} = 3\)\par
-``RFC is the count of the set of \emph{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
+``RFC is the count of the set of \ul{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
 \end{multicols}
 \plush{}
 
 \pitch{\pptQuote{book.jpg}{A small number of classes may be responsible for a large number of the methods that executed in an application, and that if testing effort were concentrated on these outlier classes, a bulk of the dynamic behavior of the object oriented systems can be checked for customer acceptance.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
 
-\pitch{\pptQuote{mark-lorenz.jpg}{Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.}{\textit{Object-Oriented Software Metrics: a Practical Guide}, \emph{Mark Lorenz} and Jeff Kidd, Prentice-Hall, Inc., 1994}}
+\pitch{\pptQuote{mark-lorenz.jpg}{Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.}{\textit{Object-Oriented Software Metrics: a Practical Guide}, \ul{Mark Lorenz} and Jeff Kidd, Prentice-Hall, Inc., 1994}}
 
 \pptBanner{Number of Messages (NOM)}
 \begin{multicols}{2}
@@ -255,10 +255,10 @@ class Book
 \plush{
   \pptBanner{Typical Mistakes in Research Papers}
   \begin{enumerate}
-    \item Assuming the reader understands the \emph{context}
-    \item Trying to find \emph{impact} instead of \emph{correlation}
-    \item Ignoring the importance of \emph{taxonomy} in Related Work
-    \item Writing in \emph{future tense}
+    \item Assuming the reader understands the \ul{context}
+    \item Trying to find \ul{impact} instead of \ul{correlation}
+    \item Ignoring the importance of \ul{taxonomy} in Related Work
+    \item Writing in \ul{future tense}
   \end{enumerate}
 }
 

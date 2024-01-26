@@ -27,31 +27,31 @@
 
 \plush{\sqmTitlePage{6}{G0vN6Ah8-js}}
 
-\pitch{\pptQuote{larry-constantine.jpg}{The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}{Wayne P. Stevens, Glenford J. Myers, and \emph{Larry L. Constantine}, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\pitch{\pptQuote{larry-constantine.jpg}{The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}{Wayne P. Stevens, Glenford J. Myers, and \ul{Larry L. Constantine}, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \plush{
 \pptPic{.8}{coupling.png}\par
 {\scriptsize Source: \url{https://www.geeksforgeeks.org/coupling-in-java/}\par}}
 
-\pitch{\pptQuote{glenford-myers.jpg}{Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \emph{complicates} a system since a module is harder to \emph{understand}, \emph{change}, or \emph{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}{Wayne P. Stevens, \emph{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\pitch{\pptQuote{glenford-myers.jpg}{Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \ul{complicates} a system since a module is harder to \ul{understand}, \ul{change}, or \ul{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}{Wayne P. Stevens, \ul{Glenford J. Myers}, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \plush{
 \pptPic{.8}{coupling-2.png}\par
 {\scriptsize Source: \url{https://www.javatpoint.com/software-engineering-coupling-and-cohesion}\par}}
 
-\pitch{\pptQuote{wayne-stevens.jpg}{The degree of coupling established by a particular connection is a function of several factors, and thus it is \emph{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}{\emph{Wayne P. Stevens}, Glenford J. Myers, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\pitch{\pptQuote{wayne-stevens.jpg}{The degree of coupling established by a particular connection is a function of several factors, and thus it is \ul{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}{\ul{Wayne P. Stevens}, Glenford J. Myers, and Larry L. Constantine, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
 
 \plush{
 \pptPic{.8}{coupling-3.png}\par
 {\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
 
-\pitch{\pptQuote{cbo.png}{\emph{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
+\pitch{\pptQuote{cbo.png}{\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}{Shyam R. Chidamber and Chris F. Kemerer, \textit{A Metrics Suite for Object Oriented Design}, IEEE Transactions on Software Engineering, 20.6, 1994}}
 
-\pitch{\pptQuote{dcc.png}{\emph{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}{Jagdish Bansiya and Carl G. Davis, \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment}, IEEE Transactions on Software Engineering, 28.1, 2002}}
+\pitch{\pptQuote{dcc.png}{\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}{Jagdish Bansiya and Carl G. Davis, \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment}, IEEE Transactions on Software Engineering, 28.1, 2002}}
 
-\pitch{\pptQuote{martin-fowler.jpg}{The biggest problems come from uncontrolled coupling at the \emph{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}{Martin Fowler, \textit{Reducing Coupling}, IEEE Software, 2001}}
+\pitch{\pptQuote{martin-fowler.jpg}{The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}{Martin Fowler, \textit{Reducing Coupling}, IEEE Software, 2001}}
 
-\pitch{\pptQuote{steve-mcconnell.jpg}{Low-to-medium \emph{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \emph{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}{Steven McConnell, \textit{Code Complete}, 2004}}
+\pitch{\pptQuote{steve-mcconnell.jpg}{Low-to-medium \ul{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \ul{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}{Steven McConnell, \textit{Code Complete}, 2004}}
 
 \plush{
 \pptPic{.95}{kokash.png}\par
@@ -72,15 +72,15 @@
 \pptBanner{Types of Coupling (some of them)}
 \begin{pptWide}{2}
 \scriptsize\begin{itemize}
-\item \emph{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
-\item \emph{Global Coupling} is when two modules share the same global data (e.g., a global variable).
-\item \emph{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
-\item \emph{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
-\item \emph{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
-\item \emph{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
-\item \emph{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
-\item \emph{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
-\item \emph{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
+\item \ul{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
+\item \ul{Global Coupling} is when two modules share the same global data (e.g., a global variable).
+\item \ul{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
+\item \ul{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
+\item \ul{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
+\item \ul{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
+\item \ul{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
+\item \ul{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
+\item \ul{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
 \end{itemize}
 \end{pptWide}
 {\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}
@@ -169,7 +169,7 @@ int t = Integer.parseInt(parts[0]);
 \end{ffcode}
 }
 \par\columnbreak\par
-``The larger the number (or the mean of all numbers), the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \emph{distance metric} will tell us exactly that: how many times, and by how much, we violated the principle of loose coupling.''\par
+``The larger the number (or the mean of all numbers), the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \ul{distance metric} will tell us exactly that: how many times, and by how much, we violated the principle of loose coupling.''\par
 {\scriptsize \url{https://www.yegor256.com/2020/10/27/distance-of-coupling.html}\par}
 \end{multicols}
 \plush{}
