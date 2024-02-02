@@ -1,0 +1,162 @@
+% (The MIT License)
+%
+% Copyright (c) 2023-2024 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Defects Density}
+\begin{document}
+
+\plush{\sqmTitlePage{18}{}}
+
+\qte
+  [Michael Fagan]
+  {michael-fagan.jpg}
+  {Feedback of results from inspections must be counted for the programmer's use and \ul{benefit}: they \ul{should not} under any circumstances be used for programmer performance \ul{appraisal}.}
+  {fagan1976design}
+
+\pitch{
+\includegraphics[width=.8\linewidth]{error-density.png}
+\par
+{\scriptsize Source: \bibentry{fagan1976design}\par}}
+
+\qte
+  {ieee-982.png}
+  {A \ul{defect} is a product \ul{anomaly}. Examples include such things as 1)~omissions and imperfections found during early life cycle phases and 2)~faults contained in software sufficiently mature for test or operation.}
+  {ieee982}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{dd.png}
+\par
+{\scriptsize Source: \bibentry{ieee982}\par}
+\par\columnbreak\par
+``This measure has a degree of \ul{indeterminism}. For example, a low value may indicate either a good process and a good product or it may indicate a bad process. If the value is low compared to similar past projects, the inspection process should be examined. If the inspection process is found to be adequate, it should then be concluded that the development process has resulted in a \ul{relatively defect-free} product.''
+\end{multicols}}
+
+\pitch{
+\includegraphics[width=.7\linewidth]{ieee-measures.png}
+\par
+{\scriptsize Source: \bibentry{ieee982}\par}}
+
+\plush{\pptBanner{39 Measures for Reliable Software}
+\begin{pptWide}{3}
+\scriptsize\begin{enumerate}\setlength\itemsep{-.1em}
+\item Fault Density
+\item Defect Density
+\item Cumulative Failure Profile
+\item Fault-Days Number
+\item Functional or Modular Test Coverage
+\item Cause and Effect Graphing
+\item Requirements Traceability
+\item Defect Indices
+\item Error Distribution(s)
+\item Software Maturity Index
+\item Manhours per Major Defect Detected
+\item Number of Conflicting Requirements
+\item Number of Entries and Exits per Module
+\item Software Science Measures
+\item Graph-Theoretic Complexity for Arch.
+\item Cyclomatic Complexity
+\item Minimal Unit Test Case Determination
+\item Run Reliability
+\item Design Structure
+\item Mean Time to Discover the Next K Faults
+\item Software Purity Level
+\item Estimated Num. of Faults Remaining
+\item Requirements Compliance
+\item Test Coverage
+\item Data or Information Flow Complexity
+\item Reliability Growth Function
+\item Residual Fault Count
+\item Failure Analysis Using Elapsed Time
+\item Testing Sufficiency
+\item Mean Time to Failure
+\item Failure Rate
+\item Software Docmtn and Source Listings
+\item RELY-Required Software Reliability
+\item Software Release Readiness
+\item Completeness
+\item Test Accuracy
+\item System Performance Reliability
+\item Independent Process Reliability
+\item Combined H\&S Operational Availability
+\end{enumerate}
+\end{pptWide}
+\par
+{\scriptsize Source: \bibentry{ieee982}\par}}
+
+\qte
+  [Nachiappan Nagappan]
+  {../13-code-churn/nachiappan-nagappan.jpg}
+  {A case study performed on Windows Server 2003 indicates the validity of the relative \ul{code churn} measures as early indicators of system \ul{defect density}. Our code churn metric suite is able to discriminate between fault and not fault-prone binaries with an accuracy of 89\%.}
+  {nagappan2005use}
+
+\qte
+  [Joseph Sherif]
+  {joseph-sherif.jpg}
+  {The analysis showed a \ul{significantly higher} density of defects during requirements inspections. It was also observed, that the defect densities found \ul{decreased} exponentialy as the mork products approached the coding phase.}
+  {kelly1992analysis}
+
+\qte
+  [Norman Fenton]
+  {norman-fenton.jpg}
+  {Our critical review of state-of-the-art of models for predicting software defects has shown that many methodological and theoretical \ul{mistakes} have been made... We recommend holistic models for software defect prediction, using Bayesian Belief Networks, as alternative approaches to the single-issue models used at present.}
+  {fenton1999critique}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{mttf.png}
+\par\columnbreak\par
+``This means we should be very wary of attempts to equate fault densities with failure rates, as proposed for example by~\citet{jones1996pragmatics}. Although highly attractive in principle, such a model does not stand up to \ul{empirical} validation.''\par
+{\scriptsize Source: \bibentry{fenton1999critique}\par}
+\end{multicols}}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{fps.png}
+\par\columnbreak\par
+``We already see defect density defined in terms of defects per \ul{function point}, and empirical studies are emerging that seem likely to be the basis for predictive models. For example, \citet{jones1991} reports the following bench-marking study, reportedly based on large amounts of data from different commercial sources.''\par
+{\scriptsize Source: \bibentry{fenton1999critique}\par}
+\end{multicols}}
+
+\qte
+  [A G{\"u}ne{\c{s}} Koru]
+  {gunes-koru.jpg}
+  {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
+  {koru2008investigation}
+
+\qte
+  [Parastoo Mohagheghi]
+  {parastoo-mohagheghi.jpg}
+  {The analysis showed that \ul{reused} components have lower defect-density than \ul{non-reused} ones. Reused components have more defects with highest severity than the total distribution, but less defects after delivery.}
+  {mohagheghi2004empirical}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{complexity.png}
+\par\columnbreak\par
+``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
+{\scriptsize Source: \bibentry{basili1984software}\par}
+\end{multicols}}
+
+\pitch{\pptBanner{?}
+\begin{itemize}\setlength\itemsep{0pt}
+\item ???
+\end{itemize}}
+
+\end{document}
