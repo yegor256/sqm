@@ -111,6 +111,7 @@
 {\scriptsize Source: \bibentry{ieee982}\par}}
 
 \qte
+  [Harlan D. Mills]
   {harlan-mills.jpg}
   {While our experience in applying statistical quality-control techniques to software development is limited, initial experience indicates that \ul{five fixes per thousand lines of code} can be tolerated without invalidating the application of statistics to estimate MTTF. This failure rate is low compared to normal development practices, where \ul{20 to 60} fixes per thousand lines of code is \ul{not atypical}.}
   {cobb1990engineering}
@@ -142,6 +143,7 @@
 \end{multicols}}
 
 \qte
+  [Steve McConnell]
   {../06-coupling/steve-mcconnell.jpg}
   {Industry average experience is about 1-25 errors per 1000 lines of code for delivered software. Cases that have one-tenth as many errors as this are rare; cases that have 10 times more tend not to be reported. (They probably aren't ever completed!) Microsoft experiences about 10–20 defects per 1000 lines of code during in-house testing and 0.5 defects per 1000 lines of code in released product.}
   {mcconnell2004code}
@@ -164,9 +166,19 @@
   {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
   {koru2008investigation}
 
-\pitch{\pptBanner{?}
-\begin{itemize}\setlength\itemsep{0pt}
-\item ???
-\end{itemize}}
+\pitch{\pptBanner{My Own Statistics (2 Feb 2024)}
+\ttfamily\small\begin{tabular}{llrrr}
+\toprule
+Github Repository & Stack & KLoC & Issues & I/KLoC \\
+\midrule
+\href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 58 & 2343 & 40.4 \\
+\href{https://github.com/objectionary/eo}{objectionary/eo} & Java & 49 & 2837 & 57.9 \\
+\href{https://github.com/yegor256/cactoos}{yegor256/cactoos} & Java & 34 & 1707 & 50.2 \\
+\href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 27 & 1227 & 45.4 \\
+\href{https://github.com/zold-io/zold}{zold-io/zold} & Ruby & 12 & 810 & 67.5 \\
+\href{https://github.com/yegor256/tacit}{yegor256/tacit} & CSS & 1 & 227 & 227.0 \\
+\bottomrule\par
+All repositories are open source.
+\end{tabular}}
 
 \end{document}
