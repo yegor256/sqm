@@ -38,6 +38,13 @@
 \par
 {\scriptsize Source: \bibentry{fagan1976design}\par}}
 
+\pitch{\begin{multicols}{2}
+\includegraphics[width=\linewidth]{complexity.png}
+\par\columnbreak\par
+``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
+{\scriptsize Source: \bibentry{basili1984software}\par}
+\end{multicols}}
+
 \qte
   {ieee-982.png}
   {A \ul{defect} is a product \ul{anomaly}. Examples include such things as 1)~omissions and imperfections found during early life cycle phases and 2)~faults contained in software sufficiently mature for test or operation.}
@@ -104,10 +111,9 @@
 {\scriptsize Source: \bibentry{ieee982}\par}}
 
 \qte
-  [Nachiappan Nagappan]
-  {../13-code-churn/nachiappan-nagappan.jpg}
-  {A case study performed on Windows Server 2003 indicates the validity of the relative \ul{code churn} measures as early indicators of system \ul{defect density}. Our code churn metric suite is able to discriminate between fault and not fault-prone binaries with an accuracy of 89\%.}
-  {nagappan2005use}
+  {harlan-mills.jpg}
+  {While our experience in applying statistical quality-control techniques to software development is limited, initial experience indicates that \ul{five fixes per thousand lines of code} can be tolerated without invalidating the application of statistics to estimate MTTF. This failure rate is low compared to normal development practices, where \ul{20 to 60} fixes per thousand lines of code is \ul{not atypical}.}
+  {cobb1990engineering}
 
 \qte
   [Joseph Sherif]
@@ -141,28 +147,22 @@
   {mcconnell2004code}
 
 \qte
-  {harlan-mills.jpg}
-  {While our experience in applying statistical quality-control techniques to software development is limited, initial experience indicates that \ul{five fixes per thousand lines of code} can be tolerated without invalidating the application of statistics to estimate MTTF. This failure rate is low compared to normal development practices, where \ul{20 to 60} fixes per thousand lines of code is \ul{not atypical}.}
-  {cobb1990engineering}
+  [Parastoo Mohagheghi]
+  {parastoo-mohagheghi.jpg}
+  {The analysis showed that \ul{reused} components have lower defect-density than \ul{non-reused} ones. Reused components have more defects with highest severity than the total distribution, but less defects after delivery.}
+  {mohagheghi2004empirical}
+
+\qte
+  [Nachiappan Nagappan]
+  {../13-code-churn/nachiappan-nagappan.jpg}
+  {A case study performed on Windows Server 2003 indicates the validity of the relative \ul{code churn} measures as early indicators of system \ul{defect density}. Our code churn metric suite is able to discriminate between fault and not fault-prone binaries with an accuracy of 89\%.}
+  {nagappan2005use}
 
 \qte
   [A G{\"u}ne{\c{s}} Koru]
   {gunes-koru.jpg}
   {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
   {koru2008investigation}
-
-\qte
-  [Parastoo Mohagheghi]
-  {parastoo-mohagheghi.jpg}
-  {The analysis showed that \ul{reused} components have lower defect-density than \ul{non-reused} ones. Reused components have more defects with highest severity than the total distribution, but less defects after delivery.}
-  {mohagheghi2004empirical}
-
-\pitch{\begin{multicols}{2}
-\includegraphics[width=\linewidth]{complexity.png}
-\par\columnbreak\par
-``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
-{\scriptsize Source: \bibentry{basili1984software}\par}
-\end{multicols}}
 
 \pitch{\pptBanner{?}
 \begin{itemize}\setlength\itemsep{0pt}
