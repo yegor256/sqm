@@ -123,6 +123,12 @@
   {kelly1992analysis}
 
 \qte
+  [Victor R. Basili]
+  {victor-basili.jpg}
+  {Five out of the six object-oriented metrics presented by \citet{chidamber1994metrics} appear to be useful to predict class fault-proneness during the high- and low-level design phases of the life-cycle.}
+  {basili1996validation}
+
+\qte
   [Norman Fenton]
   {norman-fenton.jpg}
   {Our critical review of state-of-the-art of models for predicting software defects has shown that many methodological and theoretical \ul{mistakes} have been made... We recommend holistic models for software defect prediction, using Bayesian Belief Networks, as alternative approaches to the single-issue models used at present.}
@@ -166,8 +172,119 @@
   {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
   {koru2008investigation}
 
+\plush{\pptBanner{100+ Metrics that Predict Faults}
+\begin{pptWide}{5}
+\scriptsize\begin{enumerate}\setlength\itemsep{-.3em}
+\item \textbf{\nospell{AHF}} Attribute Hiding Factor
+\item \textbf{\nospell{AIF}} Attribute Inheritance Factor
+\item \textbf{\nospell{COF}} Coupling Factor
+\item \textbf{\nospell{MHF}} Method Hiding Factor
+\item \textbf{\nospell{MIF}} Method Interface Factor
+\item \textbf{\nospell{POF}} Polymorphism Factor
+\item \textbf{\nospell{SCC}} Similarity-based Class Cohesion
+\item \textbf{\nospell{ANA}} Average Number of Ancestors
+\item \textbf{\nospell{CAM}} Cohesion Among Methods
+\item \textbf{\nospell{CIS}} Class Interface Size
+\item \textbf{\nospell{DAM}} Data Access Metric
+\item \textbf{\nospell{DCC}} Direct Class Coupling
+\item \textbf{\nospell{DSC}} Design size in classes
+\item \textbf{\nospell{MFA}} Measure of Functional Abstraction
+\item \textbf{\nospell{MOA}} Measure of Aggregation
+\item \textbf{\nospell{NOH}} Number of hierarchies
+\item \textbf{\nospell{NOM}} Number of Methods
+\item \textbf{\nospell{NOP}} Number of polymorphic methods
+\item \textbf{\nospell{LCC}} Loose class cohesion
+\item \textbf{\nospell{TCC}} Tight class cohesion
+\item \textbf{\nospell{ACAIC}}
+\item \textbf{\nospell{ACMIC}}
+\item \textbf{\nospell{AMMIC}}
+\item \textbf{\nospell{Coh}} A variation on LCOM5
+\item \textbf{\nospell{DCAEC}}
+\item \textbf{\nospell{DCMEC}}
+\item \textbf{\nospell{DMMEC}}
+\item \textbf{\nospell{FCAEC}}
+\item \textbf{\nospell{FCMEC}}
+\item \textbf{\nospell{FMMEC}}
+\item \textbf{\nospell{IFCAIC}}
+\item \textbf{\nospell{IFCMIC}}
+\item \textbf{\nospell{IFMMIC}}
+\item \textbf{\nospell{OCAEC}}
+\item \textbf{\nospell{OCAIC}}
+\item \textbf{\nospell{OCMEC}}
+\item \textbf{\nospell{OCMIC}}
+\item \textbf{\nospell{OMMEC}}
+\item \textbf{\nospell{OMMIC}}
+\item \textbf{\nospell{ATTRIB}} Attributes
+\item \textbf{\nospell{DELS}} Deletes
+\item \textbf{\nospell{EVNT}} Events
+\item \textbf{\nospell{READS}} Reads
+\item \textbf{\nospell{RWD}} Read/write/deletes
+\item \textbf{\nospell{STATES}} States
+\item \textbf{\nospell{WRITES}} Writes
+\item \textbf{\nospell{CBO}} Coupling between object classes
+\item \textbf{\nospell{DIT}} Depth of inheritance tree
+\item \textbf{\nospell{LCOM}} Lack of cohesion in methods
+\item \textbf{\nospell{LCOM2}} Lack of cohesion in methods
+\item \textbf{\nospell{NOC}} Number of children
+\item \textbf{\nospell{NTM}} Number of trivial methods
+\item \textbf{\nospell{RFC}} Response for a class
+\item \textbf{\nospell{WMC}} Weighted methods per class
+\item \textbf{\nospell{AMC}} Average method complexity
+\item \textbf{\nospell{Past}} faults Number of past faults
+\item \textbf{\nospell{Changes}} Number of times a module has been changed
+\item \textbf{\nospell{Age}} Age of a module
+\item \textbf{\nospell{Changeset}} Number of modules changed
+\item \textbf{\nospell{\(N_1\)}} Total number of operators
+\item \textbf{\nospell{\(N_2\)}} Total number of operands
+\item \textbf{\nospell{\(g_1\)}} Number of unique operators
+\item \textbf{\nospell{\(g_2\)}} Number of unique operands
+\item \textbf{\nospell{AID}} Average inheritance depth of a class
+\item \textbf{\nospell{LCOM1}} Lack of cohesion in methods
+\item \textbf{\nospell{LCOM5}} Lack of cohesion in methods
+\item \textbf{\nospell{Co}} Connectivity
+\item \textbf{\nospell{LCOM3}} Lack of cohesion in methods
+\item \textbf{\nospell{LCOM4}} Lack of cohesion in methods
+\item \textbf{\nospell{ICH}} Information-flow-based cohesion
+\item \textbf{\nospell{ICP}} Information-flow-based coupling
+\item \textbf{\nospell{IH-ICP}} Information-flow-based inheritance coupling
+\item \textbf{\nospell{NIH-ICP}} Information-flow-based non-inheritance coupling
+\item \textbf{\nospell{CMC}} Class method complexity
+\item \textbf{\nospell{CTA}} Coupling through abstract data type
+\item \textbf{\nospell{CTM}} Coupling through message passing
+\item \textbf{\nospell{NAC}} Number of ancestor
+\item \textbf{\nospell{NDC}} Number of descendent
+\item \textbf{\nospell{NLM}} Number of local methods
+\item \textbf{\nospell{DAC}} Data abstraction coupling
+\item \textbf{\nospell{DAC1}} Data abstraction coupling
+\item \textbf{\nospell{MPC}} Message passing coupling
+\item \textbf{\nospell{NCM}} Number of class methods
+\item \textbf{\nospell{NIM}} Number of instance methods
+\item \textbf{\nospell{NMA}} Number of methods added
+\item \textbf{\nospell{NMI}} Number of methods inherited
+\item \textbf{\nospell{NMO}} Number of methods overridden
+\item \textbf{\nospell{NOA}} Number of attributes
+\item \textbf{\nospell{NOAM}} Number of added methods
+\item \textbf{\nospell{NOO}} Number of operations
+\item \textbf{\nospell{NOOM}} Number of overridden methods
+\item \textbf{\nospell{NOP}} Number of parents
+\item \textbf{\nospell{NPAVG}} Average number of parameters per method
+\item \textbf{\nospell{SIX}} Specialization index
+\item \textbf{\nospell{C3}} Conceptual cohesion of Classes
+\item \textbf{\nospell{McCabe}} Cyclomatic Complexity
+\item \textbf{\nospell{Delta}} Code delta
+\item \textbf{\nospell{Churn}} Code churn
+\item \textbf{\nospell{Devs}} Number of developers
+\item \textbf{\nospell{CLD}} Class-to-leaf depth
+\item \textbf{\nospell{NOA}} Number of ancestors
+\item \textbf{\nospell{NOD}} Number of descendants
+\item \textbf{\nospell{LOC}} Lines of Code
+\end{enumerate}
+\end{pptWide}
+\par
+{\scriptsize Source: \bibentry{radjenovic2013software}\par}}
+
 \pitch{\pptBanner{My Own Statistics (2 Feb 2024)}
-\ttfamily\small\begin{tabular}{llrrr}
+{\ttfamily\small\begin{tabular}{llrrr}
 \toprule
 Github Repository & Stack & KLoC & Issues & I/KLoC \\
 \midrule
@@ -177,8 +294,8 @@ Github Repository & Stack & KLoC & Issues & I/KLoC \\
 \href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 27 & 1227 & 45.4 \\
 \href{https://github.com/zold-io/zold}{zold-io/zold} & Ruby & 12 & 810 & 67.5 \\
 \href{https://github.com/yegor256/tacit}{yegor256/tacit} & CSS & 1 & 227 & 227.0 \\
-\bottomrule\par
-All repositories are open source.
-\end{tabular}}
+\bottomrule
+\end{tabular}}\par
+All repositories are open source.}
 
 \end{document}
