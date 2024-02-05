@@ -178,6 +178,12 @@
   {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
   {koru2008investigation}
 
+\qte
+  [Kazuhiro Yamashita]
+  {kazuhiro-yamashita.jpg}
+  {Although we found some support for findings in recent literature that \ul{smaller files} have higher defects density, we found further evidence that \ul{very large} or \ul{complex} files have lower defect densities and in some cases even lower defect proneness. Our findings have immediate practical implications: the redistribution of Java code into smaller and less complex files may be \ul{counterproductive}.}
+  {yamashita2016thresholds}
+
 \plush{\pptBanner{100+ Metrics that Predict Faults}
 \begin{pptWide}{5}
 \scriptsize\begin{enumerate}\setlength\itemsep{-.3em}
@@ -302,12 +308,6 @@
 \par\columnbreak\par
 ``Software testers want to not only know which software modules should be inspected first, but also evaluate the reliability and maintenance effort of each module. Therefore, they can first employ the historical data to construct a \ul{Defect Number Prediction} (DNP) model, then use the two trained models to predict the defective-proneness or the number of defects.''
 \end{multicols}}
-
-\qte
-  [Kazuhiro Yamashita]
-  {kazuhiro-yamashita.jpg}
-  {Although we found some support for findings in recent literature that \ul{smaller files} have higher defects density, we found further evidence that \ul{very large} or \ul{complex} files have lower defect densities and in some cases even lower defect proneness. Our findings have immediate practical implications: the redistribution of Java code into smaller and less complex files may be counterproductive.}
-  {yamashita2016thresholds}
 
 \pitch{\pptBanner{My Own Statistics (2 Feb 2024)}
 {\ttfamily\small\begin{tabular}{llrrr}
