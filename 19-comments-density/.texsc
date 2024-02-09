@@ -1,0 +1,13 @@
+--pws=../aspell.en.pws
+--ignore=href:pp
+--ignore=qte:oppp
+--ignore=ffcode
+--ignore=ff
+--ignore=tabular:p
+--ignore=nospell
+--ignore=citet,citep,bibentry
+--ignore=pptPic:pp
+--ignore=pptQuote:p
+--ignore=pptQuote:p
+--ignore=pptSnippet:p
+--ignore=innoBook:p

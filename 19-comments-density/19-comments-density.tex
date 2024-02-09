@@ -1,0 +1,123 @@
+% (The MIT License)
+%
+% Copyright (c) 2023-2024 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Comments Density}
+\begin{document}
+
+\plush{\sqmTitlePage{19}{}}
+
+\qte
+  [Hubert E. Dunsmore]
+  {hubert-dunsmore.jpg}
+  {An experiment was conducted to investigate how comments are related to programmers' ability to \ul{understand} programs. Those programmers whose programs contained comments were able to \ul{answer} more questions than those without comments.}
+  {woodfield1981effect}
+
+\qte
+  {../05-maintainability-index/paper-1.png}
+  {[The degree of] \ul{intramodule commenting} is the number of lines with comments divided by the total number of lines in the module, averaged over all modules.}
+  {oman1992metrics}
+
+\qte
+  [David Parnas]
+  {david-parnas.jpg}
+  {Documentation that seems \ul{clear} and \ul{adequate} to its authors is often about \ul{as clear as mud} to the programmer who must maintain the code six months or \ul{six years later}.}
+  {parnas1994software}
+
+\pitch{
+\pptBanner{Comments Affect Maintainability}
+\includegraphics[width=.75\linewidth]{maintainability.png}
+\par
+{\scriptsize Source: \bibentry{garcia1996maintainability}\par}}
+
+\qte
+  [Beat Fluri]
+  {beat-fluri.jpg}
+  {Code and comments \ul{rarely} co-evolve: despite its growth rate, newly added code barely is commented. Also, 97\% of comment changes are done in the same revision as the associated source code change.}
+  {fluri2007code}
+
+\qte
+  [Oliver Arafat]
+  {oliver-arafat.jpg}
+  {Comment density is the percentage of comment lines in a given source code base, that is, comment lines divided by total lines of code. Comment density is assumed to be a good \ul{predictor} of maintainability and hence \ul{survival} of a software project.}
+  {arafat2009comment}
+
+\qte
+  [Houari Sahraoui]
+  {houari-sahraoui.jpg}
+  {We defined a taxonomy of comments to guide this analysis. Our study showed that programmers comment some constructs more often than others. In the majority of cases, comments are intended to explain the code that follows them. The second more widely used category of comments are dedicated to communication between programmers and personal notes (we call them working comments).}
+  {haouari2011good}
+
+\pitch{
+\pptBanner{Types of Comments}
+\includegraphics[width=.6\linewidth]{types-of-comments.png}
+\par
+{\scriptsize Source: \bibentry{haouari2011good}\par}}
+
+\pitch{
+\pptBanner{Frequency of Comments}
+\includegraphics[width=.6\linewidth]{frequency-of-comments.png}
+\par
+{\scriptsize Source: \bibentry{haouari2011good}\par}}
+
+\qte
+  [Luca Pascarella]
+  {luca-pascarella.jpg}
+  {Code comments contain valuable information to support software development, especially during code reading and code maintenance. Nevertheless, not all the comments are the \ul{same}.}
+  {pascarella2019classifying}
+
+\pitch{
+\pptBanner{Taxonomy of Comment Types}
+\includegraphics[width=.95\linewidth]{taxonomy.png}
+\par
+{\scriptsize Source: \bibentry{pascarella2019classifying}\par}}
+
+\pitch{\pptBanner{Some Open Source Repositories (9 Feb 2024)}
+{\ttfamily\small\begin{tabular}{llrrrr}
+\toprule
+Github Repository & Stack & Files & Comments & LoC & Com/LoC \\
+\midrule
+\href{https://github.com/moby/moby}{moby} (a.k.a. Docker) & Go & 8389 & 272K & 1685K & 0.16 \\
+\href{https://github.com/flutter/flutter}{flutter} & Dart & 5517 & 244K & 1353K & 0.18 \\
+\href{https://github.com/spring-projects/spring-framework}{spring-framework} & Java & 9883 & 400K & 880K & 0.45 \\
+\href{https://github.com/google/guava}{guava} & Java & 1984 & 131K & 479K & 0.27 \\
+\href{https://github.com/pytorch/pytorch}{pytorch} & Python & &&& \\
+\bottomrule
+\end{tabular}}}
+
+\pitch{\pptBanner{My Own Statistics (9 Feb 2024)}
+{\ttfamily\small\begin{tabular}{llrrr}
+\toprule
+Github Repository & Stack & Comments & LoC & Com/LoC \\
+\midrule
+\href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 34380 & 58330 & 0.59 \\
+\href{https://github.com/objectionary/eo}{objectionary/eo} & Java & 23383 & 49151 & 0.48 \\
+\href{https://github.com/yegor256/cactoos}{yegor256/cactoos} & Java & 25857 & 33826 & 0.76 \\
+\href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 21393 & 26769 & 0.80 \\
+\href{https://github.com/zold-io/zold}{zold-io/zold} & Ruby & 4306 & 11807 & 0.36 \\
+\href{https://github.com/yegor256/tacit}{yegor256/tacit} & CSS & 259 & 1110 & 0.23 \\
+\bottomrule
+\end{tabular}}\par
+All repositories are open source.}
+
+\end{document}
