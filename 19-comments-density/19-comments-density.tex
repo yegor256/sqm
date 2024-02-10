@@ -47,13 +47,12 @@
 \pitch{
 \pptBanner{Comments Affect Maintainability}
 \includegraphics[width=.75\linewidth]{maintainability.png}
-\par
-{\scriptsize Source: \bibentry{garcia1996maintainability}\par}}
+\source{garcia1996maintainability}}
 
 \qte
   [Eriko Nurvitadhi]
   {eriko-nurvitadhi.jpg}
-  {The results indicated that method comments do increase lowlevel program understanding, while class comments did not increase high-level understanding. This raises questions about the role of class comments in Object-Oriented programs...}
+  {The results indicated that method comments do increase \ul{low-level} program understanding, while class comments did not increase \ul{high-level} understanding. This raises questions about the role of class comments in Object-Oriented programs...}
   {nurvitadhi2003class}
 
 \qte
@@ -65,26 +64,29 @@
 \qte
   [Oliver Arafat]
   {oliver-arafat.jpg}
-  {Comment density is the percentage of comment lines in a given source code base, that is, comment lines divided by total lines of code. Comment density is assumed to be a good \ul{predictor} of maintainability and hence \ul{survival} of a software project.}
+  {Comment density is the percentage of comment lines in a given source code base, that is, comment lines divided by total lines of code. Comment density is assumed to be a good \ul{predictor} of maintainability and hence \ul{survival} of a software project. In this study we focus on one particular code metric, the comment density, and assess it across 5,229 active open source projects, representing about 30\% of all active open source projects.}
   {arafat2009comment}
+
+\pitch{
+\pptBanner{Project Size vs. Comments Density}
+\includegraphics[width=.7\linewidth]{density.png}
+\source{arafat2009comment}}
 
 \qte
   [Houari Sahraoui]
   {houari-sahraoui.jpg}
-  {We defined a taxonomy of comments to guide this analysis. Our study showed that programmers comment some constructs more often than others. In the majority of cases, comments are intended to explain the code that follows them. The second more widely used category of comments are dedicated to communication between programmers and personal notes (we call them working comments).}
+  {We defined a taxonomy of comments to guide this analysis. Our study showed that programmers comment \ul{some constructs} more often than others. In the majority of cases, comments are intended to \ul{explain} the code that follows them. The second more widely used category of comments are dedicated to \ul{communication} between programmers and personal notes (we call them \ul{working} comments).}
   {haouari2011good}
 
 \pitch{
 \pptBanner{Types of Comments}
 \includegraphics[width=.6\linewidth]{types-of-comments.png}
-\par
-{\scriptsize Source: \bibentry{haouari2011good}\par}}
+\source{haouari2011good}}
 
 \pitch{
 \pptBanner{Frequency of Comments}
 \includegraphics[width=.6\linewidth]{frequency-of-comments.png}
-\par
-{\scriptsize Source: \bibentry{haouari2011good}\par}}
+\source{haouari2011good}}
 
 \qte
   [Luca Pascarella]
@@ -95,19 +97,30 @@
 \pitch{
 \pptBanner{Taxonomy of Comment Types}
 \includegraphics[width=.95\linewidth]{taxonomy.png}
-\par
-{\scriptsize Source: \bibentry{pascarella2019classifying}\par}}
+\source{pascarella2019classifying}}
+
+\qte
+  [Hao He]
+  {hao-he.jpg}
+  {We analyzed the comment density of 150 projects in 5 different programming languages. We have found that there are noticeable differences in comment density, which may be related to the \ul{programming language} used in the project and the \ul{purpose} of the project.}
+  {he2019understanding}
+
+\pitch{
+\pptBanner{Comments Density by Language}
+\includegraphics[width=.9\linewidth]{by-language.png}
+\source{he2019understanding}}
 
 \pitch{\pptBanner{Some Open Source Repositories (9 Feb 2024)}
 {\ttfamily\small\begin{tabular}{llrrrr}
 \toprule
 Github Repository & Stack & Files & Comments & LoC & Com/LoC \\
 \midrule
+\href{https://github.com/nodejs/node}{nodejs} & JS + C++ & 32559 & 1003K & 8381K & 0.12 \\
+\href{https://github.com/pytorch/pytorch}{pytorch} & Python & 11562 & 414K & 2527K & 0.16 \\
 \href{https://github.com/moby/moby}{moby} (a.k.a. Docker) & Go & 8389 & 272K & 1685K & 0.16 \\
 \href{https://github.com/flutter/flutter}{flutter} & Dart & 5517 & 244K & 1353K & 0.18 \\
 \href{https://github.com/spring-projects/spring-framework}{spring-framework} & Java & 9883 & 400K & 880K & 0.45 \\
 \href{https://github.com/google/guava}{guava} & Java & 1984 & 131K & 479K & 0.27 \\
-\href{https://github.com/pytorch/pytorch}{pytorch} & Python & &&& \\
 \bottomrule
 \end{tabular}}}
 

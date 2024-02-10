@@ -2,6 +2,7 @@
 --ignore=href:pp
 --ignore=qte:oppp
 --ignore=ffcode
+--ignore=source
 --ignore=ff
 --ignore=tabular:p
 --ignore=nospell
