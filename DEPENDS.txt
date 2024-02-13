@@ -1,4 +1,3 @@
-hard
 hard acmart
 hard algorithmicx
 hard algpseudocodex
