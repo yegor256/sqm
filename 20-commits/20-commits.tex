@@ -1,0 +1,86 @@
+% (The MIT License)
+%
+% Copyright (c) 2023-2024 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Commits}
+\begin{document}
+
+\plush{\sqmTitlePage{20}{}}
+
+\qte
+  [Ahmed E. Hassan]
+  {ahmed-hassan.jpg}
+  {The Mining Software Repositories (\ul{MSR}) field is maturing thanks to the rich, extensive, and readily available software repositories... After four successful years as ICSE's largest workshop, MSR became a Working Conference in 2008.}
+  {hassan2008road}
+
+\plush{\pptBanner{An Overview of MSR Achievements}
+\begin{pptWide}{2}{\scriptsize\begin{itemize}
+\item \textbf{Understanding Software Systems}
+  ``Using the historical \ul{sticky notes} on the NetBSD system, a large open source operating system, many unexpected dependencies could be easily explained and rationalized.''
+\item \textbf{Propagating Changes}
+  ``Instead of using traditional dependency graphs to propagate changes, we could make use of the \ul{historical co-changes}. The intuition is that entities co-changing frequently in the past are very likely to co-change in the future.''
+\item \textbf{Predicting and Identifying Bugs}
+  ``Tools can flag bugs by recognizing \ul{deviations} in mined patterns for renaming variables when cloning (i.e., copy-and-paste) code.''
+\item \textbf{Understanding Team Dynamics}
+  ``Mailing lists discussions could uncover the overall \ul{morale} of a development team with developers using more optimistic words when they feel positive about the progress of the project.''
+\item \textbf{Improving the User Experience}
+  ``Instead of studying the quality of the source code, they mine data captured by project \ul{monitoring} and \ul{tracking} infrastructures as well as customer support records to determine the expected quality of a software application.''
+\item \textbf{Reusing Code}
+  ``The techniques locate uses of code such as library APIs, and attempt to \ul{match} these uses to the needs of a developer working on a new piece of code.''
+\item \textbf{Automating Empirical Studies}
+  ``The automation permits the \ul{repetition} of studies on a large number of subject and the ability to verify the generality of many findings in these studies.''
+\end{itemize}}\end{pptWide}\source{hassan2008road}}
+
+\qte
+  [Witold Pedrycz]
+  {witold-pedrycz.jpg}
+  {Results indicate that for the Eclipse data, \ul{process metrics} are more efficient defect predictors than code metrics... Files with high \ul{revision numbers} are by nature defect prone... Files that are part of \ul{large CVS commits} are likely to be defect free.}
+  {moser2008comparative}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=.7\linewidth]{change-metrics.png}
+\par\columnbreak\par
+``Our set of change metrics is obviously only one possible proposal for change metrics we can extract from a CVS repository.''
+\source{moser2008comparative}
+\end{multicols}}
+
+\qte
+  [Oliver Arafat]
+  {../19-comments-density/oliver-arafat.jpg}
+  {We suggest distinguishing commit types by their size, using the following simple heuristic: \ul{single} commits of 1 to 100 SLoC, \ul{aggregate} commits of 101 to 10000 SLoC, and repository \ul{refactorings} of more than 10000 SLoC. }
+  {arafat2009commit}
+
+\qte
+  [Jeongju Sohn]
+  {jeongju-sohn.jpg}
+  {\ul{Age} simply measures how long a given program element has existed in the code base. We calculate the age of a given \ul{statement} as the number of consecutive versions from the faulty version backwards to the latest version containing a modication to the statement.}
+  {sohn2017fluccs}
+
+
+\qte
+  [Shane McIntosh]
+  {shane-mcintosh.jpg}
+  {JIT models, which aim to \ul{predict} the commits that will introduce \ul{future defects}, are typically trained using code-based metrics. We add metrics that estimate the level of detail in commit messages to JIT models with code-based metrics. We find that 43\% and 80\% of the JIT models of the studied systems are significantly improved by adding metrics that measure commit message \ul{volume} and \ul{content}, respectively.}
+  {barnett2016relationship}
+
+\end{document}
