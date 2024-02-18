@@ -128,5 +128,20 @@
   {\ul{Age} simply measures how long a given program element has existed in the code base. We calculate the age of a given \ul{statement} as the number of consecutive versions from the faulty version backwards to the latest version containing a modication to the statement.}
   {sohn2017fluccs}
 
+\qte
+  [Yuxia Zhang]
+  {yuxia-zhang.jpg}
+  {Although LLMs can take larger diffs as input, their performance of generating messages leaves much to be improved. UniXcoder tends to generate short messages, while ChatGPT can generate more detailed messages, which are \ul{very different} from those written by developers.}
+  {zhang2024automatic}
+
+\plush{\pptBanner{Pitfalls of Automated Commits Generation}
+\begin{pptWide}{2}{\small\begin{itemize}
+\item ``Developers indicate that writing the subject of a commit message is \ul{hard}, and approximately 37\% of developers also find writing subjects \ul{time-consuming}.''
+\item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
+\item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of NNGen, CoRec, and CCRep greatly declines in comparison to the original evaluations.''
+\item ``''
+\item ``''
+\end{itemize}}\end{pptWide}\source{zhang2024automatic}}
+
 
 \end{document}
