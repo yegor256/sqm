@@ -81,6 +81,19 @@
 \end{multicols}}
 
 \qte
+  [Abram Hindle]
+  {abram-hindle.jpg}
+  {Large commits were more likely to \ul{perfective} than \ul{corrective}, while small changes were more often corrective rather than perfective. In a way it makes sense, correcting errors is surgical, perfecting a system is much more global in scope.}
+  {hindle2008large}
+
+\pitch{\begin{multicols}{2}
+\includegraphics[width=.7\linewidth]{type-of-change.png}
+\par\columnbreak\par
+``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \ul{subjective}, but reliable methods could be researched and developed to \ul{quantify} such effect.''
+\source{hindle2008large}
+\end{multicols}}
+
+\qte
   [Oliver Arafat]
   {../19-comments-density/oliver-arafat.jpg}
   {We suggest distinguishing commit types by their size, using the following simple heuristic: \ul{single} commits of 1 to 100 SLoC, \ul{aggregate} commits of 101 to 10000 SLoC, and repository \ul{refactorings} of more than 10000 SLoC.}
@@ -129,6 +142,12 @@
   {sohn2017fluccs}
 
 \qte
+  [Iftekhar Ahmed]
+  {iftekhar-ahmed.jpg}
+  {Commit message quality has an impact on software defect proneness, and the overall quality of the commit messages decreases over time, while developers believe they are writing better commit messages.}
+  {li2023commit}
+
+\qte
   [Yuxia Zhang]
   {yuxia-zhang.jpg}
   {Although LLMs can take larger diffs as input, their performance of generating messages leaves much to be improved. UniXcoder tends to generate short messages, while ChatGPT can generate more detailed messages, which are \ul{very different} from those written by developers.}
@@ -140,6 +159,22 @@
 \item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
 \item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
 \end{itemize}}\end{pptWide}\source{zhang2024automatic}}
+
+\plush{\pptBanner{Commits Best Practices (Coders' Folklore)}
+\begin{multicols}{2}{\small\begin{itemize}
+\item ``Commit it as soon as it compiles''
+  --- \href{https://softwareengineering.stackexchange.com/a/74789/20873}{here}
+\item ``Prefer small commits to large commits.''
+  --- \href{https://softwareengineering.stackexchange.com/a/207036/20873}{here}
+\item ``You shouldn't commit based on a time basis, but on a feature basis''
+  --- \href{https://softwareengineering.stackexchange.com/a/74893/20873}{here}
+\item ``I tend to commit anytime I take a break''
+  --- \href{https://softwareengineering.stackexchange.com/a/74767/20873}{here}
+\item ``If you have to put the word "and" or "also" in your summary, you need to split it up.''
+  --- \href{https://softwareengineering.stackexchange.com/a/12209/20873}{here}
+\item ``If you can't adequately comment a commit in one line, then it's already too large.''
+  --- \href{https://softwareengineering.stackexchange.com/a/10944/20873}{here}
+\end{itemize}}\end{multicols}}
 
 
 \end{document}
