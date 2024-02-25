@@ -28,6 +28,12 @@
 \plush{\sqmTitlePage{21}{}}
 
 \qte
+  [Grady Booch]
+  {grady-booch.jpg}
+  {In general, there may be more internal releases to the development team, with only a few executable releases turned over to external parties. The internal releases represent a sort of \ul{continuous integration} of the system and exist to force closure on some key system areas.}
+  {booch1994object}
+
+\qte
   [Michael Cusumano]
   {michael-cusumano.jpg}
   {Regardless of how often individual developers check in their changes to the source code, a designated developer, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
@@ -37,6 +43,12 @@
   {msft.png}
   {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
   {cusumano1997microsoft}
+
+\qte
+  [Kent Beck]
+  {../11-clone-coverage/kent-beck.jpg}
+  {Developers need freedom to make changes where they make the most sense. Therefore, \ul{integrate} and \ul{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \ul{without unit tests}.}
+  {beck1998extreme}
 
 \qte
   [Martin Fowler]
@@ -53,7 +65,7 @@
 \qte
   [Bogdan Vasilescu]
   {bogdan-vasilescu.jpg}
-  {Our main finding is that continuous integration improves the \ul{productivity} of project teams, who can integrate more outside contributions, without an observable diminishment in code quality.}
+  {Our main finding is that continuous integration improves the \ul{productivity} of project teams, who can integrate \ul{more} outside contributions, without an observable diminishment in \ul{code quality}.}
   {vasilescu2015quality}
 
 \qte
@@ -118,6 +130,23 @@
   \item Certain languages more likely to cause breakages (sorry)
   \end{itemize}
   \source{micco2017state}}
+
+\qte
+  [Thomas Rausch]
+  {thomas-rausch.jpg}
+  {Process metrics have a significant impact on the build outcome in 8 of the 14 projects on average, but the strongest influencing factor across all projects is \ul{overall stability} in the \ul{recent build history}. For 10 projects, more than 50\% (up to 80\%) of all failed builds follow a previous build failure.}
+  {rausch2017empirical}
+\pitch{\includegraphics[width=.9\linewidth]{fail-ratio.png}
+  \par
+  \source{rausch2017empirical}}
+\pitch{\begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{error-types.png}
+  \source{rausch2017empirical}
+  \par\columnbreak\par
+  ``On average, 41\% of builds fail because of test failures... On average, 30\% of errors occur in the first half of the build runtime. The later half is dominated by 70\% testfailures. Together with a build-retry approach, testfailures can cause long delays in the feedback loop.''
+  \end{multicols}}
+
+\plush{\pptThought{\href{}{On October 16, 2018}, GitHub launched Actions}}
 
 \qte
   [Wing Lam]
