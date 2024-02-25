@@ -34,6 +34,12 @@
   {fowler2006}
 
 \qte
+  [Jez Humble]
+  {jez-humble.jpg}
+  {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
+  {humble2010continuous}
+
+\qte
   [Kai Huang]
   {kai-huang.jpg}
   {Our results show there are good reasons for the rise of CI. Compared to projects that do not use CI, projects that use CI: \ul{release} twice as often, \ul{accept pull requests} faster (1.6x), and have developers who are \ul{less worried} about breaking the build.}
@@ -80,5 +86,43 @@
   ``Pivotal developers experienced similar numbers of flaky and true CI failures per week. However, for the largest category, \ul{>10 fails a week}, there were twice as many flaky failures as true failures.''
   \source{hilton2017trade}
   \end{multicols}}
+
+\qte
+  [Owain Parry]
+  {owain-parry.png}
+  {The causes and associated factors of flaky tests: \begin{enumerate*}
+    \item Asynchronicity and Concurrency,
+    \item Platform Dependencies,
+    \item Floating-Point numbers,
+    \item Order-dependent tests,
+    \item Unordered Collections,
+    \item Shared access to static fields,
+    \item Timeouts,
+    \item I/O and Network,
+    \item Algorithmic Non-determinism.
+  \end{enumerate*}}
+  {parry2021survey}
+
+\qte
+  [Wing Lam]
+  {wing-lam.jpg}
+  {We find that \ul{53\%} of flaky tests detected in CI runs are not detected in isolation.}
+  {lam2020understanding}
+
+\qte
+  [John Micco]
+  {john-micco.jpg}
+  {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \ul{all test runs} reporting a `flaky' result.}
+  {micco2016}
+
+\plush{\pptBanner{Google Thoughts About Flaky Tests}
+  \begin{itemize}
+  \item Almost 16\% of our 4.2M tests have some level of flakiness
+  \item 84\% of transitions from Pass -> Fail are from `flaky' tests
+  \item We spend up to 16\% of our compute resources re-running flaky tests
+  \item Certain people/automation more likely to cause breakages (oops!)
+  \item Certain languages more likely to cause breakages (sorry)
+  \end{itemize}
+  \source{micco2017state}}
 
 \end{document}
