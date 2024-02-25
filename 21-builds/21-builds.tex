@@ -30,7 +30,12 @@
 \qte
   [Michael Cusumano]
   {michael-cusumano.jpg}
-  {[In Microsoft], the rule is that if developers check in code that `breaks' the build by preventing it from completing the recompilation, they must fix the defect immediately.}
+  {Regardless of how often individual developers check in their changes to the source code, a designated developer, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
+  {cusumano1997microsoft}
+
+\qte
+  {msft.png}
+  {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
   {cusumano1997microsoft}
 
 \qte
@@ -44,6 +49,12 @@
   {jez-humble.jpg}
   {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
   {humble2010continuous}
+
+\qte
+  [Bogdan Vasilescu]
+  {bogdan-vasilescu.jpg}
+  {Our main finding is that continuous integration improves the \ul{productivity} of project teams, who can integrate more outside contributions, without an observable diminishment in code quality.}
+  {vasilescu2015quality}
 
 \qte
   [Kai Huang]
@@ -94,6 +105,27 @@
   \end{multicols}}
 
 \qte
+  [John Micco]
+  {john-micco.jpg}
+  {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \ul{all test runs} reporting a `flaky' result.}
+  {micco2016}
+\plush{\pptBanner{Google Thoughts About Flaky Tests}
+  \begin{itemize}
+  \item Almost 16\% of our 4.2M tests have some level of flakiness
+  \item 84\% of transitions from Pass -> Fail are from `flaky' tests
+  \item We spend up to 16\% of our compute resources re-running flaky tests
+  \item Certain people/automation more likely to cause breakages (oops!)
+  \item Certain languages more likely to cause breakages (sorry)
+  \end{itemize}
+  \source{micco2017state}}
+
+\qte
+  [Wing Lam]
+  {wing-lam.jpg}
+  {We find that \ul{53\%} of flaky tests detected in CI runs are not detected in isolation.}
+  {lam2020understanding}
+
+\qte
   [Owain Parry]
   {owain-parry.png}
   {The causes and associated factors of flaky tests: \begin{enumerate*}
@@ -108,27 +140,5 @@
     \item Algorithmic Non-determinism.
   \end{enumerate*}}
   {parry2021survey}
-
-\qte
-  [Wing Lam]
-  {wing-lam.jpg}
-  {We find that \ul{53\%} of flaky tests detected in CI runs are not detected in isolation.}
-  {lam2020understanding}
-
-\qte
-  [John Micco]
-  {john-micco.jpg}
-  {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \ul{all test runs} reporting a `flaky' result.}
-  {micco2016}
-
-\plush{\pptBanner{Google Thoughts About Flaky Tests}
-  \begin{itemize}
-  \item Almost 16\% of our 4.2M tests have some level of flakiness
-  \item 84\% of transitions from Pass -> Fail are from `flaky' tests
-  \item We spend up to 16\% of our compute resources re-running flaky tests
-  \item Certain people/automation more likely to cause breakages (oops!)
-  \item Certain languages more likely to cause breakages (sorry)
-  \end{itemize}
-  \source{micco2017state}}
 
 \end{document}
