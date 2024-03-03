@@ -28,10 +28,37 @@
 \plush{\sqmTitlePage{22}{}}
 
 \qte
-  [Steven Johnson]
-  {steven-johnson.jpg}
-  {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
-  {johnson1977lint}
+  [Brian Kernighan]
+  {../19-comments-density/brian-kernighan.jpg}
+  {The harder it is for people to \ul{grasp the intent} of any given section, the longer it will be before the program becomes \ul{operational}. Trying to outsmart a compiler defeats much of the purpose of using one. Write clearly --- \ul{don't sacrifice} clarity for `efficiency.'}
+  {kernighan1974elements}
+
+\pptBanner{Which One Is Better?}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+int f(int n)
+{
+  if (n == 1 || a < 2)
+    return 1;
+  int a = f (n-1);
+  int b = f (n-2);
+  return a + b;
+  }
+\end{ffcode}
+}
+\par\columnbreak\par
+{\small\begin{ffcode}
+int fibonacci(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibonacci(n - 1)
+    + fibonacci(n - 2);
+}
+\end{ffcode}
+}
+\end{multicols}
+\plush{}
 
 \plush{\pptBanner{My Favorite Style Checkers}
 \begin{itemize}
