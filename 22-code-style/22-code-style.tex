@@ -38,11 +38,11 @@
 {\small\begin{ffcode}
 int f(int n)
 {
-  if (n == 1 || a < 2)
+  if (n == 1 || n < 2)
     return 1;
-  int a = f (n-1);
-  int b = f (n-2);
-  return a + b;
+  int r = f (n-1);
+  int r2 = f(n - 2);
+  return r +r2;
   }
 \end{ffcode}
 }
@@ -59,6 +59,15 @@ int fibonacci(int n) {
 }
 \end{multicols}
 \plush{}
+
+\qte
+  [Henry Ledgard]
+  {henry-ledgard.jpg}
+  {An individual's body language helps clarify the spoken word. In a similar sense, the programmer relies on \ul{white space}---what is not said directly---in the code to communicate logic, intent, and understanding.}
+  {green2011coding}
+
+\pitch{\includegraphics[width=.95\linewidth]{three-ifs.png}
+\source{green2011coding}}
 
 \plush{\pptBanner{My Favorite Style Checkers}
 \begin{itemize}
