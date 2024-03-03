@@ -27,12 +27,6 @@
 
 \plush{\sqmTitlePage{22}{}}
 
-\qte
-  [Brian Kernighan]
-  {../19-comments-density/brian-kernighan.jpg}
-  {The harder it is for people to \ul{grasp the intent} of any given section, the longer it will be before the program becomes \ul{operational}. Trying to outsmart a compiler defeats much of the purpose of using one. Write clearly --- \ul{don't sacrifice} clarity for `efficiency.'}
-  {kernighan1974elements}
-
 \pptBanner{Which One Is Better?}
 \begin{multicols}{2}
 {\small\begin{ffcode}
@@ -61,10 +55,36 @@ int fibonacci(int n) {
 \plush{}
 
 \qte
+  [Brian Kernighan]
+  {../19-comments-density/brian-kernighan.jpg}
+  {The harder it is for people to \ul{grasp the intent} of any given section, the longer it will be before the program becomes \ul{operational}. Trying to outsmart a compiler defeats much of the purpose of using one. Write clearly --- \ul{don't sacrifice} clarity for `efficiency.'}
+  {kernighan1974elements}
+
+\qte
+  {berry-meekings.png}
+  {The `elegance' or `style' of a program is sometimes considered a nebulous attribute that is somehow unquantifiable; a programmer has an \ul{instinctive} feel for a `good' or a `bad' program in much the same way as an artist distinguishes good and bad paintings.}
+  {berry1985style}
+\plush{\pptBanner{Berry-Meekings Score}
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{berry-score.png}
+  \par\columnbreak\par
+  An individual score for each metric is determined by reference to the value in this table for
+    \begin{enumerate}
+      \item the point $L$, below which no score is obtained;
+      \item the point $S$, the start of the ``ideal'' range for the metric;
+      \item the point $F$, the end of the ideal range;
+      \item the point $H$, above which no score is obtained.
+    \end{enumerate}
+    \source{berry1985style}
+  \end{multicols}}
+
+\qte
   [Henry Ledgard]
   {henry-ledgard.jpg}
   {An individual's body language helps clarify the spoken word. In a similar sense, the programmer relies on \ul{white space}---what is not said directly---in the code to communicate logic, intent, and understanding.}
   {green2011coding}
+\pitch{\includegraphics[width=.95\linewidth]{three-ifs.png}
+  \source{green2011coding}}
 
 \qte
   [Peter C. Rigby]
@@ -89,9 +109,6 @@ int fibonacci(int n) {
   {weiqin-zou.jpg}
   {A pull request that is \ul{consistent} with the current code style tends to be merged into the codebase more \ul{easily} (faster).}
   {bauer2019indentation}
-
-\pitch{\includegraphics[width=.95\linewidth]{three-ifs.png}
-  \source{green2011coding}}
 
 \plush{\pptBanner{My Favorite Style Checkers}
   \begin{itemize}
