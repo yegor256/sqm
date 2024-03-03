@@ -27,8 +27,9 @@
 
 \plush{\sqmTitlePage{22}{}}
 
-\pptBanner{Which One Is Better?}
-\begin{multicols}{2}
+\pptBanner{Which One \ul{Looks} Better for You?}
+\begin{pptWide}{3}
+C:\par
 {\small\begin{ffcode}
 int f(int n)
 {
@@ -41,6 +42,7 @@ int f(int n)
 \end{ffcode}
 }
 \par\columnbreak\par
+Java:\par
 {\small\begin{ffcode}
 int fibonacci(int n) {
   if (n <= 2) {
@@ -51,7 +53,17 @@ int fibonacci(int n) {
 }
 \end{ffcode}
 }
-\end{multicols}
+\par\columnbreak\par
+Ruby:\par
+{\small\begin{ffcode}
+def fibonacci(int n)
+  return 1 if n <= 2
+  fibonacci(n - 1)
+    + fibonacci(n - 2)
+end
+\end{ffcode}
+}
+\end{pptWide}
 \plush{}
 
 \qte
@@ -61,22 +73,89 @@ int fibonacci(int n) {
   {kernighan1974elements}
 
 \qte
+  [David Marca]
+  {david-marca.jpg}
+  {The effective utilization of extra spaces, blank lines, or special characters can \ul{illuminate} the logical structure of a program. So we should not be afraid to: indent, indent consistently (3 is a readable minimum), start each statement on a new line, put only one word on a line, use extra pages to visually collect code, put blank lines between code, align keywords, separate code from comments with white space.}
+  {marca1981some}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.7\linewidth]{pascal.png}
+  \par\columnbreak\par
+  ``The best style enforcer is the computer ... but \ul{only} if we can easily cope with its ever-present restrictions.''
+  \source{marca1981some}
+  \end{multicols}}
+
+\qte
+  [Michael J. Rees]
+  {michael-rees.jpg}
+  {STYLE was designed to input the source of a syntactically correct Pascal program, make simple measurements on a one-pass line-by-line basis, and yield a style \ul{mark} out of 100\%.}
+  {rees1982automatic}
+\plush{\pptBanner{Rees Score, for Pascal}
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{rees-table.png}
+  \par\columnbreak\par
+  \includegraphics[width=.95\linewidth]{rees-curve.png}
+  \source{rees1982automatic}
+  \end{multicols}}
+
+\qte
   {berry-meekings.png}
   {The `elegance' or `style' of a program is sometimes considered a nebulous attribute that is somehow unquantifiable; a programmer has an \ul{instinctive} feel for a `good' or a `bad' program in much the same way as an artist distinguishes good and bad paintings.}
   {berry1985style}
-\plush{\pptBanner{Berry-Meekings Score}
+\plush{\pptBanner{Berry-Meekings Score, for C Programs}
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{berry-score.png}
+  \source{berry1985style}
   \par\columnbreak\par
-  An individual score for each metric is determined by reference to the value in this table for
-    \begin{enumerate}
+  ``An individual score for each metric is determined by reference to the value in this table for
+    \begin{enumerate}\setlength\itemsep{-.5em}
       \item the point $L$, below which no score is obtained;
       \item the point $S$, the start of the ``ideal'' range for the metric;
       \item the point $F$, the end of the ideal range;
-      \item the point $H$, above which no score is obtained.
+      \item the point $H$, above which no score is obtained.''
     \end{enumerate}
-    \source{berry1985style}
   \end{multicols}}
+
+\qte
+  [Warren Harrison]
+  {warren-harrison.jpg}
+  {To determine the relationship (if any) between the style metric and error proneness of each module, we performed a simple correlation analysis. The results were discouraging in the sense that a correlation of only -0.052 existed between the observed error frequency and the style metric, suggesting that the style metric bore \ul{little relationship} to the error frequency encountered in our data.}
+  {harrison1986note}
+
+\plush{\pptBanner{My Favorite Style Checkers}
+  \begin{itemize}
+    \item \href{https://eslint.org/}{ESLint} for JavaScript
+    \item \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy} for C++
+    \item \href{https://github.com/pylint-dev/pylint}{Pylint} for Python
+    \item \href{https://github.com/rubocop/rubocop}{Rubocop} for Ruby
+    \item \href{https://github.com/squizlabs/PHP_CodeSniffer}{PHP\_CodeSniffer} for PHP
+    \item \href{https://github.com/rust-lang/rustfmt}{rustfmt} for Rust
+    \item \href{https://www.qulice.com}{Qulice} by \citep{bugayenko2014blog0813} for Java (\href{https://checkstyle.sourceforge.io/}{Checkstyle} + \href{https://pmd.github.io/}{PMD})
+  \end{itemize}}
+
+\plush{\pptBanner{How Many Rules in Style Checkers?}
+  \begin{itemize}
+    \item 690+ in Clang-Tidy (C++)
+    \item 550+ in Rubocop (Ruby)
+    \item 400+ in PMD (Java)
+    \item 130+ in Checkstyle (Java)
+    \item 120+ in Pylint (Python)
+  \end{itemize}
+  \par{\small Some/most of the rules no only check style, but also find bugs.\par}}
+
+\plush{\pptBanner{Some Exotic Style Checkers}
+  \begin{itemize}
+    \item \href{https://github.com/koalaman/shellcheck}{Shellcheck} for Bash
+    \item \href{https://github.com/markdownlint/markdownlint}{markdownlint} for Markdown
+    \item \href{https://github.com/mrtazz/checkmake}{Checkmake} for Makefile
+    \item \href{https://github.com/yegor256/xcop}{xcop} for XML
+  \end{itemize}}
+
+\qte
+  [Christian Collberg]
+  {christian-collberg.jpg}
+  {Code obfuscation means one user runs an application through an \ul{obfuscator}, a program that transforms the application into one that is functionally identical to the original but which is much more difficult for another user to understand.}
+  {collberg1997taxonomy}
 
 \qte
   [Henry Ledgard]
@@ -109,34 +188,5 @@ int fibonacci(int n) {
   {weiqin-zou.jpg}
   {A pull request that is \ul{consistent} with the current code style tends to be merged into the codebase more \ul{easily} (faster).}
   {bauer2019indentation}
-
-\plush{\pptBanner{My Favorite Style Checkers}
-  \begin{itemize}
-    \item \href{https://eslint.org/}{ESLint} for JavaScript
-    \item \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy} for C++
-    \item \href{https://github.com/pylint-dev/pylint}{Pylint} for Python
-    \item \href{https://github.com/rubocop/rubocop}{Rubocop} for Ruby
-    \item \href{https://github.com/squizlabs/PHP_CodeSniffer}{PHP\_CodeSniffer} for PHP
-    \item \href{https://github.com/rust-lang/rustfmt}{rustfmt} for Rust
-    \item \href{https://www.qulice.com}{Qulice} by \citep{bugayenko2014blog0813} for Java (\href{https://checkstyle.sourceforge.io/}{Checkstyle} + \href{https://pmd.github.io/}{PMD})
-  \end{itemize}}
-
-\plush{\pptBanner{How Many Rules in Style Checkers?}
-  \begin{itemize}
-    \item 690+ in Clang-Tidy (C++)
-    \item 550+ in Rubocop (Ruby)
-    \item 400+ in PMD (Java)
-    \item 130+ in Checkstyle (Java)
-    \item 120+ in Pylint (Python)
-  \end{itemize}
-  \par{\small Some/most of the rules no only check style, but also find bugs\par}}
-
-\plush{\pptBanner{Some Exotic Style Checkers}
-  \begin{itemize}
-    \item \href{https://github.com/koalaman/shellcheck}{Shellcheck} for Bash
-    \item \href{https://github.com/markdownlint/markdownlint}{markdownlint} for Markdown
-    \item \href{https://github.com/mrtazz/checkmake}{Checkmake} for Makefile
-    \item \href{https://github.com/yegor256/xcop}{xcop} for XML
-  \end{itemize}}
 
 \end{document}
