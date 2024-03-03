@@ -1,0 +1,47 @@
+% (The MIT License)
+%
+% Copyright (c) 2023-2024 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass{article}
+\usepackage{../sqm}
+\newcommand*\thetitle{Code Style}
+\begin{document}
+
+\plush{\sqmTitlePage{22}{}}
+
+\qte
+  [Steven Johnson]
+  {steven-johnson.jpg}
+  {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
+  {johnson1977lint}
+
+\plush{\pptBanner{My Favorite Style Checkers}
+\begin{itemize}
+    \item \href{https://www.qulice.com}{Qulice} for Java (\href{https://checkstyle.sourceforge.io/}{Checkstyle} + \href{https://pmd.github.io/}{PMD})
+    \item \href{https://eslint.org/}{ESLint} for JavaScript
+    \item \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy} for C++
+    \item \href{https://github.com/pylint-dev/pylint}{Pylint} for Python
+    \item \href{https://github.com/rubocop/rubocop}{Rubocop} for Ruby
+    \item \href{https://github.com/squizlabs/PHP_CodeSniffer}{PHP\_CodeSniffer} for PHP
+    \item \href{https://github.com/rust-lang/rustfmt}{rustfmt} for Rust
+  \end{itemize}}
+
+\end{document}
