@@ -8,6 +8,8 @@ All recorded videos (so far) are in [this YouTube playlist](https://www.youtube.
 
 All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/).
 
+Research questions [are here](https://gist.github.com/yegor256/3dde3560d26ba1d7b1d2a91dbe118a12).
+
 To compile everything just run:
 
 ```bash
