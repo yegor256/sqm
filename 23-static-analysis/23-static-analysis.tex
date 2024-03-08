@@ -88,6 +88,22 @@ while (x > 0) {
   {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \ul{couldn’t find} any more bugs.'}
   {chess2004static}
 
+\pptBanner{False Negative vs. False Positive}
+\begin{multicols}{2}
+{\small\begin{ffcode}
+int f(int x) {
+  return 42 / x;
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+True Positive: ``Division by zero''\par
+False Positive: ``Integer overflow''\par
+True Negative: ``No buffer overflow''\par
+False Negative: ``No errors at all''\par
+\end{multicols}
+\plush{}
+
 \plush{\pptBanner{Why do JavaScript developers use linters?}
 \begin{itemize}
   \setlength\itemsep{0em}
