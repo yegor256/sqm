@@ -37,6 +37,43 @@
 
 % https://dl.acm.org/doi/pdf/10.1145/1287624.1287633?casa_token=f0xMwXQyTGUAAAAA:9D4WEXeruGVgiyZrUvtOtIw75G4tZJCGDN9wxfRMzVyrsbQHep7Pdzh-QKtKs71zTl-jeGZaaeIXPpQ
 
+\pptBanner{Some Types of Bugs to Be Found by Static Analysis}
+\begin{pptWide}{3}
+Unreachable Code:
+{\small\begin{ffcode}
+int a = 10;
+if (a > 20) {
+  a = a + 1;
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Division by Zero:\par
+{\small\begin{ffcode}
+int f(int x) {
+  return 42 / x;
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Endless Loop:
+{\small\begin{ffcode}
+int x = 5;
+int y = 0;
+while (x > 0) {
+  y = y + x;
+}
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
+\qte
+  [Brian Chess]
+  {brian-chess.jpg}
+  {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \ul{couldn’t find} any more bugs.'}
+  {chess2004static}
+
 \plush{\pptBanner{Why do JavaScript developers use linters?}
 \begin{itemize}
   \setlength\itemsep{0em}
@@ -65,7 +102,7 @@
   \end{itemize}}
 
 \qte
-  [Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir]
+  [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
   {kristin-tomasdottir.jpg}
   {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \ul{consistency}.}
   {tomasdottir2018adoption}
@@ -73,7 +110,7 @@
   \source{tomasdottir2018adoption}}
 
 \qte
-  [Florian Oberm{\"u}ller]
+  [\nospell{Florian Oberm{\"u}ller}]
   {florian-obermuller.jpg}
   {We introduce the concept of \ul{code perfumes} as the counterpart to \ul{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
   {obermuller2021code}
