@@ -104,10 +104,10 @@ int f(int x) {
 \end{ffcode}
 }
 \par\columnbreak\par
-\nospell{\textbf{T}rue \textbf{P}ositive} (TP): \\ ``Division by zero''\par
-\nospell{\textbf{F}alse \textbf{P}ositive} (FP): \\ ``Integer overflow''\par
-\nospell{\textbf{T}rue \textbf{N}egative} (TN): \\ ``No buffer overflow''\par
-\nospell{\textbf{F}alse \textbf{N}egative} (FN): \\ ``No errors at all''\par
+\textcolor{green}{\nospell{\textbf{T}rue \textbf{P}ositive}} (TP): \\ ``Division by zero''\par
+\textcolor{red}{\nospell{\textbf{F}alse \textbf{P}ositive}} (FP): \\ ``Integer overflow''\par
+\textcolor{green}{\nospell{\textbf{T}rue \textbf{N}egative}} (TN): \\ ``No buffer overflow''\par
+\textcolor{red}{\nospell{\textbf{F}alse \textbf{N}egative}} (FN): \\ ``No errors at all''\par
 \end{multicols}
 \plush{}
 
@@ -142,6 +142,14 @@ int f(int x) {
     \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy}
   \item Rust:
     \href{https://github.com/rust-lang/rust-clippy}{clippy}
+  \end{itemize}}
+
+\plush{\pptBanner{Some Static Analysis Mechanisms}
+\begin{itemize}
+  \item Data Flow Analysis
+  \item Symbolic Execution
+  \item Model Checking
+  \item Taint Analysis
   \end{itemize}}
 
 \plush{\pptBanner{For some tools you have to pay:}
