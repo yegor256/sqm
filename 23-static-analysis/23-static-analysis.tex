@@ -37,11 +37,38 @@
 
 % https://dl.acm.org/doi/pdf/10.1145/1287624.1287633?casa_token=f0xMwXQyTGUAAAAA:9D4WEXeruGVgiyZrUvtOtIw75G4tZJCGDN9wxfRMzVyrsbQHep7Pdzh-QKtKs71zTl-jeGZaaeIXPpQ
 
+\plush{\pptBanner{Why do JavaScript developers use linters?}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Prevent Errors
+  \item Augment Test Suites
+  \item Avoid Ambiguous and Complex Code
+  \item Maintain Code Consistency
+  \item Faster Code Review
+  \item Spare Developers' Feelings
+  \item Save Discussion Time
+  \item Learn About JavaScript
+  \end{itemize}
+  \source{tomasdottir2017and}}
+
 \plush{\pptBanner{My Favorite Static Analyzers}
 \begin{itemize}
-    \item \href{https://spotbugs.github.io/}{SpotBugs} for Java
-    \item \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy} for C++
-    \item \href{https://github.com/rust-lang/rust-clippy}{clippy} for Rust
+    \item Java:
+      \href{https://spotbugs.github.io/}{SpotBugs},
+      \href{https://checkstyle.sourceforge.io/}{Checkstyle},
+      \href{https://pmd.github.io/}{PMD},
+      \href{https://www.qulice.com}{Qulice}\citep{bugayenko2014blog0813} for Java
+    \item C++:
+      \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy}
+    \item Rust:
+      \href{https://github.com/rust-lang/rust-clippy}{clippy}
   \end{itemize}}
+
+\qte
+  [Florian Oberm{\"u}ller]
+  {florian-obermuller.jpg}
+  {We introduce the concept of \ul{code perfumes} as the counterpart to \ul{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
+  {obermuller2021code}
+
 
 \end{document}
