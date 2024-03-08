@@ -78,6 +78,13 @@ while (x > 0) {
   y = y + x;
 }
 \end{ffcode}
+}\par
+Buffer Overflow:
+{\small\begin{ffcode}
+#include <stdio.h>
+char buf[16];
+fgets(buf, 1024, stdin);
+\end{ffcode}
 }
 \end{pptWide}
 \plush{}
