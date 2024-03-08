@@ -55,6 +55,12 @@ int f(int x) {
 }
 \end{ffcode}
 }
+Integer Overflow:\par
+{\small\begin{ffcode}
+var x: u8 = 142;
+x = x * 2;
+\end{ffcode}
+}
 \par\columnbreak\par
 Endless Loop:
 {\small\begin{ffcode}
@@ -90,15 +96,27 @@ while (x > 0) {
 
 \plush{\pptBanner{My Favorite Static Analyzers}
 \begin{itemize}
-    \item Java:
-      \href{https://spotbugs.github.io/}{SpotBugs},
-      \href{https://checkstyle.sourceforge.io/}{Checkstyle},
-      \href{https://pmd.github.io/}{PMD},
-      \href{https://www.qulice.com}{Qulice}\citep{bugayenko2014blog0813} for Java
-    \item C++:
-      \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy}
-    \item Rust:
-      \href{https://github.com/rust-lang/rust-clippy}{clippy}
+  \item Java:
+    \href{https://spotbugs.github.io/}{SpotBugs},
+    \href{https://checkstyle.sourceforge.io/}{Checkstyle},
+    \href{https://pmd.github.io/}{PMD},
+    \href{https://www.qulice.com}{Qulice}\citep{bugayenko2014blog0813} for Java
+  \item C++:
+    \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy}
+  \item Rust:
+    \href{https://github.com/rust-lang/rust-clippy}{clippy}
+  \end{itemize}}
+
+\plush{\pptBanner{For some tools you have to pay:}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Coverity by \href{https://scan.coverity.com/}{Synopsys} (US)
+  \item Klockwork by \href{https://www.perforce.com/}{Perforce} (US)
+  \item Fortify by \href{https://www.microfocus.com/}{Micro Focus} (UK)
+  \item \href{https://checkmarx.com/}{Checkmarx} (US)
+  \item \href{https://www.veracode.com/}{Veracode} (US)
+  \item \href{https://snyk.io/}{Snyk} (US)
+  \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}}
 
 \qte
