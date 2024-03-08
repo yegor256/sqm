@@ -33,8 +33,6 @@
   {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
   {johnson1977lint}
 
-% Extended static checking for Java
-
 % https://dl.acm.org/doi/pdf/10.1145/1287624.1287633?casa_token=f0xMwXQyTGUAAAAA:9D4WEXeruGVgiyZrUvtOtIw75G4tZJCGDN9wxfRMzVyrsbQHep7Pdzh-QKtKs71zTl-jeGZaaeIXPpQ
 
 \pptBanner{Some Types of Bugs to Be Found by Static Analysis}
@@ -84,6 +82,52 @@ Buffer Overflow:
 #include <stdio.h>
 char buf[16];
 fgets(buf, 1024, stdin);
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
+\pptBanner{Violations, Smells, Bugs}
+\begin{pptWide}{3}
+Style Violation:
+{\small\begin{ffcode}
+int f
+  (int x)
+{
+     return 42/x;
+}
+\end{ffcode}
+}\par
+{\small\begin{ffcode}
+Line 2: Indentation
+Line 3: Curled bracket
+Line 4: Indentation
+\end{ffcode}
+}
+\par\columnbreak\par
+Code Smell:\par
+{\small\begin{ffcode}
+int f(int x) {
+  return 42.0 / x;
+}
+\end{ffcode}
+}\par
+{\small\begin{ffcode}
+Line 2: Implicit type
+cast from float to int
+\end{ffcode}
+}
+\par\columnbreak\par
+Bug:\par
+{\small\begin{ffcode}
+int f(int x) {
+  return 42 / x;
+}
+\end{ffcode}
+}\par
+{\small\begin{ffcode}
+Line 2: Possible
+division by zero
 \end{ffcode}
 }
 \end{pptWide}
@@ -166,6 +210,14 @@ int f(int x) {
   \end{itemize}\par
   Usually it's up to \ul{\$3,000} per developer per year.}
 
+\qte
+  [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
+  {kristin-tomasdottir.jpg}
+  {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \ul{consistency}.}
+  {tomasdottir2018adoption}
+\pitch{\includegraphics[width=.95\linewidth]{rules.png}
+  \source{tomasdottir2018adoption}}
+
 \pitch{
   \pptBanner{SARIF}
   \begin{multicols}{2}
@@ -174,14 +226,6 @@ int f(int x) {
   ``This document defines a standard format for the output of static analysis tools.''
   \source{sarif2023}
   \end{multicols}}
-
-\qte
-  [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
-  {kristin-tomasdottir.jpg}
-  {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \ul{consistency}.}
-  {tomasdottir2018adoption}
-\pitch{\includegraphics[width=.95\linewidth]{rules.png}
-  \source{tomasdottir2018adoption}}
 
 \qte
   [\nospell{Florian Oberm{\"u}ller}]
