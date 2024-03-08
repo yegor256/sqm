@@ -46,7 +46,15 @@ if (a > 20) {
   a = a + 1;
 }
 \end{ffcode}
+}\par
+Uninitialized Variable:\par
+{\small\begin{ffcode}
+int x;
+int y = x + 42;
+print(y);
+\end{ffcode}
 }
+
 \par\columnbreak\par
 Division by Zero:\par
 {\small\begin{ffcode}
@@ -54,7 +62,7 @@ int f(int x) {
   return 42 / x;
 }
 \end{ffcode}
-}
+}\par
 Integer Overflow:\par
 {\small\begin{ffcode}
 var x: u8 = 142;
@@ -118,6 +126,14 @@ while (x > 0) {
   \item \href{https://snyk.io/}{Snyk} (US)
   \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{sarif.png}
+  \par\columnbreak\par
+  ``This document defines a standard format for the output of static analysis tools.''
+  \source{sarif2023}
+  \end{multicols}}
 
 \qte
   [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
