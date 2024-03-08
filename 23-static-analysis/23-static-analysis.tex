@@ -32,6 +32,14 @@
   {steven-johnson.jpg}
   {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
   {johnson1977lint}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{lint-material.jpg}
+  \par\columnbreak\par
+  ``This is \ul{dryer lint}, which is scraped out of a clothes dryer filter after it's dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
+  \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
+  \source{sarif2023}
+  \end{multicols}}
 
 % https://dl.acm.org/doi/pdf/10.1145/1287624.1287633?casa_token=f0xMwXQyTGUAAAAA:9D4WEXeruGVgiyZrUvtOtIw75G4tZJCGDN9wxfRMzVyrsbQHep7Pdzh-QKtKs71zTl-jeGZaaeIXPpQ
 
@@ -88,7 +96,7 @@ fgets(buf, 1024, stdin);
 \plush{}
 
 \pptBanner{Violations, Smells, Bugs}
-\begin{pptWide}{3}
+\begin{multicols}{3}
 Style Violation:
 {\small\begin{ffcode}
 int f
@@ -96,12 +104,6 @@ int f
 {
      return 42/x;
 }
-\end{ffcode}
-}\par
-{\small\begin{ffcode}
-Line 2: Indentation
-Line 3: Curled bracket
-Line 4: Indentation
 \end{ffcode}
 }
 \par\columnbreak\par
@@ -111,11 +113,6 @@ int f(int x) {
   return 42.0 / x;
 }
 \end{ffcode}
-}\par
-{\small\begin{ffcode}
-Line 2: Implicit type
-cast from float to int
-\end{ffcode}
 }
 \par\columnbreak\par
 Bug:\par
@@ -124,13 +121,18 @@ int f(int x) {
   return 42 / x;
 }
 \end{ffcode}
-}\par
-{\small\begin{ffcode}
-Line 2: Possible
-division by zero
-\end{ffcode}
 }
-\end{pptWide}
+\end{multicols}
+{\scriptsize\color{red}\ttfamily\begin{multicols}{3}
+Line 2: Indentation \\
+Line 3: Curled bracket \\
+Line 4: Indentation
+\par\columnbreak\par
+Line 2: Implicit type \\
+cast from float to int
+\par\columnbreak\par
+Line 2: Division by zero
+\end{multicols}}
 \plush{}
 
 \qte
@@ -161,20 +163,6 @@ int f(int x) {
   {Our results show that the static analysis defect density is \ul{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \ul{predict} the pre-release defect density with a high degree of sensitivity.}
   {nagappan2005static}
 
-\plush{\pptBanner{Why do JavaScript developers use linters?}
-\begin{itemize}
-  \setlength\itemsep{0em}
-  \item Prevent Errors
-  \item Augment Test Suites
-  \item Avoid Ambiguous and Complex Code
-  \item Maintain Code Consistency
-  \item Faster Code Review
-  \item Spare Developers' Feelings
-  \item Save Discussion Time
-  \item Learn About JavaScript
-  \end{itemize}
-  \source{tomasdottir2017and}}
-
 \plush{\pptBanner{My Favorite Static Analyzers}
 \begin{itemize}
   \item Java:
@@ -197,7 +185,7 @@ int f(int x) {
   \end{itemize}\par
   You may want to watch my ``\href{https://github.com/yegor256/ppa}{Practical Program Analysis}'' course.}
 
-\plush{\pptBanner{For some tools you have to pay:}
+\plush{\pptBanner{For some tools, you have to pay:}
 \begin{itemize}
   \setlength\itemsep{0em}
   \item Coverity by \href{https://scan.coverity.com/}{Synopsys} (US)
@@ -208,7 +196,21 @@ int f(int x) {
   \item \href{https://snyk.io/}{Snyk} (US)
   \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}\par
-  Usually it's up to \ul{\$3,000} per developer per year.}
+  Usually, up to \ul{\$3,000} per developer per year.}
+
+\plush{\pptBanner{Why do JavaScript developers use linters?}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Prevent Errors
+  \item Augment Test Suites
+  \item Avoid Ambiguous and Complex Code
+  \item Maintain Code Consistency
+  \item Faster Code Review
+  \item Spare Developers' Feelings
+  \item Save Discussion Time
+  \item Learn About JavaScript
+  \end{itemize}
+  \source{tomasdottir2017and}}
 
 \qte
   [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
