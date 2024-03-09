@@ -40,8 +40,6 @@
   \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
   \end{multicols}}
 
-% https://dl.acm.org/doi/pdf/10.1145/1287624.1287633?casa_token=f0xMwXQyTGUAAAAA:9D4WEXeruGVgiyZrUvtOtIw75G4tZJCGDN9wxfRMzVyrsbQHep7Pdzh-QKtKs71zTl-jeGZaaeIXPpQ
-
 \pptBanner{Some Types of Bugs to Be Found by Static Analysis}
 \begin{pptWide}{3}
 Unreachable Code:
@@ -72,13 +70,6 @@ Integer Overflow:\par
 var x: u8 = 142;
 x = x * 2;
 \end{ffcode}
-}\par
-Endless Recursion:\par
-{\small\begin{ffcode}
-int f(int n) {
-  return f(n - 1);
-}
-\end{ffcode}
 }
 \par\columnbreak\par
 Endless Loop:
@@ -95,6 +86,44 @@ Buffer Overflow:
 #include <stdio.h>
 char buf[16];
 fgets(buf, 1024, stdin);
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
+\pptBanner{Inter-procedural Analysis}
+\begin{pptWide}{3}
+Unused Global Var:
+{\small\begin{ffcode}
+int x;
+int foo() {
+  return 42;
+}
+int bar(int x) {
+  return x + 1;
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Endless Recursion:\par
+{\small\begin{ffcode}
+int foo(int n) {
+  return bar(n - 1);
+}
+int bar(int n) {
+  return foo(n + 1);
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+Pointer Dereferencing:
+{\small\begin{ffcode}
+int foo() {
+  return *bar();
+}
+int* bar() {
+  return 0;
+}
 \end{ffcode}
 }
 \end{pptWide}
