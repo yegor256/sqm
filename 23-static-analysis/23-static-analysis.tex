@@ -73,6 +73,13 @@ Integer Overflow:\par
 var x: u8 = 142;
 x = x * 2;
 \end{ffcode}
+}\par
+Endless Recursion:\par
+{\small\begin{ffcode}
+int f(int n) {
+  return f(n - 1);
+}
+\end{ffcode}
 }
 \par\columnbreak\par
 Endless Loop:
