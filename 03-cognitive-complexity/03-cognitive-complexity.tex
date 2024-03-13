@@ -29,23 +29,30 @@
 
 \thought{Cyclomatic complexity is highly inaccurate if being compared with code readability evaluated by a human.}
 
-\pitch{\pptQuote{ann-campbell.jpg}{A guiding principle in the formulation of Cognitive Complexity has been that it should incent good coding practices. That is, it should either ignore or discount features that make code more readable}{G. Ann Campbell, Sonar Source S.A., 2017}}
+\qte
+  [Ann Campbell]
+  {ann-campbell.jpg}
+  {A guiding principle in the formulation of Cognitive Complexity has been that it should incent good coding practices. That is, it should either ignore or discount features that make code more readable.}
+  {campbell2018cognitive}
 
 \pitch{
-\pptBanner{Cyclomatic Complexity}
 \pptPic{.9}{motive-before.png}\par
-``The mathematical model underlying Cyclomatic Complexity gives these two
+``The mathematical model underlying \ul{Cyclomatic Complexity} gives these two
 methods equal weight, yet it is intuitively obvious that the control flow of
-\ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}'' --- G. Ann Campbell}
+\ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}''
+\source{campbell2017}}
 
 \pitch{
-\pptBanner{Cognitive Complexity (CoCo)}
 \pptPic{.9}{motive-after.png}\par
-``The Cognitive Complexity algorithm gives these two methods markedly different
-scores, ones that are far more reflective of their relative understandability.'' --- G. Ann Campbell}
+``The \ul{Cognitive Complexity} algorithm gives these two methods markedly different
+scores, ones that are far more reflective of their relative understandability.''
+\source{campbell2017}}
 
-\pitch{
-``Being able to find statistical correlations between code understandability and source code measures would be greatly beneficial for the software development process, which involves a great deal of activities involving program comprehension'' --- Luigi Lavazza et al., \textit{An Empirical Evaluation of the ``Cognitive Complexity'' Measure as a Predictor of Code Understandability}, Journal of Systems and Software (197), 2023.}
+\qte
+  [Luigi Lavazza]
+  {luigi-lavazza.jpg}
+  {Being able to find statistical correlations between code understandability and source code measures would be greatly beneficial for the software development process, which involves a great deal of activities involving program comprehension.}
+  {lavazza2023empirical}
 
 \pitch{CoCo is supported in a few static analyzers:
 \begin{itemize}
