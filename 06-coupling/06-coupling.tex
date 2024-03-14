@@ -27,7 +27,11 @@
 
 \plush{\sqmTitlePage{6}{G0vN6Ah8-js}}
 
-\pitch{\pptQuote{larry-constantine.jpg}{The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}{Wayne P. Stevens, Glenford J. Myers, and \ul{Larry L. Constantine}, \textit{Structured Design}, IBM Systems Journal 13.2 (1974)}}
+\qte
+  [Wayne P. Stevens, Glenford J. Myers, and \ul{Larry L. Constantine}]
+  {larry-constantine.jpg}
+  {The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}
+  {stevens1974structured}
 
 \plush{
 \pptPic{.8}{coupling.png}\par
@@ -58,9 +62,17 @@
   {\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
   {chidamber1994metrics}
 
-\pitch{\pptQuote{dcc.png}{\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}{Jagdish Bansiya and Carl G. Davis, \textit{A Hierarchical Model for Object-Oriented Design Quality Assessment}, IEEE Transactions on Software Engineering, 28.1, 2002}}
+\qte
+  [Jagdish Bansiya and Carl G. Davis]
+  {dcc.png}
+  {\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
+  {bansiya2002}
 
-\pitch{\pptQuote{martin-fowler.jpg}{The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}{Martin Fowler, \textit{Reducing Coupling}, IEEE Software, 2001}}
+\qte
+  [Martin Fowler]
+  {martin-fowler.jpg}
+  {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}
+  {fowler2001}
 
 \qte
   [Steve McConnell]
@@ -72,7 +84,13 @@
 \pptPic{.95}{kokash.png}\par
 {\scriptsize (c) Natalia Kokash, Leiden Institute of Advanced Computer Science\par}}
 
-\pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
+% \pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
+
+\qte
+  [A. Mubarak et al.]
+  {study.png}
+  {We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}
+  {mubarak2010}
 
 \pitch{Fan-out, as a metric, is supported by a few tools:
 \begin{itemize}
@@ -81,7 +99,11 @@
 \item \href{https://pypi.org/project/module-coupling-metrics/}{module-coupling-metrics} for Python
 \end{itemize}}
 
-\pitch{\pptQuote{derek-comartin.jpg}{Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}{Derek Comartin, \href{https://codeopinion.com/write-stable-code-using-coupling-metrics/}{Write Stable Code using Coupling Metrics}, 2021}}
+\qte
+  [Derek Comartin]
+  {derek-comartin.jpg}
+  {Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}
+  {comartin2021}
 
 \plush{
 \pptBanner{Types of Coupling (some of them)}
