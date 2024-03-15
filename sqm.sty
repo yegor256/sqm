@@ -38,6 +38,10 @@
 \RequirePackage{tikz}
   \usetikzlibrary{positioning,calc,arrows,arrows.meta}
 \RequirePackage{soul}
+
+\usepackage{silence}
+  \WarningFilter{bibentry}{You have used \nobibliography*}
+
 \tikzstyle{graph} = [
   node distance=0,
   every node/.style={draw=black,circle,minimum width=2.2em,line width=.08em,outer sep=.2em,font={\ttfamily}},
