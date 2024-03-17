@@ -114,7 +114,17 @@ int fibonacci(int n) {
 \item Remove method body
 \end{itemize}}
 
-\pitch{\pptQuote{richard-hamlet.jpg}{It is a truism that \ul{good} software is easy to \ul{maintain}.}{Richard G. Hamlet, \textit{Testing Programs with the Aid of a Compiler}, IEEE Transactions on Software Engineering, 4, 1977\par\vspace*{1em}{\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \ul{the first mutation-like testing system}.'' --- Jefferson A. Offutt and Stephen D. Lee, \textit{How strong is weak mutation?}, Proceedings of the Symposium on Testing, Analysis, and Verification, 1991\par}}}
+\qte
+  [Richard G. Hamlet]
+  {richard-hamlet.jpg}
+  {It is a truism that \ul{good} software is easy to \ul{maintain}.}
+  {hamlet1997}
+
+\qte
+  [Jefferson A. Offutt and Stephen D. Lee]
+  {richard-hamlet.jpg}
+  {\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \ul{the first mutation-like testing system}.''}
+  {offutt1991}
 
 \qte
   [Richard J. Lipton]
@@ -256,7 +266,11 @@ int fibonacci(int n) {
 ``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\ul{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
 \end{multicols}}
 
-\pitch{\pptQuote{lionel-briand.jpg}{Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \ul{good indication} of the fault detection \ul{ability} of a test suite.}{James H. Andrews, \ul{Lionel C. Briand} and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005}}
+\qte
+  [James H. Andrews, \ul{Lionel C. Briand} and Yvan Labiche]
+  {lionel-briand.jpg}
+  {Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \ul{good indication} of the fault detection \ul{ability} of a test suite.}
+  {andrews2005}
 
 \pitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{faults.png}
@@ -265,7 +279,11 @@ int fibonacci(int n) {
 {\scriptsize Source: James H. Andrews, Lionel C. Briand and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005\par}
 \end{multicols}}
 
-\pitch{\pptQuote{yu-seung-ma.jpg}{Comparing with previous mutation systems for procedural programs, \ul{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}{\ul{Yu-Seung Ma}, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006}}
+\qte
+  [\ul{Yu-Seung Ma}, Jeff Offutt, and Yong-Rae Kwon]
+  {yu-seung-ma.jpg}
+  {Comparing with previous mutation systems for procedural programs, \ul{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}
+  {ma2006}
 
 \pitch{\begin{multicols}{2}
 \includegraphics[width=.9\linewidth]{operators.png}
@@ -274,16 +292,32 @@ int fibonacci(int n) {
 {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
 \end{multicols}}
 
-\pitch{\pptQuote{paul-ammann.jpg}{Three conditions must be present for a failure to be observed:
+\qte
+  [\ul{Paul Ammann} and Jeff Offutt]
+  {paul-ammann.jpg}
+  {Three conditions must be present for a failure to be observed:
 1)~The location in the program that contains the fault must be reached (\ul{\textbf{R}eachability}).
 2)~After executing the location, the state of the program must be incorrect (\textbf{I}nfection).
-3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}{\ul{Paul Ammann} and Jeff Offutt, \textit{Introduction to Software Testing}, 2008}}
+3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
+  {ammann2008}
 
-\pitch{\pptQuote{mark-harman.jpg}{Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \ul{Higher order mutants} are created by the insertion of two or more faults.}{Yue Jia and \ul{Mark Harman}, \textit{Higher Order Mutation Testing}, Information and Software Technology 51(10), 2009}}
+\qte
+  [Yue Jia and \ul{Mark Harman}]
+  {mark-harman.jpg}
+  {Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \ul{Higher order mutants} are created by the insertion of two or more faults.}
+  {jia2009}
 
-\pitch{\pptQuote{yue-jia.jpg}{One \ul{problem} that prevents mutation testing from becoming a practical testing technique is the \ul{high computational cost} of executing the enormous number of mutants against a test set.}{\ul{Yue Jia} and Mark Harman, \textit{An Analysis and Survey of the Development of Mutation Testing}, IEEE Transactions on Software Engineering 37(5), 2010}}
+\qte
+  [\ul{Yue Jia} and Mark Harman]
+  {yue-jia.jpg}
+  {One \ul{problem} that prevents mutation testing from becoming a practical testing technique is the \ul{high computational cost} of executing the enormous number of mutants against a test set.}
+  {jia2010}
 
-\pitch{\pptQuote{jie-zhang.jpg}{PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \ul{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}{\ul{Jie Zhang}, Ziyi Wang, Lingming Zhang, Dan Hao, Lei Zang, Shiyang Cheng, and Lu Zhang, \textit{Predictive Mutation Testing}, Proceedings of the 25th International Symposium on Software Testing and Analysis, 2016}}
+\qte
+  [\ul{Jie Zhang}, Ziyi Wang, Lingming Zhang, Dan Hao, Lei Zang, Shiyang Cheng, and Lu Zhang]
+  {jie-zhang.jpg}
+  {PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \ul{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}
+  {zhang2016}
 
 \pitch{Mutation Coverage can be calculated by a few tools:
 \begin{itemize}
