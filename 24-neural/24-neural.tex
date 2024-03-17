@@ -25,7 +25,7 @@
 \newcommand*\thetitle{Neural Metrics}
 \begin{document}
 
-\plush{\sqmTitlePage{99}{}}
+\plush{\sqmTitlePage{24}{}}
 
 % https://www.mdpi.com/2076-3417/13/6/3722
 
@@ -35,8 +35,35 @@
   {Neural software analysis offers a fresh approach, enhancing or even surpassing traditional program analysis in some areas}
   {pradel2022}
 
-\plush{
-  \pptBanner{Read this:}\par
-}
+\qte
+  [Pavol Bielik]
+  {pavol-bielik.jpg}
+  {In this paper we present a new, automated approach for creating static analyzers: instead of manually providing the various inference rules of the analyzer, the key idea is to \ul{learn} these \ul{rules} from a \ul{dataset} of programs.}
+  {bielik2017learning}
+
+\qte
+  [Uri Alon]
+  {uri-alon.jpg}
+  {\textbf{code2vec}: The main idea is to represent a code snippet as a single fixed-length \ul{code vector}, which can be used to \ul{predict} semantic properties of the snippet.}
+  {alon2019code2vec}
+\pitch{\includegraphics[width=.85\linewidth]{code2vec-1.png}
+  \source{alon2019code2vec}}
+\pitch{\includegraphics[width=.95\linewidth]{code2vec-2.png}
+  \source{alon2019code2vec}}
+
+\pitch{\includegraphics[width=.7\linewidth]{catid.png}
+  \source{taylor2023}}
+
+\qte
+  [Mohammad Mahdi Mohajer]
+  {mohammad-mahdi-mohajer.jpg}
+  {SkipAnalyzer consists of three components, 1) an LLM-based static bug detector that scans source code and reports specific types of bugs, 2) an LLM-based false positive filter, and 3) an LLM-based patch generator that can generate patches for the detected bugs above. As a proof-of-concept, SkipAnalyzer is built on \ul{ChatGPT}.}
+  {mohajer2023skipanalyzer}
+
+\qte
+  [Haonan Li]
+  {haonan-li.jpg}
+  {UBITect produces many false positives from the static analysis. With a pilot study of 20 false positives, we can successfully prune 8 out of 20 based on GPT-3.5, whereas GPT-4 had a near-perfect result of 16 out of 20.}
+  {li2023assisting}
 
 \end{document}

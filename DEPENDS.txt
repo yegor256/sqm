@@ -55,3 +55,4 @@ hard upquote
 hard varwidth
 hard wrapfig
 hard xstring
+hard silence
