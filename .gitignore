@@ -21,3 +21,4 @@ _minted-wp/
 *.toc
 *.crumbs
 package/
+iexec.*
