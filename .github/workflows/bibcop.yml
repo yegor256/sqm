@@ -1,0 +1,10 @@
+name: bibcop
+on:
+  push:
+  pull_request:
+jobs:
+  bibcop:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: yegor256/bibcop-action@master
