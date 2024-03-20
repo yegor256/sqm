@@ -2,9 +2,12 @@
 
 [![latexmk](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml)
 
-There are slides for my series of lectures for [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
+There are slides for my series of lectures for
+[HSE University](https://www.hse.ru/en/) (Moscow, Russia).
 
-All recorded videos (so far) are in [this YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl) (все лекции по-русски!).
+All recorded videos (so far) are in
+[this YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl)
+(все лекции по-русски!).
 
 All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/).
 
@@ -13,13 +16,13 @@ Research questions [are here](https://gist.github.com/yegor256/3dde3560d26ba1d7b
 To compile everything just run:
 
 ```bash
-$ make
+make
 ```
 
 To clean everything up, do:
 
-```
-$ make clean
+```bash
+make clean
 ```
 
 You need to have
