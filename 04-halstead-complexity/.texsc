@@ -12,3 +12,4 @@
 --ignore=pptQuote:p
 --ignore=pptSnippet:p
 --ignore=innoBook:p
+--ignore=sqmTitlePage:pp
