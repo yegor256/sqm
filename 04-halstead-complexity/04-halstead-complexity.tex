@@ -33,64 +33,56 @@
   {halstead1977elements}
 
 \plush{
-\pptBanner{Inputs}
-\begin{itemize}
-\item \(\eta_1\) --- the number of distinct \ul{operators}
-\item \(\eta_2\) --- the number of distinct \ul{operands}
-\item \(N_{1}\) --- the total number of operators
-\item \(N_{2}\) --- the total number of operands
-\end{itemize}
-}
+  \pptBanner{Inputs}
+  \begin{itemize}
+  \item \(\eta_1\) --- the number of distinct \ul{operators}
+  \item \(\eta_2\) --- the number of distinct \ul{operands}
+  \item \(N_{1}\) --- the total number of operators
+  \item \(N_{2}\) --- the total number of operands
+  \end{itemize}}
 
 \pitch{
-\pptBanner{Example from Wikipedia}
-\pptPic{.8}{example.png}
-}
+  \pptBanner{Example from Wikipedia}
+  \pptPic{.8}{example.png}}
 
 \pitch{
-\pptBanner{Operators and Operands}
-``When a program is translated from one language to another, as from FORTRAN to machine language for example, the actual operators and operands may indeed change, but both versions must still consist of combinations of operators and operands. \ul{No other category} of entities need be present.'' --- \textit{Advances in Software Science}, Maurice Halstead, Advances in Computers, Volume 18, 1979
-}
+  \pptBanner{Operators and Operands}
+  ``When a program is translated from one language to another, as from FORTRAN to machine language for example, the actual operators and operands may indeed change, but both versions must still consist of combinations of operators and operands. \ul{No other category} of entities need be present.'' --- \textit{Advances in Software Science}, Maurice Halstead, Advances in Computers, Volume 18, 1979}
 
 \pitch{
-\pptBanner{Length and Vocabulary}
-\begin{itemize}
-\item \(N_1 + N_2\) = Length
-\item \(\eta_1 + \eta_2\) = Vocabulary
-\item \(\eta_1 \times \log_2 \eta_1 + \eta_2 \times \log_2 \eta_2\) = Estimated Length
-\end{itemize}
-}
+  \pptBanner{Length and Vocabulary}
+  \begin{itemize}
+  \item \(N_1 + N_2\) = Length
+  \item \(\eta_1 + \eta_2\) = Vocabulary
+  \item \(\eta_1 \times \log_2 \eta_1 + \eta_2 \times \log_2 \eta_2\) = Estimated Length
+  \end{itemize}}
 
 \pitch{
-\pptBanner{Length vs. Vocabulary}
-\pptPic{.45}{estimated-length.png}\par
-``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.'' --- \textit{A Software Science Analysis of Programming Size}, Charles P. Smith, IBM, 1980.
-}
+  \pptBanner{Length vs. Vocabulary}
+  \pptPic{.45}{estimated-length.png}\par
+  ``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.'' --- \textit{A Software Science Analysis of Programming Size}, Charles P. Smith, IBM, 1980.}
 
 \pitch{
-\pptBanner{Volume, Difficulty, and Effort}
-\begin{itemize}
-\item \(N\) = Length
-\item \(\eta\) = Vocabulary
-\item \(N \times \log_2 \eta\) = Volume
-\item \(\eta_1/2 + N_2/\eta_2\) = Difficulty
-\item \(D \times V\) = Effort
-\end{itemize}
-}
+  \pptBanner{Volume, Difficulty, and Effort}
+  \begin{itemize}
+  \item \(N\) = Length
+  \item \(\eta\) = Vocabulary
+  \item \(N \times \log_2 \eta\) = Volume
+  \item \(\eta_1/2 + N_2/\eta_2\) = Difficulty
+  \item \(D \times V\) = Effort
+  \end{itemize}}
 
 \pitch{
-\pptBanner{Effort vs. Understandability}
-``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses. '' --- \textit{Review and Evaluation of Software Science}, Ann Fitzsimmons and Tom Love, Computing Surveys, Vol. 10, No. 1, 1978.
-}
+  \pptBanner{Effort vs. Understandability}
+  ``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses. '' --- \textit{Review and Evaluation of Software Science}, Ann Fitzsimmons and Tom Love, Computing Surveys, Vol. 10, No. 1, 1978.}
 
 \pitch{
-\pptBanner{Time and Bugs Estimate}
-\begin{itemize}
-\item \(E\) = Effort
-\item \(E / 18\) = Time (in seconds)
-\item \(V / 3000\) = Bugs
-\end{itemize}
-}
+  \pptBanner{Time and Bugs Estimate}
+  \begin{itemize}
+  \item \(E\) = Effort
+  \item \(E / 18\) = Time (in seconds)
+  \item \(V / 3000\) = Bugs
+  \end{itemize}}
 
 \qte
   [Bill Curtis]
@@ -99,11 +91,11 @@
   {curtis1979}
 
 \pitch{Halstead Complexity is supported by a few tools:
-\begin{itemize}
-\item \href{https://pypi.org/project/multimetric/}{multimetric} for C++, Java, Python, and many others
-\item \href{http://www.virtualmachinery.com/jhawkmetricslist.htm}{JHawk} (not free) for Java
-\item \href{https://sourceforge.net/projects/halsteadmetricstool/}{Halstead Metrics Tool} for Java
-\item \href{https://www.jetbrains.com/help/phpstorm/php-halstead-metric.html}{PhpStorm} for PHP
-\end{itemize}}
+  \begin{itemize}
+  \item \href{https://pypi.org/project/multimetric/}{multimetric} for C++, Java, Python, and many others
+  \item \href{http://www.virtualmachinery.com/jhawkmetricslist.htm}{JHawk} (not free) for Java
+  \item \href{https://sourceforge.net/projects/halsteadmetricstool/}{Halstead Metrics Tool} for Java
+  \item \href{https://www.jetbrains.com/help/phpstorm/php-halstead-metric.html}{PhpStorm} for PHP
+  \end{itemize}}
 
 \end{document}
