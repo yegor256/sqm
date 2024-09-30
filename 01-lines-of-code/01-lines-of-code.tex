@@ -27,6 +27,13 @@
 
 \plush{\sqmTitlePage{1}{q9Gr2xguP5I}}
 
+\thought{Quality of code means \ul{maintainability}: how quickly other programmers can understand your code.}
+
+\qte
+  {edsger-dijkstra}
+  {It has been suggested that there is some law of nature telling us that the amount of intellectual effort needed grows with the \ul{square} of program \ul{length}. But, thank goodness, no one has been able to prove this law. And this is because it \ul{need not be true}.}
+  {dijkstra1972humble}
+
 \qte
   {lionel-deimel}
   {One of the most overlooked programming skills is the ability to \ul{read} a program, an activity the programmer is called upon to do with surprising \ul{frequency}.}
@@ -38,18 +45,9 @@
   {raymond1991reading}
 
 \qte
-  {shari-lawrence-pfleeger}
-  {It's not enough to make claims about your software; you must support your claims with \ul{measurable evidence}.}
-  {pfleeger2008software}
-
-\thought{Everybody wants higher \ul{quality of code}, but nobody knows how to measure it.}
-
-\qte
   {fred-brooks}
-  {A programmer depends upon other people's programs. These are often maldesigned, poorly implemented, incompletely delivered (no source code or test cases), and poorly documented. So he must spend hours studying and fixing things that in an ideal world would be complete, available, and usable.}
+  {A programmer depends upon other people's programs. These are often \ul{maldesigned}, \ul{poorly implemented}, \ul{incompletely delivered} (no source code or test cases), and \ul{poorly documented}. So he must spend hours studying and fixing things that in an \ul{ideal world} would be complete, available, and usable.}
   {brooks1995mythical}
-
-\thought{Code \ul{maintainability}, probably, is the ultimate objective of increasing the quality of source code.}
 
 \qte
   {harold-abelson}
@@ -58,15 +56,32 @@
 
 \qte
   {robert-martin}
-  {Indeed, the ratio of time spent reading vs. writing is well over 10:1. We are constantly reading old code as part of the effort to write new code. Because this ratio is so high, we want the reading of code to be easy, even if it makes the writing harder.}
+  {Indeed, the ratio of time spent reading vs. writing is well over 10:1. We are constantly reading old code as part of the effort to write new code. Because this ratio is so high, we want the \ul{reading} of code to be easy, even if it makes the \ul{writing} harder.}
   {martin2008clean}
 
-\thought{Code \ul{size} makes the biggest negative impact on code maintainability.}
+\thought{Everybody wants higher \ul{quality of code}, but nobody knows how to measure it.}
 
 \qte
-  {edsger-dijkstra}
-  {It has been suggested that there is some law of nature telling us that the amount of intellectual effort needed grows with the \ul{square} of program \ul{length}. But, thank goodness, no one has been able to prove this law. And this is because it \ul{need not be true}.}
-  {dijkstra1972humble}
+  {shari-lawrence-pfleeger}
+  {It's not enough to make claims about your software; you must support your claims with \ul{measurable evidence}.}
+  {pfleeger2008software}
+
+\qte
+  [Mariza A. S. Bigonha]
+  {mariza-bigonha}
+  {The application of \ul{thresholds} could lower the cost of software quality evaluation since they can reduce the amount of software code that should be inspected. Therefore, the thresholds provide a way for quantitative and qualitative evaluations to complement each other, leading to a more efficient quality \ul{assessment} of object-oriented software systems.}
+  {filo2024evaluating}
+
+\plush{
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{thresholds.png}
+  \par\columnbreak\par
+  To evaluate our catalog, in that work, we handled a case study to assess proprietary software from a public organization with a bad internal quality to verify the proposed thresholds' ability to indicate it.\par
+  \source{filo2024evaluating}\par
+  \source{filo2015catalogue}
+  \end{multicols}}
+
+\thought{Size of code is the key contributor to its quality, while Lines of Code (LoC) is the basic measurement of size.}
 
 \qte
   {steve-mcconnell}
@@ -84,6 +99,8 @@
   \pptBanner{\texttt{cloc.pl}}
   \pptPic{.65}{cloc.png}\par
   \url{https://github.com/AlDanial/cloc}}
+
+\thought{In 2011, Uncle Bob \href{https://softwareengineering.stackexchange.com/questions/66523}{suggested} that 200 lines per Java class is a good guideline to stay below.}
 
 \thought{Instead of counting lines, it may be more reasonable to count NCSS (Non Commenting Source Statements), but not always.}
 
@@ -121,8 +138,6 @@ NCSS = ?
   How many lines of code you delete every week?
   How about annually?
   \end{multicols}}
-
-\thought{In 2011, Uncle Bob \href{https://softwareengineering.stackexchange.com/questions/66523}{suggested} that 200 lines per Java class is a good guideline to stay below.}
 
 \thought{Java is \href{http://jameshfisher.github.io/languageredundancy/}{two times} more verbose than Ruby. Does it mean the quality of an average Ruby code is higher?}
 
