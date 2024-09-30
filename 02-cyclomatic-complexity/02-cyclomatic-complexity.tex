@@ -27,11 +27,15 @@
 
 \plush{\sqmTitlePage{2}{Cvv0Olx4Bpw}}
 
-\thought{Some programmers mistakenly feel proud of higher complexity of their code.}
+\thought{Some programmers mistakenly feel proud of higher complexity of their code~\citep{bugayenko2015blog0629,bugayenko2014blog1026}.}
+
+\plush{\tbd{...}}
+
+\thought{Thomas McCabe suggested to measure Cyclomatic Complexity (CC) of source code.}
 
 \qte
   [Thomas J. McCabe]
-  {thomas-mccabe.jpg}
+  {thomas-mccabe}
   {Cyclomatic Complexity (CC) is a count of the number of decisions in the source code. The higher the count, the more complex the code. The formula is simple: \(C=E-N+2\).}
   {mccabe1976complexity}
 
@@ -40,78 +44,75 @@
 \pptPic{.5}{cc.png}\par
 I found this picture \href{https://craftofcoding.wordpress.com/2017/06/18/coding-a-small-note-on-cyclomatic-complexity/}{here}.}
 
-\thought{In his presentation "\textit{Software Quality Metrics to Identify Risk}", Tom McCabe introduces the following categorisation to interpret cyclomatic complexity: 1--10 little risk, 11--20 moderate risk, 21--50 high risk, 50+ very high risk.}
-
-\qte
-  [Joanne E. Hale]
-  {joanne-hale.jpg}
-  {The models developed are found to successfully \ul{predict} roughly 90\% of CC’s variance by LOC alone. This suggest not only that the linear relationship between LOC and CC is stable, but the aspects of code complexity that CC measures, such as the size of the test case space, grow \ul{linearly} with source code size across languages and programming paradigms.}
-  {graylin2009cyclomatic}
-
-\qte
-  [Adnan Muslija]
-  {adnan-muslija.jpg}
-  {There is a \ul{low} to moderate correlation between the effort needed to \ul{test} a program and its complexity.}
-  {muslija2018correlation}
+\thought{CC may correlate with other metrics.}
 
 \qte
   [Gregory Seront]
-  {gregory-seront.jpg}
-  {From the results of the experiments we conducted, we observed no significant correlation between the \ul{depth of inheritance} of a class and its weighted method complexity.}
+  {gregory-seront}
+  {From the results of the experiments we conducted, we observed no significant correlation between the \ul{depth of inheritance} of a class and its weighted method complexity (WMC).}
   {seront2005relationship}
 
 \qte
-  [Abd Jader]
-  {abd-jader.jpg}
-  {As the complexity of the software increases, the probability to introduce \ul{new errors} also increases.}
-  {abd2018}
-
-\qte
   [Meine van der Meulen]
-  {meine-van-der-meulen.jpg}
+  {meine-van-der-meulen}
   {There is a very strong correlation between Lines of Code and Halstead Volume and there is an even stronger correlation between Lines of Code and McCabe's Cyclomatic Complexity.}
   {meine2007correlations}
 
 \qte
   [Yonghee Shin]
-  {yonghee-shin.jpg}
-  {The results of our study show weak evidence that software complexity is the enemy of software security for the nine complexity metrics we collected. However, \ul{vulnerable} code seems to be more complex than faulty code.}
-  {shin2008complexity}
-
-\qte
-  [Yonghee Shin]
-  {yonghee-shin.jpg}
+  {yonghee-shin}
   {The results of our study show weak evidence that software complexity is the enemy of software security for the nine complexity metrics we collected. However, \ul{vulnerable} code seems to be more complex than faulty code.}
   {shin2008complexity}
 
 \qte
   [Abram Hindle]
-  {../20-commits-density/abram-hindle.jpg}
-  {Our results strongly suggest that measuring indentation is a cheap and accurate proxy for code complexity of revisions.}
+  {abram-hindle}
+  {Our results strongly suggest that measuring \ul{indentation} is a cheap and accurate proxy for code complexity of revisions.}
   {hindle2008reading}
 
 \qte
+  [Joanne E. Hale]
+  {joanne-hale}
+  {The models developed are found to successfully \ul{predict} roughly 90\% of CC’s variance by LOC alone. This suggest not only that the linear relationship between LOC and CC is stable, but the aspects of code complexity that CC measures, such as the size of the test case space, grow \ul{linearly} with source code size across languages and programming paradigms.}
+  {graylin2009cyclomatic}
+
+\qte
   [Md Abdullah Al Mamun]
-  {md-abdullah-al-mamun.jpg}
-  {We also found that complexity and \ul{documentation} domains are more correlated with size domain than themselves}
+  {md-abdullah-al-mamun}
+  {We also found that complexity and \ul{documentation} domains are more correlated with size domain than themselves.}
   {mamun2017correlations}
 
-\thought{What is a complexity of a class? How about a module?}
+\qte
+  [Adnan Muslija]
+  {adnan-muslija}
+  {There is a \ul{low} to moderate correlation between the effort needed to \ul{test} a program and its complexity.}
+  {muslija2018correlation}
+
+\qte
+  [Abd Jader]
+  {abd-jader}
+  {As the complexity of the software increases, the probability to introduce \ul{new errors} also increases.}
+  {abd2018}
+
+\thought{In his presentation "\textit{Software Quality Metrics to Identify Risk}", Tom McCabe introduced the following categorisation to interpret cyclomatic complexity: 1--10 little risk, 11--20 moderate risk, 21--50 high risk, 50+ very high risk.}
+
+\qte
+  [Geoffrey K. Gill]
+  {geoffrey-gill}
+  {The complexity density ratio is demonstrated to be a useful predictor of software maintenance productivity on a small pilot sample of actual maintenance project.}
+  {gill1991cyclomatic}
 
 \thought{\ul{Feature creep} is one of the most common sources of cost and schedule overruns; it can even kill products and projects --- Wikipedia.}
 
 \thought{Tom McCabe suggested to prohibit functions where CC is larger than \ul{ten}. Modern static analyzers may help you control this automatically.}
 
-\qte
-  [Geoffrey K. Gill]
-  {geoffrey-gill.jpg}
-  {The complexity density ratio is demonstrated to be a useful predictor of software maintenance productivity on a small pilot sample of actual maintenance project.}
-  {gill1991cyclomatic}
-
-\plush{
-  \pptBanner{Read this:}\par
-  \href{https://www.yegor256.com/2015/06/29/simple-diagrams.html}{The Better Architect You Are, The Simpler Your Diagrams} (2015)\par
-  \href{https://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html}{Are You a Hacker or a Designer?} (2014)\par
-}
+\pitch{CC can be calculated by a few tools:
+\begin{itemize}
+\item \href{https://checkstyle.sourceforge.io/}{Checkstyle} for Java
+\item \href{https://pmd.github.io/}{PMD} for Java
+\item \href{https://pypi.org/project/mccabe/}{mccabe} for Python
+\item \href{https://github.com/rubocop/rubocop}{Rubocop} for Ruby
+\item \href{https://jshint.com/about/}{JSHint} for JavaScript
+\end{itemize}}
 
 \end{document}
