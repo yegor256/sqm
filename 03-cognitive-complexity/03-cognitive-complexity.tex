@@ -31,43 +31,47 @@
 
 \qte
   [Ann Campbell]
-  {ann-campbell.jpg}
-  {A guiding principle in the formulation of Cognitive Complexity has been that it should incent good coding practices. That is, it should either ignore or discount features that make code more readable.}
+  {ann-campbell}
+  {A guiding principle in the formulation of Cognitive Complexity has been that it should incent \ul{good} coding practices. That is, it should either ignore or discount features that make code more readable.}
   {campbell2018cognitive}
 
 \pitch{
-\pptPic{.9}{motive-before.png}\par
-``The mathematical model underlying \ul{Cyclomatic Complexity} gives these two
-methods equal weight, yet it is intuitively obvious that the control flow of
-\ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}''
-\source{campbell2017}}
+  \pptPic{.9}{motive-before.png}\par
+  ``The mathematical model underlying \ul{Cyclomatic Complexity} gives these two
+  methods equal weight, yet it is intuitively obvious that the control flow of
+  \ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}.''
+  \source{campbell2017}}
 
 \pitch{
-\pptPic{.9}{motive-after.png}\par
-``The \ul{Cognitive Complexity} algorithm gives these two methods markedly different
-scores, ones that are far more reflective of their relative understandability.''
-\source{campbell2017}}
+  \pptPic{.9}{motive-after.png}\par
+  ``The \ul{Cognitive Complexity} algorithm gives these two methods markedly different
+  scores, ones that are far more reflective of their relative understandability.''
+  \source{campbell2017}}
 
 \qte
   [Luigi Lavazza]
-  {luigi-lavazza.jpg}
+  {luigi-lavazza}
   {Being able to find statistical correlations between code understandability and source code measures would be greatly beneficial for the software development process, which involves a great deal of activities involving program comprehension.}
   {lavazza2023empirical}
 
 \pitch{CoCo is supported in a few static analyzers:
-\begin{itemize}
-\item in PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
-\item in Rubocop \href{https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity}{since 0.25} (called ``perceived complexity'')
-\item in ESLint via \href{https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md}{SonarSource plugin}
-\item in Flake8 via \href{https://github.com/Melevir/flake8-cognitive-complexity}{this plugin}
-\item in Clippy \href{https://rust-lang.github.io/rust-clippy/master/\#/cognitive_complexity}{since 1.35.0}
-\item in PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
-\end{itemize}}
+  \begin{itemize}
+  \item in PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
+  \item in Rubocop \href{https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity}{since 0.25} (called ``perceived complexity'')
+  \item in ESLint via \href{https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md}{SonarSource plugin}
+  \item in Flake8 via \href{https://github.com/Melevir/flake8-cognitive-complexity}{this plugin}
+  \item in Clippy \href{https://rust-lang.github.io/rust-clippy/master/\#/cognitive_complexity}{since 1.35.0}
+  \item in PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
+  \end{itemize}}
 
 \thought{``Perceived complexity'' is human's impression and conceptualization of a system as being complex.}
 
-\pitch{\pptBanner{Social Code Analysis}``\ul{Social code analysis} enriches our understanding of the code quality by overlaying a \ul{developer's behavior} with the \ul{structural analysis} of the code'' --- \href{https://www.thoughtworks.com/en-de/radar/techniques/social-code-analysis}{Technology Radar} of ThoughtWorks, March 2017}
+\pitch{
+  \pptBanner{Social Code Analysis}
+  ``\ul{Social code analysis} enriches our understanding of the code quality by overlaying a \ul{developer's behavior} with the \ul{structural analysis} of the code'' ---
+  \href{https://www.thoughtworks.com/en-de/radar/techniques/social-code-analysis}{Technology Radar} of ThoughtWorks, March 2017}
 
-\pitch{\pptQuote{helmet.jpg}{BrainMaster Technologies (USA) sells this ``\href{https://brainmaster.com/product/freedom-20r-series/}{Freedom 20R}'' EEG head set for \$31,025. A similar device you can get from \href{https://neiry.ru/about-us}{Neiry} (Russia), for 3\% of this price.}{}}
+\pitch{
+  \pptQuote{helmet.jpg}{BrainMaster Technologies (USA) sells this ``\href{https://brainmaster.com/product/freedom-20r-series/}{Freedom 20R}'' EEG head set for \$31,025. A similar device you can get from \href{https://neiry.ru/about-us}{Neiry} (Russia), for 3\% of this price.}{}}
 
 \end{document}
