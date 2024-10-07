@@ -51,17 +51,19 @@
 \qte
   [Luigi Lavazza]
   {luigi-lavazza}
-  {Being able to find statistical correlations between code understandability and source code measures would be greatly beneficial for the software development process, which involves a great deal of activities involving program comprehension.}
+  {Being able to find statistical correlations between code \ul{understandability} and source code \ul{measures} would be greatly beneficial for the software development process, which involves a great deal of activities involving program \ul{comprehension}.}
   {lavazza2023empirical}
 
-\pitch{CoCo is supported in a few static analyzers:
+\pitch{\textcolor{orange}{CoCo} is supported by a few static analyzers:
   \begin{itemize}
-  \item in PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
-  \item in Rubocop \href{https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity}{since 0.25} (called ``perceived complexity'')
-  \item in ESLint via \href{https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md}{SonarSource plugin}
-  \item in Flake8 via \href{https://github.com/Melevir/flake8-cognitive-complexity}{this plugin}
-  \item in Clippy \href{https://rust-lang.github.io/rust-clippy/master/\#/cognitive_complexity}{since 1.35.0}
-  \item in PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
+  \setlength\itemsep{0em}
+  \item for Java by PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
+  \item for Ruby by Rubocop \href{https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity}{since 0.25} (called ``perceived complexity'')
+  \item for C++ by \href{https://docs.codeclimate.com/docs/cognitive-complexity}{CodeClimate}
+  \item for JavaScript by ESLint via \href{https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/cognitive-complexity.md}{SonarSource plugin}
+  \item for Python by Flake8 via \href{https://github.com/Melevir/flake8-cognitive-complexity}{this plugin}
+  \item for Rust by Clippy \href{https://rust-lang.github.io/rust-clippy/master/\#/cognitive_complexity}{since 1.35.0}
+  \item for PHP by PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
   \end{itemize}}
 
 \thought{``Perceived complexity'' is human's impression and conceptualization of a system as being complex.}
