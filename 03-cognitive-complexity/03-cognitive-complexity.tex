@@ -99,10 +99,10 @@
 \qte
   [Rub{\'e}n Saborido]
   {ruben-saborido}
-  {Different cognitive complexity measures have been proposed to quantify the understandability of a piece of code and, therefore, its maintainability. However, the cognitive complexity metric provided by SonarSource is quickly spreading in the software industry due to the popularity of their well-known static code tools for evaluating software quality.}
+  {Different cognitive complexity measures have been proposed to quantify the understandability of a piece of code and, therefore, its maintainability. \ul{However}, the cognitive complexity metric provided by SonarSource is quickly spreading in the software industry due to the popularity of their well-known static code \ul{tools} for evaluating software quality.}
   {saborido2022automatizing}
 
-\pitch{\textcolor{orange}{CoCo} is supported by a few static analyzers:
+\pitch{Cognitive Complexity (\textcolor{orange}{CoCo}) is supported by a few static analyzers:
   \begin{itemize}
   \setlength\itemsep{0em}
   \item for Java by PMD \href{https://pmd.github.io/pmd/pmd_rules_apex_design.html}{since 6.22.0}
@@ -114,7 +114,7 @@
   \item for PHP by PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
   \end{itemize}}
 
-\thought{Maybe it's impossible to accurately measure the complexity of software.}
+\thought{Maybe it's impossible to accurately measure the ``\ul{perceived} complexity'' of software?}
 
 \qte
   {norman-fenton}
@@ -127,14 +127,40 @@
   {Being able to find statistical correlations between code \ul{understandability} and source code \ul{measures} would be greatly beneficial for the software development process, which involves a great deal of activities involving program \ul{comprehension}.}
   {lavazza2023empirical}
 
-\thought{``Perceived complexity'' is human's impression and conceptualization of a system as being complex.}
+\thought{Social code analysis: we analyze the \ul{author(s)} of the code, not only the code itself.}
 
-\pitch{
-  \pptBanner{Social Code Analysis}
-  ``\ul{Social code analysis} enriches our understanding of the code quality by overlaying a \ul{developer's behavior} with the \ul{structural analysis} of the code'' ---
-  \href{https://www.thoughtworks.com/en-de/radar/techniques/social-code-analysis}{Technology Radar} of ThoughtWorks, March 2017}
+\qte
+  {../03-cognitive-complexity/social}
+  {Social code analysis enriches our understanding of the code quality by overlaying a \ul{developer's behavior} with the \ul{structural analysis} of the code.}
+  {social2017}
 
 \pitch{
   \pptQuote{helmet.jpg}{BrainMaster Technologies (USA) sells this ``\href{https://brainmaster.com/product/freedom-20r-series/}{Freedom 20R}'' EEG head set for \$31,025. A similar device you can get from \href{https://neiry.ru/about-us}{Neiry} (Russia), for 3\% of this price.}{}}
+
+The following Java code has an obvious but hard to spot functional defect:
+\par
+{\scriptsize\begin{ffcode}[columns=flexible]
+public class AverageCalculator {                             // (*@\textcolor{green}{LOW}@*)
+  public static void main(String[] args) {                   // (*@\textcolor{green}{LOW}@*)
+    int[] numbers = {10, 20, 30, 40, 50};                    // (*@\textcolor{green}{LOW}@*)
+    System.out.println("Average: " + avg(numbers));          // (*@\textcolor{orange}{MEDIUM}@*)
+  }                                                          // (*@\textcolor{green}{LOW}@*)
+  static double avg(int[] nums) {                            // (*@\textcolor{green}{LOW}@*)
+    double sum = 0;                                          // (*@\textcolor{orange}{MEDIUM}@*)
+    for (int i = 0; i (*@\textcolor{red}{<=}@*) nums.length; i++)                   // (*@\textcolor{red}{HIGH}@*)
+      sum += nums[i];                                        // (*@\textcolor{red}{HIGH}@*)
+    return sum / nums.length;                                // (*@\textcolor{orange}{MEDIUM}@*)
+  }                                                          // (*@\textcolor{green}{LOW}@*)
+}                                                            // (*@\textcolor{green}{LOW}@*)
+\end{ffcode}
+}
+\par
+The ``neuro-social markup'' is on the right side of the code, as Java comments, indicating the level of \ul{brain activity} at the moment of writing the particular line of code, such as \textcolor{green}{LOW}, \textcolor{orange}{MEDIUM} or \textcolor{red}{HIGH}.
+\plush{}
+
+\qte
+  {julio-medeiros}
+  {The EEG results reveal evidence of \ul{mental effort saturation} as \ul{code complexity} increases. Conversely, the classic software complexity metrics do \ul{not accurately} represent the mental effort involved in code comprehension.}
+  {medeiros2021can}
 
 \end{document}
