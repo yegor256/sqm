@@ -28,7 +28,7 @@
 \plush{\sqmTitlePage{4}{YsGzjv0hgcc}}
 
 \qte
-  {maurice-halstead.jpg}
+  {maurice-halstead}
   {Any attempt to find a \ul{universal} set of metrics that could be applied to any computer program, might at first glance appear destined to be unfruitful, if not merely \ul{difficult}. But, without universal, measurable parameters, we would be in the position of trying to develop the science of thermodynamics before the advent of a temperature scale.}
   {halstead1977elements}
 
@@ -59,8 +59,13 @@
 
 \pitch{
   \pptBanner{Length vs. Vocabulary}
-  \pptPic{.45}{estimated-length.png}\par
-  ``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.'' --- \textit{A Software Science Analysis of Programming Size}, Charles P. Smith, IBM, 1980.}
+  \begin{multicols}{2}
+  \pptPic{.95}{estimated-length.png}
+  \par\columnbreak\par
+  ``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.''
+  \par
+  \source{smith1980software}
+  \end{multicols}}
 
 \pitch{
   \pptBanner{Volume, Difficulty, and Effort}
@@ -74,7 +79,8 @@
 
 \pitch{
   \pptBanner{Effort vs. Understandability}
-  ``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses. '' --- \textit{Review and Evaluation of Software Science}, Ann Fitzsimmons and Tom Love, Computing Surveys, Vol. 10, No. 1, 1978.}
+  ``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses.''\par
+  \source{fitzsimmons1978review}}
 
 \pitch{
   \pptBanner{Time and Bugs Estimate}
@@ -86,8 +92,8 @@
 
 \qte
   [Bill Curtis]
-  {bill-curtis.jpg}
-  {In studying some error data provided us by Rome Air Development Center, Phil Milliman and I found Halstead's metric a remarkably accurate predictor of delivered bugs in a system developed with modern programming practices and tools}
+  {bill-curtis}
+  {In studying some error data provided us by Rome Air Development Center, Phil Milliman and I found Halstead's metric a \ul{remarkably accurate predictor} of delivered \ul{bugs} in a system developed with modern programming practices and tools.}
   {curtis1979}
 
 \pitch{Halstead Complexity is supported by a few tools:
