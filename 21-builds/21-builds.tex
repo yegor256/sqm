@@ -29,48 +29,48 @@
 
 \qte
   [Grady Booch]
-  {grady-booch.jpg}
+  {grady-booch}
   {In general, there may be more internal releases to the development team, with only a few executable releases turned over to external parties. The internal releases represent a sort of \ul{continuous integration} of the system and exist to force closure on some key system areas.}
   {booch1994object}
 
 \qte
   [Michael Cusumano]
-  {michael-cusumano.jpg}
+  {michael-cusumano}
   {Regardless of how often individual developers check in their changes to the source code, a designated developer, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
   {cusumano1997microsoft}
 
 \qte
-  {msft.png}
+  {../21-builds/msft}
   {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
   {cusumano1997microsoft}
 
 \qte
   [Kent Beck]
-  {../11-clone-coverage/kent-beck.jpg}
+  {kent-beck}
   {Developers need freedom to make changes where they make the most sense. Therefore, \ul{integrate} and \ul{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \ul{without unit tests}.}
   {beck1998extreme}
 
 \qte
   [Martin Fowler]
-  {../06-coupling/martin-fowler.jpg}
+  {martin-fowler}
   {For most projects, the XP guideline of a \ul{ten minute} build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute chiseled off the build time is a minute \ul{saved} for each developer every time they commit.}
   {fowler2006}
 
 \qte
   [Jez Humble]
-  {jez-humble.jpg}
+  {jez-humble}
   {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
   {humble2010continuous}
 
 \qte
   [Bogdan Vasilescu]
-  {bogdan-vasilescu.jpg}
+  {bogdan-vasilescu}
   {Our main finding is that continuous integration improves the \ul{productivity} of project teams, who can integrate \ul{more} outside contributions, without an observable diminishment in \ul{code quality}.}
   {vasilescu2015quality}
 
 \qte
   [Kai Huang]
-  {kai-huang.jpg}
+  {kai-huang}
   {Our results show there are good reasons for the rise of CI. Compared to projects that do not use CI, projects that use CI: \ul{release} twice as often, \ul{accept pull requests} faster (1.6x), and have developers who are \ul{less worried} about breaking the build.}
   {hilton2016usage}
 \pitch{\begin{multicols}{2}
@@ -94,7 +94,7 @@
 
 \qte
   [Michael Hilton]
-  {michael-hilton.jpg}
+  {michael-hilton}
   {Developers use CI to guarantee \ul{quality}, consistency, and viability across different environments. However, adding and maintaining automated tests causes these benefits to come at the expense of \ul{increased time} and \ul{effort}.}
   {hilton2017trade}
 \pitch{\begin{multicols}{2}
@@ -118,7 +118,7 @@
 
 \qte
   [John Micco]
-  {john-micco.jpg}
+  {john-micco}
   {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \ul{all test runs} reporting a `flaky' result.}
   {micco2016}
 \plush{\pptBanner{Google Thoughts About Flaky Tests}
@@ -133,13 +133,13 @@
 
 \qte
   [Carmine Vassallo]
-  {carmine-vassallo.jpg}
+  {carmine-vassallo}
   {In total, the 349 projects underwent 116,741 builds, of which 30,792 (26\%) failed. It is interesting to notice how the percentage of build failures is approximately the same in OSS and ING.}
   {vassallo2017tale}
 
 \qte
   [Thomas Rausch]
-  {thomas-rausch.jpg}
+  {thomas-rausch}
   {Process metrics have a significant impact on the build outcome in 8 of the 14 projects on average, but the strongest influencing factor across all projects is \ul{overall stability} in the \ul{recent build history}. For 10 projects, more than 50\% (up to 80\%) of all failed builds follow a previous build failure.}
   {rausch2017empirical}
 \pitch{\includegraphics[width=.9\linewidth]{fail-ratio.png}
@@ -154,7 +154,7 @@
 
 \qte
   [Romit Jain]
-  {romit-jain.jpg}
+  {romit-jain}
   {We observed that team size generally \ul{increases} the number of build failures. The interesting observation here is the minima after which there is a positive curve.}
   {jain2018brief}
 \pitch{\includegraphics[width=.5\linewidth]{team-size.png}
@@ -166,7 +166,7 @@
 
 \qte
   [Mehdi Golzadeh]
-  {mehdi-golzadeh.jpg}
+  {mehdi-golzadeh}
   {Together with Travis, GHA covers more than 80\% of all usages. Moreover, in only 18 months GHA has overtaken all other CIs in popularity.}
   {golzadeh2022rise}
 \pitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
@@ -174,13 +174,13 @@
 
 \qte
   [Wing Lam]
-  {wing-lam.jpg}
+  {wing-lam}
   {We find that \ul{53\%} of flaky tests detected in CI runs are not detected in isolation.}
   {lam2020understanding}
 
 \qte
   [Owain Parry]
-  {owain-parry.png}
+  {owain-parry}
   {The causes and associated factors of flaky tests: \begin{enumerate*}
     \item Asynchronicity and Concurrency,
     \item Platform Dependencies,
@@ -196,13 +196,13 @@
 
 \qte
   [Pei Liu]
-  {pei-liu.jpg}
+  {pei-liu}
   {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
   {liu2022first}
 
 \qte
   [Shanto Rahman]
-  {shanto-rahman.jpg}
+  {shanto-rahman}
   {FlakeSync works by \ul{identifying} a critical point, representing some key part of code that must be executed early w.r.t. other concurrently executing code, and a barrier point, representing the part of code that should wait until the critical point has been executed. FlakeSync can \ul{modify} code to check when the critical point is executed and have the barrier point keep waiting until the critical point has been executed, essentially synchronizing these two parts of code for the specific test execution.}
   {rahman2024flakesync}
 
