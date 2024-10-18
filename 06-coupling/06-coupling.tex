@@ -29,7 +29,7 @@
 
 \qte
   [Larry L. Constantine]
-  {larry-constantine.jpg}
+  {larry-constantine}
   {The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}
   {stevens1974structured}
 
@@ -39,7 +39,7 @@
 
 \qte
   [Glenford Myers]
-  {glenford-myers.jpg}
+  {glenford-myers}
   {Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \ul{complicates} a system since a module is harder to \ul{understand}, \ul{change}, or \ul{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}
   {stevens1974structured}
 
@@ -49,7 +49,7 @@
 
 \qte
   [Wayne P. Stevens]
-  {wayne-stevens.jpg}
+  {wayne-stevens}
   {The degree of coupling established by a particular connection is a function of several factors, and thus it is \ul{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}
   {stevens1974structured}
 
@@ -58,24 +58,24 @@
 {\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
 
 \qte
-  {cbo.png}
+  {../06-coupling/cbo}
   {\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
   {chidamber1994metrics}
 
 \qte
-  {dcc.png}
+  {../06-coupling/dcc}
   {\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
   {bansiya2002}
 
 \qte
   [Martin Fowler]
-  {martin-fowler.jpg}
+  {martin-fowler}
   {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}
   {fowler2001}
 
 \qte
   [Steve McConnell]
-  {steve-mcconnell.jpg}
+  {steve-mcconnell}
   {Low-to-medium \ul{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \ul{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}
   {mcconnell2004code}
 
@@ -86,7 +86,7 @@
 % \pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
 
 \qte
-  {study.png}
+  {../06-coupling/study}
   {We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}
   {mubarak2010}
 
@@ -99,7 +99,7 @@
 
 \qte
   [Derek Comartin]
-  {derek-comartin.jpg}
+  {derek-comartin}
   {Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}
   {comartin2021}
 

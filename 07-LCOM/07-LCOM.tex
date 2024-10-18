@@ -29,7 +29,7 @@
 
 \qte
   [Larry Constantine]
-  {../06-coupling/larry-constantine.jpg}
+  {larry-constantine}
   {Coupling is reduced when the relationships among elements not in the same module are minimized. There are two ways of achieving this: minimizing the relationships among modules and \ul{maximizing relationships} among elements in the same module.}
   {stevens1974structured}
 
@@ -41,13 +41,13 @@
 
 \qte
   [Neal Ford]
-  {neal-ford.jpg}
+  {neal-ford}
   {Architecture is the tension between coupling and cohesion.}
   {ford2024}
 
 \qte
   [Glenford J. Myers]
-  {../06-coupling/glenford-myers.jpg}
+  {glenford-myers}
   {The scale of cohesiveness, from lowest to highest, follows:
     1)~Coincidental,
     2)~Logical,
@@ -64,7 +64,7 @@
 
 \qte
   [Wayne P. Stevens]
-  {../06-coupling/wayne-stevens.jpg}
+  {wayne-stevens}
   {One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \ul{form should follow function}.}
   {stevens1974structured}
 
@@ -199,7 +199,7 @@ int v = new SQLResult()
 
 \qte
   [Chris Kemerer]
-  {chris-kemerer.jpg}
+  {chris-kemerer}
   {Consider a class with methods \(m_1, m_2, \dots, m_n\). Let \(V_i\) be a set of instance variables used by method \(m_i\). There are \(n\) such sets \(V_1, V_2, \dots, V_n\). LCOM is the number of disjoint sets formed by the intersection of the \(n\) sets. The number of disjoint sets provides a measure for the disparate nature of methods in the class. Fewer disjoint sets implies greater similarity of methods.}
   {chidamber1991towards}
 
@@ -268,7 +268,7 @@ class Rectangle {
 
 \qte
   [Brian Henderson-Sellers]
-  {brian-henderson-sellers.jpg}
+  {brian-henderson-sellers}
   {LCOM2 equals the percentage of methods that do not access a specific attribute averaged over all attributes in the class. If the number of methods or attributes is zero, LCOM2 is undefined and displayed as zero.}
   {henderson1996coupling}
 
@@ -300,7 +300,7 @@ class Rectangle {
 
 \qte
   [Larry Constantine]
-  {../06-coupling/larry-constantine.jpg}
+  {larry-constantine}
   {LCOM3 is defined as a normalized measure that considers the number of methods in the class, the number of attributes, and the average number of methods that access each attribute. (by ChatGPT)}
   {henderson1996coupling}
 
@@ -330,7 +330,7 @@ where\par
 
 \qte
   [Martin Hitz]
-  {martin-hitz.jpg}
+  {martin-hitz}
   {LCOM4 measures the number of 'connected components' in a class. A connected component is a set of related methods (and class-level variables). Methods A and B are related if: they both access the same class-level variable, or A calls B or vice versa.}
   {hitz1995measuring}
 
