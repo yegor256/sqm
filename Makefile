@@ -53,7 +53,7 @@ package: latexmk
 		done
 		echo "<p>Compiled on: $$(date).</p>"
 		echo "<p>LaTeX sources are in <a href='https://github.com/yegor256/sqm'>GitHub</a>.</p>"
-		echo "<p>Videos are in <a href='https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl'>YouTube</a>.</p>"
+		echo "<p>Videos are <a href='https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl'>on YouTube</a>.</p>"
 		echo "</body></html>"
 	)>> index.html
 

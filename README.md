@@ -5,7 +5,7 @@
 There are slides for my series of lectures for
 [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
 
-All recorded videos (so far) are in [this YouTube playlist][playlist]
+All recorded videos are in [this YouTube playlist][playlist]
 (все лекции по-русски!).
 
 All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/).
@@ -26,6 +26,7 @@ make clean
 ```
 
 You need to have
+[`make`](https://www.gnu.org/software/make/),
 [LaTeX](https://en.wikipedia.org/wiki/LaTeX),
 [`aspell`](http://aspell.net/),
 [`texsc`](https://rubygems.org/gems/texsc),
