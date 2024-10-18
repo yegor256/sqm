@@ -1,4 +1,3 @@
-hard doi
 hard acmart
 hard algorithmicx
 hard algpseudocodex
@@ -16,6 +15,7 @@ hard crumbs
 hard currfile
 hard cyrillic
 hard datetime
+hard doi
 hard enumitem
 hard environ
 hard fdsymbol
@@ -42,6 +42,7 @@ hard ppt-slides
 hard preprint
 hard qrcode
 hard relsize
+hard silence
 hard stmaryrd
 hard svg
 hard textpos
@@ -51,8 +52,8 @@ hard to-be-determined
 hard totpages
 hard transparent
 hard trimspaces
+hard underscore
 hard upquote
 hard varwidth
 hard wrapfig
 hard xstring
-hard silence
