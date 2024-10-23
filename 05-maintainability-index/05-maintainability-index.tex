@@ -94,16 +94,15 @@
 }
 
 \plush{
-\pptBanner{Maintainability Index by Visual Studio}
-\begin{multicols}{2}
-\pptPic{.95}{vs-formula.png}\par
-{\scriptsize Source: \href{https://radon.readthedocs.io/en/latest/intro.html}{Introduction to Code Metrics}, by Radon\par}
-\pptPic{.95}{vs-grades.png}\par
-{\scriptsize Source: \href{https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/}{Think Twice Before Using the ``Maintainability Index''}, by Arie van Deursen\par}
-\par\columnbreak\par
-``We decided to be conservative with the thresholds. The desire was that if the index showed red then we would be saying with a high degree of confidence that there was an issue with the code.'' --- \href{https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=vs-2022}{Code metrics --- Maintainability index range and meaning} by Microsoft, 2011.
-\end{multicols}
-}
+  \pptBanner{Maintainability Index by Visual Studio}
+  \begin{multicols}{2}
+  \pptPic{.95}{vs-formula.png}\par
+  {\scriptsize Source: \href{https://radon.readthedocs.io/en/latest/intro.html}{Introduction to Code Metrics}, by Radon\par}
+  \pptPic{.95}{vs-grades.png}\par
+  {\scriptsize Source: \href{https://avandeursen.com/2014/08/29/think-twice-before-using-the-maintainability-index/}{Think Twice Before Using the ``Maintainability Index''}, by Arie van Deursen\par}
+  \par\columnbreak\par
+  ``We decided to be conservative with the thresholds. The desire was that if the index showed red then we would be saying with a high degree of confidence that there was an issue with the code.'' --- \href{https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=vs-2022}{Code metrics --- Maintainability index range and meaning} by Microsoft, 2011.
+  \end{multicols}}
 
 \lnQuote
   [Rainer Niedermayr]
@@ -148,7 +147,18 @@
 \lnQuote
   {slr}
   {The SLR outcome provided us with \ul{174 software metrics}, among which we identified a set of 15 most commonly mentioned ones, and 19 metric computation tools available to practitioners.}
-  {ardito2022}
+  {ardito2020tool}
+
+\plush{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{metrics.png}
+  \par\columnbreak\par
+  \lnSource{ardito2020tool}
+  \end{multicols}}
+
+\lnPitch{
+  \includegraphics[width=.7\linewidth]{langs.png}\par
+  \lnSource{ardito2020tool}}
 
 % let's say something about "aggregation of software metrics"
 % start from here: https://onlinelibrary.wiley.com/doi/abs/10.1002/smr.1558
