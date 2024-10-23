@@ -21,83 +21,83 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Neural Metrics}
 \begin{document}
 
-\plush{\sqmTitlePage{24}{6Rog8QhuXTY}}
+\plush{\lnTitlePage{24}{24}{6Rog8QhuXTY}}
 
-\qte
+\lnQuote
   [Michael Pradel]
   {michael-pradel}
   {\ul{Neural} software analysis offers a fresh approach, enhancing or even \ul{surpassing} traditional program analysis in some areas.}
   {pradel2021neural}
 
-\qte
+\lnQuote
   [Francesca Arcelli Fontana]
   {francesca-arcelli-fontana}
   {We conclude that the application of machine learning to the detection of [these] \ul{code smells} can provide high accuracy (>96\%), and only a hundred training examples are needed to reach at least 95\% accuracy.}
   {arcelli2016comparing}
 
-\qte
+\lnQuote
   [Martin White]
   {martin-white}
   {Among the true positives, we found pairs mapping to all four clone types. We compared our approach to a traditional structure-oriented technique and found that our learning-based approach \ul{detected clones} that were either undetected or suboptimally reported by the prominent tool Deckard.}
   {white2016deep}
 
-\qte
+\lnQuote
   [Pavol Bielik]
   {pavol-bielik}
   {In this paper we present a new, automated approach for creating static analyzers: instead of manually providing the various inference rules of the analyzer, the key idea is to \ul{learn} these \ul{rules} from a \ul{dataset} of programs.}
   {bielik2017learning}
 
-\qte
+\lnQuote
   [Tomas Mikolov]
   {tomas-mikolov}
   {The meanings of `Canada' and `Air' cannot be easily combined to obtain `Air Canada'. Motivated by this example, we present a simple method for finding phrases in text, and show that learning good \ul{vector representations} for millions of phrases is possible.}
   {mikolov2013distributed}
-\qte
+\lnQuote
   [Koushik Sen]
   {koushik-sen}
   {This paper presents DeepBugs, a learning approach to name-based bug detection, which reasons about names based on a semantic representation and which automatically learns bug detectors instead of manually writing them. We formulate bug detection as a \ul{binary classification problem} and train a classifier that distinguishes \ul{correct} from \ul{incorrect} code.}
   {pradel2018deepbugs}
 
-\qte
+\lnQuote
   [Dario Di Nucci]
   {dario-di-nucci}
   {While \citet{arcelli2016comparing} opened a new perspective for code smell detection, in the context of our research we found a number of possible \ul{limitations} that might threaten the results of this study. Our findings show that the high performance achieved in their study was in fact due to the \ul{specific dataset} employed rather than the actual capabilities of machine-learning techniques for code smell detection.}
   {di2018detecting}
 
-\qte
+\lnQuote
   [Uri Alon]
   {uri-alon}
   {\textbf{code2vec}: The main idea is to represent a code snippet as a single fixed-length \ul{code vector}, which can be used to \ul{predict} semantic properties of the snippet.}
   {alon2019code2vec}
-\pitch{\includegraphics[width=.85\linewidth]{code2vec-1.png}
-  \source{alon2019code2vec}}
-\pitch{\includegraphics[width=.95\linewidth]{code2vec-2.png}
-  \source{alon2019code2vec}}
+\lnPitch{\includegraphics[width=.85\linewidth]{code2vec-1.png}
+  \lnSource{alon2019code2vec}}
+\lnPitch{\includegraphics[width=.95\linewidth]{code2vec-2.png}
+  \lnSource{alon2019code2vec}}
 
-\qte
+\lnQuote
   [Mohammad Mahdi Mohajer]
   {mohammad-mahdi-mohajer}
   {SkipAnalyzer consists of three components, 1) an LLM-based static bug detector that scans source code and reports specific types of bugs, 2) an LLM-based false positive filter, and 3) an LLM-based patch generator that can generate patches for the detected bugs above. As a proof-of-concept, SkipAnalyzer is built on \ul{ChatGPT}.}
   {mohajer2023skipanalyzer}
 
-\qte
+\lnQuote
   [Haonan Li]
   {haonan-li}
   {UBITect produces many \ul{false positives} from the static analysis. With a pilot study of 20 false positives, we can successfully \ul{prune} 8 out of 20 based on GPT-3.5, whereas GPT-4 had a near-perfect result of 16 out of 20.}
   {li2023assisting}
 
-\qte
+\lnQuote
   [Elif Nur Haner K{\i}r{\u{g}}{\i}l]
   {elif-kirgil}
   {In the study, the \ul{cohesion} value, which is one of the most important criteria for evaluating software quality, was predicted by RF, KNN, REPTree, SVM, MLP, and LR \ul{machine learning} techniques.}
   {haner2023predicting}
 
-\pitch{\includegraphics[width=.7\linewidth]{catid.png}
-  \source{taylor2023}}
+\lnPitch{\includegraphics[width=.7\linewidth]{catid.png}
+  \lnSource{taylor2023}}
 
 
 \end{document}

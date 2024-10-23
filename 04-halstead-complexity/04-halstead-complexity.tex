@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Halstead Complexity}
 \begin{document}
 
-\plush{\sqmTitlePage{4}{YsGzjv0hgcc}}
+\plush{\lnTitlePage{4}{24}{YsGzjv0hgcc}}
 
-\qte
+\lnQuote
   {maurice-halstead}
   {Any attempt to find a \ul{universal} set of metrics that could be applied to any computer program, might at first glance appear destined to be unfruitful, if not merely \ul{difficult}. But, without universal, measurable parameters, we would be in the position of trying to develop the science of thermodynamics before the advent of a temperature scale.}
   {halstead1977elements}
@@ -41,15 +41,15 @@
   \item \(N_{2}\) --- the total number of operands
   \end{itemize}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Example from Wikipedia}
   \pptPic{.8}{example.png}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Operators and Operands}
-  ``When a program is translated from one language to another, as from FORTRAN to machine language for example, the actual operators and operands may indeed change, but both versions must still consist of combinations of operators and operands. \ul{No other category} of entities need be present.''\par\source{halstead1979advances}}
+  ``When a program is translated from one language to another, as from FORTRAN to machine language for example, the actual operators and operands may indeed change, but both versions must still consist of combinations of operators and operands. \ul{No other category} of entities need be present.''\par\lnSource{halstead1979advances}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Length and Vocabulary}
   \begin{itemize}
   \item \(N_1 + N_2\) = Length
@@ -57,17 +57,17 @@
   \item \(\eta_1 \times \log_2 \eta_1 + \eta_2 \times \log_2 \eta_2\) = Estimated Length
   \end{itemize}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Length vs. Vocabulary}
   \begin{multicols}{2}
   \pptPic{.95}{estimated-length.png}
   \par\columnbreak\par
   ``The size of a program, regardless of the metric used to measure size, is a function of the vocabulary of the program.''
   \par
-  \source{smith1980software}
+  \lnSource{smith1980software}
   \end{multicols}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Volume, Difficulty, and Effort}
   \begin{itemize}
   \item \(N\) = Length
@@ -77,29 +77,29 @@
   \item \(D \times V\) = Effort
   \end{itemize}}
 
-\pitch{
+\lnPitch{
   \pptBanner{Effort vs. Understandability}
   ``We have independently tested the hypothesis that the mental effort required to create a program (measured by \(E\)) is related to a person's ability to understand a program or to find bugs in existing programs. The studies of Gould and Weissman as well as our work strongly support these hypotheses.''\par
-  \source{fitzsimmons1978review}}
+  \lnSource{fitzsimmons1978review}}
 
-\qte
+\lnQuote
   [Bill Curtis]
   {bill-curtis}
   {In the current study, the complexity metrics were more highly related to the performance of less experienced programmers. Thus, the complexity metrics may not represent the most important constructs for predicting the performance of experienced programmers. These programmers probably conceptualized programs at a level other than that of operators, operands, and basic control paths.}
   {curtis1979measuring}
 
-\pitch{
+\lnPitch{
   \pptBanner{CC vs. Halstead Volume}
   \begin{multicols}{2}
   \pptPic{.95}{cc-vs-volume.png}
   \par\columnbreak\par
   ``From the Fig. 7, it is obvious that that the correlation between Cyclomatic Complexity and Halstead Volume is strong. The change in Cyclomatic Complexity will impact on Halstead Volume and vice versa.''
   \par
-  \source{tashtoush2014correlation}
+  \lnSource{tashtoush2014correlation}
   \end{multicols}}
 
 
-\pitch{
+\lnPitch{
   \pptBanner{Time and Bugs Estimate}
   \begin{itemize}
   \item \(E\) = Effort
@@ -107,17 +107,17 @@
   \item \(V / 3000\) = Bugs
   \end{itemize}}
 
-\qte
+\lnQuote
   {bill-curtis}
   {In studying some error data provided us by Rome Air Development Center, Phil Milliman and I found Halstead's metric a \ul{remarkably accurate predictor} of delivered \ul{bugs} in a system developed with modern programming practices and tools.}
   {curtis1979}
 
-\qte
+\lnQuote
   {../04-halstead-complexity/bailey}
   {The authors analysis indicated that software errors were \ul{not} a linear function of program volume. It is felt that errors are a result of \ul{many other factors} besides those which make up the volume metric. Perhaps the correlation exists on a very large scale (over an entire software system).}
   {bailey1981software}
 
-\pitch{Halstead Complexity is supported by a few tools:
+\lnPitch{Halstead Complexity is supported by a few tools:
   \begin{itemize}
   \item \href{https://pypi.org/project/multimetric/}{multimetric} for C++, Java, Python, and many others
   \item \href{http://www.virtualmachinery.com/jhawkmetricslist.htm}{JHawk} (not free) for Java

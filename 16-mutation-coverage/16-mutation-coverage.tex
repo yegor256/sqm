@@ -21,11 +21,11 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Mutation Coverage}
 \begin{document}
 
-\plush{\sqmTitlePage{16}{WYWSv_PucHc}}
+\plush{\lnTitlePage{16}{24}{WYWSv_PucHc}}
 
 \pptBanner{Example, Part I: Code Coverage}
 \begin{multicols}{2}
@@ -103,7 +103,7 @@ int fibonacci(int n) {
 \end{pptWide}
 \plush{}
 
-\pitch{\pptBanner{Some Mutation Operators}
+\lnPitch{\pptBanner{Some Mutation Operators}
 \begin{itemize}
 \item Statement deletion
 \item Statement duplication or insertion
@@ -114,30 +114,30 @@ int fibonacci(int n) {
 \item Remove method body
 \end{itemize}}
 
-\qte
+\lnQuote
   [Richard G. Hamlet]
   {richard-hamlet}
   {It is a truism that \ul{good} software is easy to \ul{maintain}.}
   {hamlet1997}
 
-% \qte
+% \lnQuote
 %   [Jefferson A. Offutt]
 %   {richard-hamlet.jpg}
 %   {\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \ul{the first mutation-like testing system}.''}
 %   {offutt1991}
 
-\qte
+\lnQuote
   [Richard J. Lipton]
   {richard-lipton}
   {Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has \ul{adequately} tested a Fortran program by direct measurement of the number and kinds of errors it is \ul{capable} of uncovering.}
   {demillo1978hints}
 
-\qte
+\lnQuote
   {timothy-budd}
   {A test set is \ul{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \ul{small} syntactic modifications to the subject program.}
   {budd1981mutation}
 
-\qte
+\lnQuote
   {william-howden}
   {In \ul{weak mutation testing} method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}
   {howden1982weak}
@@ -178,20 +178,20 @@ fibonacci(12) == 144;
 \end{pptWide}
 \plush{}
 
-\qte
+\lnQuote
   [Jeff Offutt]
   {jeff-offutt}
   {Our results indicate that \ul{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}
   {offutt1994empirical}
 
-\qte
+\lnQuote
   [Richard DeMillo]
   {richard-demillo}
   {A mutant operator mutates \ul{one syntactic entity} of a program. Further, only one mutant operator
 is applied at a time to the program under test.}
   {agrawal1989design}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=.8\linewidth]{c-operators.png}\par
 \par\columnbreak\par
 ``Each mutant operator belongs to one of the following categories:
@@ -204,7 +204,7 @@ and
 {\scriptsize Source: Hiralal Agrawal et al., \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989\par}
 \end{multicols}}
 
-\qte
+\lnQuote
   [Phyllis G. Frankl]
   {phyllis-frankl}
   {Those mutants that compute precisely the same function are called \ul{equivalent} mutants and the others are called \ul{inequivalent} mutants.}
@@ -259,40 +259,40 @@ int fibonacci(int n) {
 \end{pptWide}
 \plush{}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{duas.png}\par
 {\scriptsize Source: \bibentry{frankl1997all}\par}
 \par\columnbreak\par
 ``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\ul{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
 \end{multicols}}
 
-\qte
+\lnQuote
   [Lionel C. Briand]
   {lionel-briand}
   {Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \ul{good indication} of the fault detection \ul{ability} of a test suite.}
   {andrews2005}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{faults.png}
 \par\columnbreak\par
 ``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \ul{seeded faults}.''\par
 {\scriptsize Source: James H. Andrews, Lionel C. Briand and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005\par}
 \end{multicols}}
 
-\qte
+\lnQuote
   [Yu-Seung Ma]
   {yu-seung-ma}
   {Comparing with previous mutation systems for procedural programs, \ul{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}
   {ma2006}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=.9\linewidth]{operators.png}
 \par\columnbreak\par
 ``\ul{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \ul{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
 {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
 \end{multicols}}
 
-\qte
+\lnQuote
   [Paul Ammann]
   {paul-ammann}
   {Three conditions must be present for a failure to be observed:
@@ -301,25 +301,25 @@ int fibonacci(int n) {
 3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
   {ammann2008}
 
-\qte
+\lnQuote
   [Mark Harman]
   {mark-harman}
   {Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \ul{Higher order mutants} are created by the insertion of two or more faults.}
   {jia2009}
 
-\qte
+\lnQuote
   [Yue Jia]
   {yue-jia}
   {One \ul{problem} that prevents mutation testing from becoming a practical testing technique is the \ul{high computational cost} of executing the enormous number of mutants against a test set.}
   {jia2010}
 
-\qte
+\lnQuote
   [Jie Zhang]
   {jie-zhang}
   {PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \ul{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}
   {zhang2016}
 
-\pitch{Mutation Coverage can be calculated by a few tools:
+\lnPitch{Mutation Coverage can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://pitest.org/}{PIT} for Java
 \item \href{https://github.com/stryker-mutator/stryker-js}{StrykerJS} for JavaScript

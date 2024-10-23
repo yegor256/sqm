@@ -21,11 +21,11 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Code Coverage}
 \begin{document}
 
-\plush{\sqmTitlePage{15}{pJrXQ5rptig}}
+\plush{\lnTitlePage{15}{24}{pJrXQ5rptig}}
 
 \pptBanner{Example, Part I}
 \begin{multicols}{2}
@@ -84,7 +84,7 @@ assert fibonacci(10) == 55;
 \end{multicols}
 \plush{}
 
-\pitch{\pptBanner{Some Kinds of Code Coverage}
+\lnPitch{\pptBanner{Some Kinds of Code Coverage}
 \begin{itemize}\setlength\itemsep{0em}
 \item Line Coverage
 \item Statement Coverage
@@ -123,13 +123,13 @@ assert foo(50) == 42;
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [William Robert Elmendorf]
   {william-elmendorf}
   {A disciplined test control process is composed of five steps: 1) establish the intended extent of testing; 2) create a list of functional \ul{variations} eligible for testing; 3) rank and subset the \ul{eligible} variations so that test resources can be directed at those with the higher payoff; 4) calculate the \ul{test coverage} of the test case library; and 5) verify attainment of the \ul{planned} test coverage.}
   {elmendorf1969}
 
-\qte
+\lnQuote
   [David Gelperin]
   {david-gelperin}
   {However, only half regularly document their test designs, only half regularly save their tests for reuse after software changes, and an extremely small five percent provide regular \ul{measurements} of code coverage.}
@@ -149,57 +149,57 @@ measurements of code coverage}.''\par
 \end{multicols}
 }
 
-\qte
+\lnQuote
   [Boris Beizer]
   {boris-beizer}
   {Junky software takes more tests to achieve coverage, but it breaks under any systematic test.}
   {beizer1995}
 
-\qte
+\lnQuote
   [Brian Marick]
   {brian-marick}
   {Coverage numbers (like many numbers) are dangerous because they're \ul{objective} but \ul{incomplete}. They too often distort sensible action. Using them in isolation is as foolish as hiring based only on GPA.}
   {marick1997}
 
-\qte
+\lnQuote
   [Martin Fowler]
   {martin-fowler}
   {I would be suspicious of anything like 100\% --- it would smell of someone writing tests to make the coverage \ul{numbers happy}, but not thinking about what they are doing.}
   {fowler1997}
 
-\qte
+\lnQuote
   [Cem Kaner]
   {cem-kaner}
   {As you get near 100 percent line coverage, that doesn't tell you the product is near release. It just tells you that the product is no longer \ul{obviously far} from release according to \ul{this measure}.}
   {kaner2002}
 
-\qte
+\lnQuote
   [Pavneet Singh Kochhar, David Lo, Julia Lawall, Nachiappan Nagappan]
   {pavneet-singh-kochhar}
   {Our results show that coverage has an \ul{insignificant correlation} with the number of bugs that are found after the release of the software at the project level, and \ul{no such correlation} at the file level.}
   {kochhar2017}
 
-\qte
+\lnQuote
   [Goran Petrovi{\'c}]
   {goran-petrovic}
   {Google \ul{does not enforce} any code coverage thresholds across the entire codebase. Projects (or groups of projects) are free to define their own thresholds and goals. Many projects opt-into a centralized voluntary alerting system that defines \ul{five levels} of code coverage thresholds.}
   {ivankovi2019}
 
 
-\pitch{\pptBanner{Code Coverage Threshold Levels in Google}\includegraphics[width=.7\textwidth]{levels.png}}
+\lnPitch{\pptBanner{Code Coverage Threshold Levels in Google}\includegraphics[width=.7\textwidth]{levels.png}}
 
-\qte
+\lnQuote
   [Adam Bender]
   {adam-bender}
   {Code coverage \ul{does not guarantee} that the covered lines or branches have been tested correctly, it just guarantees that they have been executed by a test. But a low code coverage number \ul{does guarantee} that large areas of the product are going completely untested by automation on every single deployment.}
   {arguelles2020}
 
-\qte
+\lnQuote
   {../15-code-coverage/survey}
   {Many \ul{contracts} are specifying that a certain \ul{percentage} of the statements or instructions must be successfully executed before the acceptance of the software by the customer.}
   {bowen1979survey}
 
-\pitch{\pptBanner{Industry Standards that Require Code Coverage}
+\lnPitch{\pptBanner{Industry Standards that Require Code Coverage}
 \begin{itemize}
 \item ISO-26262: ``Road Vehicles'' functional safety (Switzerland)
 \item IEC 61508: ``Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems'' (UK)
@@ -207,7 +207,7 @@ measurements of code coverage}.''\par
 \item IEC 62304: ``Medical Device Software'' (UK)
 \end{itemize}}
 
-\pitch{
+\lnPitch{
 \begin{pptWide}{2}
 ISO-26262:\\
 \includegraphics[width=.9\linewidth]{iso-26262.png}\par
@@ -221,11 +221,11 @@ IEC 62304:\\
 \end{pptWide}
 }
 
-\pitch{\pptBanner{Codecov.io}\includegraphics[width=.7\textwidth]{codecov.png}}
+\lnPitch{\pptBanner{Codecov.io}\includegraphics[width=.7\textwidth]{codecov.png}}
 
-\pitch{\pptBanner{Line Coverage}\includegraphics[width=.7\textwidth]{lines.png}}
+\lnPitch{\pptBanner{Line Coverage}\includegraphics[width=.7\textwidth]{lines.png}}
 
-\pitch{\pptBanner{Tarpaulin for Rust}\includegraphics[width=.7\textwidth]{tarpaulin.png}}
+\lnPitch{\pptBanner{Tarpaulin for Rust}\includegraphics[width=.7\textwidth]{tarpaulin.png}}
 
 \pptBanner{Code Coverage Threshold, JaCoCo Example}
 \begin{multicols}{2}
@@ -318,7 +318,7 @@ IEC 62304:\\
 {\scriptsize Source: \url{https://github.com/volodya-lombrozo/jtcop}\par}
 \plush{}
 
-\pitch{Code Coverage can be calculated by a few tools:
+\lnPitch{Code Coverage can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://www.jacoco.org}{JaCoCo} for Java
 \item \href{https://istanbul.js.org/}{Istanbul} for Javascript

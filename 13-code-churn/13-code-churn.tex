@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Code Churn}
 \begin{document}
 
-\plush{\sqmTitlePage{13}{dvuyJ5LvHvQ}}
+\plush{\lnTitlePage{13}{24}{dvuyJ5LvHvQ}}
 
-\pitch{\pptBanner{History of Version Control Systems (VCS)}
+\lnPitch{\pptBanner{History of Version Control Systems (VCS)}
 \begin{itemize}\setlength\itemsep{0pt}
   \item The Librarian by ADR: created in 1969
   \item Panvalet by Computer Associates: 1969
@@ -40,7 +40,7 @@
   \item Git: 2005
 \end{itemize}}
 
-\qte
+\lnQuote
   [Sebastian G. Elbaum]
   {sebastian-elbaum}
   {We can measure the increase or decrease in system complexity as measured by a selected metric, \ul{code delta}, or we can measure the total amount of \ul{change} the system has undergone between builds, \ul{code churn}.}
@@ -102,25 +102,25 @@ delta for the system will be close to zero.''
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Nachiappan Nagappan]
   {nachiappan-nagappan}
   {Our case study provides strong support for the following conclusion: increase in relative code churn measures is accompanied by an increase in system \ul{defect density}.}
   {nagappan2005use}
 
-\qte
+\lnQuote
   [Rudolf Ferenc]
   {rudolf-ferenc}
   {We can conclude that committing files with higher cumulative code churn values (i.e. those of longer change history) is more likely to result in negative maintainability change.}
   {farago2015cumulative}
 
-\qte
+\lnQuote
 [Tobias Olsson]
   {tobias-olsson}
   {Non-normal code churn can be a tangible and measurable \ul{effect} of architectural violations in source code. However, more research is needed to better understand this connection, e.g., if violations are the \ul{cause}, the size of the effect, the cost of refactoring, and whether it is generalizable to other system.}
   {olsson2017}
 
-\pitch{\pptBanner{CodeClimate.com Interpretation of Code Churn}
+\lnPitch{\pptBanner{CodeClimate.com Interpretation of Code Churn}
 \begin{multicols}{2}
 \includegraphics[width=.98\columnwidth]{codeclimate.png}
 \par\columnbreak\par

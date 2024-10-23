@@ -21,33 +21,33 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Cyclomatic Complexity}
 \begin{document}
 
-\plush{\sqmTitlePage{2}{Cvv0Olx4Bpw}}
+\plush{\lnTitlePage{2}{24}{Cvv0Olx4Bpw}}
 
-\qte
+\lnQuote
   [Trevor Foucher]
   {trevor-foucher}
   {Instead of minimizing the number of lines, a better metric is to minimize the \ul{time} needed for someone to understand it.}
   {boswell2011art}
 
-\thought{Some programmers mistakenly feel proud of higher complexity of their code~\citep{bugayenko2015blog0629,bugayenko2014blog1026}.}
+\lnThought{Some programmers mistakenly feel proud of higher complexity of their code~\citep{bugayenko2015blog0629,bugayenko2014blog1026}.}
 
-\qte
+\lnQuote
   {../02-cyclomatic-complexity/se-answer}
   {Please don't take offense to this, but when a coder is \ul{proud} of the complexity of his/her code (like your sentence says `wow this code is sooo complex'), most of the time it is a sign of a really \ul{bad design}.}
   {rolland2013}
 
-\qte
+\lnQuote
   {vladimir-khorikov}
   {The \ul{simpler} your solution is, the \ul{better} you are as a software developer. Most software developers can write code that works. Creating code that works \ul{and} is as simple as possible --- that is the true challenge.}
   {khorikov2015kiss}
 
-\thought{Thomas McCabe suggested to measure Cyclomatic Complexity (CC) of source code.}
+\lnThought{Thomas McCabe suggested to measure Cyclomatic Complexity (CC) of source code.}
 
-\qte
+\lnQuote
   [Thomas J. McCabe]
   {thomas-mccabe}
   {Cyclomatic Complexity (CC) is a count of the number of decisions in the source code. The higher the count, the more complex the code. The formula is simple: \(C=E-N+2\).}
@@ -58,67 +58,67 @@
 \pptPic{.5}{cc.png}\par
 I found this picture \href{https://craftofcoding.wordpress.com/2017/06/18/coding-a-small-note-on-cyclomatic-complexity/}{here}.}
 
-\thought{CC may correlate with other metrics.}
+\lnThought{CC may correlate with other metrics.}
 
-\qte
+\lnQuote
   [Gregory Seront]
   {gregory-seront}
   {From the results of the experiments we conducted, we observed no significant correlation between the \ul{depth of inheritance} of a class and its weighted method complexity (WMC).}
   {seront2005relationship}
 
-\qte
+\lnQuote
   [Meine van der Meulen]
   {meine-van-der-meulen}
   {There is a very strong correlation between Lines of Code and Halstead Volume and there is an even stronger correlation between Lines of Code and McCabe's Cyclomatic Complexity.}
   {meine2007correlations}
 
-\qte
+\lnQuote
   [Yonghee Shin]
   {yonghee-shin}
   {The results of our study show weak evidence that software complexity is the enemy of software security for the nine complexity metrics we collected. However, \ul{vulnerable} code seems to be more complex than faulty code.}
   {shin2008complexity}
 
-\qte
+\lnQuote
   [Abram Hindle]
   {abram-hindle}
   {Our results strongly suggest that measuring \ul{indentation} is a cheap and accurate proxy for code complexity of revisions.}
   {hindle2008reading}
 
-\qte
+\lnQuote
   [Joanne E. Hale]
   {joanne-hale}
   {The models developed are found to successfully \ul{predict} roughly 90\% of CC’s variance by LOC alone. This suggest not only that the linear relationship between LOC and CC is stable, but the aspects of code complexity that CC measures, such as the size of the test case space, grow \ul{linearly} with source code size across languages and programming paradigms.}
   {graylin2009cyclomatic}
 
-\qte
+\lnQuote
   [Md Abdullah Al Mamun]
   {md-abdullah-al-mamun}
   {We also found that complexity and \ul{documentation} domains are more correlated with size domain than themselves.}
   {mamun2017correlations}
 
-\qte
+\lnQuote
   [Adnan Muslija]
   {adnan-muslija}
   {There is a \ul{low} to moderate correlation between the effort needed to \ul{test} a program and its complexity.}
   {muslija2018correlation}
 
-\qte
+\lnQuote
   [Abd Jader]
   {abd-jader}
   {As the complexity of the software increases, the probability to introduce \ul{new errors} also increases.}
   {abd2018}
 
-\thought{In his presentation "\textit{Software Quality Metrics to Identify Risk}", Tom McCabe introduced the following categorisation to interpret cyclomatic complexity: 1--10 little risk, 11--20 moderate risk, 21--50 high risk, 50+ very high risk.}
+\lnThought{In his presentation "\textit{Software Quality Metrics to Identify Risk}", Tom McCabe introduced the following categorisation to interpret cyclomatic complexity: 1--10 little risk, 11--20 moderate risk, 21--50 high risk, 50+ very high risk.}
 
-\qte
+\lnQuote
   [Geoffrey K. Gill]
   {geoffrey-gill}
   {The complexity density ratio is demonstrated to be a useful predictor of software maintenance productivity on a small pilot sample of actual maintenance project.}
   {gill1991cyclomatic}
 
-\thought{Tom McCabe suggested to prohibit functions where CC is larger than \ul{ten}. Modern static analyzers may help you control this automatically.}
+\lnThought{Tom McCabe suggested to prohibit functions where CC is larger than \ul{ten}. Modern static analyzers may help you control this automatically.}
 
-\pitch{CC can be calculated by a few tools:
+\lnPitch{CC can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://checkstyle.sourceforge.io/}{Checkstyle} for Java
 \item \href{https://pmd.github.io/}{PMD} for Java

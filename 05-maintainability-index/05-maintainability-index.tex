@@ -21,33 +21,33 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Maintainability Index}
 \begin{document}
 
-\plush{\sqmTitlePage{5}{xnSnPfVkmkM}}
+\plush{\lnTitlePage{5}{24}{xnSnPfVkmkM}}
 
 \plush{\pptPic{.6}{wtfs.png}}
 
-\qte
+\lnQuote
   [Fred Brooks]
   {fred-brooks}
-  {The total \ul{cost of maintaining} a widely used program is typically 40 percent or more of the cost of developing it}
+  {The total \ul{cost of maintaining} a widely used program is typically 40 percent or more of the cost of developing it.}
   {brooks1982}
 
-\qte
+\lnQuote
   [Ward Cunningham]
   {ward-cunningham}
   {Shipping first time code is like going into \ul{debt}. A little debt speeds development so long as it is paid back promptly with a rewrite. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt.}
   {cunningham1992}
 
-\qte
+\lnQuote
   [Paul Oman]
   {anonymous}
   {Before developers can claim that they are building maintainable systems, there must be some way to \ul{measure} maintainability}
   {coleman1994}
 
-\qte
+\lnQuote
   {../05-maintainability-index/paper-1}
   {The factors of software that determine or influence maintainability can be organized into a \ul{hierarchical} structure of measurable attribute. Our hierarchy serves as a taxonomic definition for software maintainability that is compatible with the 35 published works upon which it is based.}
   {oman1992metrics}
@@ -67,7 +67,7 @@
 \end{multicols}
 }
 
-\qte
+\lnQuote
   {../05-maintainability-index/paper-2}
   {A software maintainability model is only useful if it can provide developers and maintainers in an industrial setting with more information about the system}
   {coleman1994}
@@ -105,7 +105,7 @@
 \end{multicols}
 }
 
-\qte
+\lnQuote
   [Rainer Niedermayr]
   {rainer-niedermayr}
   {We are convinced that Maintainability Index is \ul{nonsense}. We think that it is not sensible to reduce the maintainability of a whole software system to one single indicator.}
@@ -113,7 +113,7 @@
 
 \plush{\pptThought{``The Maintainability Index does not provide information about the impact on development activities. A value of 57 does not express which maintainability aspects are affected by a bad value.'' --- Rainer Niedermayr}}
 
-\qte
+\lnQuote
   [Arie van Deursen]
   {arie-van-deursen}
   {If you are a researcher, \ul{think twice} before using the maintainability index in your experiments. Make sure you study and fully understand the original papers published about it.}
@@ -121,7 +121,7 @@
 
 \plush{\pptThought{``Tool smiths and vendors used the exact same formula and coefficients as the 1994 experiments, without any recalibration.'' --- Arie van Deursen}}
 
-\qte
+\lnQuote
   [Tim Gilboy]
   {tim-gilboy}
   {If we're going to use the Maintainability Index we should use it to measure \ul{relative} maintainability within our project rather than use it as an \ul{absolute} metric.}
@@ -129,13 +129,13 @@
 
 \plush{\pptThought{\raggedright``Extending the length can significantly decrease Maintainability Index, even if all of the changes cause the code to be clearer and more understandable.'' --- Tim Gilboy}}
 
-\qte
+\lnQuote
   [Tja\u{s}a Heri\u{c}ko]
   {../05-maintainability-index/hericko}
   {When comparing maintainability measurements from several Index variants, the perception of maintainability could be impacted by the choice of the Index variant used.}
   {hericko2023}
 
-\pitch{Maintainability Index is supported by a few tools:
+\lnPitch{Maintainability Index is supported by a few tools:
 \begin{itemize}
 \item \href{https://visualstudio.microsoft.com/}{Visual Studio} for C++ and others
 \item \href{https://www.sonarsource.com/products/sonarqube/}{SonarQube} for Java
@@ -145,7 +145,7 @@
 \item \href{https://github.com/yagipy/maintidx}{maintidx} for Go
 \end{itemize}}
 
-\qte
+\lnQuote
   {../05-maintainability-index/slr}
   {The SLR outcome provided us with \ul{174 software metrics}, among which we identified a set of 15 most commonly mentioned ones, and 19 metric computation tools available to practitioners.}
   {ardito2022}

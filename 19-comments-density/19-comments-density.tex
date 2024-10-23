@@ -21,145 +21,145 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Comments Density}
 \begin{document}
 
-\plush{\sqmTitlePage{19}{4_SNhBeyato}}
+\plush{\lnTitlePage{19}{24}{4_SNhBeyato}}
 
-\qte
+\lnQuote
   [Brian Kernighan]
   {brian-kernighan}
   {The best documentation for a computer program is a \ul{clean structure}. It also helps if the code is well formatted, with good mnemonic identifiers, labels, and a smattering of \ul{enlightening comments}. Flowcharts and program descriptions are of secondary importance; the only reliable documentation of a computer program is the \ul{code} itself.}
   {kernighan1974elements}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{bridge.png}
 \par\columnbreak\par
 ``Comments which precede a group of statements, and which describe them in terms of operations in another domain, will be particularly helpful. The role of comments is to \ul{bridge} between knowledge domains.''
-\source{brooks1978using}
+\lnSource{brooks1978using}
 \end{multicols}}
 
-\qte
+\lnQuote
   [Hubert E. Dunsmore]
   {hubert-dunsmore}
   {An experiment was conducted to investigate how comments are related to programmers' ability to \ul{understand} programs. Those programmers whose programs contained comments were able to \ul{answer} more questions than those without comments.}
   {woodfield1981effect}
 
-\qte
+\lnQuote
   {../05-maintainability-index/paper-1}
   {[The degree of] \ul{intramodule commenting} is the number of lines with comments divided by the total number of lines in the module, averaged over all modules.}
   {oman1992metrics}
 
-\qte
+\lnQuote
   [David Parnas]
   {david-parnas}
   {Documentation that seems \ul{clear} and \ul{adequate} to its authors is often about \ul{as clear as mud} to the programmer who must maintain the code six months or \ul{six years later}.}
   {parnas1994software}
 
-\pitch{
+\lnPitch{
 \pptBanner{Comments Affect Maintainability}
 \includegraphics[width=.75\linewidth]{maintainability.png}
-\source{garcia1996maintainability}}
+\lnSource{garcia1996maintainability}}
 
-\qte
+\lnQuote
   [Martin Fowler]
   {martin-fowler}
   {Don't worry, we aren't saying that people shouldn't write comments. In our olfactory analogy, comments aren't a bad smell; indeed they are a \ul{sweet smell}. The reason we mention comments here is that comments often are used as a \ul{deodorant}. It's surprising how often you look at thickly commented code and notice that the comments are there because the code is bad.}
   {fowler1999refactoring}
 
-\qte
+\lnQuote
   [Andy Hunt]
   {andy-hunt}
   {Programmers are taught: good code has \ul{lots of comments}. Unfortunately, they are never taught why code needs comments: bad code requires lots of comments. The DRY principle tells us to keep the low-level knowledge in the code, where it belongs, and reserve the comments for other, \ul{high-level explanations}. Otherwise, we're duplicating knowledge, and every change means changing both the code and the comments. The comments will inevitably become \ul{out of date}, and untrustworthy comments are worse than no comments at all.}
   {hunt1999pragmatic}
 
-\qte
+\lnQuote
   [Eriko Nurvitadhi]
   {eriko-nurvitadhi}
   {The results indicated that method comments do increase \ul{low-level} program understanding, while class comments did not increase \ul{high-level} understanding. This raises questions about the role of class comments in Object-Oriented programs...}
   {nurvitadhi2003class}
 
-\qte
+\lnQuote
   [Steve McConnell]
   {steve-mcconnell}
   {The main contributor to code-level documentation isn't comments, but good \ul{programming style}... Comments are easier to write poorly than well, and commenting can be more \ul{damaging} than helpful.}
   {mcconnell2004code}
 
-\qte
+\lnQuote
   [Beat Fluri]
   {beat-fluri}
   {Code and comments \ul{rarely} co-evolve: despite its growth rate, newly added code barely is commented. Also, 97\% of comment changes are done in the same revision as the associated source code change.}
   {fluri2007code}
 
-\qte
+\lnQuote
   [Robert C. Martin]
   {robert-martin}
   {Indeed, comments are, at best, a \ul{necessary evil}. If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much---perhaps \ul{not at all}.}
   {martin2008clean}
 
-\qte
+\lnQuote
   [Oliver Arafat]
   {oliver-arafat}
   {Comment density is the percentage of comment lines in a given source code base, that is, comment lines divided by total lines of code. Comment density is assumed to be a good \ul{predictor} of maintainability and hence \ul{survival} of a software project. In this study we focus on one particular code metric, the comment density, and assess it across 5,229 active open source projects, representing about 30\% of all active open source projects.}
   {arafat2009comment}
 
-\pitch{
+\lnPitch{
 \pptBanner{Project Size vs. Comments Density}
 \includegraphics[width=.7\linewidth]{density.png}
-\source{arafat2009comment}}
+\lnSource{arafat2009comment}}
 
-\qte
+\lnQuote
   [Houari Sahraoui]
   {houari-sahraoui}
   {We defined a taxonomy of comments to guide this analysis. Our study showed that programmers comment \ul{some constructs} more often than others. In the majority of cases, comments are intended to \ul{explain} the code that follows them. The second more widely used category of comments are dedicated to \ul{communication} between programmers and personal notes (we call them \ul{working} comments).}
   {haouari2011good}
 
-\pitch{
+\lnPitch{
 \pptBanner{Types of Comments}
 \includegraphics[width=.6\linewidth]{types-of-comments.png}
-\source{haouari2011good}}
+\lnSource{haouari2011good}}
 
-\pitch{
+\lnPitch{
 \pptBanner{Frequency of Comments}
 \includegraphics[width=.6\linewidth]{frequency-of-comments.png}
-\source{haouari2011good}}
+\lnSource{haouari2011good}}
 
-\qte
+\lnQuote
   [Tobias Röhm]
   {tobias-roehm}
   {Source code is \ul{more trusted} than documentation: 21 participants reported that they get their main information from \ul{source code} and \ul{inline comments} whereas only four stated that \ul{documentation} is their main source of information.}
   {roehm2012professional}
 
-\qte
+\lnQuote
   [Luca Pascarella]
   {luca-pascarella}
   {Code comments contain valuable information to support software development, especially during code reading and code maintenance. Nevertheless, not all the comments are the \ul{same}.}
   {pascarella2019classifying}
 
-\pitch{
+\lnPitch{
 \pptBanner{Taxonomy of Comment Types}
 \includegraphics[width=.95\linewidth]{taxonomy.png}
-\source{pascarella2019classifying}}
+\lnSource{pascarella2019classifying}}
 
-\qte
+\lnQuote
   [Hao He]
   {hao-he}
   {We analyzed the comment density of 150 projects in 5 different programming languages. We have found that there are noticeable differences in comment density, which may be related to the \ul{programming language} used in the project and the \ul{purpose} of the project.}
   {he2019understanding}
 
-\pitch{
+\lnPitch{
 \pptBanner{Comments Density by Language}
 \includegraphics[width=.9\linewidth]{by-language.png}
-\source{he2019understanding}}
+\lnSource{he2019understanding}}
 
-\qte
+\lnQuote
   [Sean Stapleton]
   {sean-stapleton}
   {Participants reviewed Java methods and summaries and answered established program comprehension questions. In addition, participants completed coding tasks given summaries as specifications. We found that participants performed significantly better using \ul{human-written summaries} versus \ul{machine-generated} summaries.}
   {stapleton2020human}
 
-\qte
+\lnQuote
   [Xing Hu]
   {xing-hu}
   {Code comment generation is a popular area of research in recent years. In this work, we interviewed 16 professionals and surveyed 720 practitioners on commenting practices and issues they face and their expectations on code comment generation tools. Practitioners are \ul{enthusiastic} about research in \ul{comment generation} techniques and expect tools to generate comments for different granularity levels (especially \ul{class} and \ul{method} levels).}
@@ -180,10 +180,10 @@
 \end{enumerate}
 \par\columnbreak\par
 \includegraphics[width=.9\linewidth]{joke.png}
-\source{spertus2021}
+\lnSource{spertus2021}
 \end{multicols}}
 
-\pitch{\pptBanner{Some Open Source Repositories (9 Feb 2024)}
+\lnPitch{\pptBanner{Some Open Source Repositories (9 Feb 2024)}
 {\ttfamily\small\begin{tabular}{llrrrr}
 \toprule
 Github Repository & Stack & Files & Comments & LoC & Com/LoC \\
@@ -198,7 +198,7 @@ Github Repository & Stack & Files & Comments & LoC & Com/LoC \\
 \bottomrule
 \end{tabular}}}
 
-\pitch{\pptBanner{My Own Statistics (9 Feb 2024)}
+\lnPitch{\pptBanner{My Own Statistics (9 Feb 2024)}
 {\ttfamily\small\begin{tabular}{llrrr}
 \toprule
 Github Repository & Stack & Comments & LoC & Com/LoC \\

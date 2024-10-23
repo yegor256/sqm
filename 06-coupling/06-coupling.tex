@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Coupling}
 \begin{document}
 
-\plush{\sqmTitlePage{6}{G0vN6Ah8-js}}
+\plush{\lnTitlePage{6}{24}{G0vN6Ah8-js}}
 
-\qte
+\lnQuote
   [Larry L. Constantine]
   {larry-constantine}
   {The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}
@@ -37,7 +37,7 @@
 \pptPic{.8}{coupling.png}\par
 {\scriptsize Source: \url{https://www.geeksforgeeks.org/coupling-in-java/}\par}}
 
-\qte
+\lnQuote
   [Glenford Myers]
   {glenford-myers}
   {Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \ul{complicates} a system since a module is harder to \ul{understand}, \ul{change}, or \ul{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}
@@ -47,7 +47,7 @@
 \pptPic{.8}{coupling-2.png}\par
 {\scriptsize Source: \url{https://www.javatpoint.com/software-engineering-coupling-and-cohesion}\par}}
 
-\qte
+\lnQuote
   [Wayne P. Stevens]
   {wayne-stevens}
   {The degree of coupling established by a particular connection is a function of several factors, and thus it is \ul{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}
@@ -57,23 +57,23 @@
 \pptPic{.8}{coupling-3.png}\par
 {\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
 
-\qte
+\lnQuote
   {../06-coupling/cbo}
   {\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
   {chidamber1994metrics}
 
-\qte
+\lnQuote
   {../06-coupling/dcc}
   {\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
   {bansiya2002}
 
-\qte
+\lnQuote
   [Martin Fowler]
   {martin-fowler}
   {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}
   {fowler2001}
 
-\qte
+\lnQuote
   [Steve McConnell]
   {steve-mcconnell}
   {Low-to-medium \ul{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \ul{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}
@@ -83,21 +83,21 @@
 \pptPic{.95}{kokash.png}\par
 {\scriptsize (c) Natalia Kokash, Leiden Institute of Advanced Computer Science\par}}
 
-% \pitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
+% \lnPitch{\pptQuote{study.png}{We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}{A. Mubarak et al., \textit{An Evolutionary Study of Fan-in and Fan-out Metrics in OSS}, Proceedings of the 4th International Conference on Research Challenges in Information Science (RCIS), 2010}}
 
-\qte
+\lnQuote
   {../06-coupling/study}
   {We also found evidence of certain `key' classes (with both high fan-in and fan-out) and `client' and `server'-type classes with just high fan-out and fan-in, respectively.}
   {mubarak2010}
 
-\pitch{Fan-out, as a metric, is supported by a few tools:
+\lnPitch{Fan-out, as a metric, is supported by a few tools:
 \begin{itemize}
 \item \href{https://checkstyle.sourceforge.io/apidocs/com/puppycrawl/tools/checkstyle/checks/metrics/ClassFanOutComplexityCheck.html}{Checkstyle} for Java
 \item \href{https://github.com/sarnold/cccc}{CCCC} for C++, C, and Java
 \item \href{https://pypi.org/project/module-coupling-metrics/}{module-coupling-metrics} for Python
 \end{itemize}}
 
-\qte
+\lnQuote
   [Derek Comartin]
   {derek-comartin}
   {Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}
@@ -155,7 +155,7 @@ class EmployeeHourlyRate
 }
 \par
 ``Polymorphism makes sofware more fragile ... to make it robust!''\par
-\source{bugayenko2018blog0918}
+\lnSource{bugayenko2018blog0918}
 \end{multicols}
 \plush{}
 
@@ -183,7 +183,7 @@ return Foo.with(
 \end{ffcode}
 }
 \end{multicols}\par
-\source{bugayenko2015blog1208}
+\lnSource{bugayenko2015blog1208}
 \plush{}
 
 \pptBanner{Distance of Coupling}
@@ -204,7 +204,7 @@ int t = Integer.parseInt(parts[0]);
 }
 \par\columnbreak\par
 ``The larger the number, the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \ul{distance metric} will tell us how many times, and by how much, we violated the principle of loose coupling.''\par
-\source{bugayenko2020blog1027}
+\lnSource{bugayenko2020blog1027}
 \end{multicols}
 \plush{}
 

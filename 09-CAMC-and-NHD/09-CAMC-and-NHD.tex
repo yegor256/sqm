@@ -21,15 +21,15 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \usepackage{amsmath}
 \usepackage{relsize}
 \newcommand*\thetitle{CAMC and NHD}
 \begin{document}
 
-\plush{\sqmTitlePage{9}{oCxJ_YSSAGo}}
+\plush{\lnTitlePage{9}{24}{oCxJ_YSSAGo}}
 
-\pitch{
+\lnPitch{
 \pptBanner{Rational Unified Process (RUP)}
 \pptPic{.7}{rup.png}}
 
@@ -62,7 +62,7 @@ void main(Shape s)
 \end{pptWide}
 \plush{}
 
-\qte
+\lnQuote
   [Jagdish Bansiya]
   {jagdish-bansiya}
   {\textbf{CAMC}: Cohesion Among Methods of Classes (CAMC) evaluates the relatedness of methods in the interface of a class using the parameter lists defined for the methods. It can be applied earlier in the development than can traditional cohesiveness metrics because it relies only on method prototypes declared in a class.}
@@ -77,7 +77,7 @@ void main(Shape s)
 \includegraphics[width=.9\columnwidth]{nhd-2.png}\par
 \end{pptWide}}
 
-\qte
+\lnQuote
   [Steve Counsell]
   {steve-counsell}
   {\textbf{NHD}: The hamming distance (HD) provides a measure of disagreement between rows in a binary matrix. The Normalised Hamming Distance (NHD) metric measures agreement between rows in a binary matrix.}
@@ -93,7 +93,7 @@ void main(Shape s)
 \includegraphics[width=.9\columnwidth]{nhd-3.png}\par
 \end{pptWide}}
 
-\qte
+\lnQuote
   [Robert C. Martin]
   {robert-martin}
   {Classes that have 'fat' interfaces are classes whose interfaces are not \ul{cohesive}. In other words, the interfaces of the class can be broken up into groups of methods.}
@@ -136,11 +136,11 @@ class OneByteStream
 }
 \end{pptWide}
 \par
-\source{bugayenko2016blog0426}
+\lnSource{bugayenko2016blog0426}
 \plush{}
 
 
-\pitch{
+\lnPitch{
 \pptBanner{Also Known As...}
 \begin{multicols}{2}
 \begin{itemize}

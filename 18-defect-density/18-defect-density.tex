@@ -21,36 +21,36 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{Defects Density}
 \begin{document}
 
-\plush{\sqmTitlePage{18}{}}
+\plush{\lnTitlePage{18}{24}{}}
 
-\qte
+\lnQuote
   [Michael Fagan]
   {michael-fagan}
   {Feedback of results from inspections must be counted for the programmer's use and \ul{benefit}: they \ul{should not} under any circumstances be used for programmer performance \ul{appraisal}.}
   {fagan1976design}
 
-\pitch{
+\lnPitch{
 \includegraphics[width=.8\linewidth]{error-density.png}
 \par
 {\scriptsize Source: \bibentry{fagan1976design}\par}}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{complexity.png}
 \par\columnbreak\par
 ``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
 {\scriptsize Source: \bibentry{basili1984software}\par}
 \end{multicols}}
 
-\qte
+\lnQuote
   {../18-defect-density/ieee-982}
   {A \ul{defect} is a product \ul{anomaly}. Examples include such things as 1)~omissions and imperfections found during early life cycle phases and 2)~faults contained in software sufficiently mature for test or operation.}
   {ieee982}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{dd.png}
 \par
 {\scriptsize Source: \bibentry{ieee982}\par}
@@ -58,7 +58,7 @@
 ``This measure has a degree of \ul{indeterminism}. For example, a low value may indicate either a good process and a good product or it may indicate a bad process. If the value is low compared to similar past projects, the inspection process should be examined. If the inspection process is found to be adequate, it should then be concluded that the development process has resulted in a \ul{relatively defect-free} product.''
 \end{multicols}}
 
-\pitch{
+\lnPitch{
 \includegraphics[width=.7\linewidth]{ieee-measures.png}
 \par
 {\scriptsize Source: \bibentry{ieee982}\par}}
@@ -110,75 +110,75 @@
 \par
 {\scriptsize Source: \bibentry{ieee982}\par}}
 
-\qte
+\lnQuote
   [Harlan D. Mills]
   {harlan-mills}
   {While our experience in applying statistical quality-control techniques to software development is limited, initial experience indicates that \ul{five fixes per thousand lines of code} can be tolerated without invalidating the application of statistics to estimate MTTF. This failure rate is low compared to normal development practices, where \ul{20 to 60} fixes per thousand lines of code is \ul{not atypical}.}
   {cobb1990engineering}
 
-\qte
+\lnQuote
   [Joseph Sherif]
   {joseph-sherif}
   {The analysis showed a \ul{significantly higher} density of defects during requirements inspections. It was also observed, that the defect densities found \ul{decreased} exponentialy as the mork products approached the coding phase.}
   {kelly1992analysis}
 
-\qte
+\lnQuote
   [Victor R. Basili]
   {victor-basili}
   {Five out of the six object-oriented metrics presented by \citet{chidamber1994metrics} appear to be useful to predict class fault-proneness during the high- and low-level design phases of the life-cycle.}
   {basili1996validation}
 
-\qte
+\lnQuote
   [Norman Fenton]
   {norman-fenton}
   {Our critical review of state-of-the-art of models for predicting software defects has shown that many methodological and theoretical \ul{mistakes} have been made... We recommend holistic models for software defect prediction, using Bayesian Belief Networks, as alternative approaches to the single-issue models used at present.}
   {fenton1999critique}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{mttf.png}
 \par\columnbreak\par
 ``This means we should be very wary of attempts to equate fault densities with failure rates, as proposed for example by~\citet{jones1996pragmatics}. Although highly attractive in principle, such a model does not stand up to \ul{empirical} validation.''\par
 {\scriptsize Source: \bibentry{fenton1999critique}\par}
 \end{multicols}}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=\linewidth]{fps.png}
 \par\columnbreak\par
 ``We already see defect density defined in terms of defects per \ul{function point}, and empirical studies are emerging that seem likely to be the basis for predictive models. For example, \citet{jones1991} reports the following bench-marking study, reportedly based on large amounts of data from different commercial sources.''\par
 {\scriptsize Source: \bibentry{fenton1999critique}\par}
 \end{multicols}}
 
-\qte
+\lnQuote
   [Steve McConnell]
   {steve-mcconnell}
   {Industry average experience is about 1-25 errors per 1000 lines of code for delivered software. Cases that have one-tenth as many errors as this are rare; cases that have 10 times more tend not to be reported. (They probably aren't ever completed!) Microsoft experiences about 10–20 defects per 1000 lines of code during in-house testing and 0.5 defects per 1000 lines of code in released product.}
   {mcconnell2004code}
 
-\qte
+\lnQuote
   [Parastoo Mohagheghi]
   {parastoo-mohagheghi}
   {The analysis showed that \ul{reused} components have lower defect-density than \ul{non-reused} ones. Reused components have more defects with highest severity than the total distribution, but less defects after delivery.}
   {mohagheghi2004empirical}
 
-\qte
+\lnQuote
   [Nachiappan Nagappan]
   {nachiappan-nagappan}
   {A case study performed on Windows Server 2003 indicates the validity of the relative \ul{code churn} measures as early indicators of system \ul{defect density}. Our code churn metric suite is able to discriminate between fault and not fault-prone binaries with an accuracy of 89\%.}
   {nagappan2005use}
 
-\qte
+\lnQuote
   [Thomas Ball]
   {thomas-ball}
   {Our results show that the \ul{static analysis} defect density is correlated at statistically significant levels to the \ul{pre-release} defect density determined by various testing activities. Further, the static analysis defect density can be used to predict the pre-release defect density with a high degree of sensitivity.}
   {nagappan2005static}
 
-\qte
+\lnQuote
   [A G{\"u}ne{\c{s}} Koru]
   {gunes-koru}
   {We studied four large-scale object-oriented products, Mozilla, Cn3d, JBoss, and Eclipse. We observed that defect proneness increased as class size increased, but at a \ul{slower} rate; smaller classes were proportionally more problematic than larger classes.}
   {koru2008investigation}
 
-\qte
+\lnQuote
   [Kazuhiro Yamashita]
   {kazuhiro-yamashita}
   {Although we found some support for findings in recent literature that \ul{smaller files} have higher defects density, we found further evidence that \ul{very large} or \ul{complex} files have lower defect densities and in some cases even lower defect proneness. Our findings have immediate practical implications: the redistribution of Java code into smaller and less complex files may be \ul{counterproductive}.}
@@ -295,13 +295,13 @@
 \par
 {\scriptsize Source: \bibentry{radjenovic2013software}\par}}
 
-\qte
+\lnQuote
   [Xiao Yu]
   {xiao-yu}
   {The problem of \ul{predicting} the precise number of defects via regression algorithms is \ul{far} from being solved.}
   {yu2022predicting}
 
-\pitch{\begin{multicols}{2}
+\lnPitch{\begin{multicols}{2}
 \includegraphics[width=.8\linewidth]{predicting-methods.png}
 \par
 {\scriptsize Source: \bibentry{yu2022predicting}\par}
@@ -309,7 +309,7 @@
 ``Software testers want to not only know which software modules should be inspected first, but also evaluate the reliability and maintenance effort of each module. Therefore, they can first employ the historical data to construct a \ul{Defect Number Prediction} (DNP) model, then use the two trained models to predict the defective-proneness or the number of defects.''
 \end{multicols}}
 
-\pitch{\pptBanner{My Own Statistics (2 Feb 2024)}
+\lnPitch{\pptBanner{My Own Statistics (2 Feb 2024)}
 {\ttfamily\small\begin{tabular}{llrrr}
 \toprule
 Github Repository & Stack & KLoC & Issues & I/KLoC \\

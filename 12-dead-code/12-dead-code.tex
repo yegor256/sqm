@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \usepackage{amsmath}
 \usepackage{relsize}
 \newcommand*\thetitle{Dead Code}
 \begin{document}
 
-\plush{\sqmTitlePage{12}{zN0gX9m6a2k}}
+\plush{\lnTitlePage{12}{24}{zN0gX9m6a2k}}
 
 \pptBanner{Motivating Example}
 \begin{multicols}{2}
@@ -58,7 +58,7 @@ class Book
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Mika M\"{a}ntyl\"{a}]
   {mika-mantyla}
   {Dead code is code that has been used in the past, but is currently never executed. Dead code \ul{hinders} code \ul{comprehension} and makes the current program structure \ul{less obvious}.}
@@ -84,7 +84,7 @@ void main(int x) {
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Simone Romano]
   {simone-romano}
   {Although there is some consensus on the fact that dead code is a common phenomenon, it could be \ul{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}
@@ -92,7 +92,7 @@ void main(int x) {
 
 \plush{\pptBanner{Unreachable/Dead Methods in Java}\pptPic{.9}{unreachable.png}\par{\scriptsize Source: \textit{A Graph-based Approach to Detect Unreachable Methods in Java Software}, Simone Romano, Giuseppe Scanniello, Carlo Sartiani, Michele Risi, Proceedings of the 31st Annual ACM Symposium on Applied Computing, 2016\par}}
 
-\qte
+\lnQuote
   [Sebastian Eder]
   {sebastian-eder}
   {We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \ul{25\% of all methods} were never used during the complete period.}
@@ -130,7 +130,7 @@ and the smaller the amount of the abandoned code inside it.''
 
 \plush{\pptBanner{Volatility vs. Number of Files in a Repo}\pptPic{.7}{graph.png}}
 
-\pitch{\pptBanner{Monolithic Repositories}
+\lnPitch{\pptBanner{Monolithic Repositories}
 {\small\begin{description}
 \item[Centralization]
   The codebase is contained in a single repo encompassing multiple projects.
@@ -146,31 +146,31 @@ and the smaller the amount of the abandoned code inside it.''
 \end{description}}\par
 {\scriptsize Source: \textit{Advantages and Disadvantages of a Monolithic Repository: A case study at Google}, Ciera Jaspan et al., ICSE, 2018\par}}
 
-\qte
+\lnQuote
   [Ciera Jaspan]
   {ciera-jaspan}
   {Our survey results show that engineers at Google strongly prefer our monolithic repo, and that \ul{visibility} of the codebase and simple \ul{dependency management} were the primary factors for this preference.}
   {jaspan2018}
 
-\qte
+\lnQuote
   [Rachel Potvin]
   {rachel-potvin}
   {The Google codebase includes approximately \ul{one billion files} and has a history of approximately 35 million commits spanning Google's entire 18-year existence. The repository contains \ul{86TBa} of data, including approximately \ul{two billion lines of code} in nine million unique source files.}
   {potvin2016}
 
-\qte
+\lnQuote
   [Durham Goode]
   {durham-goode}
   {Facebook's main source repository is enormous---many times larger than even the Linux kernel, which checked in at \ul{17 million lines of code} and \ul{44,000 files} in 2013.}
   {goode2014}
 
-\qte
+\lnQuote
   [Tomas Votruba]
   {tomas-votruba}
   {Before monorepo, I had to upgrade every package manually, which resulted in dissonance: one package used Symfony\textbackslash{}Console 3.2, but other only 2.8 and it got messy \ul{for no reason}.}
   {votruba2017}
 
-\pitch{\pptBanner{Benefits of ``Manyrepo'' Approach}
+\lnPitch{\pptBanner{Benefits of ``Manyrepo'' Approach}
 {\small\begin{description}
 \item[Encapsulation]
   Each repo encapsulates and hides its details from everybody else.

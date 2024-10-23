@@ -21,20 +21,20 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \usepackage{setspace}
 \newcommand*\thetitle{TCC and LCC}
 \begin{document}
 
-\plush{\sqmTitlePage{8}{JOKxjpAglFU}}
+\plush{\lnTitlePage{8}{24}{JOKxjpAglFU}}
 
-\qte
+\lnQuote
   [Edward Yourdon]
   {edward-yourdon}
   {Module cohesion may be conceptualized as the \ul{cement} that holds the processing elements of a module together. In a sense, a high degree of module cohesion is an indication of \ul{close approximation} of inherent problem structure.}
   {yourdon1979structured}
 
-\qte
+\lnQuote
   [James M. Bieman]
   {james-bieman}
   {We define two measures of class cohesion based on the \ul{direct} and \ul{indirect} connections of method pairs: TCC and LCC.}
@@ -71,12 +71,12 @@ Indirectly connected (\(\texttt{NIC}=2\)): \\
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   {../08-TCC-and-LCC/paper}
   {If a class is designed in \ul{ad hoc manner} and unrelated components are included in the class, the class represents more than one concept and does not \ul{model an entity}. The cohesion value of such a class is likely to be less than 0.5.}
   {bieman1995cohesion}
 
-\qte
+\lnQuote
   [Steve McConnell]
   {steve-mcconnell}
   {Cohesion refers to how closely all the routines in a class or all the code in a routine support a \ul{central purpose}---how focused the class is. The ideas of \ul{abstraction} and cohesion are closely related---a class interface that presents a good abstraction usually has strong cohesion.}
@@ -135,7 +135,7 @@ class Article
 \begin{spacing}{0.9}
 ``The \ff{Article} copies method \ff{print()} and attribute body from the \ff{Manuscript}, as if it’s not a living organism, but rather a dead one from which we \ul{inherit} its parts.''\par
 ``Implementation inheritance was created as a mechanism for code reuse. It doesn't fit into OOP at all.''\par
-\source{bugayenko2016blog0913}
+\lnSource{bugayenko2016blog0913}
 \end{spacing}
 \end{multicols}
 \plush{}
@@ -173,7 +173,7 @@ class Article
 {\scriptsize Wikipedia: \url{https://en.wikipedia.org/wiki/Composition_over_inheritance}\par}
 \plush{}
 
-\pitch{TCC+LCC can be calculated by a few tools:
+\lnPitch{TCC+LCC can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://www.jpeek.org}{jPeek} for Java
 \item C++ --- don't know

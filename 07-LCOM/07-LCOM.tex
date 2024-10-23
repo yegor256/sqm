@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \newcommand*\thetitle{LCOM 1, 2, 3, 4, 5, ...}
 \begin{document}
 
-\plush{\sqmTitlePage{7}{74YigDo8_BE}}
+\plush{\lnTitlePage{7}{24}{74YigDo8_BE}}
 
-\qte
+\lnQuote
   [Larry Constantine]
   {larry-constantine}
   {Coupling is reduced when the relationships among elements not in the same module are minimized. There are two ways of achieving this: minimizing the relationships among modules and \ul{maximizing relationships} among elements in the same module.}
@@ -37,15 +37,15 @@
 \pptPic{.8}{cohesion-1.png}\par
 {\scriptsize Source: \url{https://bootcamp.uxdesign.cc/why-product-development-and-design-needs-cohesion-coupling-87731c84aaa7}\par}}
 
-% \pitch{\pptQuote{neal-ford.jpg}{Architecture is the tension between coupling and cohesion.}{\href{https://nealford.com/}{Neal Ford}, ThoughtWorks}}
+% \lnPitch{\pptQuote{neal-ford.jpg}{Architecture is the tension between coupling and cohesion.}{\href{https://nealford.com/}{Neal Ford}, ThoughtWorks}}
 
-\qte
+\lnQuote
   [Neal Ford]
   {neal-ford}
   {Architecture is the tension between coupling and cohesion.}
   {ford2024}
 
-\qte
+\lnQuote
   [Glenford J. Myers]
   {glenford-myers}
   {The scale of cohesiveness, from lowest to highest, follows:
@@ -62,7 +62,7 @@
 \pptPic{.8}{cohesion-3.png}\par
 {\scriptsize Source: \url{https://logicmojo.com/cohesion-and-coupling-in-oops}\par}}
 
-\qte
+\lnQuote
   [Wayne P. Stevens]
   {wayne-stevens}
   {One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \ul{form should follow function}.}
@@ -197,7 +197,7 @@ int v = new SQLResult()
 \end{multicols}
 {\scriptsize Source: \url{https://enterprisecraftsmanship.com/posts/cohesion-coupling-difference/}\par}}
 
-\qte
+\lnQuote
   [Chris Kemerer]
   {chris-kemerer}
   {Consider a class with methods \(m_1, m_2, \dots, m_n\). Let \(V_i\) be a set of instance variables used by method \(m_i\). There are \(n\) such sets \(V_1, V_2, \dots, V_n\). LCOM is the number of disjoint sets formed by the intersection of the \(n\) sets. The number of disjoint sets provides a measure for the disparate nature of methods in the class. Fewer disjoint sets implies greater similarity of methods.}
@@ -229,7 +229,7 @@ LCOM is the number of disjoint sets formed by the intersection of the \(n\) sets
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Chris F. Kemerer]
   {../07-LCOM/kemerer}
   {Let \(P = \{ (v_i, v_j) | v_i \cap v_j = \emptyset \}\) and \(Q = \{ (v_i, v_j) | v_i \cap v_j \not= \emptyset \}\). Then, \( \texttt{LCOM} = |P| - |Q| \), but not less than zero. Thus, the LCOM is a count of the number of method pairs whose similarity is 0 minus the count of method pairs whose similarity is not zero.}
@@ -266,7 +266,7 @@ class Rectangle {
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Brian Henderson-Sellers]
   {brian-henderson-sellers}
   {LCOM2 equals the percentage of methods that do not access a specific attribute averaged over all attributes in the class. If the number of methods or attributes is zero, LCOM2 is undefined and displayed as zero.}
@@ -298,7 +298,7 @@ class Rectangle {
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Larry Constantine]
   {larry-constantine}
   {LCOM3 is defined as a normalized measure that considers the number of methods in the class, the number of attributes, and the average number of methods that access each attribute. (by ChatGPT)}
@@ -328,7 +328,7 @@ where\par
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Martin Hitz]
   {martin-hitz}
   {LCOM4 measures the number of 'connected components' in a class. A connected component is a set of related methods (and class-level variables). Methods A and B are related if: they both access the same class-level variable, or A calls B or vice versa.}
@@ -358,7 +358,7 @@ class Rectangle {
 \end{multicols}
 \plush{}
 
-\pitch{LCOMs can be calculated by a few tools:
+\lnPitch{LCOMs can be calculated by a few tools:
 \begin{itemize}
 \item \href{https://www.jpeek.org}{jPeek} for Java
 \item \href{https://www.cppdepend.com/documentation/code-metrics}{CPPDepend} for C++

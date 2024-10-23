@@ -21,13 +21,13 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{../sqm}
+\usepackage{../lecture-notes.sty/lecture-notes}
 \usepackage{amsmath}
 \usepackage{relsize}
 \newcommand*\thetitle{Object Dimensions}
 \begin{document}
 
-\plush{\sqmTitlePage{10}{jdEFoz-OQ44}}
+\plush{\lnTitlePage{10}{24}{jdEFoz-OQ44}}
 
 \plush{
 \pptBanner{Object Metrics}
@@ -44,7 +44,7 @@
 \end{itemize}
 }
 
-\qte
+\lnQuote
   [Fernando Brito e Abreu]
   {fernando-brito-e-abreu}
   {\textbf{Metrics for Object-Oriented Design (MOOD)}: Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \ul{heuristics}.}
@@ -162,7 +162,7 @@ maximum number of possible distinct polymorphic situations.''
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   [Chris F. Kemerer]
   {chris-kemerer}
   {The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \ul{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}
@@ -235,12 +235,12 @@ class Book
 \end{multicols}
 \plush{}
 
-\qte
+\lnQuote
   {../10-object-dimensions/book}
   {A small number of classes may be responsible for a large number of the methods that executed in an application, and that if testing effort were concentrated on these outlier classes, a bulk of the dynamic behavior of the object oriented systems can be checked for customer acceptance.}
   {chidamber1994metrics}
 
-\qte
+\lnQuote
   [Mark Lorenz]
   {mark-lorenz}
   {Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.}
