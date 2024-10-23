@@ -47,6 +47,7 @@ hard relsize
 hard silence
 hard stmaryrd
 hard svg
+hard tcolorbox
 hard textpos
 hard tikzpagenodes
 hard titling
