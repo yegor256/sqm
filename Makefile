@@ -20,54 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-SHELL := /bin/bash
+GITHUB=yegor256/sqm
+PLAYLIST=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl
 
-.SHELLFLAGS = -e -o pipefail -c
-.ONESHELL:
-
-DIRS := $(wildcard [0-9][0-9]-*/.) syllabus
-
-all: latexmk package
-
-latexmk:
-	for d in $(DIRS); do
-		cd $${d} && latexmk -pdf && cd ..
-	done
-
-lacheck:
-	for d in $(DIRS); do
-		cd $${d} && lacheck *.tex && cd ..
-	done
-
-package: latexmk
-	mkdir -p package
-	for d in $(DIRS); do
-		cp $${d}/*.pdf package
-	done
-	cd package
-	rm -rf index.html
-	(
-		echo "<html><body style='font-family: monospace;'>"
-		for f in $$(ls *.pdf); do
-			echo "<p><a href='$${f}'>$${f}</a></p>"
-		done
-		echo "<p>Compiled on: $$(date).</p>"
-		echo "<p>LaTeX sources are in <a href='https://github.com/yegor256/sqm'>GitHub</a>.</p>"
-		echo "<p>Videos are <a href='https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl'>on YouTube</a>.</p>"
-		echo "</body></html>"
-	)>> index.html
-
-copy:
-	for d in $(DIRS); do
-		cp .latexmkrc $${d}
-		cp .texsc $${d}
-		cp .texqc $${d}
-	done
-
-clean:
-	for d in $(DIRS); do
-		cd $${d}
-		latexmk -C
-		rm -rf _minted*
-		cd ..
-	done
+include lecture-notes/makefile.defs
