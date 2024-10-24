@@ -1,4 +1,4 @@
---pws=../aspell.en.pws
+\usepackage{../lecture-notes/notes}
 --ignore=href:pp
 --ignore=qte:oppp
 --ignore=ffcode
