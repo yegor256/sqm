@@ -7,3 +7,6 @@
 [submodule "lecture-notes.sty"]
 	path = lecture-notes.sty
 	url = https://github.com/yegor256/lecture-notes.sty
+[submodule "lecture-notes"]
+	path = lecture-notes
+	url = https://github.com/yegor256/lecture-notes
