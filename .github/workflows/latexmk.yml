@@ -36,7 +36,7 @@ jobs:
       - uses: yegor256/latexmk-action@0.15.0
         with:
           cmd: make
-          depends: DEPENDS.txt
+          depends: lecture-notes/DEPENDS.txt
       - uses: JamesIves/github-pages-deploy-action@v4.6.8
         with:
           branch: gh-pages
