@@ -1,6 +1,7 @@
 # Software Quality Metrics (SQM), Lecture Notes
 
 [![latexmk](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/sqm/actions/workflows/latexmk.yml)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/sqm/blob/master/LICENSE.txt)
 
 There are slides for my series of lectures for
 [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
