@@ -104,22 +104,21 @@
   {comartin2021}
 
 \plush{
-\pptBanner{Types of Coupling (some of them)}
-\begin{pptWide}{2}
-\scriptsize\begin{itemize}
-\item \ul{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
-\item \ul{Global Coupling} is when two modules share the same global data (e.g., a global variable).
-\item \ul{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
-\item \ul{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
-\item \ul{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
-\item \ul{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
-\item \ul{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
-\item \ul{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
-\item \ul{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
-\end{itemize}
-\end{pptWide}
-{\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}
-}
+  \pptBanner{Types of Coupling (some of them)}
+  \begin{pptWide}{2}
+  \scriptsize\begin{itemize}
+  \item \ul{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
+  \item \ul{Global Coupling} is when two modules share the same global data (e.g., a global variable).
+  \item \ul{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
+  \item \ul{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
+  \item \ul{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
+  \item \ul{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
+  \item \ul{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
+  \item \ul{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
+  \item \ul{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
+  \end{itemize}
+  \end{pptWide}
+  {\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}}
 
 \pptBanner{Fear of Decoupling}
 \begin{multicols}{2}
