@@ -30,7 +30,7 @@
 \lnQuote
   [Larry L. Constantine]
   {larry-constantine}
-  {The fewer and simpler the connections between modules, the easier it is to understand each module without reference to other modules.}
+  {The fewer and simpler the connections between modules, the easier it is to \ul{understand} each module without reference to other modules.}
   {stevens1974structured}
 
 \plush{
@@ -58,6 +58,11 @@
 {\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
 
 \lnQuote
+  {robert-martin}
+  {The lack of coupling means that the elements of our system are \ul{better isolated} from each other and from change. This isolation makes it easier to \ul{understand} each element of the system.}
+  {martin2008clean}
+
+\lnQuote
   {../06-coupling/cbo}
   {\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
   {chidamber1994metrics}
@@ -70,7 +75,7 @@
 \lnQuote
   [Martin Fowler]
   {martin-fowler}
-  {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of dependency relationship between the modules.}
+  {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of \ul{dependency relationship} between the modules.}
   {fowler2001}
 
 \lnQuote
@@ -95,6 +100,8 @@
 \item \href{https://checkstyle.sourceforge.io/apidocs/com/puppycrawl/tools/checkstyle/checks/metrics/ClassFanOutComplexityCheck.html}{Checkstyle} for Java
 \item \href{https://github.com/sarnold/cccc}{CCCC} for C++, C, and Java
 \item \href{https://pypi.org/project/module-coupling-metrics/}{module-coupling-metrics} for Python
+\item \href{https://github.com/Skarlso/effrit}{effrit} for Go
+\item \href{https://github.com/terryyin/lizard}{lizard} for JavaScript, C\#, TypeScript, Lua, Rust, etc.
 \end{itemize}}
 
 \lnQuote
