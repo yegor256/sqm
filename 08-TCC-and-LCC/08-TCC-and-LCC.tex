@@ -51,6 +51,15 @@
   {We define two measures of class cohesion based on the \ul{direct} and \ul{indirect} connections of method pairs: TCC and LCC.}
   {bieman1995cohesion}
 
+\plush{
+  \pptBanner{Connectivity Between Methods in a Class}
+  \begin{multicols}{2}
+  \includegraphics[width=\linewidth]{connectivity.png}
+  \par\columnbreak\par
+  ``An instance variable is directly used by a method \(M\) if the instance variable appears as a data token in the method \(M\). The instance variable may be defined in the same class as \(M\) or in an ancestor class of the class. \(DU(M)\) is a set of instantce variables directly used by a method \(M\).''\par
+  \lnSource{bieman1995cohesion}
+  \end{multicols}}
+
 \pptBanner{Tight and Loose Class Cohesion (TCC+LCC)}
 \begin{multicols}{2}
 {\small\begin{ffcode}
@@ -117,14 +126,19 @@ var file = {
 {\scriptsize The slide is taken from the \href{https://github.com/yegor256/painofoop}{``Pain of OOP''} (2023) course.\par}
 \plush{}
 
-\pptBanner{Inheritance vs. Cohesion}
-\begin{multicols}{2}
-\includegraphics[width=.9\columnwidth]{graphs.png}
-\par\columnbreak\par
-``Our results show that the classes that are heavily \ul{reused} via inheritance exhibit \ul{lower cohesion}. We expected to find that the most reused classes would be the most cohesive ones.''\par
-\lnSource{bieman1995cohesion}
-\end{multicols}
-\plush{}
+\lnQuote
+  {david-west}
+  {Isomorphism of the modules (objects) in problem and solution space is a desirable, in fact essential, quality for software.}
+  {west2004object}
+
+\plush{
+  \pptBanner{Inheritance vs. Cohesion}
+  \begin{multicols}{2}
+  \includegraphics[width=.9\columnwidth]{graphs.png}
+  \par\columnbreak\par
+  ``Our results show that the classes that are heavily \ul{reused} via inheritance exhibit \ul{lower cohesion}. We expected to find that the most reused classes would be the most cohesive ones.''\par
+  \lnSource{bieman1995cohesion}
+  \end{multicols}}
 
 \pptBanner{Inheritance is Code Reuse}
 \begin{multicols}{2}
