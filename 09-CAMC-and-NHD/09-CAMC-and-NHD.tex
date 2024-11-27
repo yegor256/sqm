@@ -29,9 +29,14 @@
 
 \plush{\lnTitlePage{9}{24}{oCxJ_YSSAGo}}
 
+\lnQuote
+  {philippe-kruchten}
+  {Without a well-defined process, your development team will develop in an ad hoc manner, with success relying on the \ul{heroic efforts} of a few dedicated individual contributors. This is not a sustainable condition.}
+  {kruchten2004rational}
+
 \lnPitch{
-\pptBanner{Rational Unified Process (RUP)}
-\pptPic{.7}{rup.png}}
+  \pptBanner{Rational Unified Process (RUP)}
+  \pptPic{.7}{rup.png}}
 
 \pptBanner{Decoupling via Interfaces (in Java)}
 \begin{pptWide}{2}
@@ -65,7 +70,7 @@ void main(Shape s)
 \lnQuote
   [Jagdish Bansiya]
   {jagdish-bansiya}
-  {\textbf{CAMC}: Cohesion Among Methods of Classes (CAMC) evaluates the relatedness of methods in the interface of a class using the parameter lists defined for the methods. It can be applied earlier in the development than can traditional cohesiveness metrics because it relies only on method prototypes declared in a class.}
+  {\textbf{CAMC}: Cohesion Among Methods of Classes (CAMC) evaluates the \ul{relatedness} of methods in the interface of a class using the parameter lists defined for the methods. It can be applied \ul{earlier} in the development than can traditional cohesiveness metrics because it relies only on method prototypes declared in a class.}
   {bansiya1999class}
 
 \plush{\begin{pptWide}{2}
@@ -75,6 +80,7 @@ void main(Shape s)
 \(\texttt{CAMC} = \frac{1}{k \times l} \times \mathlarger{\sum}_{i=1}^{k} \mathlarger{\sum}_{j=1}^{l} o_{ij}\)\par
 \par\columnbreak\par
 \includegraphics[width=.9\columnwidth]{nhd-2.png}\par
+\lnSource{bansiya1999class}
 \end{pptWide}}
 
 \lnQuote
@@ -152,12 +158,7 @@ class OneByteStream
   \item absent in JavaScript
   \item ``interface'' in Go
   \item ``trait'' in Rust
-\end{itemize}\end{multicols}}
-
-\plush{
-  \pptBanner{Read this:}\par
-  \href{https://www.yegor256.com/2020/02/19/fat-skinny-design.html}{Fat vs. Skinny Design} (2020)\par
-  \href{https://www.yegor256.com/2017/12/19/srp-is-hoax.html}{SRP is a Hoax} (2017) \par
-}
+\end{itemize}\end{multicols}\par
+\lnSource{bugayenko2020blog0219}}
 
 \end{document}
