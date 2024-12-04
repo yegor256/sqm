@@ -223,8 +223,8 @@ class Trim
 class Book
   public String (*@\textcolor{orange}{title}@*)()
     return new Trim(
-      this(*@\textcolor{orange}{.read}@*)()
-    )(*@\textcolor{orange}{.value}@*)();
+      this.(*@\textcolor{orange}{read}@*)()
+    ).(*@\textcolor{orange}{value}@*)();
   private String (*@\textcolor{orange}{read}@*)()
     // read from the DB
 \end{ffcode}
