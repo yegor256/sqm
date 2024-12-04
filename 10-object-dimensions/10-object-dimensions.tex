@@ -177,7 +177,7 @@ class Material {
   }
 }
 
-class Book extends Material {
+class Book (*@\textcolor{orange}{extends Material}@*) {
   public String title() {
     return "David";
   }
@@ -187,7 +187,7 @@ class Book extends Material {
 \par\columnbreak\par
 \(\texttt{DIT}_\texttt{Material} = 0\)\par
 \(\texttt{DIT}_\texttt{Book} = 1\)\par
-``DIT is a measure of how many ancestor classes can potentially affect this class.''
+``DIT is a measure of how many \ul{ancestor} classes can potentially affect this class.''
 \end{multicols}
 \plush{}
 
@@ -210,7 +210,7 @@ class Book (*@\textcolor{orange}{extends Material}@*) {
 \par\columnbreak\par
 \(\texttt{NOC}_\texttt{Material} = 1\)\par
 \(\texttt{NOC}_\texttt{Book} = 0\)\par
-``NOC is a measure of how many sub-classes are going to inherit the methods of the parent class.''
+``NOC is a measure of how many \ul{sub-classes} are going to inherit the methods of the parent class.''
 \end{multicols}
 \plush{}
 
