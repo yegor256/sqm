@@ -221,16 +221,16 @@ class Trim
   String value()
 
 class Book
-  public String title()
+  public String (*@\textcolor{orange}{title}@*)()
     return new Trim(
-      this.read()
-    ).value();
-  private String read()
+      this(*@\textcolor{orange}{.read}@*)()
+    )(*@\textcolor{orange}{.value}@*)();
+  private String (*@\textcolor{orange}{read}@*)()
     // read from the DB
 \end{ffcode}
 }
 \par\columnbreak\par
-\(\texttt{RFC}_\texttt{Material} = 3\)\par
+\(\texttt{RFC}_\texttt{Book} = 3\)\par
 ``RFC is the count of the set of \ul{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
 \end{multicols}
 \plush{}
@@ -254,9 +254,9 @@ class Trim
 
 class Book
   public String title()
-    return new Trim(
-      this.read()
-    ).value();
+    return (*@\textcolor{orange}{new}@*) Trim(
+      this(*@\textcolor{orange}{.read}@*)()
+    )(*@\textcolor{orange}{.value}@*)();
   private String read()
     // read from the DB
 \end{ffcode}
@@ -266,13 +266,5 @@ class Book
 ``Number of Messages (NOM) measures the number of messages sent in a method, segregated by type of message.''
 \end{multicols}
 \plush{}
-
-\plush{
-  \pptBanner{Read this:}\par
-  \small
-  \href{https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html}{OOP Alternative to Utility Classes} (2014) \par
-  \href{https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html}{Java Annotations Are a Big Mistake} (2016) \par
-  \href{https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html}{How Much Your Objects Encapsulate?} (2014) \par
-}
 
 \end{document}
