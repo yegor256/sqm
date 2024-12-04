@@ -168,6 +168,23 @@ maximum number of possible distinct polymorphic situations.''
   {The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \ul{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}
   {chidamber1994metrics}
 
+\pptBanner{Weighted Methods per Class (WMC)}
+\begin{multicols}{2}
+Consider a class \(C_i\), with methods \(M_1, \dots, M_n\). Let \(c_1, \dots, c_n\) be
+the complexity of the methods. Then:
+\begin{equation*}
+\text{WMC} = \sum_{i=1}^{n} c_i
+\end{equation*}
+If all method complexities are considered to be unity, then \(\text{WMC} = n\),
+the number of methods.
+\par\columnbreak\par
+``It can be argued that developers approach the task of writing a method as they would
+a traditional program, and therefore some traditional static complexity metric,
+such as McCabe's Cyclomatic number, may be appropriate.''
+\lnSource{chidamber1994metrics}
+\end{multicols}
+\plush{}
+
 \pptBanner{Depth of Inheritance Tree (DIT)}
 \begin{multicols}{2}
 {\small\begin{ffcode}
