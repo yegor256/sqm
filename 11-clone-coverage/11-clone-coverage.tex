@@ -112,18 +112,19 @@ void sayHello(int id) {
   {Two lines of code are considered to be identical if they contain the same \ul{sequence of characters} after removing comments and white space; the \ul{semantics} of the program statements are not analyzed.}
   {baker1993}
 
-\pptBanner{Up to 38\% of lines are involved in duplicates}
-\begin{multicols}{2}
-\includegraphics[width=.9\columnwidth]{scatter.png}
-\par\columnbreak\par
-The plots are dense near the main diagonal, implying
-that most copies tend to occur \ul{fairly locally}, e.g. within the
-same file or module. \par However, certain line segments occur
-away from the main diagonal; it would be interesting to
-investigate why the corresponding sections of code are
-duplicated.
-\end{multicols}
-\plush{}
+\plush{
+  \pptBanner{Up to 38\% of lines are involved in duplicates}
+  \begin{multicols}{2}
+  \includegraphics[width=.9\columnwidth]{scatter.png}
+  \par\columnbreak\par
+  ``The plots are dense near the main diagonal, implying
+  that most copies tend to occur \ul{fairly locally}, e.g. within the
+  same file or module. However, certain line segments occur
+  away from the main diagonal; it would be interesting to
+  investigate why the corresponding sections of code are
+  duplicated.''
+  \lnSource{baker1993}
+  \end{multicols}}
 
 \lnQuote
   [Andy Hunt]
@@ -140,7 +141,7 @@ duplicated.
 \lnQuote
   [Yoshiki Higo]
   {yoshiki-higo}
-  {Code-clone analysis is a good vehicle to quantitatively understand the differences and improvements between two versions of the same software system}
+  {Code-clone analysis is a good vehicle to \ul{quantitatively} understand the differences and improvements between two versions of the same software system}
   {livieri2007}
 
 \lnQuote
@@ -229,7 +230,10 @@ More than one code segments that are functionally similar but implemented by dif
 \end{multicols}
 \plush{}
 
-\plush{\pptBanner{Clones in Linux Kernel}\pptPic{.9}{clones.png}\par\textit{Identifying Clones in the Linux Kernel}, Gerardo Casazza, Giuliano Antoniol, Umberto Villano, Ettore Merlo, Massimiliano Di Penta, Proceedings of the International Workshop on Source Code Analysis and Manipulation, 2001}
+\plush{
+  \pptBanner{Clones in Linux Kernel}
+  \pptPic{.9}{clones.png}\par
+  \lnSource{casazza2001identifying}}
 
 \plush{
   \pptBanner{Methods of clone detection:}
@@ -240,8 +244,8 @@ More than one code segments that are functionally similar but implemented by dif
     \item Using ``tree matching''
     \item Using Program Dependency Graphs (PDG)
     \item Using Machine Learning (ML)
-  \end{enumerate}
-}
+    \item Large Language Models (LLM)
+  \end{enumerate}}
 
 \lnQuote
   [Jens Krinke]
@@ -257,9 +261,17 @@ More than one code segments that are functionally similar but implemented by dif
     \item SonarQube
     \item \href{http://www.semdesigns.com/products/clone/}{CloneDR} by Semantic Designs
     \item \href{https://simian.quandarypeak.com/download/}{Simian} by Quandary Peak Research
-  \end{enumerate}
-}
+  \end{enumerate}}
 
 \plush{\pptBanner{Simian 4.0.0}\includegraphics[width=.9\textwidth]{simian.png}}
+
+\plush{
+  \pptBanner{How Effective LLMs Are?}
+  \begin{multicols}{2}
+  \includegraphics[width=.9\columnwidth]{gpt-recall.png}
+  \par\columnbreak\par
+  ``A correlation was observed between the GPTs' accuracy at identifying code clones and code similarity, with both GPT models exhibiting \ul{low effectiveness} in detecting the most complex Type-4 code clones.''
+  \lnSource{zhang2024assessing}
+  \end{multicols}}
 
 \end{document}
