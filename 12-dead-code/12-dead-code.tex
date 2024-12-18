@@ -90,7 +90,10 @@ void main(int x) {
   {We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \ul{25\% of all methods} were never used during the complete period.}
   {eder2012}
 
-\plush{\pptBanner{Unreachable/Dead Methods in Java}\pptPic{.9}{unreachable.png}\par{\scriptsize Source: \textit{A Graph-based Approach to Detect Unreachable Methods in Java Software}, Simone Romano, Giuseppe Scanniello, Carlo Sartiani, Michele Risi, Proceedings of the 31st Annual ACM Symposium on Applied Computing, 2016\par}}
+\lnPitch{
+  \pptBanner{Unreachable/Dead Methods in Java}
+  \pptPic{.9}{unreachable.png}\par
+  \lnSource{romano2016graph}}
 
 \lnQuote
   [Simone Romano]
@@ -98,7 +101,7 @@ void main(int x) {
   {Although there is some consensus on the fact that dead code is a common phenomenon, it could be \ul{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}
   {romano2018}
 
-\plush{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=\linewidth]{born-dead.png}
   \par\columnbreak\par
@@ -106,7 +109,7 @@ void main(int x) {
   \lnSource{caivano2021exploratory}
   \end{multicols}}
 
-\plush{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=\linewidth]{js-deads.png}
   \par\columnbreak\par
@@ -114,7 +117,7 @@ void main(int x) {
   \lnSource{malavolta2023javascript}
   \end{multicols}}
 
-\plush{
+\lnPitch{
   \pptBanner{Volatility Metric}
   \begin{multicols}{2}
   \scalebox{.7}{\begin{tikzpicture}[every node/.style={rectangle, minimum width=1em, fill=gray, anchor=south west, font={\color{white}}, inner sep=0pt}]
@@ -145,7 +148,7 @@ void main(int x) {
   \lnSource{bugayenko2021volatility}
   \end{multicols}}
 
-\plush{
+\lnPitch{
   \pptBanner{Volatility vs. Number of Files in a Repo}
   \pptPic{.5}{graph.png}
   \lnSource{bugayenko2021volatility}}
