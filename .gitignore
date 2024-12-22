@@ -22,3 +22,5 @@ _minted-wp/
 *.crumbs
 package/
 iexec.*
+*.bbl-SAVE-ERROR
+*.bcf-SAVE-ERROR

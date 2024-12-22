@@ -21,16 +21,239 @@
 % SOFTWARE.
 
 \documentclass[nobrand,anonymous,nodate,nosecurity]{huawei}
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage[russian,english]{babel}
+\def\SqmEnglish{}
+\ifdefined\SqmRussian
+  \usepackage[utf8]{inputenc}
+  \usepackage[T2A]{fontenc}
+  \usepackage[russian,english]{babel}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[english]{babel}
+\fi
 \usepackage{booktabs}
+\usepackage{wrapfig}
 \usepackage{tabularx}
+\usepackage{iexec}
 \usepackage{multicol}
 \usepackage{href-ul}
 \usepackage{ffcode}
 \usepackage{soul}
 \begin{document}
+
+\newcommand\angry[1]{\textcolor{red}{#1}}
+
+\iexec[quiet]{wget -N --quiet https://www.yegor256.com/images/face-1024x1024.jpg}
+
+\ifdefined\SqmEnglish
+{\sffamily{\bfseries\Large Software Quality Metrics (SQM)}
+
+\begin{abstract}
+In the course, students will learn different approaches to software quality,
+starting from the most traditional ones, like McCabe's complexity and
+Halstead effort, and finishing with most recently developed, based on Neural Networks
+and Large Language Models (LLM).
+\end{abstract}
+
+\textbf{What is the goal?}\\
+Writing code that compiles is easy. Writing code that is easy to read
+is a much bigger challenge. Without a proper understanding of what maintainability
+and software quality mean and why they matter, it may be hard or even impossible
+to become a professional programmer, capable of designing large software systems.
+At this course, we will attempt to investigate this very subject
+in order to increase the level of students' professionalism.
+
+\floatstyle{plain}
+\restylefloat{figure}
+\begin{wrapfigure}{r}{1.2in}%
+\raggedleft%
+\includegraphics[width=1.2in]{face-1024x1024.jpg}%
+\end{wrapfigure}
+\textbf{Who is the teacher?}\\
+Yegor is developing software for more than 30 years, being a hands-on programmer
+(see his GitHub account with 4.9K followers: \href{https://github.com/yegor256}{@yegor256})
+and a manager of other programmers. At the moment, he is a director
+of an R\&D laboratory in Huawei. His recent conference talks are in
+\href{https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q}{his YouTube channel}.
+He also published a \href{https://www.yegor256.com/books.html}{few books}
+and wrote a \href{https://www.yegor256.com/contents.html}{blog} about software engineering
+and object-oriented programming.
+He previously taught a few courses in
+\href{https://innopolis.university/}{Innopolis University} (Kazan, Russia)
+and
+\href{https://hse.ru}{HSE University} (Moscow, Russia),
+for example,
+\href{https://github.com/yegor256/ssd16}{SSD16 (2021)},
+\href{https://github.com/yegor256/eqsp}{EQSP (2022)},
+\href{https://github.com/yegor256/ppa}{PPA (2023)},
+\href{https://github.com/yegor256/painofoop}{COOP (2023)},
+and
+\href{https://github.com/yegor256/pmba}{PMBA (2023)}
+(all videos are available).
+
+\textbf{Why this course?}\\
+Unfortunately, the quality of software is not getting better in the
+industry of software development while the amount of code we programmers
+write every year steadily grows. There is an urgent need to help
+programmers understand their craft better through the perspective
+of quantitative and qualitative analysis of software code.
+
+\textbf{What's the methodology?}\\
+There are 24 lectures, each dedicated to one (or a few) metrics that
+were designed to measure the quality or quantity of code over the last
+few decades of software engineering and computer science. Students will
+hear the theories behind the metrics accompanied with the stories
+experienced by the lecturer in his practical participation in software
+projects.
+
+\newpage
+\section*{Course Structure}
+
+Prerequisites to the course (it is expected that a student knows this):
+
+\begin{itemize}
+\item How to write code
+\item How to design software
+\item How to use Git
+\end{itemize}
+
+After the course, students \emph{hopefully} will understand:
+
+\begin{itemize}
+\item How to make their bug reports appreciated?
+\item How to make their pull requests merged?
+\item How to reject a pull request politely?
+\item How to become an active contributor of a large repository?
+\item How to keep up with GitHub etiquette?
+\item How to invite and motivate contributors?
+\item How to deal with frustration during code reviews?
+\item How to avoid stale pull requests (never merged)?
+\item How to use GitHub Actions effectively?
+\item How to format the \texttt{README.md} file?
+\item How to control quality and avoid chaos in a public repository?
+\item How to use GitHub account in lieu of a C.V.?
+\item How to get 100 stars?
+\item How to release in one click?
+\item How to employ ChatGPT as a coding companion?
+\item How to get 10K stars?
+\item How to earn money via open source?
+\end{itemize}
+
+\newpage
+\section*{Lectures \& Labs}
+
+The following 80-minute lectures constitute the course:
+
+\newlist{lectures}{enumerate}{10}
+\setlist[lectures]{label*=\arabic*.}
+\begin{lectures}
+    \item Lines of Code
+    \item McCabe's Cyclomatic Complexity
+    \item Cognitive Complexity
+    \item Halstead Complexity
+    \item Maintainability Index
+    \item Coupling
+    \item LCOM 1, 2, 3, 4, 5
+    \item TCC and LCC
+    \item CAMC and NHD
+    \item Object Dimensions
+    \item Clone Coverage
+    \item Dead Code
+    \item Code Churn
+    \item Tech Debt
+    \item Code Coverage
+    \item Mutation Coverage
+    \item Function Points
+    \item Defects Density
+    \item Comments Density
+    \item Commits Density
+    \item Builds
+    \item Code Style
+    \item Static Analysis
+    \item Neural Metrics
+\end{lectures}
+
+At laboratory classes, organized by a Teaching Assistant (TA),
+students either make pull requests to
+GitHub repositories suggested by the teacher, or write sections
+for their research papers.
+
+Most probably, one of the following repositories will be suggested
+by the teacher for contribution during the course:
+\href{https://github.com/yegor256/cam}{yegor256/cam} (Bash, Python),
+\href{https://github.com/yegor256/rultor}{yegor256/rultor} (Java, XML),
+\href{https://github.com/yegor256/qulice}{yegor256/qulice} (Java),
+\href{https://github.com/cqfn/jpeek}{cqfn/jpeek} (Java, XML),
+and
+\href{https://github.com/objectionary/eo}{objectionary/eo} (Java, XSLT).
+
+\newpage
+\section*{Grading}
+
+At the first lecture, students form groups of \textbf{2--3} people in each one (no exceptions!).
+Each group picks a research topic from the list suggested by the teacher.
+
+Each group writes a research paper in \LaTeX, according
+to the \href{https://www.yegor256.com/2022/08/24/research-paper-template.html}{guideline}.
+The length of the pager may not exceed four pages in
+\href{https://ctan.org/pkg/acmart}{acmart/sigplan} 10pt format
+(including references and appendices).
+The paper must be presented to the teacher \angry{incrementally}, section by section:
+\begin{inparaenum}[1)]
+\item Method,
+\item Related Work,
+\item Results,
+\item Discussion,
+\item Conclusion,
+\item Introduction,
+and
+\item Abstract.
+\end{inparaenum}
+Once a section is \angry{approved} by the teacher, the next section may be presented for review.
+
+After a presentation of a section, the teacher may ask the group to \angry{stop}
+working with the paper. In this case, no sections may be presented for review any more: they all will be rejected.
+This decision is \angry{subjectively} made by the teacher and will \angry{not} be explained
+to the students, however the following may contribute to such a
+negative decision:
+\begin{inparaenum}[a)]
+    \item ChatGPT,
+    \item plagiarism,
+    \item negligence,
+    and
+    \item laziness.
+\end{inparaenum}
+
+When the Abstract is accepted by the teacher, a group may ask a student from another
+group to review their paper, according to
+\href{https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html}{this guideline}.
+The review must be accepted by the TA.
+
+There is no exam at the end of the course. Instead,
+each student earns points for the following results:\\
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{lrr}
+Result & Points & Limit \\
+\hline
+Attended a lecture & +2 & 8 \\
+Attended a lab & +2 & 8 \\
+Merged a pull request to a suggested repo & +4 & 48 \\
+Reviewed a paper of another group & +3 & 9 \\
+``Method'' section (\href{https://www.yegor256.com/2023/10/11/method-of-research.html}{guideline}) & +8 \\
+``Related Work'' section (\href{https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html}{guideline}) & +12 \\
+``Results'' and ``Discussion'' sections (\href{https://www.yegor256.com/2023/12/11/results-and-discussion.html}{guideline}) & +12 \\
+``Conclusion'' & +6 \\
+``Introduction'' section & +6 \\
+``Abstract'' and Title & +4 \\
+\end{tabular}
+
+Then, 55+ points mean ``A,'' 47+ mean ``B,'' and 23+ mean ``C.''
+
+An online lecture is counted as ``attended'' only if a student was personally
+presented in Zoom for more than 75\% of the lecture's time. Watching the
+lecture from the computer of a friend doesn't count.
+
+\else
 
 \newcommand\head[2]{#1: & #2 \\}
 \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
@@ -90,31 +313,24 @@
     \item Cognitive Complexity
     \item Halstead Complexity
     \item Maintainability Index
-
     \item Coupling
     \item LCOM 1, 2, 3, 4, 5
     \item TCC and LCC
     \item CAMC and NHD
     \item Object Dimensions
-
     \item Clone Coverage
     \item Dead Code
     \item Code Churn
     \item Tech Debt
-
     \item Code Coverage
     \item Mutation Coverage
-
     \item Function Points
-
     \item Defects Density
     \item Comments Density
     \item Commits Density
-
     \item Builds
     \item Code Style
     \item Static Analysis
-
     \item Neural Metrics
 \end{enumerate}
 
@@ -198,5 +414,7 @@ Paul Clements et al., \ul{Documenting Software Architectures: Views and Beyond}\
 {\nospell{Jez Humble} et al.}, \ul{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
 {\nospell{Michael T. Nygard}}, \ul{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
 \end{multicols}
+
+\fi
 
 \end{document}
