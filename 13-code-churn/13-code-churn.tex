@@ -28,23 +28,37 @@
 \plush{\lnTitlePage{13}{24}{dvuyJ5LvHvQ}}
 
 \lnPitch{\pptBanner{History of Version Control Systems (VCS)}
-\begin{itemize}\setlength\itemsep{0pt}
-  \item The Librarian by ADR: created in 1969
-  \item Panvalet by Computer Associates: 1969
-  \item SCCS by Bell Labs: 1973
-  \item RCS by GNU: 1982
-  \item CVS: 1986
-  \item ClearCase by IBM: 1992
-  \item Apache Subversion: 2000
-  \item Mercurial: 2005
-  \item Git: 2005
+\begin{itemize}\setlength\itemsep{-.2em}
+  \item The \textbf{Librarian} by ADR: created in 1969
+  \item \textbf{Panvalet} by Computer Associates: 1969
+  \item \textbf{SCCS} by Bell Labs: 1973
+  \item \textbf{RCS} by GNU: 1982
+  \item \textbf{CVS} by Dick Grune: 1986
+  \item \textbf{ClearCase} by IBM: 1992
+  \item \textbf{Subversion} by Apache: 2000
+  \item \textbf{BitKeeper} by BitMover Inc.: 2000
+  \item \textbf{Arch} by Thomas Lord in GNU: 2001
+  \item \textbf{Git} by Linus Torvalds: 2005
+  \item \textbf{Mercurial} by Olivia Mackall: 2005
 \end{itemize}}
 
 \lnQuote
   [Sebastian G. Elbaum]
   {sebastian-elbaum}
-  {We can measure the increase or decrease in system complexity as measured by a selected metric, \ul{code delta}, or we can measure the total amount of \ul{change} the system has undergone between builds, \ul{code churn}.}
+  {We can measure the increase or decrease in system complexity as measured by a selected metric, \ul{code delta}, or we can measure the total amount of \ul{change} the system has undergone between builds, \textcolor{orange}{code churn}.}
   {munson1998}
+
+\lnPitch{
+  \pptBanner{What is ``Churn''?}
+  \begin{multicols}{2}
+  Wikipedia says that ``\textcolor{orange}{churn rate}
+  (also known as attrition rate, turnover, customer turnover, or
+  customer defection) is a measure of the proportion of individuals or
+  items \ul{moving out} of a group over a specific period.''
+  \par\columnbreak\par
+  \pptPic{1}{butter-churn.jpg}\par
+  {\small Barrel Butter Churn, Victorian, Original, \$95.00\par}
+  \end{multicols}}
 
 \pptBanner{Motivating Example}
 \begin{pptWide}{3}
