@@ -21,26 +21,29 @@
 % SOFTWARE.
 
 \documentclass{article}
+\usepackage{setspace}
+\usepackage[static]{/code/ctan/clicks/clicks}
 \usepackage{../lecture-notes/notes}
 \newcommand*\thetitle{Code Churn}
 \begin{document}
 
 \plush{\lnTitlePage{13}{24}{dvuyJ5LvHvQ}}
 
-\lnPitch{\pptBanner{History of Version Control Systems (VCS)}
-\begin{itemize}\setlength\itemsep{-.2em}
-  \item The \textbf{Librarian} by ADR: created in 1969
-  \item \textbf{Panvalet} by Computer Associates: 1969
-  \item \textbf{SCCS} by Bell Labs: 1973
-  \item \textbf{RCS} by GNU: 1982
-  \item \textbf{CVS} by Dick Grune: 1986
-  \item \textbf{ClearCase} by IBM: 1992
-  \item \textbf{Subversion} by Apache: 2000
-  \item \textbf{BitKeeper} by BitMover Inc.: 2000
-  \item \textbf{Arch} by Thomas Lord in GNU: 2001
-  \item \textbf{Git} by Linus Torvalds: 2005
-  \item \textbf{Mercurial} by Olivia Mackall: 2005
-\end{itemize}}
+\lnPitch{
+  \pptBanner{History of Version Control Systems (VCS)}
+  \begin{itemize}\setlength\itemsep{-.2em}
+    \item The \textbf{Librarian} by ADR: created in 1969
+    \item \textbf{Panvalet} by Computer Associates: 1969
+    \item \textbf{SCCS} by Bell Labs: 1973
+    \item \textbf{RCS} by GNU: 1982
+    \item \textbf{CVS} by Dick Grune: 1986
+    \item \textbf{ClearCase} by IBM: 1992
+    \item \textbf{Subversion} by Apache: 2000
+    \item \textbf{BitKeeper} by BitMover Inc.: 2000
+    \item \textbf{Arch} by Thomas Lord in GNU: 2001
+    \item \textbf{Git} by Linus Torvalds: 2005
+    \item \textbf{Mercurial} by Olivia Mackall: 2005
+  \end{itemize}}
 
 \lnQuote
   [Sebastian G. Elbaum]
@@ -101,20 +104,28 @@ final class Book
 Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}{-2}
 \plush{}
 
-\pptBanner{Code Delta vs. Code Churn}
-\begin{multicols}{2}
-\includegraphics[width=.7\columnwidth]{qtb.png}
-\par\columnbreak\par
-``A limitation of measuring code deltas is that it
-\ul{doesn't} give an indicator as to how much change the
-system has undergone. If several
-software modules are removed and are replaced by
-modules of roughly equivalent complexity, the code
-delta for the system will be close to zero.''
-\par
-{\scriptsize Source: \textit{Code Churn: A Measure for Estimating the Impact of Code Change}, Sebastian G. Elbaum et al., ICSM, 1998\par}
-\end{multicols}
-\plush{}
+\lnPitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.7\columnwidth]{qtb.png}
+  \par\columnbreak\par
+  ``A limitation of measuring \textcolor{orange}{code deltas} is that it
+  \ul{doesn't} give an indicator as to how much change the
+  system has undergone. If several
+  software modules are removed and are replaced by
+  modules of roughly equivalent complexity, the code
+  delta for the system will be close to zero.''
+  \par
+  \lnSource{munson1998}
+  \end{multicols}}
+
+\lnPitch{
+  \begin{multicols}{2}
+  \includegraphics[width=\columnwidth]{fi-churn.png}
+  \par\columnbreak\par
+  ``In the case of code churn, what is important is the absolute measure of the amount of code that has been modified. From the standpoint of \ul{fault insertion} (FI), removing a lot of code is probably as catastrophic as adding a similar amount.''
+  \par
+  \lnSource{hall2000software}
+  \end{multicols}}
 
 \lnQuote
   [Nachiappan Nagappan]
@@ -134,21 +145,22 @@ delta for the system will be close to zero.''
   {Non-normal code churn can be a tangible and measurable \ul{effect} of architectural violations in source code. However, more research is needed to better understand this connection, e.g., if violations are the \ul{cause}, the size of the effect, the cost of refactoring, and whether it is generalizable to other system.}
   {olsson2017}
 
-\lnPitch{\pptBanner{CodeClimate.com Interpretation of Code Churn}
-\begin{multicols}{2}
-\includegraphics[width=.98\columnwidth]{codeclimate.png}
-\par\columnbreak\par
-``When we have finished analyzing your default branch, you will see churn metrics for the files in your repository. This churn metric is approximately the \ul{number of times a file has changed} in the last 90 days, calculated by counting the number of distinct versions of that file across commits from that time.''\par
-{\scriptsize Source: \href{https://docs.codeclimate.com/docs/churn}{their blog}\par}
-\end{multicols}}
+\lnPitch{
+  \pptBanner{CodeClimate.com Interpretation of Code Churn}
+  \begin{multicols}{2}
+  \includegraphics[width=.98\columnwidth]{codeclimate.png}
+  \par\columnbreak\par
+  ``When we have finished analyzing your default branch, you will see churn metrics for the files in your repository. This churn metric is approximately the \ul{number of times a file has changed} in the last 90 days, calculated by counting the number of distinct versions of that file across commits from that time.''\par
+  {\scriptsize Source: \href{https://docs.codeclimate.com/docs/churn}{their blog}\par}
+  \end{multicols}}
 
-\pptBanner{HitsOfCode.com}
-\begin{multicols}{2}
-\includegraphics[width=.9\columnwidth]{hitsofcode.png}
-\par\columnbreak\par
-Created by \href{https://www.vbrandl.net/}{Valentin Brandl} (\href{https://github.com/vbrandl}{@vbrandl})
-and inspired by the blog post of mine~\citep{bugayenko2014blog1114}.
-\end{multicols}
-\plush{}
+\lnPitch{
+  \pptBanner{HitsOfCode.com}
+  \begin{multicols}{2}
+  \includegraphics[width=.9\columnwidth]{hitsofcode.png}
+  \par\columnbreak\par
+  Created by \href{https://www.vbrandl.net/}{Valentin Brandl} (\href{https://github.com/vbrandl}{@vbrandl})
+  and inspired by the blog post of mine~\citep{bugayenko2014blog1114}.
+  \end{multicols}}
 
 \end{document}
