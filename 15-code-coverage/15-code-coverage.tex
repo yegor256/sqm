@@ -84,16 +84,17 @@ assert fibonacci(10) == 55;
 \end{multicols}
 \plush{}
 
-\lnPitch{\pptBanner{Some Kinds of Code Coverage}
-\begin{itemize}\setlength\itemsep{0em}
-\item Line Coverage
-\item Statement Coverage
-\item Branch Coverage
-\item Condition Coverage
-\item Function Coverage
-\item Linear Code Sequence and Jump (LCSAJ) Coverage
-\item Modified Condition / Decision Coverage (MC/DC)
-\end{itemize}}
+\lnPitch{
+  \pptBanner{Some Kinds of Code Coverage}
+  \begin{itemize}\setlength\itemsep{0em}
+  \item Line Coverage
+  \item Statement Coverage
+  \item Branch Coverage
+  \item Condition Coverage
+  \item Function Coverage
+  \item Linear Code Sequence and Jump (LCSAJ) Coverage
+  \item Modified Condition / Decision Coverage (MC/DC)
+  \end{itemize}}
 
 \pptBanner{Four Kinds of Coverage}
 \begin{multicols}{2}
@@ -143,18 +144,17 @@ assert foo(50) == 42;
   {gelperin1988}
 
 \plush{
-\begin{multicols}{2}
-\includegraphics[width=.7\linewidth]{practices.png}
-\par\columnbreak\par
-``We note an \ul{inconsistency}. A high percentage of the respondents
-felt that the testing in their organization was a systematic
-and organized activity (91\% answered either ``yes''
-or ``sometimes'' to this practice). However, [...]
-an extremely small 5\% provide \ul{regular
-measurements of code coverage}.''\par
-{\scriptsize --- \textit{The Growth of Software Testing}, David Gelperin and Bill Hetzel, Communications of the ACM, 31(6), 1988\par}
-\end{multicols}
-}
+  \begin{multicols}{2}
+  \includegraphics[width=.7\linewidth]{practices.png}
+  \par\columnbreak\par
+  ``We note an \ul{inconsistency}. A high percentage of the respondents
+  felt that the testing in their organization was a systematic
+  and organized activity (91\% answered either ``yes''
+  or ``sometimes'' to this practice). However, [...]
+  an extremely small 5\% provide \ul{regular
+  measurements of code coverage}.''\par
+  {\scriptsize --- \textit{The Growth of Software Testing}, David Gelperin and Bill Hetzel, Communications of the ACM, 31(6), 1988\par}
+  \end{multicols}}
 
 \lnQuote
   [Boris Beizer]
@@ -192,8 +192,9 @@ measurements of code coverage}.''\par
   {Google \ul{does not enforce} any code coverage thresholds across the entire codebase. Projects (or groups of projects) are free to define their own thresholds and goals. Many projects opt-into a centralized voluntary alerting system that defines \ul{five levels} of code coverage thresholds.}
   {ivankovi2019}
 
-
-\lnPitch{\pptBanner{Code Coverage Threshold Levels in Google}\includegraphics[width=.7\textwidth]{levels.png}}
+\lnPitch{
+  \pptBanner{Code Coverage Threshold Levels in Google}
+  \includegraphics[width=.7\textwidth]{levels.png}}
 
 \lnQuote
   [Adam Bender]
@@ -206,27 +207,27 @@ measurements of code coverage}.''\par
   {Many \ul{contracts} are specifying that a certain \ul{percentage} of the statements or instructions must be successfully executed before the acceptance of the software by the customer.}
   {bowen1979survey}
 
-\lnPitch{\pptBanner{Industry Standards that Require Code Coverage}
-\begin{itemize}
-\item ISO-26262: ``Road Vehicles'' functional safety (Switzerland)
-\item IEC 61508: ``Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems'' (UK)
-\item DO-178C: ``Software Considerations in Airborne Systems and Equipment Certification'' (USA)
-\item IEC 62304: ``Medical Device Software'' (UK)
-\end{itemize}}
+\lnPitch{
+  \pptBanner{Industry Standards that Require Code Coverage}
+  \begin{itemize}
+  \item ISO-26262: ``Road Vehicles'' functional safety (Switzerland)
+  \item IEC 61508: ``Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems'' (UK)
+  \item DO-178C: ``Software Considerations in Airborne Systems and Equipment Certification'' (USA)
+  \item IEC 62304: ``Medical Device Software'' (UK)
+  \end{itemize}}
 
 \lnPitch{
-\begin{pptWide}{2}
-ISO-26262:\\
-\includegraphics[width=.9\linewidth]{iso-26262.png}\par
-IEC 61508:\\
-\includegraphics[width=.9\linewidth]{iec-61508.png}\par
-\par\columnbreak\par
-DO-178C:\\
-\includegraphics[width=.9\linewidth]{do-178c.png}\par
-IEC 62304:\\
-\includegraphics[width=.9\linewidth]{iso-26262.png}\par
-\end{pptWide}
-}
+  \begin{pptWide}{2}
+  ISO-26262:\\
+  \includegraphics[width=.9\linewidth]{iso-26262.png}\par
+  IEC 61508:\\
+  \includegraphics[width=.9\linewidth]{iec-61508.png}\par
+  \par\columnbreak\par
+  DO-178C:\\
+  \includegraphics[width=.9\linewidth]{do-178c.png}\par
+  IEC 62304:\\
+  \includegraphics[width=.9\linewidth]{iso-26262.png}\par
+  \end{pptWide}}
 
 \lnPitch{\pptBanner{Codecov.io}\includegraphics[width=.7\textwidth]{codecov.png}}
 
@@ -325,14 +326,15 @@ IEC 62304:\\
 {\scriptsize Source: \url{https://github.com/volodya-lombrozo/jtcop}\par}
 \plush{}
 
-\lnPitch{Code Coverage can be calculated by a few tools:
-\begin{itemize}
-\item \href{https://www.jacoco.org}{JaCoCo} for Java
-\item \href{https://istanbul.js.org/}{Istanbul} for Javascript
-\item \href{https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}{Gcov} for C/C++
-\item \href{https://pypi.org/project/coverage/}{Coverage.py} for Python
-\item \href{https://github.com/simplecov-ruby/simplecov}{Simplecov} for Ruby
-\item \href{https://github.com/xd009642/tarpaulin}{Tarpaulin} for Rust
-\end{itemize}}
+\lnPitch{
+  Code Coverage can be calculated by a few tools:
+  \begin{itemize}
+  \item \href{https://www.jacoco.org}{JaCoCo} for Java
+  \item \href{https://istanbul.js.org/}{Istanbul} for Javascript
+  \item \href{https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}{Gcov} for C/C++
+  \item \href{https://pypi.org/project/coverage/}{Coverage.py} for Python
+  \item \href{https://github.com/simplecov-ruby/simplecov}{Simplecov} for Ruby
+  \item \href{https://github.com/xd009642/tarpaulin}{Tarpaulin} for Rust
+  \end{itemize}}
 
 \end{document}
