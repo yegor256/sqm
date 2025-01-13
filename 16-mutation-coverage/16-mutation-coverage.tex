@@ -286,19 +286,19 @@ int fibonacci(int n) {
   {ma2006}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=.9\linewidth]{operators.png}
-\par\columnbreak\par
-``\ul{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \ul{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
-{\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
-\end{multicols}}
+  \includegraphics[width=.9\linewidth]{operators.png}
+  \par\columnbreak\par
+  ``\ul{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \ul{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
+  {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
+  \end{multicols}}
 
 \lnQuote
   [Paul Ammann]
   {paul-ammann}
   {Three conditions must be present for a failure to be observed:
-1)~The location in the program that contains the fault must be reached (\ul{\textbf{R}eachability}).
-2)~After executing the location, the state of the program must be incorrect (\textbf{I}nfection).
-3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
+  1)~The location in the program that contains the fault must be reached (\ul{\textbf{R}eachability}).
+  2)~After executing the location, the state of the program must be incorrect (\textbf{I}nfection).
+  3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
   {ammann2008}
 
 \lnQuote
@@ -325,13 +325,23 @@ int fibonacci(int n) {
   {Our experiments used 357 real faults in 5 open-source applications that comprise a total of 321,000 lines of code. The results show a statistically \ul{significant} correlation between mutant detection and real fault detection, independently of code coverage.}
   {just2014mutants}
 
+\lnPitch{\begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{google-coverage.png}
+  \par\columnbreak\par
+  ``First, we aim to select mutants with a high survival rate and productivity
+  to maximize their utility as test objectives. Second, we aim to report
+  very few mutants to reduce computational effort and avoid
+  overwhelming developers with too many findings.''\par
+  \lnSource{petrovic2021practical}
+  \end{multicols}}
+
 \lnPitch{Mutation Coverage can be calculated by a few tools:
-\begin{itemize}
-\item \href{https://pitest.org/}{PIT} for Java
-\item \href{https://github.com/stryker-mutator/stryker-js}{StrykerJS} for JavaScript
-\item \href{https://github.com/nlohmann/mutate_cpp}{Mutate++} for C++
-\item \href{https://github.com/EvanKepner/mutatest}{mutatest} for Python
-\item \href{https://github.com/mbj/mutant}{mutant} for Ruby
-\end{itemize}}
+  \begin{itemize}
+  \item \href{https://pitest.org/}{PIT} for Java
+  \item \href{https://github.com/stryker-mutator/stryker-js}{StrykerJS} for JavaScript
+  \item \href{https://github.com/nlohmann/mutate_cpp}{Mutate++} for C++
+  \item \href{https://github.com/EvanKepner/mutatest}{mutatest} for Python
+  \item \href{https://github.com/mbj/mutant}{mutant} for Ruby
+  \end{itemize}}
 
 \end{document}
