@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+      - run: sudo apt-get update && sudo apt-get install -y wget
       - uses: yegor256/latexmk-action@0.15.0
         with:
           cmd: make
