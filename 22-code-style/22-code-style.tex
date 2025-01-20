@@ -90,7 +90,8 @@ end
   {michael-rees}
   {STYLE was designed to input the source of a syntactically correct Pascal program, make simple measurements on a one-pass line-by-line basis, and yield a style \ul{mark} out of 100\%.}
   {rees1982automatic}
-\plush{\pptBanner{Rees Score, for Pascal}
+\lnPitch{
+  \pptBanner{Rees Score, for Pascal}
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{rees-table.png}
   \par\columnbreak\par
@@ -102,7 +103,8 @@ end
   {../22-code-style/berry-meekings}
   {The `elegance' or `style' of a program is sometimes considered a nebulous attribute that is somehow unquantifiable; a programmer has an \ul{instinctive} feel for a `good' or a `bad' program in much the same way as an artist distinguishes good and bad paintings.}
   {berry1985style}
-\plush{\pptBanner{Berry-Meekings Score, for C Programs}
+\lnPitch{
+  \pptBanner{Berry-Meekings Score, for C Programs}
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{berry-score.png}
   \lnSource{berry1985style}
@@ -122,7 +124,8 @@ end
   {To determine the relationship (if any) between the style metric and error proneness of each module, we performed a simple correlation analysis. The results were discouraging in the sense that a correlation of only -0.052 existed between the observed error frequency and the style metric, suggesting that the style metric bore \ul{little relationship} to the error frequency encountered in our data.}
   {harrison1986note}
 
-\plush{\pptBanner{My Favorite Style Checkers}
+\lnPitch{
+  \pptBanner{My Favorite Style Checkers}
   \begin{itemize}
     \item \href{https://eslint.org/}{ESLint} (2013) for JavaScript
     \item \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy} (2007?) for C++
@@ -133,7 +136,8 @@ end
     \item \href{https://www.qulice.com}{Qulice} by \citet{bugayenko2014blog0813} for Java: \href{https://checkstyle.sourceforge.io/}{Checkstyle} (2001) + \href{https://pmd.github.io/}{PMD} (2022)
   \end{itemize}}
 
-\plush{\pptBanner{How Many Rules in Style Checkers?}
+\lnPitch{
+  \pptBanner{How Many Rules in Style Checkers?}
   \begin{itemize}
     \item 690+ in Clang-Tidy (C++)
     \item 550+ in Rubocop (Ruby)
@@ -143,7 +147,8 @@ end
   \end{itemize}
   \par{\small Some/most of the rules no only check style, but also find bugs.\par}}
 
-\plush{\pptBanner{Some Exotic Style Checkers}
+\lnPitch{
+  \pptBanner{Some Exotic Style Checkers}
   \begin{itemize}
     \item \href{https://github.com/koalaman/shellcheck}{Shellcheck} for Bash
     \item \href{https://github.com/markdownlint/markdownlint}{markdownlint} for Markdown
@@ -163,12 +168,11 @@ end
   {Formally, we can characterize software readability as a mapping from a code sample to a finite score domain. We presented human annotators with a sequence of short code selections, called snippets. The annotators were asked to individually score each snippet based on their personal estimation of readability. Our metric for readability is \ul{derived} (using ML) from these judgments.}
   {buse2009learning}
 
-\plush{
+\lnPitch{
   \begin{multicols}{2}
-  \includegraphics[width=.85\linewidth]{readability.png}
+  \includegraphics[width=.8\linewidth]{readability.png}
   \par\columnbreak\par
-  ``We find, for example, that factors like 'average line length' and 'average number of identifiers per line' are very important to readability. Conversely, 'average
-identifier length' is not, in itself, a very predictive factor,''
+  ``We find, for example, that factors like 'average line length' and 'average number of identifiers per line' are very important to readability. Conversely, 'average identifier length' is not, in itself, a very predictive factor,''
   \lnSource{buse2009learning}
   \end{multicols}}
 
@@ -231,5 +235,18 @@ identifier length' is not, in itself, a very predictive factor,''
   {weiqin-zou}
   {A pull request that is \ul{consistent} with the current code style tends to be merged into the codebase more \ul{easily} (faster).}
   {bauer2019indentation}
+
+\lnQuote
+  [Tja{\v{s}}a Heri{\v{c}}ko]
+  {tjasa-hericko}
+  {The findings suggest a very weak to strong negative correlation between ESLint warning density and the value of Maintainability Index at a project- and a module- level. Changes in warning density between projects only slightly inversely correspond to changes in maintainability.}
+  {herivcko2023relationship}
+\lnPitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{mi-linter.png}
+  \par\columnbreak\par
+  ``Although there is a tendency for the shift in maintainability to be positive when the change in warning density is negative and vice versa, the strength of the relationship is negligible.''
+  \lnSource{herivcko2023relationship}
+  \end{multicols}}
 
 \end{document}
