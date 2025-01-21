@@ -25,7 +25,7 @@
 \newcommand*\thetitle{Commits Density}
 \begin{document}
 
-\plush{\lnTitlePage{20}{24}{}}
+\lnTitlePage{20}{24}{BrG3HiuYC5U}
 
 \lnQuote
   [Marc J. Rochkind]
@@ -101,11 +101,11 @@
   {moser2008comparative}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=.7\linewidth]{change-metrics.png}
-\par\columnbreak\par
-``Our set of change metrics is obviously only one possible proposal for change metrics we can extract from a CVS repository.''
-\lnSource{moser2008comparative}
-\end{multicols}}
+  \includegraphics[width=.7\linewidth]{change-metrics.png}
+  \par\columnbreak\par
+  ``Our set of change metrics is obviously only one possible proposal for change metrics we can extract from a CVS repository.''
+  \lnSource{moser2008comparative}
+  \end{multicols}}
 
 \lnQuote
   [Abdulkareem Alali]
@@ -113,15 +113,16 @@
   {One observation is that the terms that suggest \ul{bug related changes} are associated with fairly small-sized commits.}
   {alali2008s}
 
-\lnPitch{\includegraphics[width=.95\linewidth]{size-distribution.png}
-\lnSource{alali2008s}}
+\lnPitch{
+  \includegraphics[width=.95\linewidth]{size-distribution.png}
+  \lnSource{alali2008s}}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=.7\linewidth]{terms.png}
-\par\columnbreak\par
-``For each project, we collected the log messages and eliminated stop words using the \nospell{Lovins stemmer} algorithm... The result is a ranked list of frequent terms for each project. Then we cross join those nine lists and take the top most 50 frequent terms.''
-\lnSource{alali2008s}
-\end{multicols}}
+  \includegraphics[width=.7\linewidth]{terms.png}
+  \par\columnbreak\par
+  ``For each project, we collected the log messages and eliminated stop words using the \nospell{Lovins stemmer} algorithm... The result is a ranked list of frequent terms for each project. Then we cross join those nine lists and take the top most 50 frequent terms.''
+  \lnSource{alali2008s}
+  \end{multicols}}
 
 \lnQuote
   [Abram Hindle]
@@ -130,11 +131,11 @@
   {hindle2008large}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=.7\linewidth]{type-of-change.png}
-\par\columnbreak\par
-``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \ul{subjective}, but reliable methods could be researched and developed to \ul{quantify} such effect.''
-\lnSource{hindle2008large}
-\end{multicols}}
+  \includegraphics[width=.7\linewidth]{type-of-change.png}
+  \par\columnbreak\par
+  ``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \ul{subjective}, but reliable methods could be researched and developed to \ul{quantify} such effect.''
+  \lnSource{hindle2008large}
+  \end{multicols}}
 
 \lnQuote
   [Oliver Arafat]
@@ -203,30 +204,30 @@
   {zhang2024automatic}
 
 \plush{\pptBanner{Pitfalls of Automated Commits Generation}
-\begin{pptWide}{2}{\small\begin{itemize}
-\item ``Developers indicate that writing the subject of a commit message is \ul{hard}, and approximately 37\% of developers also find writing subjects \ul{time-consuming}.''
-\item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
-\item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
-\end{itemize}}\end{pptWide}\lnSource{zhang2024automatic}}
+  \begin{pptWide}{2}{\small\begin{itemize}
+  \item ``Developers indicate that writing the subject of a commit message is \ul{hard}, and approximately 37\% of developers also find writing subjects \ul{time-consuming}.''
+  \item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
+  \item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
+  \end{itemize}}\end{pptWide}\lnSource{zhang2024automatic}}
 
 \plush{\pptBanner{Commits Best Practices (Coders' Folklore)}
-\begin{multicols}{2}{\small\begin{itemize}
-\item ``Commit it as soon as it compiles''
-  --- \href{https://softwareengineering.stackexchange.com/a/74789/20873}{here}
-\item ``Prefer small commits to large commits.''
-  --- \href{https://softwareengineering.stackexchange.com/a/207036/20873}{here}
-\item ``You shouldn't commit based on a time basis, but on a feature basis''
-  --- \href{https://softwareengineering.stackexchange.com/a/74893/20873}{here}
-\item ``I tend to commit anytime I take a break''
-  --- \href{https://softwareengineering.stackexchange.com/a/74767/20873}{here}
-\item ``If you have to put the word "and" or "also" in your summary, you need to split it up.''
-  --- \href{https://softwareengineering.stackexchange.com/a/12209/20873}{here}
-\item ``If you can't adequately comment a commit in one line, then it's already too large.''
-  --- \href{https://softwareengineering.stackexchange.com/a/10944/20873}{here}
-\item ``Files that are generated by build tools, compilers, or other automated processes should not typically be committed.''
-  --- \href{https://medium.com/@saeid/10-essential-practices-for-better-git-commits-and-why-they-matter-3cfc420bf53e}{here}
-\item ``The first line must be maximum 50 characters long, each line in the description should though wrap at the 72nd mark.''
-  --- \href{https://preslav.me/2015/02/21/what-s-with-the-50-72-rule/}{here}
-\end{itemize}}\end{multicols}}
+  \begin{multicols}{2}{\small\begin{itemize}
+  \item ``Commit it as soon as it compiles''
+    --- \href{https://softwareengineering.stackexchange.com/a/74789/20873}{here}
+  \item ``Prefer small commits to large commits.''
+    --- \href{https://softwareengineering.stackexchange.com/a/207036/20873}{here}
+  \item ``You shouldn't commit based on a time basis, but on a feature basis''
+    --- \href{https://softwareengineering.stackexchange.com/a/74893/20873}{here}
+  \item ``I tend to commit anytime I take a break''
+    --- \href{https://softwareengineering.stackexchange.com/a/74767/20873}{here}
+  \item ``If you have to put the word "and" or "also" in your summary, you need to split it up.''
+    --- \href{https://softwareengineering.stackexchange.com/a/12209/20873}{here}
+  \item ``If you can't adequately comment a commit in one line, then it's already too large.''
+    --- \href{https://softwareengineering.stackexchange.com/a/10944/20873}{here}
+  \item ``Files that are generated by build tools, compilers, or other automated processes should not typically be committed.''
+    --- \href{https://medium.com/@saeid/10-essential-practices-for-better-git-commits-and-why-they-matter-3cfc420bf53e}{here}
+  \item ``The first line must be maximum 50 characters long, each line in the description should though wrap at the 72nd mark.''
+    --- \href{https://preslav.me/2015/02/21/what-s-with-the-50-72-rule/}{here}
+  \end{itemize}}\end{multicols}}
 
 \end{document}
