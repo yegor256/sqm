@@ -130,7 +130,8 @@
   {Large commits were more likely to \ul{perfective} than \ul{corrective}, while small changes were more often corrective rather than perfective. In a way it makes sense, correcting errors is surgical, perfecting a system is much more global in scope.}
   {hindle2008large}
 
-\lnPitch{\begin{multicols}{2}
+\lnPitch{
+  \begin{multicols}{2}
   \includegraphics[width=.7\linewidth]{type-of-change.png}
   \par\columnbreak\par
   ``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \ul{subjective}, but reliable methods could be researched and developed to \ul{quantify} such effect.''
@@ -209,6 +210,14 @@
   \item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
   \item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
   \end{itemize}}\end{pptWide}\lnSource{zhang2024automatic}}
+
+\lnPitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.95\linewidth]{cmo.png}
+  \par\columnbreak\par
+  ``Our evaluation shows CMO generates commit messages that are significantly more rational, comprehensive, and expressive while outperforming state-of-the-art CMG methods and human messages 88.2\%-95.4\% of the time.''
+  \lnSource{li2025optimization}
+  \end{multicols}}
 
 \plush{\pptBanner{Commits Best Practices (Coders' Folklore)}
   \begin{multicols}{2}{\small\begin{itemize}
