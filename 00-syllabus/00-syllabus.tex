@@ -21,7 +21,7 @@
 % SOFTWARE.
 
 \documentclass[nobrand,anonymous,nodate,nosecurity]{huawei}
-\def\SqmEnglish{}
+\def\SqmRussian{}
 \ifdefined\SqmRussian
   \usepackage[utf8]{inputenc}
   \usepackage[T2A]{fontenc}
@@ -45,7 +45,179 @@
 
 \iexec[quiet,log]{wget --no-check-certificate -N --quiet https://www.yegor256.com/images/face-1024x1024.jpg}
 
-\ifdefined\SqmEnglish
+\def\repositories{
+  \href{https://github.com/yegor256/cam}{yegor256/cam} (Bash, Python),
+  \href{https://github.com/yegor256/rultor}{yegor256/rultor} (Java, XML),
+  \href{https://github.com/yegor256/qulice}{yegor256/qulice} (Java),
+  \href{https://github.com/cqfn/jpeek}{cqfn/jpeek} (Java, XML),
+  and
+  \href{https://github.com/objectionary/eo}{objectionary/eo} (Java, XSLT)}
+
+\ifdefined\SqmRussian
+
+\newcommand\head[2]{#1: & #2 \\}
+\begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
+\head{Название}
+  {``Практические методы повышения качества программного кода''}
+\head{Департамент}
+  {Кафедра Программной Инженерии (КПИ)}
+\head{Период реализации}
+  {1,2,3 модули 2023/2024}
+\head{Язык}
+  {Русский}
+\head{Видео}
+  {\href{https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl}{YouTube}}
+\head{Слайды}
+  {\href{https://github.com/yegor256/sqm}{GitHub}}
+\head{Охват аудитории}
+  {Для всего кампуса}
+\head{Объем дисциплины}
+  {48 часов семинары + 66 часов самостоятельная работа}
+\head{Онлайн курс}
+  {---}
+\head{Технологии реализации}
+  {Лекции: офлайн-занятия, практика: офлайн-занятия}
+\head{Разработчики}
+  {Бугаенко Егор Георгиевич}
+\head{Утверждение}
+  {---}
+\end{tabularx}
+
+\section{Цели курса}
+
+В лекционной части курса рассматриваются инструменты оценки качества кода и методы его повышения. Теоретическое изложение не привязано к конкретным языкам программирования. Практическая часть курса предполагает самостоятельную работу студентов над анализом крупных open source проектов с целью выявления закономерностей и проблем с качеством.
+
+Ожидается, что по окончанию курса студент будет:
+\begin{itemize}
+    \item Понимать, из чего состоит оценка качества программных продуктов;
+    \item Уметь проводить научные исследования в сфере анализа репозиториев с программным кодом;
+    \item Уметь пользоваться инструментами анализа качества кода.
+\end{itemize}
+
+Предполагается, что к началу курса студент умеет:
+\begin{itemize}
+    \item Самостоятельно программировать на одном из популярных языков, таких как Java, JavaScript, Python или C++;
+    \item Самостоятельно управлять репозиторием проекта с помощью Git;
+    \item Самостоятельно моделировать архитектуру программного проекта, используя UML.
+\end{itemize}
+
+Лучшие студенты опубликуют результаты своего исследования на одной из научных конференций.
+
+\section{Лекции}
+
+Всего в курсе 24 лекции по два академических часа (80 минут каждая лекция):
+\begin{enumerate}
+    \setlength\itemsep{0em}
+    \item Lines of Code
+    \item McCabe's Cyclomatic Complexity
+    \item Cognitive Complexity
+    \item Halstead Complexity
+    \item Maintainability Index
+    \item Coupling
+    \item LCOM 1, 2, 3, 4, 5
+    \item TCC and LCC
+    \item CAMC and NHD
+    \item Object Dimensions
+    \item Clone Coverage
+    \item Dead Code
+    \item Code Churn
+    \item Tech Debt
+    \item Code Coverage
+    \item Mutation Coverage
+    \item Function Points
+    \item Defects Density
+    \item Comments Density
+    \item Commits Density
+    \item Builds
+    \item Code Style
+    \item Static Analysis
+    \item Neural Metrics
+\end{enumerate}
+
+Порядок лекций может меняться, а тематика корректироваться в зависимости от интереса аудитории.
+
+Тип аудиторий: лекционные (для лекционных занятий).
+
+Оснащение аудиторий: наличие Wi-Fi.
+
+\section{Аттестация}
+
+В рамках курса студенты должны разделиться на группы по 1--3 человека. Каждая группа должна выбрать одну из исследовательских тем, предложенных на первой лекции. По выбранной теме необходимо провести исследование и оформить его результаты в научную статью на английском языке, объемом 7--12 страниц формата \href{https://ctan.org/pkg/acmart}{acmart/sigplan}. Статья должна содержать обязательные разделы: Abstract, Introduction, Related Work, Method, Experimental Results, Discussion, Conclusion и References.
+
+Студент может также набрать баллы путем написания кода в одном из open source репозитории:
+\repositories{}.
+
+Оценка за курс складывается из суммы баллов:
+
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{>{\raggedright}p{4in}>{\raggedleft\arraybackslash}X}
+\toprule
+Результат & Баллы \\
+\midrule
+Студент представил черновик статьи (2+ страниц) до конца первого модуля & 1 \\
+Студент представил черновик статьи (4+ страниц) до конца второго модуля & 1 \\
+Студент успешно отправил 4+ pull requests & 1 \\
+Студент успешно отправил 8+ pull requests & 2 \\
+Студент успешно отправил 12+ pull requests & 4 \\
+Студент посетил 10 или более лекций & 1 \\
+Студент посетил 20 или более лекций & 3 \\
+Студент отправил статью на конференцию после разрешения преподавателя & 1 \\
+Статья принята на конференции CORE-B & 7 \\
+Статья принята на конференции CORE-A & 10 \\
+\bottomrule
+\end{tabularx}
+
+Пересдача невозможна.
+
+\section{Самостоятельная работа}
+
+Работая самостоятельно над темой исследования, ожидается, что студент выполнит следующее:
+\begin{itemize}
+    \item Изучит существующие статьи и книги, касающиеся темы исследования;
+    \item Сформулирует research question;
+    \item Определит метод исследования;
+    \item Проведет исследования и соберет данные;
+    \item Проанализирует результаты;
+    \item Выявит слабые стороны и опишет их;
+    \item Сделает вывод;
+    \item Оформит статью.
+\end{itemize}
+
+Дополнительную помощь можно получить в этой статье:
+\href{https://www.yegor256.com/2022/08/24/research-paper-template.html}{Research Paper Simple Template}
+(и в материалах, на которые статья ссылается).
+
+\section{Литература}
+
+\begin{multicols}{2}\small\raggedright
+Len Bass et al., \ul{Software Architecture in Practice}\\[3pt]
+Paul Clements et al., \ul{Documenting Software Architectures: Views and Beyond}\\[3pt]
+\nospell{Karl Wiegers} et al., \ul{Software Requirements}\\[3pt]
+{\nospell{Alistair Cockburn}}, \ul{Writing Effective Use Cases}\\[3pt]
+{\nospell{Steve McConnell}}, \ul{Software Estimation: Demystifying the Black Art}\\[3pt]
+{Robert Martin}, \ul{Clean Architecture: A Craftsman's Guide to Software Structure and Design}\\[3pt]
+{Steve McConnell}, \ul{Code Complete}\\[3pt]
+{Frederick Brooks Jr.}, \ul{Mythical Man-Month, The: Essays on Software Engineering}\\[3pt]
+{David Thomas et al.}, \ul{The Pragmatic Programmer: Your Journey To Mastery}\\[3pt]
+{Robert C. Martin}, \ul{Clean Code: A Handbook of Agile Software Craftsmanship}\\[3pt]
+{\nospell{Grady Booch} et al.}, \ul{Object-Oriented Analysis and Design with Applications}\\[3pt]
+{\nospell{Bjarne Stroustrup}}, \ul{Programming: Principles and Practice Using C++}\\[3pt]
+{\nospell{Brett McLaughlin} et al.}, \ul{Head First Object-Oriented Analysis and Design: A Brain Friendly Guide to OOA\&D}\\[3pt]
+{David West}, \ul{Object Thinking}\\[3pt]
+{Eric Evans}, \ul{Domain-Driven Design: Tackling Complexity in the Heart of Software}\\[3pt]
+{Yegor Bugayenko}, \ul{Code Ahead}\\[3pt]
+{Yegor Bugayenko}, \ul{Elegant Objects}\\[3pt]
+{Michael Feathers}, \ul{Working Effectively with Legacy Code}\\[3pt]
+{Martin Fowler}, \ul{Refactoring: Improving the Design of Existing Code}\\[3pt]
+{Erich Gamma et al.}, \ul{Design Patterns: Elements of Reusable Object-Oriented Software}\\[3pt]
+{Martin Fowler}, \ul{UML Distilled}\\[3pt]
+{\nospell{Anneke Kleppe} et al.}, \ul{MDA Explained: The Model Driven Architecture: Practice and Promise}\\[3pt]
+{\nospell{Jez Humble} et al.}, \ul{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
+{\nospell{Michael T. Nygard}}, \ul{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
+\end{multicols}
+
+\else
+
 {\sffamily{\bfseries\Large Software Quality Metrics (SQM)}
 
 \begin{abstract}
@@ -182,12 +354,7 @@ for their research papers.
 
 Most probably, one of the following repositories will be suggested
 by the teacher for contribution during the course:
-\href{https://github.com/yegor256/cam}{yegor256/cam} (Bash, Python),
-\href{https://github.com/yegor256/rultor}{yegor256/rultor} (Java, XML),
-\href{https://github.com/yegor256/qulice}{yegor256/qulice} (Java),
-\href{https://github.com/cqfn/jpeek}{cqfn/jpeek} (Java, XML),
-and
-\href{https://github.com/objectionary/eo}{objectionary/eo} (Java, XSLT).
+\repositories{}.
 
 \newpage
 \section*{Grading}
@@ -254,169 +421,6 @@ Then, 55+ points mean ``A,'' 47+ mean ``B,'' and 23+ mean ``C.''
 An online lecture is counted as ``attended'' only if a student was personally
 presented in Zoom for more than 75\% of the lecture's time. Watching the
 lecture from the computer of a friend doesn't count.
-
-\else
-
-\newcommand\head[2]{#1: & #2 \\}
-\begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
-\head{Название}
-  {``Практические методы повышения качества программного кода''}
-\head{Департамент}
-  {Кафедра Программной Инженерии (КПИ)}
-\head{Период реализации}
-  {1,2,3 модули 2023/2024}
-\head{Язык}
-  {Русский}
-\head{Видео}
-  {\href{https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl}{YouTube}}
-\head{Слайды}
-  {\href{https://github.com/yegor256/sqm}{GitHub}}
-\head{Охват аудитории}
-  {Для всего кампуса}
-\head{Объем дисциплины}
-  {48 часов семинары + 66 часов самостоятельная работа}
-\head{Онлайн курс}
-  {---}
-\head{Технологии реализации}
-  {Лекции: офлайн-занятия, практика: офлайн-занятия}
-\head{Разработчики}
-  {Бугаенко Егор Георгиевич}
-\head{Утверждение}
-  {---}
-\end{tabularx}
-
-\section{Цели курса}
-
-В лекционной части курса рассматриваются инструменты оценки качества кода и методы его повышения. Теоретическое изложение не привязано к конкретным языкам программирования. Практическая часть курса предполагает самостоятельную работу студентов над анализом крупных open source проектов с целью выявления закономерностей и проблем с качеством.
-
-Ожидается, что по окончанию курса студент будет:
-\begin{itemize}
-    \item Понимать, из чего состоит оценка качества программных продуктов;
-    \item Уметь проводить научные исследования в сфере анализа репозиториев с программным кодом;
-    \item Уметь пользоваться инструментами анализа качества кода.
-\end{itemize}
-
-Предполагается, что к началу курса студент умеет:
-\begin{itemize}
-    \item Самостоятельно программировать на одном из популярных языков, таких как Java, JavaScript, Python или C++;
-    \item Самостоятельно управлять репозиторием проекта с помощью Git;
-    \item Самостоятельно моделировать архитектуру программного проекта, используя UML.
-\end{itemize}
-
-Лучшие студенты опубликуют результаты своего исследования на одной из научных конференций.
-
-\section{Лекции}
-
-Всего в курсе 24 лекции по два академических часа (80 минут каждая лекция):
-\begin{enumerate}
-    \setlength\itemsep{0em}
-    \item Lines of Code
-    \item McCabe's Cyclomatic Complexity
-    \item Cognitive Complexity
-    \item Halstead Complexity
-    \item Maintainability Index
-    \item Coupling
-    \item LCOM 1, 2, 3, 4, 5
-    \item TCC and LCC
-    \item CAMC and NHD
-    \item Object Dimensions
-    \item Clone Coverage
-    \item Dead Code
-    \item Code Churn
-    \item Tech Debt
-    \item Code Coverage
-    \item Mutation Coverage
-    \item Function Points
-    \item Defects Density
-    \item Comments Density
-    \item Commits Density
-    \item Builds
-    \item Code Style
-    \item Static Analysis
-    \item Neural Metrics
-\end{enumerate}
-
-Порядок лекций может меняться, а тематика корректироваться в зависимости от интереса аудитории.
-
-Тип аудиторий: лекционные (для лекционных занятий).
-
-Оснащение аудиторий: наличие Wi-Fi.
-
-\section{Аттестация}
-
-В рамках курса студенты должны разделиться на группы по 1--3 человека. Каждая группа должна выбрать одну из исследовательских тем, предложенных на первой лекции. По выбранной теме необходимо провести исследование и оформить его результаты в научную статью на английском языке, объемом 7--12 страниц формата \href{https://ctan.org/pkg/acmart}{acmart/sigplan}. Статья должна содержать обязательные разделы: Abstract, Introduction, Related Work, Method, Experimental Results, Discussion, Conclusion и References.
-
-Студент может также набрать баллы путем написания кода в одном из open source репозитории.
-
-Оценка за курс складывается из суммы баллов:
-
-\renewcommand{\arraystretch}{1}
-\begin{tabularx}{\textwidth}{>{\raggedright}p{4in}>{\raggedleft\arraybackslash}X}
-\toprule
-Результат & Баллы \\
-\midrule
-Студент представил черновик статьи (2+ страниц) до конца первого модуля & 1 \\
-Студент представил черновик статьи (4+ страниц) до конца второго модуля & 1 \\
-Студент успешно отправил 4+ pull requests & 1 \\
-Студент успешно отправил 8+ pull requests & 2 \\
-Студент успешно отправил 12+ pull requests & 4 \\
-Студент посетил 10 или более лекций & 1 \\
-Студент посетил 20 или более лекций & 3 \\
-Студент отправил статью на конференцию после разрешения преподавателя & 1 \\
-Статья принята на конференции CORE-B & 7 \\
-Статья принята на конференции CORE-A & 10 \\
-\bottomrule
-\end{tabularx}
-
-Пересдача невозможна.
-
-\section{Самостоятельная работа}
-
-Работая самостоятельно над темой исследования, ожидается, что студент выполнит следующее:
-\begin{itemize}
-    \item Изучит существующие статьи и книги, касающиеся темы исследования;
-    \item Сформулирует research question;
-    \item Определит метод исследования;
-    \item Проведет исследования и соберет данные;
-    \item Проанализирует результаты;
-    \item Выявит слабые стороны и опишет их;
-    \item Сделает вывод;
-    \item Оформит статью.
-\end{itemize}
-
-Дополнительную помощь можно получить в этой статье:
-\href{https://www.yegor256.com/2022/08/24/research-paper-template.html}{Research Paper Simple Template}
-(и в материалах, на которые статья ссылается).
-
-\section{Литература}
-
-\begin{multicols}{2}\small\raggedright
-Len Bass et al., \ul{Software Architecture in Practice}\\[3pt]
-Paul Clements et al., \ul{Documenting Software Architectures: Views and Beyond}\\[3pt]
-\nospell{Karl Wiegers} et al., \ul{Software Requirements}\\[3pt]
-{\nospell{Alistair Cockburn}}, \ul{Writing Effective Use Cases}\\[3pt]
-{\nospell{Steve McConnell}}, \ul{Software Estimation: Demystifying the Black Art}\\[3pt]
-{Robert Martin}, \ul{Clean Architecture: A Craftsman's Guide to Software Structure and Design}\\[3pt]
-{Steve McConnell}, \ul{Code Complete}\\[3pt]
-{Frederick Brooks Jr.}, \ul{Mythical Man-Month, The: Essays on Software Engineering}\\[3pt]
-{David Thomas et al.}, \ul{The Pragmatic Programmer: Your Journey To Mastery}\\[3pt]
-{Robert C. Martin}, \ul{Clean Code: A Handbook of Agile Software Craftsmanship}\\[3pt]
-{\nospell{Grady Booch} et al.}, \ul{Object-Oriented Analysis and Design with Applications}\\[3pt]
-{\nospell{Bjarne Stroustrup}}, \ul{Programming: Principles and Practice Using C++}\\[3pt]
-{\nospell{Brett McLaughlin} et al.}, \ul{Head First Object-Oriented Analysis and Design: A Brain Friendly Guide to OOA\&D}\\[3pt]
-{David West}, \ul{Object Thinking}\\[3pt]
-{Eric Evans}, \ul{Domain-Driven Design: Tackling Complexity in the Heart of Software}\\[3pt]
-{Yegor Bugayenko}, \ul{Code Ahead}\\[3pt]
-{Yegor Bugayenko}, \ul{Elegant Objects}\\[3pt]
-{Michael Feathers}, \ul{Working Effectively with Legacy Code}\\[3pt]
-{Martin Fowler}, \ul{Refactoring: Improving the Design of Existing Code}\\[3pt]
-{Erich Gamma et al.}, \ul{Design Patterns: Elements of Reusable Object-Oriented Software}\\[3pt]
-{Martin Fowler}, \ul{UML Distilled}\\[3pt]
-{\nospell{Anneke Kleppe} et al.}, \ul{MDA Explained: The Model Driven Architecture: Practice and Promise}\\[3pt]
-{\nospell{Jez Humble} et al.}, \ul{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
-{\nospell{Michael T. Nygard}}, \ul{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
-\end{multicols}
-
 \fi
 
 \end{document}
