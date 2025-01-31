@@ -33,8 +33,10 @@
 \lnQuote
   [Bill Curtis]
   {bill-curtis}
-  {Computational complexity assesses the difficulty of verifying an algorithm's correctness, while psychological complexity assesses human performance on programming tasks.}
+  {\ul{Computational} complexity assesses the difficulty of verifying an algorithm's correctness, while \ul{psychological} complexity assesses human performance on programming tasks.}
   {curtis1979measuring}
+
+\lnThought{There must be other way to measure the complexity of code, taking into account how humans comprehend it.}
 
 \lnQuote
   [Lionel C. Briand]
@@ -50,10 +52,12 @@
 
 \lnPitch{
   \begin{multicols}{2}
-  \includegraphics[width=.8\linewidth]{bcs.png}\par
+  \includegraphics[width=.7\linewidth]{bcs.png}\par
   BCS stands for ``\ul{basic control structure}.''
   \par\columnbreak\par
+  \begin{spacing}{0.9}
   ``The cognitive weight of software is the degree of difficulty or relative time and effort required for comprehending a given piece of software modelled by a number of BCSs. The total cognitive weight of a software component, \(W_c\), is defined as the sum of the cognitive weights of its \(q\) linear blocks composed of individual BCSs.''
+  \end{spacing}
   \par
   \lnSource{shao2003new}
   \end{multicols}}
@@ -71,9 +75,11 @@
 
 \lnPitch{
   \begin{multicols}{2}
-  \includegraphics[width=.95\linewidth]{cicm.png}\par
+  \includegraphics[width=.85\linewidth]{cicm.png}\par
   \par\columnbreak\par
+  \begin{spacing}{0.9}
   ``In a group of 25, each student was given 15 programs. They were asked to read the program and come out with what problem the program addressed. Time required to understand was recorded. The diagram shows that as cognitive information complexity increases, time taken to understand the program also increased.''
+  \end{spacing}
   \par
   \lnSource{kushwaha2006improved}
   \end{multicols}}
@@ -82,6 +88,8 @@
   {anonymous}
   {The cognitive weight of a BCS is measured as the number of ways that BCS can generate some factors that make it difficult to comprehend relative to the sequential BCS, of which the cognitive weight is `1'. The value of total cognitive weights of the software is measured as the number of relative ways that software can generate the combination of factors that make the function and semantics difficult to comprehend.}
   {benjapol2008underlying}
+
+\lnThought{One metric was adopted by the community and is actively used.}
 
 \lnQuote
   [Ann Campbell]
