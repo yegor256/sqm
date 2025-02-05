@@ -27,10 +27,7 @@
 
 \lnTitlePage{17}{24}{xt01nxxfAB0}
 
-\lnQuote
-  {capers-jones}
-  {From the start of the software era in the 1950s until roughly 1970, software cost estimating was performed \ul{manually}, using simple \ul{rules of thumb} or local estimating algorithms developed through trial and error methods.}
-  {jones2007}
+\lnThought{We don't know how to estimate the size of the effort required to develop a software system.}
 
 \lnQuote
   {fred-brooks}
@@ -38,20 +35,31 @@
   {brooks1978mythical}
 
 \lnQuote
+  {capers-jones}
+  {From the start of the software era in the 1950s until roughly 1970, software cost estimating was performed \ul{manually}, using simple \ul{rules of thumb} or local estimating algorithms developed through trial and error methods.}
+  {jones2007}
+
+\lnQuote
+  {steve-mcconnell}
+  {The largest driver in a software estimate is the \ul{size} of the software being built, because there is more variation in the size than in any other factor.}
+  {mcconnell2006software}
+\lnPitch{
+  \pptBanner{Cone of Uncertainty}
+  \pptPic{.55}{cone.png}
+  \par
+  \lnSource{mcconnell2006software}}
+
+\lnThought{However, we can speculate, with the help of function points.}
+
+\lnQuote
   {lawrence-putnam}
   {\textbf{SLIM}: In general, the \ul{size} of the product in source \ul{statements} is \(S = C \times K^{1/3} \times t^{4/3}\), where \(C\) is a productivity constant, \(K\) is development effort, and \(t\) is time.}
   {putnam1978general}
 
 \lnQuote
-  {barry-boehm}
-  {\textbf{COCOMO} (\textbf{Co}nstructive \textbf{Co}st \textbf{Mo}del): We compute the \ul{estimated development effort} as the nominal development effort times the product of the effort multipliers for the 15 \ul{cost driver attributes}... A nominal development effort is estimated as a function of the product's size in delivered source \ul{instructions} in thousands (KDSI) and the project's development mode.}
-  {boehm1984software}
-
-\lnQuote
   {allan-albrecht}
   {\textbf{FPA}: The general approach is to count the number of external user \ul{inputs}, \ul{inquiries}, \ul{outputs}, and master \ul{files} delivered by the development project. These factors are outward manifestations of any application. They cover all the functions in an application.}
   {albrecht1979measuring}
-
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=\linewidth]{factors.png}
   \par\columnbreak\par
@@ -59,47 +67,36 @@
   \lnSource{albrecht1979measuring}
   \end{multicols}}
 
-\lnPitch{\begin{multicols}{2}
-  \includegraphics[width=\linewidth]{functions.png}
-  \par\columnbreak\par
-  ``In order to find the adjusted function point (AFP) value, the UFP (the raw function count weighted by the appropriate complexity shown in the Table) is multiplied by the VAF.''\par
-  \lnSource{galorath2006software}
-  \end{multicols}}
-
-\lnQuote
-  {peter-chen}
-  {The entity-relationship (ER) model adopts the more natural view that the real world consists of \ul{entities} and \ul{relationships}. It incorporates some of the important semantic information about the real world.}
-  {chen1976entity}
-
-\lnPitch{
-  \pptPic{.95}{er-diagram.png}
-  \par
-  \lnSource{chen1976entity}}
-
-\lnQuote
-  {tom-demarco}
-  {The Data Flow Diagram shows flow of \ul{data}, not of \ul{control}. This is the difference between Data Flow Diagrams and flowcharts. The Data Flow Diagram portrays a situation from the point of view of the data, while a flowchart portrays it from the point of view of those who act upon the data.}
-  {demarco1978}
-
-\lnPitch{
-  \pptPic{.75}{dfd.png}
-  \par
-  \lnSource{demarco1978}}
-
 \lnQuote
   {../17-function-points/sloc-vs-fps}
   {At least for the applications analyzed, both the development work-hours and application size in ``SLOC'' are \ul{strong functions} of ``function points'' and ``input/output data item count.'' Further, it appears that basing applications development effort estimates on the amount of function to be provided by an application rather than an estimate of ``SLOC'' may be \ul{superior}.}
   {albrecht1983software}
 
 \lnQuote
+  {barry-boehm}
+  {\textbf{COCOMO} (\textbf{Co}nstructive \textbf{Co}st \textbf{Mo}del): We compute the \ul{estimated development effort} as the nominal development effort times the product of the effort multipliers for the 15 \ul{cost driver attributes}... A nominal development effort is estimated as a function of the product's size in delivered source \ul{instructions} in thousands (KDSI) and the project's development mode.}
+  {boehm1984software}
+
+\lnQuote
   {../17-function-points/book-of-charles-symons}
   {The major difference is that \textbf{Mk II FPA}, with its \ul{finer granularity}, is a continuous measure whereas IFPUG limits component size once a threshold is reached.}
   {symons1991software}
-
 \lnPitch{
   \pptPic{.95}{mk-ii.png}
   \par
   \lnSource{symons1991software}}
+
+\lnQuote
+  {../17-function-points/cocomo-2}
+  {\textbf{COCOMO-II}: Success in all types of organization depends increasingly on the development of customized software solutions, yet more than half of software projects now in the works will \ul{exceed} both their \ul{schedules} and their \ul{budgets} by more than 50\%.}
+  {boehm2000}
+
+\lnPitch{\begin{multicols}{2}
+  \includegraphics[width=\linewidth]{functions.png}
+  \par\columnbreak\par
+  ``In order to find the adjusted function point (AFP) value, the UFP (the raw function count weighted by the appropriate complexity shown in the Table) is multiplied by the VAF.''\par
+  \lnSource{galorath2006software}
+  \end{multicols}}
 
 \lnQuote
   {daniel-galorath}
@@ -113,17 +110,34 @@
   \lnSource{galorath2006software}
   \end{multicols}}
 
-\lnQuote
-  {../17-function-points/cocomo-2}
-  {\textbf{COCOMO-II}: Success in all types of organization depends increasingly on the development of customized software solutions, yet more than half of software projects now in the works will \ul{exceed} both their \ul{schedules} and their \ul{budgets} by more than 50\%.}
-  {boehm2000}
-
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=\linewidth]{loc-per-fp.png}
   \par\columnbreak\par
   ``\ul{Backfiring} is converting lines of code to function points by dividing the line count by a \ul{conversion ratio}. The author does not recommend backfiring as an approach to generating function points.''\par
   \lnSource{galorath2006software}
   \end{multicols}}
+
+\lnThought{We can also use ER Model and Data Flow Diagrams.}
+
+\lnQuote
+  {peter-chen}
+  {The \textcolor{orange}{Entity-Relationship} (ER) model adopts the more natural view that the real world consists of \ul{entities} and \ul{relationships}. It incorporates some of the important semantic information about the real world.}
+  {chen1976entity}
+\lnPitch{
+  \pptPic{.95}{er-diagram.png}
+  \par
+  \lnSource{chen1976entity}}
+
+\lnQuote
+  {tom-demarco}
+  {The \textcolor{orange}{Data Flow Diagram} shows flow of \ul{data}, not of \ul{control}. This is the difference between Data Flow Diagrams and flowcharts. The Data Flow Diagram portrays a situation from the point of view of the data, while a flowchart portrays it from the point of view of those who act upon the data.}
+  {demarco1978}
+\lnPitch{
+  \pptPic{.75}{dfd.png}
+  \par
+  \lnSource{demarco1978}}
+
+\lnThought{We can even standardize function points.}
 
 \lnQuote
   {capers-jones}
@@ -161,21 +175,6 @@
   \lnSource{iso20926}
   \end{multicols}}
 
-\lnQuote
-  {roger-pressman}
-  {The function point metric, like LOC, is relatively \ul{controversial}... Opponents claim that the method requires some `sleight of hand' in that computation is based on \ul{subjective}, rather than \ul{objective}, data.}
-  {pressman2005software}
-
-\lnQuote
-  {chris-kemerer}
-  {Function Points and Function Counts (adjusted FPs) can be used as predictors of KSLOC. In particular, Function Counts \ul{correlated} with KSLOC at the level of \ul{75.1 percent}, which is similar to the correlations published by \citet{albrecht1983software}, and is likely to be good enough to be of use to the software manager.}
-  {kemerer1987empirical}
-
-\lnQuote
-  {graham-low}
-  {Function point counts appear to be a more consistent a \emph{priori} measure of software size than source lines of code. As such it is recommended that function point \ul{estimates} be used in preference to lines of code estimates as the measure of system size.}
-  {low1990function}
-
 \lnPitch{\pptBanner{Function Point Standards}
   \begin{itemize}\setlength\itemsep{0pt}
   \item Mark-II --- ISO/IEC 20968:2002
@@ -194,5 +193,22 @@
   \item Weighted Micro Function Points
   \item Fuzzy Function Points
   \end{itemize}}
+
+\lnThought{Apparently, a correlation exists between function points and some other metrics.}
+
+\lnQuote
+  {chris-kemerer}
+  {Function Points and Function Counts (adjusted FPs) can be used as predictors of KSLOC. In particular, Function Counts \ul{correlated} with KSLOC at the level of \ul{75.1 percent}, which is similar to the correlations published by \citet{albrecht1983software}, and is likely to be good enough to be of use to the software manager.}
+  {kemerer1987empirical}
+
+\lnQuote
+  {graham-low}
+  {Function point counts appear to be a more consistent a \emph{priori} measure of software size than source lines of code. As such it is recommended that function point \ul{estimates} be used in preference to lines of code estimates as the measure of system size.}
+  {low1990function}
+
+\lnQuote
+  {roger-pressman}
+  {The function point metric, like LOC, is relatively \ul{controversial}... Opponents claim that the method requires some `sleight of hand' in that computation is based on \ul{subjective}, rather than \ul{objective}, data.}
+  {pressman2005software}
 
 \end{document}
