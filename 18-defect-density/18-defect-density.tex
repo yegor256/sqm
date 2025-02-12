@@ -27,23 +27,27 @@
 
 \lnTitlePage{18}{24}{M-yHXzROVno}
 
+\lnThought{Defects are not problems, they are opportunities.}
+
 \lnQuote
   [Michael Fagan]
   {michael-fagan}
   {Feedback of results from inspections must be counted for the programmer's use and \ul{benefit}: they \ul{should not} under any circumstances be used for programmer performance \ul{appraisal}.}
   {fagan1976design}
-
 \lnPitch{
   \includegraphics[width=.8\linewidth]{error-density.png}
   \par
   \lnSource{fagan1976design}}
 
-\lnPitch{\begin{multicols}{2}
+\lnPitch{
+  \begin{multicols}{2}
   \includegraphics[width=\linewidth]{complexity.png}
   \par\columnbreak\par
   ``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
   \lnSource{basili1984software}
   \end{multicols}}
+
+\lnThought{Any imperfection is a defect that deserves to be reported, and then counted.}
 
 \lnQuote
   {../18-defect-density/ieee-982}
@@ -109,6 +113,8 @@
   \end{pptWide}
   \lnSource{ieee982}}
 
+\lnThought{Defect density may be predicted and even planned.}
+
 \lnQuote
   [Harlan D. Mills]
   {harlan-mills}
@@ -152,6 +158,8 @@
   {steve-mcconnell}
   {Industry average experience is about 1-25 errors per 1000 lines of code for delivered software. Cases that have one-tenth as many errors as this are rare; cases that have 10 times more tend not to be reported. (They probably aren't ever completed!) Microsoft experiences about 10–20 defects per 1000 lines of code during in-house testing and 0.5 defects per 1000 lines of code in released product.}
   {mcconnell2004code}
+
+\lnThought{Defect density depends on many factors and metrics.}
 
 \lnQuote
   [Parastoo Mohagheghi]
@@ -301,22 +309,38 @@
   {yu2022predicting}
 
 \lnPitch{\begin{multicols}{2}
-  \includegraphics[width=.8\linewidth]{predicting-methods.png}
+  \includegraphics[width=.7\linewidth]{predicting-methods.png}
   \par
   \lnSource{yu2022predicting}
   \par\columnbreak\par
   ``Software testers want to not only know which software modules should be inspected first, but also evaluate the reliability and maintenance effort of each module. Therefore, they can first employ the historical data to construct a \ul{Defect Number Prediction} (DNP) model, then use the two trained models to predict the defective-proneness or the number of defects.''
   \end{multicols}}
 
-\lnPitch{\pptBanner{My Own Statistics (2 Feb 2024)}
+\lnThought{On average, modern projects have 10-50 defects per KLoC.}
+
+\lnPitch{\pptBanner{A few open source projects (12 Feb 2025)}
+  {\ttfamily\small\begin{tabular}{llrrr}
+  \toprule
+  Project & Stack & KLoC & Issues & I/KLoC \\
+  \midrule
+  \href{https://github.com/flutter/flutter}{flutter} & Dart & 2,100 & 103,000 & 49.0 \\
+  \href{https://github.com/rust-lang/rust}{rust} & Rust & 2,100 & 56,500 & 26.9 \\
+  \href{https://github.com/tensorflow/tensorflow}{tensorflow} & C++ & 3,600 & 40,200 & 11.2 \\
+  \href{https://github.com/angular/angular}{angular} & TypeScript & 800 & 28,700 & 35.9 \\
+  \href{https://github.com/google/guava}{guava} & Java & 346 & 3,600 & 10.4 \\
+  \bottomrule
+  \end{tabular}}\par
+  All repositories are open source.}
+
+\lnPitch{\pptBanner{My own statistics (2 Feb 2024)}
   {\ttfamily\small\begin{tabular}{llrrr}
   \toprule
   Github Repository & Stack & KLoC & Issues & I/KLoC \\
   \midrule
-  \href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 58 & 2343 & 40.4 \\
-  \href{https://github.com/objectionary/eo}{objectionary/eo} & Java & 49 & 2837 & 57.9 \\
-  \href{https://github.com/yegor256/cactoos}{yegor256/cactoos} & Java & 34 & 1707 & 50.2 \\
-  \href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 27 & 1227 & 45.4 \\
+  \href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 58 & 2,343 & 40.4 \\
+  \href{https://github.com/objectionary/eo}{objectionary/eo} & Java & 49 & 2,837 & 57.9 \\
+  \href{https://github.com/yegor256/cactoos}{yegor256/cactoos} & Java & 34 & 1,707 & 50.2 \\
+  \href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 27 & 1,227 & 45.4 \\
   \href{https://github.com/zold-io/zold}{zold-io/zold} & Ruby & 12 & 810 & 67.5 \\
   \href{https://github.com/yegor256/tacit}{yegor256/tacit} & CSS & 1 & 227 & 227.0 \\
   \bottomrule
