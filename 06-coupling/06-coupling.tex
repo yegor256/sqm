@@ -27,6 +27,8 @@
 
 \lnTitlePage{6}{24}{G0vN6Ah8-js}
 
+\lnThought{Tight coupling between software modules makes the system less maintanable.}
+
 \lnQuote
   [Larry L. Constantine]
   {larry-constantine}
@@ -57,11 +59,19 @@
   \pptPic{.8}{coupling-3.png}\par
   {\scriptsize Source: \url{https://nordicapis.com/the-difference-between-tight-coupling-and-loose-coupling/}\par}}
 
+\lnThought{Software experts agree.}
+
 \lnQuote
   [Grady Booch]
   {grady-booch}
   {However, there is tension between the concepts of coupling and inheritance because inheritance introduces significant coupling. On the one hand, weakly coupled classes are desirable; on the other hand, inheritance---which \ul{tightly couples} superclasses and their subclasses---helps us to exploit the commonality among abstractions.}
   {booch1994object}
+
+\lnQuote
+  [Martin Fowler]
+  {martin-fowler}
+  {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of \ul{dependency relationship} between the modules.}
+  {fowler2001}
 
 \lnQuote
   {david-west}
@@ -79,6 +89,8 @@
   {Elements are coupled if a change in one \ul{forces} a change in the other. Loosely coupled features are easier to \ul{maintain}.}
   {freeman2009growing}
 
+\lnThought{Measuring coupling is difficult, but possible.}
+
 \lnQuote
   {../06-coupling/cbo}
   {\ul{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
@@ -88,12 +100,6 @@
   {../06-coupling/dcc}
   {\ul{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
   {bansiya2002}
-
-\lnQuote
-  [Martin Fowler]
-  {martin-fowler}
-  {The biggest problems come from uncontrolled coupling at the \ul{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of \ul{dependency relationship} between the modules.}
-  {fowler2001}
 
 \lnQuote
   [Steve McConnell]
@@ -127,6 +133,8 @@
   {Afferent coupling (denoted by \textbf{\textsf{Ca}}) is a metric that indicates the total number of other projects/boundaries that are dependent upon it. Efferent coupling (denoted by \textbf{\textsf{Ce}}) is another metric that is the verse of Afferent Coupling. It is the total number of projects that a given project depends on. Instability another metric that is a ratio: $\textbf{\textsf{I}} = \textbf{\textsf{Ce}} / (\textbf{\textsf{Ce}} + \textbf{\textsf{Ca}}).$ This metric is a ratio between 0 and 1. With 0 meaning it's totally stable and 1 meaning it's unstable.}
   {comartin2021}
 
+\lnThought{Different types of coupling exist.}
+
 \lnPitch{
   \pptBanner{Types of Coupling (some of them)}
   \begin{pptWide}{2}
@@ -143,6 +151,35 @@
   \end{itemize}
   \end{pptWide}
   {\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}}
+
+\pptBanner{Temporal Coupling}
+\begin{multicols}{2}
+Tight coupling (\textcolor{red}{not good}):\par
+{\small\begin{ffcode}
+List<String> list =
+  new LinkedList<>();
+Foo.append(list, "Jeff");
+Foo.append(list, "Walter");
+return list;
+\end{ffcode}
+}
+\par\columnbreak\par
+Loose coupling (\textcolor{green}{good}):\par
+{\small\begin{ffcode}
+return Foo.with(
+  Foo.with(
+    new LinkedList<>(),
+    "Jeff"
+  ),
+  "Walter"
+);
+\end{ffcode}
+}
+\end{multicols}\par
+\lnSource{bugayenko2015blog1208}
+\plush{}
+
+\lnThought{Some programmers are mistakenly scared of \textbf{de}-coupling.}
 
 \pptBanner{Fear of Decoupling}
 \begin{multicols}{2}
@@ -180,33 +217,6 @@ class EmployeeHourlyRate
 ``Polymorphism makes sofware more fragile ... to make it robust!''\par
 \lnSource{bugayenko2018blog0918}
 \end{multicols}
-\plush{}
-
-\pptBanner{Temporal Coupling}
-\begin{multicols}{2}
-Tight coupling (\textcolor{red}{not good}):\par
-{\small\begin{ffcode}
-List<String> list =
-  new LinkedList<>();
-Foo.append(list, "Jeff");
-Foo.append(list, "Walter");
-return list;
-\end{ffcode}
-}
-\par\columnbreak\par
-Loose coupling (\textcolor{green}{good}):\par
-{\small\begin{ffcode}
-return Foo.with(
-  Foo.with(
-    new LinkedList<>(),
-    "Jeff"
-  ),
-  "Walter"
-);
-\end{ffcode}
-}
-\end{multicols}\par
-\lnSource{bugayenko2015blog1208}
 \plush{}
 
 \pptBanner{Distance of Coupling}
