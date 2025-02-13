@@ -27,6 +27,8 @@
 
 \lnTitlePage{7}{24}{74YigDo8_BE}
 
+\lnThought{While coupling is bad, cohesion is good.}
+
 \lnQuote
   [Larry Constantine]
   {larry-constantine}
@@ -37,11 +39,39 @@
   \pptPic{.8}{cohesion-1.png}\par
   {\scriptsize Source: \url{https://bootcamp.uxdesign.cc/why-product-development-and-design-needs-cohesion-coupling-87731c84aaa7}\par}}
 
+\lnPitch{
+  \pptPic{.8}{cohesion-3.png}\par
+  {\scriptsize Source: \url{https://logicmojo.com/cohesion-and-coupling-in-oops}\par}}
+
+\lnQuote
+  [Wayne P. Stevens]
+  {wayne-stevens}
+  {One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \ul{form should follow function}.}
+  {stevens1974structured}
+
+\lnPitch{
+  \begin{multicols}{4}
+  1. Ideal \par
+  \includegraphics[width=.2\textwidth]{cohesion-2.1.png} \par
+  \par\columnbreak\par
+  2. God Object \par
+  \includegraphics[width=.2\textwidth]{cohesion-2.2.png} \par
+  \par\columnbreak\par
+  3. Poorly selected boundaries \par
+  \includegraphics[width=.2\textwidth]{cohesion-2.3.png} \par
+  \par\columnbreak\par
+  4. Destructive decoupling \par
+  \includegraphics[width=.2\textwidth]{cohesion-2.4.png} \par
+  \end{multicols}
+  {\scriptsize Source: \url{https://enterprisecraftsmanship.com/posts/cohesion-coupling-difference/}\par}}
+
 \lnQuote
   [Neal Ford]
   {neal-ford}
   {Architecture is the \ul{tension} between coupling and cohesion.}
   {ford2024}
+
+\lnThought{Six levels of cohesiveness.}
 
 \lnQuote
   [Glenford J. Myers]
@@ -56,17 +86,7 @@
     6)~Functional.}
   {stevens1974structured}
 
-\lnPitch{
-  \pptPic{.8}{cohesion-3.png}\par
-  {\scriptsize Source: \url{https://logicmojo.com/cohesion-and-coupling-in-oops}\par}}
-
-\lnQuote
-  [Wayne P. Stevens]
-  {wayne-stevens}
-  {One of the most useful techniques for reducing the effect of changes on the program is to make the structure of the design match the structure of the problem, that is, \ul{form should follow function}.}
-  {stevens1974structured}
-
-\pptBanner{Coincidental Binding}
+\pptBanner{1) Coincidental Binding}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class Helpers {
@@ -83,7 +103,7 @@ might result from either of the following situations: (1) An existing program is
 \end{multicols}
 \plush{}
 
-\pptBanner{Logical Binding}
+\pptBanner{2) Logical Binding}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class StringUtils {
@@ -101,7 +121,7 @@ class StringUtils {
 \end{multicols}
 \plush{}
 
-\pptBanner{Temporal Binding}
+\pptBanner{3) Temporal Binding}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class SQLStringUtils {
@@ -118,7 +138,7 @@ class SQLStringUtils {
 \end{multicols}
 \plush{}
 
-\pptBanner{Communicational Binding}
+\pptBanner{4) Communicational Binding}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class SQLResult {
@@ -136,7 +156,7 @@ class SQLResult {
 \end{multicols}
 \plush{}
 
-\pptBanner{Sequential Binding}
+\pptBanner{5) Sequential Binding}
 \begin{multicols}{2}
 {\small\begin{ffcode}
 class SQLResult {
@@ -156,7 +176,7 @@ int v = new SQLResult()
 \end{multicols}
 \plush{}
 
-\pptBanner{Functional Binding}
+\pptBanner{6) Functional Binding}
 \begin{multicols}{2}
 {\scriptsize\begin{ffcode}
 class SQLResult {
@@ -179,21 +199,7 @@ int v = new SQLResult()
 \end{multicols}
 \plush{}
 
-\lnPitch{
-  \begin{multicols}{4}
-  1. Ideal \par
-  \includegraphics[width=.2\textwidth]{cohesion-2.1.png} \par
-  \par\columnbreak\par
-  2. God Object \par
-  \includegraphics[width=.2\textwidth]{cohesion-2.2.png} \par
-  \par\columnbreak\par
-  3. Poorly selected boundaries \par
-  \includegraphics[width=.2\textwidth]{cohesion-2.3.png} \par
-  \par\columnbreak\par
-  4. Destructive decoupling \par
-  \includegraphics[width=.2\textwidth]{cohesion-2.4.png} \par
-  \end{multicols}
-  {\scriptsize Source: \url{https://enterprisecraftsmanship.com/posts/cohesion-coupling-difference/}\par}}
+\lnThought{It is possible to measure cohesion, knowing the internal structure of a class.}
 
 \lnQuote
   [Chris Kemerer]
