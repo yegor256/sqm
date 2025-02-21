@@ -32,46 +32,7 @@
 
 \lnTitlePage{11}{24}{ynPTEzDTutc}
 
-\lnQuote
-  [Edward Yourdon]
-  {edward-yourdon}
-  {Whenever possible, we wish to maximize \ul{fan-in} during the design process. Fan-in is the \textit{raison d'\^{e}tre} of modularity: Each instance of multiple fan-in means that some \ul{duplicate code} has been avoided.}
-  {yourdon1979structured}
-
-\lnQuote
-  [Bertrand Meyer]
-  {bertrand-meyer}
-  {The challenge of reusability is to avoid \ul{unneeded duplication} of software by taking advantage of the commonality between variants. If identical or near-identical fragments appear in different modules, it will be difficult to \ul{guarantee} their integrity and to ensure that changes or corrections \ul{get propagated} to all the needed places.}
-  {meyer1988object}
-
-\lnQuote
-  [Kent Beck]
-  {kent-beck}
-  {You must find a way to eliminate all the duplicated logic in the system. This is the hardest part of design for me, because you first have to find the duplication, and then you have to find a way to eliminate it. Eliminating duplication naturally leads you to create \ul{lots of little objects} and lots of little methods, because otherwise there will inevitably be duplication.}
-  {beck2000extreme}
-
-\lnQuote
-  {steve-mcconnell}
-  {With code in one place, you save the space that would have been used by duplicated code. Modifications will be easier because you'll need to modify the code in \ul{only one location}. The code will be more reliable because you'll have to check only one place to ensure that the code is right.}
-  {mcconnell2004code}
-
-\lnQuote
-  [Robert C. Martin]
-  {robert-martin}
-  {Duplication is the \ul{primary enemy} of a well-designed system.}
-  {martin2008clean}
-
-% \lnQuote
-%   [Qurat Ul Ain]
-%   {qurat-ul-ain}
-%   {If a bug is identified in one segment of code, all the similar segments need to be \ul{checked} for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}
-%   {ain2019}
-
-\lnQuote
-  [Rainer Koschke]
-  {rainer-koschke}
-  {The problem with code cloning is that errors in the original must be fixed in every copy. Other kinds of maintenance changes, for instance, extensions or adaptations, must be applied \ul{multiple times}, too. Yet, it is usually not documented \ul{where} code was copied.}
-  {bellon2007}
+\lnThought{Code duplication happens not only when we copy-paste it.}
 
 \pptBanner{Motivating Example (part I)}
 \begin{multicols}{2}
@@ -129,12 +90,68 @@ void sayHello(int id) {
 \end{multicols}
 \plush{}
 
+\lnThought{Code duplication is evil.}
+
+\lnQuote
+  [Edward Yourdon]
+  {edward-yourdon}
+  {Whenever possible, we wish to maximize \ul{fan-in} during the design process. Fan-in is the \textit{raison d'\^{e}tre} of modularity: Each instance of multiple fan-in means that some \ul{duplicate code} has been avoided.}
+  {yourdon1979structured}
+
+\lnQuote
+  [Bertrand Meyer]
+  {bertrand-meyer}
+  {The challenge of reusability is to avoid \ul{unneeded duplication} of software by taking advantage of the commonality between variants. If identical or near-identical fragments appear in different modules, it will be difficult to \ul{guarantee} their integrity and to ensure that changes or corrections \ul{get propagated} to all the needed places.}
+  {meyer1988object}
+
+\lnQuote
+  [Andy Hunt]
+  {andy-hunt}
+  {\textbf{Don't Repeat Yourself (DRY)}: Every piece of knowledge must have a \ul{single}, unambiguous, authoritative representation within a system.}
+  {hunt1999pragmatic}
+
+\lnQuote
+  [Kent Beck]
+  {kent-beck}
+  {\textbf{The Rule of Three}: The \ul{first} time you do something, you just do it. The \ul{second} time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The \ul{third} time you do something similar, you refactor.}
+  {fowler1999refactoring}
+
+\lnQuote
+  [Kent Beck]
+  {kent-beck}
+  {You must find a way to eliminate all the duplicated logic in the system. This is the hardest part of design for me, because you first have to find the duplication, and then you have to find a way to eliminate it. Eliminating duplication naturally leads you to create \ul{lots of little objects} and lots of little methods, because otherwise there will inevitably be duplication.}
+  {beck2000extreme}
+
+\lnQuote
+  {steve-mcconnell}
+  {With code in one place, you save the space that would have been used by duplicated code. Modifications will be easier because you'll need to modify the code in \ul{only one location}. The code will be more reliable because you'll have to check only one place to ensure that the code is right.}
+  {mcconnell2004code}
+
+\lnQuote
+  [Rainer Koschke]
+  {rainer-koschke}
+  {The problem with code cloning is that errors in the original must be fixed in every copy. Other kinds of maintenance changes, for instance, extensions or adaptations, must be applied \ul{multiple times}, too. Yet, it is usually not documented \ul{where} code was copied.}
+  {bellon2007}
+
+\lnQuote
+  [Robert C. Martin]
+  {robert-martin}
+  {Duplication is the \ul{primary enemy} of a well-designed system.}
+  {martin2008clean}
+
+% \lnQuote
+%   [Qurat Ul Ain]
+%   {qurat-ul-ain}
+%   {If a bug is identified in one segment of code, all the similar segments need to be \ul{checked} for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}
+%   {ain2019}
+
+\lnThought{Detecting clones in the source code may help understand the degree of code duplication.}
+
 \lnQuote
   [Brenda S. Baker]
   {brenda-baker}
   {Two lines of code are considered to be identical if they contain the same \ul{sequence of characters} after removing comments and white space; the \ul{semantics} of the program statements are not analyzed.}
   {baker1993}
-
 \lnPitch{
   \pptBanner{Up to 38\% of lines are involved in duplicates}
   \begin{multicols}{2}
@@ -150,18 +167,6 @@ void sayHello(int id) {
   \end{multicols}}
 
 \lnQuote
-  [Andy Hunt]
-  {andy-hunt}
-  {\textbf{Don't Repeat Yourself (DRY)}: Every piece of knowledge must have a \ul{single}, unambiguous, authoritative representation within a system.}
-  {hunt1999pragmatic}
-
-\lnQuote
-  [Kent Beck]
-  {kent-beck}
-  {\textbf{The Rule of Three}: The \ul{first} time you do something, you just do it. The \ul{second} time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The \ul{third} time you do something similar, you refactor.}
-  {fowler1999refactoring}
-
-\lnQuote
   [Yoshiki Higo]
   {yoshiki-higo}
   {Code-clone analysis is a good vehicle to \ul{quantitatively} understand the differences and improvements between two versions of the same software system}
@@ -172,6 +177,8 @@ void sayHello(int id) {
   {wasi-haider-butt}
   {We identified and analyzed 26 Code Clone Detection (CCD) tools, i.e., 13 existing and 13 proposed/developed. Moreover, 62 open-source subject systems whose source code is utilized for the CCD are presented.}
   {ain2019}
+
+\lnThought{Four types of clones are known to exists in software code.}
 
 \pptBanner{Type-1: Exact Clone}
 \begin{multicols}{2}
@@ -253,10 +260,14 @@ More than one code segments that are functionally similar but implemented by dif
 \end{multicols}
 \plush{}
 
+\lnThought{Even large and well-maintained systems have clones.}
+
 \lnPitch{
   \pptBanner{Clones in Linux Kernel}
   \pptPic{.9}{clones.png}\par
   \lnSource{casazza2001identifying}}
+
+\lnThought{Many methods exist that may detect clones.}
 
 \lnPitch{
   \pptBanner{Methods of clone detection:}
@@ -288,6 +299,8 @@ More than one code segments that are functionally similar but implemented by dif
 
 \plush{\pptBanner{Simian 4.0.0}\includegraphics[width=.9\textwidth]{simian.png}}
 
+\lnThought{ML/LLM may help detect clones, or maybe not.}
+
 \lnPitch{
   \pptBanner{How Effective LLMs Are?}
   \begin{multicols}{2}
@@ -295,6 +308,16 @@ More than one code segments that are functionally similar but implemented by dif
   \par\columnbreak\par
   ``A correlation was observed between the GPTs' accuracy at identifying code clones and code similarity, with both GPT models exhibiting \ul{low effectiveness} in detecting the most complex Type-4 code clones.''
   \lnSource{zhang2024assessing}
+  \end{multicols}}
+
+\lnPitch{
+  \pptBanner{ChatGPT is better than others:}
+  \begin{multicols}{2}
+  \includegraphics[width=.9\columnwidth]{java-java.png}\par
+  {\scriptsize \textbf{Recall} is a model's ability to find all the relevant cases within a data set, while \textbf{precision} is its ability to identify only the relevant data points.\par}
+  \par\columnbreak\par
+  ``Notably, ChatGPT accomplishes this performance in a zero-shot manner, while the baselines are fully fine-tuned for the downstream task.''
+  \lnSource{khajezade2024investigating}
   \end{multicols}}
 
 \end{document}
