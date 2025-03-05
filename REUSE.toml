@@ -23,7 +23,12 @@ path = [
     ".xcop",
     "Gemfile.lock",
     "README.md",
-    "rc",
+    ".latexmkrc",
+    ".texqc",
+    ".texsc",
+    "**/.latexmkrc",
+    "**/.texqc",
+    "**/.texsc",
     "renovate.json",
 ]
 precedence = "override"

@@ -8,6 +8,8 @@
 
 \lnTitlePage{21}{24}{QQUda0fAcxE}
 
+\lnThought{Continuous development accumulates problems, while regular releases encourage their resolving earlier.}
+
 \lnQuote
   [Grady Booch]
   {grady-booch}
@@ -31,6 +33,8 @@
   {Developers need freedom to make changes where they make the most sense. Therefore, \ul{integrate} and \ul{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \ul{without unit tests}.}
   {beck1998extreme}
 
+\lnThought{Continuous Integration (CI) means routine and frequent compilation and testing.}
+
 \lnQuote
   [Martin Fowler]
   {martin-fowler}
@@ -42,6 +46,8 @@
   {jez-humble}
   {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
   {humble2010continuous}
+
+\lnThought{Statistics show that CI helps.}
 
 \lnQuote
   [Bogdan Vasilescu]
@@ -72,6 +78,8 @@
   ``The average build time is just under 500 seconds. Errored builds are those that occur before the build begins (e.g., when a dependency cannot be downloaded), and failed builds are those that the build is not completed successfully.''
   \lnSource{hilton2016usage}
   \end{multicols}}
+
+\lnThought{Flaky tests make life harder.}
 
 \lnQuote
   [Michael Hilton]
@@ -112,6 +120,8 @@
   \end{itemize}
   \lnSource{micco2017state}}
 
+\lnThought{The frequency of build failures is the metric about project quality.}
+
 \lnQuote
   [Carmine Vassallo]
   {carmine-vassallo}
@@ -143,16 +153,6 @@
 \lnPitch{\includegraphics[width=.5\linewidth]{productivity.png}
   \lnSource{jain2018brief}}
 
-\plush{\pptThought{\href{}{On October 16, 2018}, \newline GitHub launched ``Actions''}}
-
-\lnQuote
-  [Mehdi Golzadeh]
-  {mehdi-golzadeh}
-  {Together with Travis, GHA covers more than 80\% of all usages. Moreover, in only 18 months GHA has overtaken all other CIs in popularity.}
-  {golzadeh2022rise}
-\lnPitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
-  \lnSource{golzadeh2022rise}}
-
 \lnQuote
   [Wing Lam]
   {wing-lam}
@@ -176,15 +176,25 @@
   {parry2021survey}
 
 \lnQuote
-  [Pei Liu]
-  {pei-liu}
-  {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
-  {liu2022first}
-
-\lnQuote
   [Shanto Rahman]
   {shanto-rahman}
   {FlakeSync works by \ul{identifying} a critical point, representing some key part of code that must be executed early w.r.t. other concurrently executing code, and a barrier point, representing the part of code that should wait until the critical point has been executed. FlakeSync can \ul{modify} code to check when the critical point is executed and have the barrier point keep waiting until the critical point has been executed, essentially synchronizing these two parts of code for the specific test execution.}
   {rahman2024flakesync}
+
+\lnThought{\href{}{On October 16, 2018}, \newline GitHub launched ``Actions''}
+
+\lnQuote
+  [Mehdi Golzadeh]
+  {mehdi-golzadeh}
+  {Together with Travis, GHA covers more than 80\% of all usages. Moreover, in only 18 months GHA has overtaken all other CIs in popularity.}
+  {golzadeh2022rise}
+\lnPitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
+  \lnSource{golzadeh2022rise}}
+
+\lnQuote
+  [Pei Liu]
+  {pei-liu}
+  {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
+  {liu2022first}
 
 \end{document}
