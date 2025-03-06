@@ -3,10 +3,13 @@
 
 \documentclass{article}
 \usepackage{../lecture-notes/notes}
+\usepackage{href-ul}
 \newcommand*\thetitle{Code Coverage}
 \begin{document}
 
 \lnTitlePage{15}{24}{pJrXQ5rptig}
+
+\lnThought{A line of code is covered if it is executed during the test suite’s run.}
 
 \pptBanner{Example, Part I}
 \begin{multicols}{2}
@@ -65,6 +68,8 @@ assert fibonacci(10) == 55;
 \end{multicols}
 \plush{}
 
+\lnThought{Not only lines of code may be covered by tests.}
+
 \lnPitch{
   \pptBanner{Some Kinds of Code Coverage}
   \begin{itemize}\setlength\itemsep{0em}
@@ -105,6 +110,8 @@ assert foo(50) == 42;
 \end{multicols}
 \plush{}
 
+\lnThought{The coverage level can be an indicator of quality.}
+
 \lnQuote
   [William Robert Elmendorf]
   {william-elmendorf}
@@ -123,7 +130,6 @@ assert foo(50) == 42;
   {david-gelperin}
   {However, only half regularly document their test designs, only half regularly save their tests for reuse after software changes, and an extremely small five percent provide regular \ul{measurements} of code coverage.}
   {gelperin1988}
-
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.6\linewidth]{practices.png}
@@ -134,7 +140,7 @@ assert foo(50) == 42;
   or ``sometimes'' to this practice). However, [...]
   an extremely small 5\% provide \ul{regular
   measurements of code coverage}.''\par
-  {\scriptsize --- \textit{The Growth of Software Testing}, David Gelperin and Bill Hetzel, Communications of the ACM, 31(6), 1988\par}
+  \lnSource{gelperin1988}
   \end{multicols}}
 
 \lnQuote
@@ -142,6 +148,8 @@ assert foo(50) == 42;
   {boris-beizer}
   {Junky software takes more tests to achieve coverage, but it breaks under any systematic test.}
   {beizer1995}
+
+\lnThought{Not all practitioners believe in high coverage numbers.}
 
 \lnQuote
   [Brian Marick]
@@ -183,6 +191,8 @@ assert foo(50) == 42;
   {Code coverage \ul{does not guarantee} that the covered lines or branches have been tested correctly, it just guarantees that they have been executed by a test. But a low code coverage number \ul{does guarantee} that large areas of the product are going completely untested by automation on every single deployment.}
   {arguelles2020}
 
+\lnThought{Some international standards require coverage control during software development.}
+
 \lnQuote
   {../15-code-coverage/survey}
   {Many \ul{contracts} are specifying that a certain \ul{percentage} of the statements or instructions must be successfully executed before the acceptance of the software by the customer.}
@@ -209,6 +219,8 @@ assert foo(50) == 42;
   IEC 62304:\\
   \includegraphics[width=.9\linewidth]{iso-26262.png}\par
   \end{pptWide}}
+
+\lnThought{Open source tools exist that help keep coverage under control.}
 
 \lnPitch{\pptBanner{Codecov.io}\includegraphics[width=.7\textwidth]{codecov.png}}
 
