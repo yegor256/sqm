@@ -8,6 +8,8 @@
 
 \lnTitlePage{16}{24}{WYWSv_PucHc}
 
+\lnThought{We may intentionally break feature code to see how the tests respond.}
+
 \pptBanner{Example, Part I: Code Coverage}
 \begin{multicols}{2}
 Live Code:\par
@@ -95,11 +97,7 @@ int fibonacci(int n) {
 \item Remove method body
 \end{itemize}}
 
-\lnQuote
-  [Richard G. Hamlet]
-  {richard-hamlet}
-  {It is a truism that \ul{good} software is easy to \ul{maintain}.}
-  {hamlet1997}
+\lnThought{Early experiments demonstrated how effective the method can be.}
 
 % \lnQuote
 %   [Jefferson A. Offutt]
@@ -117,6 +115,8 @@ int fibonacci(int n) {
   {timothy-budd}
   {A test set is \ul{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \ul{small} syntactic modifications to the subject program.}
   {budd1981mutation}
+
+\lnThought{Weak mutation testing is a lightweight alternative to strong mutation testing.}
 
 \lnQuote
   {william-howden}
@@ -165,6 +165,8 @@ fibonacci(12) == 144;
   {Our results indicate that \ul{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}
   {offutt1994empirical}
 
+\lnThought{Mutation operators may be classified.}
+
 \lnQuote
   [Richard DeMillo]
   {richard-demillo}
@@ -173,17 +175,19 @@ is applied at a time to the program under test.}
   {agrawal1989design}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=.8\linewidth]{c-operators.png}\par
-\par\columnbreak\par
-``Each mutant operator belongs to one of the following categories:
-1)~statement mutations,
-2)~operator mutations,
-3)~variable mutations,
-and
-4)~constant mutations.
-''\par
-{\scriptsize Source: Hiralal Agrawal et al., \textit{Design of Mutant Operators for the C Programming Language}, Technical Report SERC-TR-41-P, Software Engineering Research Center, Purdue University, 1989\par}
-\end{multicols}}
+  \includegraphics[width=.8\linewidth]{c-operators.png}\par
+  \par\columnbreak\par
+  ``Each mutant operator belongs to one of the following categories:
+  1)~statement mutations,
+  2)~operator mutations,
+  3)~variable mutations,
+  and
+  4)~constant mutations.
+  ''\par
+  \lnSource{agrawal1989design}
+  \end{multicols}}
+
+\lnThought{Some mutants are immortal---they can never be killed.}
 
 \lnQuote
   [Phyllis G. Frankl]
@@ -241,36 +245,34 @@ int fibonacci(int n) {
 \plush{}
 
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=\linewidth]{duas.png}\par
-\lnSource{frankl1997all}
-\par\columnbreak\par
-``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\ul{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
-\end{multicols}}
+  \includegraphics[width=\linewidth]{duas.png}\par
+  \lnSource{frankl1997all}
+  \par\columnbreak\par
+  ``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\ul{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
+  \end{multicols}}
 
 \lnQuote
   [Lionel C. Briand]
   {lionel-briand}
   {Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \ul{good indication} of the fault detection \ul{ability} of a test suite.}
   {andrews2005}
-
 \lnPitch{\begin{multicols}{2}
-\includegraphics[width=\linewidth]{faults.png}
-\par\columnbreak\par
-``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \ul{seeded faults}.''\par
-{\scriptsize Source: James H. Andrews, Lionel C. Briand and Yvan Labiche, \textit{Is Mutation an Appropriate Tool for Testing Experiments?}, Proceedings of the 27th International Conference on Software Engineering (ICSE), 2005\par}
-\end{multicols}}
+  \includegraphics[width=\linewidth]{faults.png}
+  \par\columnbreak\par
+  ``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \ul{seeded faults}.''\par
+  \lnSource{andrews2005}
+  \end{multicols}}
 
 \lnQuote
   [Yu-Seung Ma]
   {yu-seung-ma}
   {Comparing with previous mutation systems for procedural programs, \ul{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}
   {ma2006}
-
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{operators.png}
   \par\columnbreak\par
   ``\ul{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \ul{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
-  {\scriptsize Source: Yu-Seung Ma, Jeff Offutt, and Yong-Rae Kwon, \textit{MuJava: A Mutation System for Java}, Proceedings of the 28th International Conference on Software Engineering (ICSE), 2006\par}
+  \lnSource{ma2006}
   \end{multicols}}
 
 \lnQuote
