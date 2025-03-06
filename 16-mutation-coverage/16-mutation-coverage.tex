@@ -263,6 +263,8 @@ int fibonacci(int n) {
   \lnSource{andrews2005}
   \end{multicols}}
 
+\lnThought{MuJava was probably the first open source mutation coverage analyzer for Java.}
+
 \lnQuote
   [Yu-Seung Ma]
   {yu-seung-ma}
@@ -271,7 +273,9 @@ int fibonacci(int n) {
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{operators.png}
   \par\columnbreak\par
+  \begin{spacing}{0.9}
   ``\ul{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \ul{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
+  \end{spacing}
   \lnSource{ma2006}
   \end{multicols}}
 
@@ -284,11 +288,15 @@ int fibonacci(int n) {
   3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
   {ammann2008}
 
+\lnThought{First order mutants are too primitive for some cases.}
+
 \lnQuote
   [Mark Harman]
   {mark-harman}
   {Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \ul{Higher order mutants} are created by the insertion of two or more faults.}
   {jia2009}
+
+\lnThought{Mutation testing is one of the most expensive methods of quality control.}
 
 \lnQuote
   [Yue Jia]
