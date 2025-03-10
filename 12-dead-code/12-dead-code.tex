@@ -16,7 +16,7 @@ Before (\textcolor{red}{wrong}):\par
 {\small\begin{ffcode}
 class Book
   private int id;
-  public Book(int it)
+  public Book(int i)
     this.id = i;
   public int getId()
     return this.id;
@@ -30,7 +30,7 @@ After (\textcolor{green}{better}):\par
 {\small\begin{ffcode}
 class Book
   private final int id;
-  public Book(int it)
+  public Book(int i)
     this.id = i;
   public int getId()
     return this.id;
