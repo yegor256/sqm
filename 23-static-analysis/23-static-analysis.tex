@@ -180,6 +180,23 @@ int f(int x) {
 \end{multicols}
 \plush{}
 
+\plush{
+  \pptBanner{Precision \& Recall}
+  \emph{Precision} is the fraction of relevant instances among the retrieved instances (100\% precision means \emph{soundness}).
+  \emph{Recall} is the fraction of relevant instances that were retrieved (100\% recall means \emph{completeness}).
+  \begin{pptWideOne}
+  \begin{gather*}
+  \text{Precision} = \frac{TP}{TP + FP}
+  \quad\quad
+  \text{Recall} = \frac{TP}{TP + FN}
+  \quad\quad
+  \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+  \\[12pt]
+  \text{F1} = \frac{2 \times TP}{2 \times TP + FP + FN}
+  \\
+  \end{gather*}
+  \end{pptWideOne}}
+
 \lnQuote
   [Sunghun Kim]
   {sunghun-kim}
