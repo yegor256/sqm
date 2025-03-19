@@ -195,7 +195,7 @@ int f(int x) {
 \lnQuote
   [Benjamin Livshits]
   {benjamin-livshits}
-  {We are not aware of a single realistic whole-program analysis tool that does not \ul{purposely} make unsound choices... Soundness is \ul{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
+  {We are not aware of a single realistic whole-program analysis tool that does not \ul{purposely} make unsound choices... \textcolor{orange}{Soundness} is \ul{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
   {livshits2015defense}
 
 \lnQuote
@@ -209,6 +209,8 @@ int f(int x) {
   {nachiappan-nagappan}
   {Our results show that the static analysis defect density is \ul{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \ul{predict} the pre-release defect density with a high degree of sensitivity.}
   {nagappan2005static}
+
+\lnThought{Existing open-source static analyzers are less powerful than commercial ones.}
 
 \plush{\pptBanner{My Favorite Static Analyzers}
 \begin{itemize}
@@ -247,28 +249,6 @@ int f(int x) {
   \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}\par
   Usually, up to \ul{\$3,000} per developer per year.}
-
-\plush{\pptBanner{Why do JavaScript developers use linters?}
-\begin{itemize}
-  \setlength\itemsep{0em}
-  \item Prevent Errors
-  \item Augment Test Suites
-  \item Avoid Ambiguous and Complex Code
-  \item Maintain Code Consistency
-  \item Faster Code Review
-  \item Spare Developers' Feelings
-  \item Save Discussion Time
-  \item Learn About JavaScript
-  \end{itemize}
-  \lnSource{tomasdottir2017and}}
-
-\lnQuote
-  [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
-  {kristin-tomasdottir}
-  {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \ul{consistency}.}
-  {tomasdottir2018adoption}
-\lnPitch{\includegraphics[width=.95\linewidth]{rules.png}
-  \lnSource{tomasdottir2018adoption}}
 
 \lnPitch{
   \pptBanner{SARIF}
