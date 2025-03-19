@@ -3,6 +3,7 @@
 
 \documentclass{article}
 \usepackage{../lecture-notes/notes}
+\usepackage[russian,english]{babel}
 \newcommand*\thetitle{Static Analysis}
 \begin{document}
 
@@ -17,7 +18,7 @@
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{lint-material.png}
   \par\columnbreak\par
-  ``This is \ul{dryer lint}, which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
+  ``This is \ul{dryer lint} (({\selectlanguage{russian}ворс})), which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
   \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
   \end{multicols}}
 
@@ -27,14 +28,14 @@ Unreachable Code:
 {\small\begin{ffcode}
 int a = 10;
 if (a > 20) {
-  a = a + 1;
+  (*@\textcolor{orange}{a = a + 1;}@*)
 }
 \end{ffcode}
 }\par
 Uninitialized Variable:\par
 {\small\begin{ffcode}
 int x;
-int y = x + 42;
+int y = (*@\textcolor{orange}{x}@*) + 42;
 print(y);
 \end{ffcode}
 }
@@ -42,14 +43,14 @@ print(y);
 Division by Zero:\par
 {\small\begin{ffcode}
 int f(int x) {
-  return 42 / x;
+  return (*@\textcolor{orange}{42 / x}@*);
 }
 \end{ffcode}
 }\par
 Integer Overflow:\par
 {\small\begin{ffcode}
 var x: u8 = 142;
-x = x * 2;
+x = x (*@\textcolor{orange}{* 2}@*);
 \end{ffcode}
 }
 \par\columnbreak\par
@@ -57,7 +58,7 @@ Endless Loop:
 {\small\begin{ffcode}
 int x = 5;
 int y = 0;
-while (x > 0) {
+while ((*@\textcolor{orange}{x > 0}@*)) {
   y = y + x;
 }
 \end{ffcode}
@@ -66,7 +67,7 @@ Buffer Overflow:
 {\small\begin{ffcode}
 #include <stdio.h>
 char buf[16];
-fgets(buf, 1024, stdin);
+fgets(buf, (*@\textcolor{orange}{1024}@*), stdin);
 \end{ffcode}
 }
 \end{pptWide}
@@ -80,8 +81,9 @@ int x;
 int foo() {
   return 42;
 }
+
 int bar(int x) {
-  return x + 1;
+  return (*@\textcolor{orange}{x}@*) + 1;
 }
 \end{ffcode}
 }
@@ -91,6 +93,7 @@ Endless Recursion:\par
 int foo(int n) {
   return bar(n - 1);
 }
+
 int bar(int n) {
   return foo(n + 1);
 }
@@ -102,8 +105,9 @@ Pointer Dereferencing:
 int foo() {
   return *bar();
 }
+
 int* bar() {
-  return 0;
+  return (*@\textcolor{orange}{0}@*);
 }
 \end{ffcode}
 }
