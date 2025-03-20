@@ -8,7 +8,20 @@
 
 \lnTitlePage{18}{24}{M-yHXzROVno}
 
-\lnThought{Defects are not problems, they are opportunities.}
+\lnThought{Defects are not just problems---they are mostly opportunities.}
+
+\lnQuote
+  [Victor R. Basili]
+  {victor-basili}
+  {Scatter plots for executable lines per module versus the number of errors found in the module were graphed. It was difficult to see any trend within these plots, so \ul{the number of errors/1000 executable lines} within a module size was calculated.}
+  {basili1984software}
+\lnPitch{
+  \begin{multicols}{2}
+  \includegraphics[width=\linewidth]{complexity.png}
+  \par\columnbreak\par
+  ``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
+  \lnSource{basili1984software}
+  \end{multicols}}
 
 \lnQuote
   [Michael Fagan]
@@ -20,15 +33,7 @@
   \par
   \lnSource{fagan1976design}}
 
-\lnPitch{
-  \begin{multicols}{2}
-  \includegraphics[width=\linewidth]{complexity.png}
-  \par\columnbreak\par
-  ``One \ul{surprising} result was that module \ul{size} did not account for error proneness. In fact, it was quite the contrary---the larger the module, the \ul{less} error prone it was. This was true even though the larger modules were more complex.''\par
-  \lnSource{basili1984software}
-  \end{multicols}}
-
-\lnThought{Any imperfection is a defect that deserves to be reported, and then counted.}
+\lnThought{Any imperfection is a defect that should be reported and accounted for.}
 
 \lnQuote
   {../18-defect-density/ieee-982}
@@ -94,7 +99,7 @@
   \end{pptWide}
   \lnSource{ieee982}}
 
-\lnThought{Defect density may be predicted and even planned.}
+\lnThought{Defect Density (DD), as a metric, can be predicted and even planned for.}
 
 \lnQuote
   [Harlan D. Mills]
@@ -105,13 +110,13 @@
 \lnQuote
   [Joseph Sherif]
   {joseph-sherif}
-  {The analysis showed a \ul{significantly higher} density of defects during requirements inspections. It was also observed, that the defect densities found \ul{decreased} exponentialy as the mork products approached the coding phase.}
+  {The analysis showed a \ul{significantly higher} density of defects during requirements inspections. It was also observed, that the defect densities found \ul{decreased} exponentialy as the more products approached the coding phase.}
   {kelly1992analysis}
 
 \lnQuote
-  [Victor R. Basili]
-  {victor-basili}
-  {Five out of the six object-oriented metrics presented by \citet{chidamber1994metrics} appear to be useful to predict class fault-proneness during the high- and low-level design phases of the life-cycle.}
+  [Lionel C. Briand]
+  {lionel-briand}
+  {Five out of the six object-oriented metrics presented by \citet{chidamber1994metrics} appear to be useful to predict class \ul{fault-proneness} during the high- and low-level design phases of the life-cycle.}
   {basili1996validation}
 
 \lnQuote
@@ -318,7 +323,7 @@
   \toprule
   Github Repository & Stack & KLoC & Issues & I/KLoC \\
   \midrule
-  \href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 58 & 2,343 & 40.4 \\
+  % \href{https://github.com/zerocracy/farm}{zerocracy/farm} & Java & 58 & 2,343 & 40.4 \\
   \href{https://github.com/objectionary/eo}{objectionary/eo} & Java & 49 & 2,837 & 57.9 \\
   \href{https://github.com/yegor256/cactoos}{yegor256/cactoos} & Java & 34 & 1,707 & 50.2 \\
   \href{https://github.com/yegor256/takes}{yegor256/takes} & Java & 27 & 1,227 & 45.4 \\
