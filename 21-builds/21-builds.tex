@@ -8,7 +8,7 @@
 
 \lnTitlePage{21}{24}{QQUda0fAcxE}
 
-\lnThought{Continuous development accumulates problems, while regular releases encourage their resolving earlier.}
+\lnThought{Regular integration of software reduces risk and increases predictability.}
 
 \lnQuote
   [Grady Booch]
@@ -17,23 +17,12 @@
   {booch1994object}
 
 \lnQuote
-  [Michael Cusumano]
-  {michael-cusumano}
-  {Regardless of how often individual developers check in their changes to the source code, a designated developer, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
-  {cusumano1997microsoft}
-
-\lnQuote
-  {../21-builds/msft}
-  {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
-  {cusumano1997microsoft}
-
-\lnQuote
   [Kent Beck]
   {kent-beck}
   {Developers need freedom to make changes where they make the most sense. Therefore, \ul{integrate} and \ul{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \ul{without unit tests}.}
   {beck1998extreme}
 
-\lnThought{Continuous Integration (CI) means routine and frequent compilation and testing.}
+\lnThought{The entire CI pipeline must be reduced to a single click.}
 
 \lnQuote
   [Martin Fowler]
@@ -42,10 +31,29 @@
   {fowler2006}
 
 \lnQuote
+  [Michael T. Nygard]
+  {michael-nygard}
+  {Enterprise software must be cynical. Cynical software expects bad things to happen and is never surprised when they do. Cynical software \ul{doesn't even trust itself}, so it puts up internal barriers to protect itself from failures.}
+  {nygard2007release}
+
+\lnQuote
   [Jez Humble]
   {jez-humble}
   {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
   {humble2010continuous}
+
+\lnThought{Pre-flight builds are a stronger quality guarantee than post-commit builds.}
+
+\lnQuote
+  [Michael Cusumano]
+  {michael-cusumano}
+  {Regardless of how often individual developers check in their changes to the source code, a \ul{designated developer}, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
+  {cusumano1997microsoft}
+
+\lnQuote
+  {../21-builds/msft}
+  {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
+  {cusumano1997microsoft}
 
 \lnThought{Statistics show that CI helps.}
 
