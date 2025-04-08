@@ -3,6 +3,7 @@
 
 \documentclass{article}
 \usepackage{../lecture-notes/notes}
+\usepackage{svg}
 \newcommand*\thetitle{Builds}
 \begin{document}
 
@@ -60,6 +61,14 @@
   {scott-maclellan}
   {A \textcolor{orange}{preflight build} or preflight is a build which runs a portion of your CI \ul{on a branch} being developed. We have introduced preflights into several projects and I can say the results are dramatic.}
   {maclellan2015}
+
+\lnPitch{\begin{multicols}{2}
+  \includesvg[height=.4\linewidth]{rultor.svg}\par
+  Since 2014, we use \href{https://wwww.rultor.com}{Rultor}, a hosted GitHub-based chatbot that merges branches after preflight builds.
+  \par\columnbreak\par
+  \includesvg[height=.4\linewidth]{github.svg}\par
+  Since 2023, we also use \href{https://news.ycombinator.com/item?id=36707239}{GitHub Merge Queue} that does the same, with a less intuitive interface but a full integration with GitHub Actions.
+  \end{multicols}}
 
 \lnThought{Statistics show that CI helps.}
 

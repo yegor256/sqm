@@ -26,3 +26,4 @@ iexec.*
 node_modules/
 package/
 target/
+svg-inkscape/
