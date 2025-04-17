@@ -7,6 +7,8 @@
 \newcommand*\thetitle{Static Analysis}
 \begin{document}
 
+\setlength\headheight{0pt}
+
 \lnTitlePage{23}{24}{QK2XQvYoEpQ}
 
 \lnThought{Analyzing a program before it starts running may help detect its defects earlier.}
@@ -16,6 +18,7 @@
   {steven-johnson}
   {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
   {johnson1977lint}
+
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{lint-material.png}
@@ -24,56 +27,55 @@
   \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
   \end{multicols}}
 
-\pptBanner{Some Types of Bugs to Be Found by Static Analysis}
-\begin{pptWide}{3}
-Unreachable Code:
-{\small\begin{ffcode}
+\begin{lnSnippet}[unreachable.java]
 int a = 10;
 if (a > 20) {
   (*@\textcolor{orange}{a = a + 1;}@*)
 }
-\end{ffcode}
-}\par
-Uninitialized Variable:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[uninitialized.java]
 int x;
 int y = (*@\textcolor{orange}{x}@*) + 42;
 print(y);
-\end{ffcode}
-}
-\par\columnbreak\par
-Division by Zero:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[div-by-zero.java]
 int f(int x) {
   return (*@\textcolor{orange}{42 / x}@*);
 }
-\end{ffcode}
-}\par
-Integer Overflow:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[overflow.java]
 var x: u8 = 142;
 x = x (*@\textcolor{orange}{* 2}@*);
-\end{ffcode}
-}
-\par\columnbreak\par
-Endless Loop:
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[endless-loop.java]
 int x = 5;
 int y = 0;
 while ((*@\textcolor{orange}{x > 0}@*)) {
-  y = y + x;
-}
-\end{ffcode}
-}\par
-Buffer Overflow:
-{\small\begin{ffcode}
+  y = y + x; }
+\end{lnSnippet}
+\begin{lnSnippet}[buffer-overflow.java]
 #include <stdio.h>
 char buf[16];
 fgets(buf, (*@\textcolor{orange}{1024}@*), stdin);
-\end{ffcode}
-}
-\end{pptWide}
-\plush{}
+\end{lnSnippet}
+\lnPitch{
+  \pptBanner{Some Types of Bugs to Be Found by Static Analysis}
+  \begin{pptWide}{3}
+  Unreachable Code:
+  {\small\ffinput{unreachable.java}}\par
+  Uninitialized Variable:\par
+  {\small\ffinput{uninitialized.java}}
+  \par\columnbreak\par
+  Division by Zero:\par
+  {\small\ffinput{div-by-zero.java}}\par
+  Integer Overflow:\par
+  {\small\ffinput{overflow.java}}
+  \par\columnbreak\par
+  Endless Loop:
+  {\small\ffinput{endless-loop.java}}\par
+  Buffer Overflow:
+  {\small\ffinput{buffer-overflow.java}}
+  \end{pptWide}}
 
 \begin{lnSnippet}[unused.java]
 int x;
@@ -234,11 +236,9 @@ int f(int x) {
   \pptBanner{My Favorite Static Analyzers}
   \begin{itemize}
   \item Java:
-    \href{https://spotbugs.github.io/}{SpotBugs},
-    \href{https://checkstyle.sourceforge.io/}{Checkstyle},
-    \href{https://pmd.github.io/}{PMD},
+    \href{https://spotbugs.github.io/}{SpotBugs}
     and
-    \href{https://www.qulice.com}{Qulice} for Java
+    \href{https://pmd.github.io/}{PMD}
   \item C++:
     \href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy}
   \item Rust:
