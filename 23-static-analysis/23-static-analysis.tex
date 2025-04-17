@@ -75,10 +75,7 @@ fgets(buf, (*@\textcolor{orange}{1024}@*), stdin);
 \end{pptWide}
 \plush{}
 
-\pptBanner{Inter-procedural Analysis}
-\begin{pptWide}{3}
-Unused Global Var:
-{\small\begin{ffcode}
+\begin{lnSnippet}[unused.java]
 int x;
 int foo() {
   return 42;
@@ -87,11 +84,8 @@ int foo() {
 int bar(int x) {
   return (*@\textcolor{orange}{x}@*) + 1;
 }
-\end{ffcode}
-}
-\par\columnbreak\par
-Endless Recursion:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[endless.java]
 int foo(int n) {
   return bar(n - 1);
 }
@@ -99,11 +93,8 @@ int foo(int n) {
 int bar(int n) {
   return foo(n + 1);
 }
-\end{ffcode}
-}
-\par\columnbreak\par
-Pointer Dereferencing:
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[deref.java]
 int foo() {
   return *bar();
 }
@@ -111,50 +102,60 @@ int foo() {
 int* bar() {
   return (*@\textcolor{orange}{0}@*);
 }
-\end{ffcode}
-}
-\end{pptWide}
-\plush{}
+\end{lnSnippet}
+\lnPitch{
+  \pptBanner{Inter-procedural Analysis}
+  \begin{pptWide}{3}
+  Unused Global Var:
+  {\small\ffinput{unused.java}}
+  \par\columnbreak\par
+  Endless Recursion:\par
+  {\small\ffinput{endless.java}}
+  \par\columnbreak\par
+  Pointer Dereferencing:
+  {\small\ffinput{deref.java}}
+  \end{pptWide}}
 
-\pptBanner{Violations, Smells, Bugs}
-\begin{multicols}{3}
-Style Violation:
-{\small\begin{ffcode}
+\begin{lnSnippet}[style.java]
 int f
   (int x)
 {
      return 42/x;
 }
-\end{ffcode}
-}
-\par\columnbreak\par
-Code Smell:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[smell.java]
 int f(int x) {
   return 42.0 / x;
 }
-\end{ffcode}
-}
-\par\columnbreak\par
-Bug:\par
-{\small\begin{ffcode}
+\end{lnSnippet}
+\begin{lnSnippet}[bug.java]
 int f(int x) {
   return 42 / x;
 }
-\end{ffcode}
-}
-\end{multicols}
-{\scriptsize\color{red}\ttfamily\begin{multicols}{3}
-Line 2: Indentation \\
-Line 3: Curled bracket \\
-Line 4: Indentation
-\par\columnbreak\par
-Line 2: Implicit type \\
-cast from float to int
-\par\columnbreak\par
-Line 2: Division by zero
-\end{multicols}}
-\plush{}
+\end{lnSnippet}
+\lnPitch{
+  \pptBanner{Violations, Smells, Bugs}
+  \begin{multicols}{3}
+  Style Violation:
+  {\small\ffinput{style.java}}
+  \par\columnbreak\par
+  Code Smell:\par
+  {\small\ffinput{smell.java}}
+  \par\columnbreak\par
+  Bug:\par
+  {\small\ffinput{bug.java}}
+  \end{multicols}
+  {\scriptsize\color{red}\ttfamily
+  \begin{multicols}{3}\raggedright
+  Line 2: Indentation \\
+  Line 3: Curled bracket \\
+  Line 4: Indentation
+  \par\columnbreak\par
+  Line 2: Implicit type \\
+  cast from float to int
+  \par\columnbreak\par
+  Line 2: Division by zero
+  \end{multicols}}}
 
 \lnThought{Static analyzers can fail in two ways: by falsely reporting bugs or by missing them.}
 
@@ -164,21 +165,21 @@ Line 2: Division by zero
   {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \ul{couldn't find} any more bugs.'}
   {chess2004static}
 
-\pptBanner{False Negative vs. False Positive}
-\begin{multicols}{2}
-{\small\begin{ffcode}
+\begin{lnSnippet}[div.java]
 int f(int x) {
   return 42 / x;
 }
-\end{ffcode}
-}
-\par\columnbreak\par
-\textcolor{green}{\nospell{\textbf{T}rue \textbf{P}ositive}} (TP): \\ ``Division by zero''\par
-\textcolor{red}{\nospell{\textbf{F}alse \textbf{P}ositive}} (FP): \\ ``Integer overflow''\par
-\textcolor{green}{\nospell{\textbf{T}rue \textbf{N}egative}} (TN): \\ ``No buffer overflow''\par
-\textcolor{red}{\nospell{\textbf{F}alse \textbf{N}egative}} (FN): \\ ``No errors at all''\par
-\end{multicols}
-\plush{}
+\end{lnSnippet}
+  \lnPitch{
+  \pptBanner{False Negative vs. False Positive}
+  \begin{multicols}{2}
+  {\small\ffinput{div.java}}
+  \par\columnbreak\par
+  \textcolor{green}{\nospell{\textbf{T}rue \textbf{P}ositive}} (TP): \\ ``Division by zero''\par
+  \textcolor{red}{\nospell{\textbf{F}alse \textbf{P}ositive}} (FP): \\ ``Integer overflow''\par
+  \textcolor{green}{\nospell{\textbf{T}rue \textbf{N}egative}} (TN): \\ ``No buffer overflow''\par
+  \textcolor{red}{\nospell{\textbf{F}alse \textbf{N}egative}} (FN): \\ ``No errors at all''\par
+  \end{multicols}}
 
 \lnPitch{
   \pptBanner{Precision \& Recall}
