@@ -1,3 +1,7 @@
+_minted-*/
+_minted-wp/
+.DS_Store
+.idea/
 *.aux
 *.bbl
 *.bbl-SAVE-ERROR
@@ -18,12 +22,8 @@
 *.run.xml
 *.toc
 *.xcp
-.DS_Store
-.idea/
-_minted-*/
-_minted-wp/
 iexec.*
 node_modules/
 package/
-target/
 svg-inkscape/
+target/
