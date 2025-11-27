@@ -20,7 +20,7 @@ jobs:
           submodules: true
       - run: sudo apt-get update --yes --fix-missing && sudo apt-get install --yes wget
       - run: /bin/echo works
-      - uses: yegor256/latexmk-action@0.17.0
+      - uses: yegor256/latexmk-action@0.18.2
         with:
           cmd: make
           depends: lecture-notes/DEPENDS.txt
