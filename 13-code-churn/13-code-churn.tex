@@ -28,7 +28,7 @@
 \lnQuote
   [Sebastian G. Elbaum]
   {sebastian-elbaum}
-  {We can measure the increase or decrease in system complexity as measured by a selected metric, \ul{code delta}, or we can measure the total amount of \ul{change} the system has undergone between builds, \textcolor{orange}{code churn}.}
+  {We can measure the increase or decrease in system complexity as measured by a selected metric, \emph{code delta}, or we can measure the total amount of \emph{change} the system has undergone between builds, \textcolor{orange}{code churn}.}
   {munson1998}
 
 \lnPitch{
@@ -37,7 +37,7 @@
   Wikipedia says that ``\textcolor{orange}{churn rate}
   (also known as attrition rate, turnover, customer turnover, or
   customer defection) is a measure of the proportion of individuals or
-  items \ul{moving out} of a group over a specific period.''
+  items \emph{moving out} of a group over a specific period.''
   \par\columnbreak\par
   \pptPic{1}{butter-churn.jpg}\par
   {\small Barrel Butter Churn, Victorian, Original, \$95.00\par}
@@ -89,7 +89,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
   \includegraphics[width=.7\columnwidth]{qtb.png}
   \par\columnbreak\par
   ``A limitation of measuring \textcolor{orange}{code deltas} is that it
-  \ul{doesn't} give an indicator as to how much change the
+  \emph{doesn't} give an indicator as to how much change the
   system has undergone. If several
   software modules are removed and are replaced by
   modules of roughly equivalent complexity, the code
@@ -102,7 +102,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
   \begin{multicols}{2}
   \includegraphics[width=\columnwidth]{fi-churn.png}
   \par\columnbreak\par
-  ``In the case of code churn, what is important is the absolute measure of the amount of code that has been modified. From the standpoint of \ul{fault insertion} (FI), removing a lot of code is probably as catastrophic as adding a similar amount.''
+  ``In the case of code churn, what is important is the absolute measure of the amount of code that has been modified. From the standpoint of \emph{fault insertion} (FI), removing a lot of code is probably as catastrophic as adding a similar amount.''
   \par
   \lnSource{hall2000software}
   \end{multicols}}
@@ -110,7 +110,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
 \lnQuote
   [Nachiappan Nagappan]
   {nachiappan-nagappan}
-  {Our case study provides strong support for the following conclusion: increase in relative code churn measures is accompanied by an increase in system \ul{defect density}.}
+  {Our case study provides strong support for the following conclusion: increase in relative code churn measures is accompanied by an increase in system \emph{defect density}.}
   {nagappan2005use}
 
 \lnPitch{
@@ -124,7 +124,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
 \lnQuote
   [Georgios Gousios]
   {georgios-gousios}
-  {We examined 291 carefully selected Ruby, Python, Java and Scala projects (in total, 166,884 pull requests)... The number of \ul{total lines} changed by pull requests is on average less than 500 (95\% percentile: \textbf{1227}, 90\% percentile: 497, 80\% percentile: 168) with a median number of 20.}
+  {We examined 291 carefully selected Ruby, Python, Java and Scala projects (in total, 166,884 pull requests)... The number of \emph{total lines} changed by pull requests is on average less than 500 (95\% percentile: \textbf{1227}, 90\% percentile: 497, 80\% percentile: 168) with a median number of 20.}
   {gousios2014exploratory}
 
 \lnQuote
@@ -136,7 +136,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
 \lnQuote
 [Tobias Olsson]
   {tobias-olsson}
-  {Non-normal code churn can be a tangible and measurable \ul{effect} of architectural violations in source code. However, more research is needed to better understand this connection, e.g., if violations are the \ul{cause}, the size of the effect, the cost of refactoring, and whether it is generalizable to other system.}
+  {Non-normal code churn can be a tangible and measurable \emph{effect} of architectural violations in source code. However, more research is needed to better understand this connection, e.g., if violations are the \emph{cause}, the size of the effect, the cost of refactoring, and whether it is generalizable to other system.}
   {olsson2017}
 
 \lnPitch{
@@ -144,7 +144,7 @@ Delta: \textcolor{green}{+3} / 0, Churn: \textcolor{green}{+7} / \textcolor{red}
   \begin{multicols}{2}
   \includegraphics[width=.98\columnwidth]{codeclimate.png}
   \par\columnbreak\par
-  ``When we have finished analyzing your default branch, you will see churn metrics for the files in your repository. This churn metric is approximately the \ul{number of times a file has changed} in the last 90 days, calculated by counting the number of distinct versions of that file across commits from that time.''\par
+  ``When we have finished analyzing your default branch, you will see churn metrics for the files in your repository. This churn metric is approximately the \emph{number of times a file has changed} in the last 90 days, calculated by counting the number of distinct versions of that file across commits from that time.''\par
   {\scriptsize Source: \href{https://docs.codeclimate.com/docs/churn}{their blog}\par}
   \end{multicols}}
 

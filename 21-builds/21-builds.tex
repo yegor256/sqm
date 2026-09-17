@@ -14,19 +14,19 @@
 \lnQuote
   [Grady Booch]
   {grady-booch}
-  {In general, there may be more internal releases to the development team, with only a few executable releases turned over to external parties. The internal releases represent a sort of \ul{continuous integration} of the system and exist to force closure on some key system areas.}
+  {In general, there may be more internal releases to the development team, with only a few executable releases turned over to external parties. The internal releases represent a sort of \emph{continuous integration} of the system and exist to force closure on some key system areas.}
   {booch1994object}
 
 \lnQuote
   [Kent Beck]
   {kent-beck}
-  {Developers need freedom to make changes where they make the most sense. Therefore, \ul{integrate} and \ul{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \ul{without unit tests}.}
+  {Developers need freedom to make changes where they make the most sense. Therefore, \emph{integrate} and \emph{test} several times a day. Throw away unintegrated code after a couple of days and start over. Ignore code ownership. Program in pairs. Don't integrate \emph{without unit tests}.}
   {beck1998extreme}
 
 \lnQuote
   [Michael T. Nygard]
   {michael-nygard}
-  {Enterprise software must be cynical. Cynical software expects bad things to happen and is never surprised when they do. Cynical software \ul{doesn't even trust itself}, so it puts up internal barriers to protect itself from failures.}
+  {Enterprise software must be cynical. Cynical software expects bad things to happen and is never surprised when they do. Cynical software \emph{doesn't even trust itself}, so it puts up internal barriers to protect itself from failures.}
   {nygard2007release}
 
 \lnThought{The entire CI pipeline must be reduced to a single click.}
@@ -34,13 +34,13 @@
 \lnQuote
   [Martin Fowler]
   {martin-fowler}
-  {For most projects, the XP guideline of a \ul{ten minute} build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute chiseled off the build time is a minute \ul{saved} for each developer every time they commit.}
+  {For most projects, the XP guideline of a \emph{ten minute} build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute chiseled off the build time is a minute \emph{saved} for each developer every time they commit.}
   {fowler2006}
 
 \lnQuote
   [Jez Humble]
   {jez-humble}
-  {Automation is the key. It allows all of the \ul{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \ul{push of a button}.}
+  {Automation is the key. It allows all of the \emph{common tasks} involved in the creation and deployment of software to be performed by developers, testers, and operations personnel, at the \emph{push of a button}.}
   {humble2010continuous}
 
 \lnThought{Pre-flight builds are a stronger quality guarantee than post-commit builds.}
@@ -48,18 +48,18 @@
 \lnQuote
   [Michael Cusumano]
   {michael-cusumano}
-  {Regardless of how often individual developers check in their changes to the source code, a \ul{designated developer}, called the project \ul{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
+  {Regardless of how often individual developers check in their changes to the source code, a \emph{designated developer}, called the project \emph{build master}, generates a complete build of the product on a daily basis using the master version of the source code.}
   {cusumano1997microsoft}
 
 \lnQuote
   {../21-builds/msft}
-  {[In Microsoft], the rule is that if developers check in code that `breaks' the \ul{build} by preventing it from completing the \ul{recompilation}, they must fix the defect \ul{immediately}.}
+  {[In Microsoft], the rule is that if developers check in code that `breaks' the \emph{build} by preventing it from completing the \emph{recompilation}, they must fix the defect \emph{immediately}.}
   {cusumano1997microsoft}
 
 \lnQuote
   [Scott MacLellan]
   {scott-maclellan}
-  {A \textcolor{orange}{preflight build} or preflight is a build which runs a portion of your CI \ul{on a branch} being developed. We have introduced preflights into several projects and I can say the results are dramatic.}
+  {A \textcolor{orange}{preflight build} or preflight is a build which runs a portion of your CI \emph{on a branch} being developed. We have introduced preflights into several projects and I can say the results are dramatic.}
   {maclellan2015}
 
 \lnPitch{\begin{multicols}{2}
@@ -75,13 +75,13 @@
 \lnQuote
   [Bogdan Vasilescu]
   {bogdan-vasilescu}
-  {Our main finding is that continuous integration improves the \ul{productivity} of project teams, who can integrate \ul{more} outside contributions, without an observable diminishment in \ul{code quality}.}
+  {Our main finding is that continuous integration improves the \emph{productivity} of project teams, who can integrate \emph{more} outside contributions, without an observable diminishment in \emph{code quality}.}
   {vasilescu2015quality}
 
 \lnQuote
   [Kai Huang]
   {kai-huang}
-  {Our results show there are good reasons for the rise of CI. Compared to projects that do not use CI, projects that use CI: \ul{release} twice as often, \ul{accept pull requests} faster (1.6x), and have developers who are \ul{less worried} about breaking the build.}
+  {Our results show there are good reasons for the rise of CI. Compared to projects that do not use CI, projects that use CI: \emph{release} twice as often, \emph{accept pull requests} faster (1.6x), and have developers who are \emph{less worried} about breaking the build.}
   {hilton2016usage}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{by-stars.png}
@@ -107,31 +107,31 @@
 \lnQuote
   [Michael Hilton]
   {michael-hilton}
-  {Developers use CI to guarantee \ul{quality}, consistency, and viability across different environments. However, adding and maintaining automated tests causes these benefits to come at the expense of \ul{increased time} and \ul{effort}.}
+  {Developers use CI to guarantee \emph{quality}, consistency, and viability across different environments. However, adding and maintaining automated tests causes these benefits to come at the expense of \emph{increased time} and \emph{effort}.}
   {hilton2017trade}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{barriers.png}
   \par\columnbreak\par
-  ``When a CI build fails, some participants begin the process of identifying why the build failed. \ul{Sometimes}, this can be fairly straightforward...''
+  ``When a CI build fails, some participants begin the process of identifying why the build failed. \emph{Sometimes}, this can be fairly straightforward...''
   \lnSource{hilton2017trade}
   \end{multicols}}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{ten-minutes.png}
   \par\columnbreak\par
-  ``\citep{fowler2006} suggests most projects should try to follow the XP guideline of a 10-minute build. When we asked our 523 participants what is the \ul{maximum acceptable time} for a CI build to take, the \ul{most common answer} was also 10 minutes.''
+  ``\citep{fowler2006} suggests most projects should try to follow the XP guideline of a 10-minute build. When we asked our 523 participants what is the \emph{maximum acceptable time} for a CI build to take, the \emph{most common answer} was also 10 minutes.''
   \lnSource{hilton2017trade}
   \end{multicols}}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{flaky.png}
   \par\columnbreak\par
-  ``Pivotal developers experienced similar numbers of flaky and true CI failures per week. However, for the largest category, \ul{>10 fails a week}, there were twice as many flaky failures as true failures.''
+  ``Pivotal developers experienced similar numbers of flaky and true CI failures per week. However, for the largest category, \emph{>10 fails a week}, there were twice as many flaky failures as true failures.''
   \lnSource{hilton2017trade}
   \end{multicols}}
 
 \lnQuote
   [John Micco]
   {john-micco}
-  {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \ul{all test runs} reporting a `flaky' result.}
+  {Unfortunately, across our entire corpus of tests, we [in Google] see a continual rate of about 1.5\% of \emph{all test runs} reporting a `flaky' result.}
   {micco2016}
 \plush{\pptBanner{Google Thoughts About Flaky Tests}
   \begin{itemize}
@@ -154,7 +154,7 @@
 \lnQuote
   [Thomas Rausch]
   {thomas-rausch}
-  {Process metrics have a significant impact on the build outcome in 8 of the 14 projects on average, but the strongest influencing factor across all projects is \ul{overall stability} in the \ul{recent build history}. For 10 projects, more than 50\% (up to 80\%) of all failed builds follow a previous build failure.}
+  {Process metrics have a significant impact on the build outcome in 8 of the 14 projects on average, but the strongest influencing factor across all projects is \emph{overall stability} in the \emph{recent build history}. For 10 projects, more than 50\% (up to 80\%) of all failed builds follow a previous build failure.}
   {rausch2017empirical}
 \lnPitch{\includegraphics[width=.9\linewidth]{fail-ratio.png}
   \par
@@ -169,7 +169,7 @@
 \lnQuote
   [Romit Jain]
   {romit-jain}
-  {We observed that team size generally \ul{increases} the number of build failures. The interesting observation here is the minima after which there is a positive curve.}
+  {We observed that team size generally \emph{increases} the number of build failures. The interesting observation here is the minima after which there is a positive curve.}
   {jain2018brief}
 \lnPitch{\includegraphics[width=.5\linewidth]{team-size.png}
   \lnSource{jain2018brief}}
@@ -179,7 +179,7 @@
 \lnQuote
   [Wing Lam]
   {wing-lam}
-  {We find that \ul{53\%} of flaky tests detected in CI runs are not detected in isolation.}
+  {We find that \emph{53\%} of flaky tests detected in CI runs are not detected in isolation.}
   {lam2020understanding}
 
 \lnQuote
@@ -201,7 +201,7 @@
 \lnQuote
   [Shanto Rahman]
   {shanto-rahman}
-  {FlakeSync works by \ul{identifying} a critical point, representing some key part of code that must be executed early w.r.t. other concurrently executing code, and a barrier point, representing the part of code that should wait until the critical point has been executed. FlakeSync can \ul{modify} code to check when the critical point is executed and have the barrier point keep waiting until the critical point has been executed, essentially synchronizing these two parts of code for the specific test execution.}
+  {FlakeSync works by \emph{identifying} a critical point, representing some key part of code that must be executed early w.r.t. other concurrently executing code, and a barrier point, representing the part of code that should wait until the critical point has been executed. FlakeSync can \emph{modify} code to check when the critical point is executed and have the barrier point keep waiting until the critical point has been executed, essentially synchronizing these two parts of code for the specific test execution.}
   {rahman2024flakesync}
 
 \lnThought{\href{}{On October 16, 2018}, \newline GitHub launched ``Actions''}
@@ -217,7 +217,7 @@
 \lnQuote
   [Pei Liu]
   {pei-liu}
-  {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
+  {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \emph{majority} of open-source Android apps are developed \emph{without} accessing CI/CD services.}
   {liu2022first}
 
 \end{document}

@@ -54,7 +54,7 @@ void main(int x) {
 \end{ffcode}
 }
 \par\columnbreak\par
-``Dead code refers to computations whose \ul{results are never used}. Code that is dead can be eliminated without affecting the behavior of the program.''\par
+``Dead code refers to computations whose \emph{results are never used}. Code that is dead can be eliminated without affecting the behavior of the program.''\par
 {\scriptsize Source: \textit{Compiler Techniques for Code Compaction}, Saumya K. Debray, William Evans, Robert Muth, Bjorn De Sutter, ACM Transactions on Programming languages and Systems (TOPLAS), 22(2), 2000 \par}
 \end{multicols}
 \plush{}
@@ -62,13 +62,13 @@ void main(int x) {
 \lnQuote
   [Mika M\"{a}ntyl\"{a}]
   {mika-mantyla}
-  {Dead code is code that has been used in the past, but is currently never executed. Dead code \ul{hinders} code \ul{comprehension} and makes the current program structure \ul{less obvious}.}
+  {Dead code is code that has been used in the past, but is currently never executed. Dead code \emph{hinders} code \emph{comprehension} and makes the current program structure \emph{less obvious}.}
   {mantyla2003}
 
 \lnQuote
   [Sebastian Eder]
   {sebastian-eder}
-  {We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \ul{25\% of all methods} were never used during the complete period.}
+  {We conducted the study on the level of methods in the sense of object oriented programming. The systems contains 25,390 methods. We found that \emph{25\% of all methods} were never used during the complete period.}
   {eder2012}
 
 \lnPitch{
@@ -79,14 +79,14 @@ void main(int x) {
 \lnQuote
   [Simone Romano]
   {simone-romano}
-  {Although there is some consensus on the fact that dead code is a common phenomenon, it could be \ul{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}
+  {Although there is some consensus on the fact that dead code is a common phenomenon, it could be \emph{harmful}, and it seems to matter to software professionals; surprisingly, dead code has received very little empirical attention from the software engineering research community.}
   {romano2018}
 
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=\linewidth]{born-dead.png}
   \par\columnbreak\par
-  ``\begin{inparaenum}[i)]\item ...; \item dead methods generally \ul{survive} for a long time, in terms of commits, before being buried or revived; \item dead methods are \ul{rarely revived}; and \item most dead methods are dead \ul{since the creation} of the corresponding methods.\end{inparaenum}''
+  ``\begin{inparaenum}[i)]\item ...; \item dead methods generally \emph{survive} for a long time, in terms of commits, before being buried or revived; \item dead methods are \emph{rarely revived}; and \item most dead methods are dead \emph{since the creation} of the corresponding methods.\end{inparaenum}''
   \lnSource{caivano2021exploratory}
   \end{multicols}}
 
@@ -107,7 +107,7 @@ void main(int x) {
 \lnQuote
   [Pietro Cassieri]
   {pietro-cassieri}
-  {The results indicate that, after removing dead methods, the \ul{internal structure} of the source code significantly \ul{improves}, while the \ul{space} to store executable code significantly decreases along with the time to compile source code.}
+  {The results indicate that, after removing dead methods, the \emph{internal structure} of the source code significantly \emph{improves}, while the \emph{space} to store executable code significantly decreases along with the time to compile source code.}
   {romano2024folklore}
 
 \lnPitch{
@@ -149,7 +149,7 @@ void main(int x) {
 \lnQuote
   [Ciera Jaspan]
   {ciera-jaspan}
-  {Our survey results show that engineers at Google strongly prefer our monolithic repo, and that \ul{visibility} of the codebase and simple \ul{dependency management} were the primary factors for this preference.}
+  {Our survey results show that engineers at Google strongly prefer our monolithic repo, and that \emph{visibility} of the codebase and simple \emph{dependency management} were the primary factors for this preference.}
   {jaspan2018advantages}
 
 \lnPitch{\pptBanner{Monolithic Repositories}
@@ -171,31 +171,31 @@ void main(int x) {
 \lnQuote
   [James Whittaker]
   {james-whittaker}
-  {Most code at Google shares a \ul{single} repository and common tool chain. This single repository makes a great deal of sense as engineers moving from project to project have little to \ul{relearn}.}
+  {Most code at Google shares a \emph{single} repository and common tool chain. This single repository makes a great deal of sense as engineers moving from project to project have little to \emph{relearn}.}
   {whittaker2012google}
 
 \lnQuote
   [John Penix]
   {john-penix}
-  {Software development at Google happens quickly and at scale. The Google codebase receives over \ul{20 changes per minute} and 50 percent of the files change every month!}
+  {Software development at Google happens quickly and at scale. The Google codebase receives over \emph{20 changes per minute} and 50 percent of the files change every month!}
   {whittaker2012google}
 
 \lnQuote
   [Durham Goode]
   {durham-goode}
-  {\textcolor{orange}{Facebook}'s main source repository is enormous---many times larger than even the Linux kernel, which checked in at \ul{17 million lines of code} and \ul{44,000 files} in 2013.}
+  {\textcolor{orange}{Facebook}'s main source repository is enormous---many times larger than even the Linux kernel, which checked in at \emph{17 million lines of code} and \emph{44,000 files} in 2013.}
   {goode2014}
 
 \lnQuote
   [Rachel Potvin]
   {rachel-potvin}
-  {The \textcolor{orange}{Google} codebase includes approximately \ul{one billion files} and has a history of approximately 35 million commits spanning Google's entire 18-year existence. The repository contains \ul{86TBa} of data, including approximately \ul{two billion lines of code} in nine million unique source files.}
+  {The \textcolor{orange}{Google} codebase includes approximately \emph{one billion files} and has a history of approximately 35 million commits spanning Google's entire 18-year existence. The repository contains \emph{86TBa} of data, including approximately \emph{two billion lines of code} in nine million unique source files.}
   {potvin2016}
 
 \lnQuote
   [Tomas Votruba]
   {tomas-votruba}
-  {Before monorepo, I had to upgrade every package manually, which resulted in dissonance: one package used Symfony\textbackslash{}Console 3.2, but other only 2.8 and it got messy \ul{for no reason}.}
+  {Before monorepo, I had to upgrade every package manually, which resulted in dissonance: one package used Symfony\textbackslash{}Console 3.2, but other only 2.8 and it got messy \emph{for no reason}.}
   {votruba2017}
 
 \lnPitch{

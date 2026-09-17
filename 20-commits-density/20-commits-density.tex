@@ -14,7 +14,7 @@
 \lnQuote
   [Marc J. Rochkind]
   {marc-rochkind}
-  {Where the change was made, that is, to what source lines, and what the change actually was is recorded by the nature of the \ul{deltas} themselves. The \ul{reason} for the delta is not recorded automatically; it must be supplied by the programmer adding the delta, but it is required. The \ul{quality} of the reason (like the quality of the change itself) depends on the \textcolor{orange}{conscientiousness} ({\selectlanguage{russian}добросовестность}) of the programmer.}
+  {Where the change was made, that is, to what source lines, and what the change actually was is recorded by the nature of the \emph{deltas} themselves. The \emph{reason} for the delta is not recorded automatically; it must be supplied by the programmer adding the delta, but it is required. The \emph{quality} of the reason (like the quality of the change itself) depends on the \textcolor{orange}{conscientiousness} ({\selectlanguage{russian}добросовестность}) of the programmer.}
   {rochkind1975source}
 
 \lnThought{The log of changes may help us understand the effort invested.}
@@ -22,26 +22,26 @@
 \lnQuote
   [Todd Graves]
   {todd-graves}
-  {By studying effort at the level of individual changes, we are able to \ul{judge} the influence of factors whose contributions are \ul{not estimable} at a large project level due to aggregation.}
+  {By studying effort at the level of individual changes, we are able to \emph{judge} the influence of factors whose contributions are \emph{not estimable} at a large project level due to aggregation.}
   {graves1998inferring}
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{athcm.png}
   \par\columnbreak\par
-  ``Effort, measured in Average Technical Head Count Months (ATHCM), is recorded for each person every month broken down by charging numbers... The eleven developers completed 2794 changes (\ul{Maintenance Requests}) in the 45 month period under study.''
+  ``Effort, measured in Average Technical Head Count Months (ATHCM), is recorded for each person every month broken down by charging numbers... The eleven developers completed 2794 changes (\emph{Maintenance Requests}) in the 45 month period under study.''
   \lnSource{graves1998inferring}
   \end{multicols}}
 
 \lnQuote
   [David Atkins]
   {david-atkins}
-  {Observation is that the \ul{change history} of a software entity (i.e., the version control data about the modifications to the entity) can be used to estimate the amount of effort a developer expended on a particular modification or set of modifications.}
+  {Observation is that the \emph{change history} of a software entity (i.e., the version control data about the modifications to the entity) can be used to estimate the amount of effort a developer expended on a particular modification or set of modifications.}
   {atkins1999using}
 
 \lnQuote
   [Audris Mockus]
   {audris-mockus}
-  {Our hypothesis is that a \ul{textual description} field of a change is essential to understanding why that change was performed. Also, we expect that difficulty, size, and interval would vary strongly across different types of changes.}
+  {Our hypothesis is that a \emph{textual description} field of a change is essential to understanding why that change was performed. Also, we expect that difficulty, size, and interval would vary strongly across different types of changes.}
   {mockus2000identifying}
 \lnPitch{
   \includegraphics[width=.95\linewidth]{mr-classes.png}
@@ -52,7 +52,7 @@
 \lnQuote
   [Witold Pedrycz]
   {witold-pedrycz}
-  {Results indicate that for the Eclipse data, \ul{process metrics} are more efficient defect predictors than code metrics... Files with high \ul{revision numbers} are by nature defect prone... Files that are part of \ul{large CVS commits} are likely to be defect free.}
+  {Results indicate that for the Eclipse data, \emph{process metrics} are more efficient defect predictors than code metrics... Files with high \emph{revision numbers} are by nature defect prone... Files that are part of \emph{large CVS commits} are likely to be defect free.}
   {moser2008comparative}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.7\linewidth]{change-metrics.png}
@@ -64,7 +64,7 @@
 \lnQuote
   [Abdulkareem Alali]
   {abdulkareem-alali}
-  {One observation is that the terms that suggest \ul{bug related changes} are associated with fairly small-sized commits.}
+  {One observation is that the terms that suggest \emph{bug related changes} are associated with fairly small-sized commits.}
   {alali2008s}
 \lnPitch{
   \includegraphics[width=.95\linewidth]{size-distribution.png}
@@ -79,13 +79,13 @@
 \lnQuote
   [Abram Hindle]
   {abram-hindle}
-  {Large commits were more likely to \ul{perfective} than \ul{corrective}, while small changes were more often corrective rather than perfective. In a way it makes sense, correcting errors is surgical, perfecting a system is much more global in scope.}
+  {Large commits were more likely to \emph{perfective} than \emph{corrective}, while small changes were more often corrective rather than perfective. In a way it makes sense, correcting errors is surgical, perfecting a system is much more global in scope.}
   {hindle2008large}
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.7\linewidth]{type-of-change.png}
   \par\columnbreak\par
-  ``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \ul{subjective}, but reliable methods could be researched and developed to \ul{quantify} such effect.''
+  ``We believe that reading a commit log and its diff gives an idea of how easy or difficult it is to maintain a system. For example, several features in PostgreSQL required large commits to be implemented. This is very \emph{subjective}, but reliable methods could be researched and developed to \emph{quantify} such effect.''
   \lnSource{hindle2008large}
   \end{multicols}}
 
@@ -94,82 +94,82 @@
 \lnQuote
   [Oliver Arafat]
   {oliver-arafat}
-  {We suggest distinguishing commit types by their size, using the following simple heuristic: \ul{single} commits of 1 to 100 SLoC, \ul{aggregate} commits of 101 to 10000 SLoC, and repository \ul{refactorings} of more than 10000 SLoC.}
+  {We suggest distinguishing commit types by their size, using the following simple heuristic: \emph{single} commits of 1 to 100 SLoC, \emph{aggregate} commits of 101 to 10000 SLoC, and repository \emph{refactorings} of more than 10000 SLoC.}
   {arafat2009commit}
 
 \lnQuote
   [Jon Eyolfson]
   {jon-eyolfson}
-  {Commits submitted between midnight and 4~AM (referred to as late-night commits) are significantly buggier and commits between 7~AM and noon are less buggy, implying that developers may want to double-check their own \ul{latenight} commits.}
+  {Commits submitted between midnight and 4~AM (referred to as late-night commits) are significantly buggier and commits between 7~AM and noon are less buggy, implying that developers may want to double-check their own \emph{latenight} commits.}
   {eyolfson2011time}
 
 \lnQuote
   [Jeongju Sohn]
   {jeongju-sohn}
-  {\ul{Age} simply measures how long a given program element has existed in the code base. We calculate the age of a given \ul{statement} as the number of consecutive versions from the faulty version backwards to the latest version containing a modication to the statement.}
+  {\emph{Age} simply measures how long a given program element has existed in the code base. We calculate the age of a given \emph{statement} as the number of consecutive versions from the faulty version backwards to the latest version containing a modication to the statement.}
   {sohn2017fluccs}
 
-\lnThought{Some commit \ul{messages} are good, while others are worse.}
+\lnThought{Some commit \emph{messages} are good, while others are worse.}
 
 \lnQuote
   [German Daniel]
   {german-daniel}
-  {Developers take care to explain, in each \ul{Modification Request} (MR), the \ul{reason} for the change (CVS allows developers to add a log message to every file revision during a CVS commit). The average log for an MR is 300 characters, with a minimum length of 1 (only 8 MRs) and 18~000 for the longest log (which involved the merging of a branch to the main CVS tree).}
+  {Developers take care to explain, in each \emph{Modification Request} (MR), the \emph{reason} for the change (CVS allows developers to add a log message to every file revision during a CVS commit). The average log for an MR is 300 characters, with a minimum length of 1 (only 8 MRs) and 18~000 for the longest log (which involved the merging of a branch to the main CVS tree).}
   {german2004using}
 
 \lnQuote
   [Marco D'Ambros]
   {marco-dambros}
-  {Developers do not always document all the changes in the commit comment. A common cause is that writing exhaustive comments is \ul{time consuming}, and---being the last step of a coding session---the necessary \ul{time} and \ul{energy} is not always available. Moreover, for commits with many changes, the developers might \ul{not remember} all of the modifications.}
+  {Developers do not always document all the changes in the commit comment. A common cause is that writing exhaustive comments is \emph{time consuming}, and---being the last step of a coding session---the necessary \emph{time} and \emph{energy} is not always available. Moreover, for commits with many changes, the developers might \emph{not remember} all of the modifications.}
   {d2010commit}
 
 \lnQuote
   [Raymond Buse]
   {raymond-buse}
-  {We present an automatic technique for synthesizing succinct human-readable documentation for arbitrary program \ul{differences}. We compare our documentation to 250 human-written log messages from 5 popular open source projects. Employing a human study, we find that our generated documentation is \ul{suitable} for supplementing or replacing 89\% of existing log messages that directly describe a code change.}
+  {We present an automatic technique for synthesizing succinct human-readable documentation for arbitrary program \emph{differences}. We compare our documentation to 250 human-written log messages from 5 popular open source projects. Employing a human study, we find that our generated documentation is \emph{suitable} for supplementing or replacing 89\% of existing log messages that directly describe a code change.}
   {buse2010automatically}
 
 \lnQuote
   [Robert Dyer]
   {robert-dyer}
-  {First, around 14\% of all log messages were completely \ul{empty}. Second, over two thirds of the messages contained \ul{1–15 words}, which is less than the average length of a sentence in English. A \ul{normal} length sentence in English is \ul{15–20 words} (according to various results in Google) and thus we see that very few logs (10\%) contained descriptive messages.}
+  {First, around 14\% of all log messages were completely \emph{empty}. Second, over two thirds of the messages contained \emph{1–15 words}, which is less than the average length of a sentence in English. A \emph{normal} length sentence in English is \emph{15–20 words} (according to various results in Google) and thus we see that very few logs (10\%) contained descriptive messages.}
   {dyer2013boa}
 
 \lnQuote
   [Luis Fernando Cort{\'e}s-Coy]
   {luis-fernando-cortes-coy}
-  {The results of the user study demonstrate that 84\% of the \ul{generated} commit messages do not miss essential information required to understand the changes, 25\% of them are concise, and in 39\% of the cases the generated messages are easy to read and understand.}
+  {The results of the user study demonstrate that 84\% of the \emph{generated} commit messages do not miss essential information required to understand the changes, 25\% of them are concise, and in 39\% of the cases the generated messages are easy to read and understand.}
   {cortes2014automatically}
 
 \lnQuote
   [Shane McIntosh]
   {shane-mcintosh}
-  {JIT models, which aim to \ul{predict} the commits that will introduce \ul{future defects}, are typically trained using code-based metrics. We add metrics that estimate the level of detail in commit messages to JIT models with code-based metrics. We find that 43\% and 80\% of the JIT models of the studied systems are significantly improved by adding metrics that measure commit message \ul{volume} and \ul{content}, respectively.}
+  {JIT models, which aim to \emph{predict} the commits that will introduce \emph{future defects}, are typically trained using code-based metrics. We add metrics that estimate the level of detail in commit messages to JIT models with code-based metrics. We find that 43\% and 80\% of the JIT models of the studied systems are significantly improved by adding metrics that measure commit message \emph{volume} and \emph{content}, respectively.}
   {barnett2016relationship}
 
 \lnQuote
   [Eddie Antonio Santos]
   {eddie-antonio-santos}
-  {Despite some evidence to suggest that the ``unusualness'' of a commit message is positively correlated with build failure, the slope is so gradual that it is \ul{infeasible} for an average developer to \ul{judge} a commit by simply reading its log message.}
+  {Despite some evidence to suggest that the ``unusualness'' of a commit message is positively correlated with build failure, the slope is so gradual that it is \emph{infeasible} for an average developer to \emph{judge} a commit by simply reading its log message.}
   {santos2016judging}
 
 \lnQuote
   [Iftekhar Ahmed]
   {iftekhar-ahmed}
-  {Commit message \ul{quality} has an impact on software \ul{defect proneness}, and the overall quality of the commit messages \ul{decreases} over time, while developers believe they are writing better commit messages.}
+  {Commit message \emph{quality} has an impact on software \emph{defect proneness}, and the overall quality of the commit messages \emph{decreases} over time, while developers believe they are writing better commit messages.}
   {li2023commit}
 
 \lnQuote
   [Yuxia Zhang]
   {yuxia-zhang}
-  {Although LLMs can take larger diffs as input, their performance of generating messages leaves much to be improved. UniXcoder tends to generate short messages, while ChatGPT can generate more detailed messages, which are \ul{very different} from those written by developers.}
+  {Although LLMs can take larger diffs as input, their performance of generating messages leaves much to be improved. UniXcoder tends to generate short messages, while ChatGPT can generate more detailed messages, which are \emph{very different} from those written by developers.}
   {zhang2024automatic}
 
 \plush{\pptBanner{Pitfalls of Automated Commits Generation}
   \begin{pptWide}{2}{\small\begin{itemize}
-  \item ``Developers indicate that writing the subject of a commit message is \ul{hard}, and approximately 37\% of developers also find writing subjects \ul{time-consuming}.''
-  \item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \ul{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
-  \item ``After removing \ul{bot-generated} and \ul{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
+  \item ``Developers indicate that writing the subject of a commit message is \emph{hard}, and approximately 37\% of developers also find writing subjects \emph{time-consuming}.''
+  \item ``The state-of-the-art approaches for automated commit message generation have limited their datasets to commits whose diffs have \emph{no more than 100 or 200 tokens}. However, only 5\% of commits have a diff length of no more than 100 tokens. The performance of four state-of-the-art approaches on commits with larger diffs degrades significantly.''
+  \item ``After removing \emph{bot-generated} and \emph{uninformative} commit messages from the training and testing datasets, the performance of \nospell{NNGen}, \nospell{CoRec}, and \nospell{CCRep} greatly declines in comparison to the original evaluations.''
   \end{itemize}}\end{pptWide}\lnSource{zhang2024automatic}}
 
 \lnPitch{
@@ -185,26 +185,26 @@
 \lnQuote
   [Ahmed E. Hassan]
   {ahmed-hassan}
-  {The Mining Software Repositories (\ul{MSR}) field is maturing thanks to the rich, extensive, and readily available software repositories... After four successful years as ICSE's largest workshop, MSR became a Working Conference in 2008.}
+  {The Mining Software Repositories (\emph{MSR}) field is maturing thanks to the rich, extensive, and readily available software repositories... After four successful years as ICSE's largest workshop, MSR became a Working Conference in 2008.}
   {hassan2008road}
 
 \plush{
   \pptBanner{An Overview of MSR Achievements}
   \begin{pptWide}{2}{\scriptsize\begin{itemize}
   \item \textbf{Understanding Software Systems}
-    ``Using the historical \ul{sticky notes} on the NetBSD system, a large open source operating system, many unexpected dependencies could be easily explained and rationalized.''
+    ``Using the historical \emph{sticky notes} on the NetBSD system, a large open source operating system, many unexpected dependencies could be easily explained and rationalized.''
   \item \textbf{Propagating Changes}
-    ``Instead of using traditional dependency graphs to propagate changes, we could make use of the \ul{historical co-changes}. The intuition is that entities co-changing frequently in the past are very likely to co-change in the future.''
+    ``Instead of using traditional dependency graphs to propagate changes, we could make use of the \emph{historical co-changes}. The intuition is that entities co-changing frequently in the past are very likely to co-change in the future.''
   \item \textbf{Predicting and Identifying Bugs}
-    ``Tools can flag bugs by recognizing \ul{deviations} in mined patterns for renaming variables when cloning (i.e., copy-and-paste) code.''
+    ``Tools can flag bugs by recognizing \emph{deviations} in mined patterns for renaming variables when cloning (i.e., copy-and-paste) code.''
   \item \textbf{Understanding Team Dynamics}
-    ``Mailing lists discussions could uncover the overall \ul{morale} of a development team with developers using more optimistic words when they feel positive about the progress of the project.''
+    ``Mailing lists discussions could uncover the overall \emph{morale} of a development team with developers using more optimistic words when they feel positive about the progress of the project.''
   \item \textbf{Improving the User Experience}
-    ``Instead of studying the quality of the source code, they mine data captured by project \ul{monitoring} and \ul{tracking} infrastructures as well as customer support records to determine the expected quality of a software application.''
+    ``Instead of studying the quality of the source code, they mine data captured by project \emph{monitoring} and \emph{tracking} infrastructures as well as customer support records to determine the expected quality of a software application.''
   \item \textbf{Reusing Code}
-    ``The techniques locate uses of code such as library APIs, and attempt to \ul{match} these uses to the needs of a developer working on a new piece of code.''
+    ``The techniques locate uses of code such as library APIs, and attempt to \emph{match} these uses to the needs of a developer working on a new piece of code.''
   \item \textbf{Automating Empirical Studies}
-    ``The automation permits the \ul{repetition} of studies on a large number of subject and the ability to verify the generality of many findings in these studies.''
+    ``The automation permits the \emph{repetition} of studies on a large number of subject and the ability to verify the generality of many findings in these studies.''
   \end{itemize}}\end{pptWide}\lnSource{hassan2008road}}
 
 \lnThought{Now, the best practices...}
@@ -241,7 +241,7 @@
   {\small This is how it works for multiple repositories at the same time:
   \url{https://stackoverflow.com/a/79373503/187141}\par}
   \par\columnbreak\par
-  ``Git hook scripts are useful for identifying simple issues before submission to code review. We run our \ul{hooks} on \ul{every commit} to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements.''
+  ``Git hook scripts are useful for identifying simple issues before submission to code review. We run our \emph{hooks} on \emph{every commit} to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements.''
   \url{https://pre-commit.com}
   \end{multicols}}
 

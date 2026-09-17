@@ -14,7 +14,7 @@
 \lnQuote
   [Bill Curtis]
   {bill-curtis}
-  {\ul{Computational} complexity assesses the difficulty of verifying an algorithm's correctness, while \ul{psychological} complexity assesses human performance on programming tasks.}
+  {\emph{Computational} complexity assesses the difficulty of verifying an algorithm's correctness, while \emph{psychological} complexity assesses human performance on programming tasks.}
   {curtis1979measuring}
 
 \lnThought{There must be other way to measure the complexity of code, taking into account how humans comprehend it.}
@@ -22,19 +22,19 @@
 \lnQuote
   [Lionel C. Briand]
   {lionel-briand}
-  {By cognitive complexity we mean the \ul{mental burden} of the persons who have to deal with the class. We \ul{assume} that it is the, sometimes necessary, high cognitive complexity of a class which causes it to display undesirable external qualities, such as decreased maintainability and testability, or increased fault-proneness.}
+  {By cognitive complexity we mean the \emph{mental burden} of the persons who have to deal with the class. We \emph{assume} that it is the, sometimes necessary, high cognitive complexity of a class which causes it to display undesirable external qualities, such as decreased maintainability and testability, or increased fault-proneness.}
   {briand2001integrating}
 
 \lnQuote
   [Jingqiu Shao]
   {jingqiu-shao}
-  {Cognitive complexity, the \ul{new measure} for software complexity presented in this paper, is a measure of the cognitive and psychological complexity of software as a human intelligence artifact.}
+  {Cognitive complexity, the \emph{new measure} for software complexity presented in this paper, is a measure of the cognitive and psychological complexity of software as a human intelligence artifact.}
   {shao2003new}
 
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.7\linewidth]{bcs.png}\par
-  BCS stands for ``\ul{basic control structure}.''
+  BCS stands for ``\emph{basic control structure}.''
   \par\columnbreak\par
   \begin{spacing}{0.9}
   ``The cognitive weight of software is the degree of difficulty or relative time and effort required for comprehending a given piece of software modelled by a number of BCSs. The total cognitive weight of a software component, \(W_c\), is defined as the sum of the cognitive weights of its \(q\) linear blocks composed of individual BCSs.''
@@ -45,7 +45,7 @@
 
 \lnQuote
   {yingxu-wang}
-  {Cognitive complexity of software is a product of its architectural and operational complexities on the basis of \ul{deductive semantics} and the \ul{abstract system theory}.}
+  {Cognitive complexity of software is a product of its architectural and operational complexities on the basis of \emph{deductive semantics} and the \emph{abstract system theory}.}
   {wang2006cognitive}
 
 \lnQuote
@@ -75,26 +75,26 @@
 \lnQuote
   [Ann Campbell]
   {ann-campbell}
-  {A guiding principle in the formulation of Cognitive Complexity has been that it should incent \ul{good} coding practices. That is, it should either ignore or discount features that make code more readable.\pptPin{\includegraphics[width=7em]{sonarqube.pdf}}}
+  {A guiding principle in the formulation of Cognitive Complexity has been that it should incent \emph{good} coding practices. That is, it should either ignore or discount features that make code more readable.\pptPin{\includegraphics[width=7em]{sonarqube.pdf}}}
   {campbell2018cognitive}
 
 \lnPitch{
   \pptPic{.9}{motive-before.png}\par
-  ``The mathematical model underlying \ul{Cyclomatic Complexity} gives these two
+  ``The mathematical model underlying \emph{Cyclomatic Complexity} gives these two
   methods equal weight, yet it is intuitively obvious that the control flow of
   \ff{sumOfPrimes} is more difficult to understand than that of \ff{getWords}.''
   \lnSource{campbell2017}}
 
 \lnPitch{
   \pptPic{.9}{motive-after.png}\par
-  ``The \ul{Cognitive Complexity} algorithm gives these two methods markedly different
+  ``The \emph{Cognitive Complexity} algorithm gives these two methods markedly different
   scores, ones that are far more reflective of their relative understandability.''
   \lnSource{campbell2017}}
 
 \lnQuote
   [Rub{\'e}n Saborido]
   {ruben-saborido}
-  {Different cognitive complexity measures have been proposed to quantify the understandability of a piece of code and, therefore, its maintainability. \ul{However}, the cognitive complexity metric provided by SonarSource is quickly spreading in the software industry due to the popularity of their well-known static code \ul{tools} for evaluating software quality.}
+  {Different cognitive complexity measures have been proposed to quantify the understandability of a piece of code and, therefore, its maintainability. \emph{However}, the cognitive complexity metric provided by SonarSource is quickly spreading in the software industry due to the popularity of their well-known static code \emph{tools} for evaluating software quality.}
   {saborido2022automatizing}
 
 \lnPitch{Cognitive Complexity (\textcolor{orange}{CoCo}) is supported by a few static analyzers:
@@ -109,24 +109,24 @@
   \item for PHP by PHPCS via \href{https://github.com/Rarst/phpcs-cognitive-complexity}{this plugin}
   \end{itemize}}
 
-\lnThought{Maybe it's impossible to accurately measure the ``\ul{perceived} complexity'' of software?}
+\lnThought{Maybe it's impossible to accurately measure the ``\emph{perceived} complexity'' of software?}
 
 \lnQuote
   {norman-fenton}
-  {We showed that the search for \ul{general} software complexity measures is doomed to failure.}
+  {We showed that the search for \emph{general} software complexity measures is doomed to failure.}
   {fenton1994software}
 
 \lnQuote
   [Luigi Lavazza]
   {luigi-lavazza}
-  {Being able to find statistical correlations between code \ul{understandability} and source code \ul{measures} would be greatly beneficial for the software development process, which involves a great deal of activities involving program \ul{comprehension}.}
+  {Being able to find statistical correlations between code \emph{understandability} and source code \emph{measures} would be greatly beneficial for the software development process, which involves a great deal of activities involving program \emph{comprehension}.}
   {lavazza2023empirical}
 
-\lnThought{Social code analysis: we analyze the \ul{author(s)} of the code, not only the code itself.}
+\lnThought{Social code analysis: we analyze the \emph{author(s)} of the code, not only the code itself.}
 
 \lnQuote
   {../03-cognitive-complexity/social}
-  {Social code analysis enriches our understanding of the code quality by overlaying a \ul{developer's behavior} with the \ul{structural analysis} of the code.}
+  {Social code analysis enriches our understanding of the code quality by overlaying a \emph{developer's behavior} with the \emph{structural analysis} of the code.}
   {social2017}
 
 \lnPitch{
@@ -134,7 +134,7 @@
 
 \lnQuote
   {raul-barbosa}
-  {We propose the use of \ul{biofeedback} code highlighting techniques to provide online programmer's warnings for potentially problematic code lines that may need a second look at (to remove possible bugs).}
+  {We propose the use of \emph{biofeedback} code highlighting techniques to provide online programmer's warnings for potentially problematic code lines that may need a second look at (to remove possible bugs).}
   {couceiro2019spotting}
 
 The following Java code has an obvious but hard to spot functional defect:
@@ -155,12 +155,12 @@ public class AverageCalculator {                             // (*@\textcolor{gr
 \end{ffcode}
 }
 \par
-The ``cognitive state code annotations'' are on the right side of the code, as Java comments, indicating the level of \ul{brain activity} at the moment of writing the particular line of code.
+The ``cognitive state code annotations'' are on the right side of the code, as Java comments, indicating the level of \emph{brain activity} at the moment of writing the particular line of code.
 \plush{}
 
 \lnQuote
   {julio-medeiros}
-  {The EEG results reveal evidence of \ul{mental effort saturation} as \ul{code complexity} increases. Conversely, the classic software complexity metrics do \ul{not accurately} represent the mental effort involved in code comprehension.}
+  {The EEG results reveal evidence of \emph{mental effort saturation} as \emph{code complexity} increases. Conversely, the classic software complexity metrics do \emph{not accurately} represent the mental effort involved in code comprehension.}
   {medeiros2021can}
 
 \end{document}

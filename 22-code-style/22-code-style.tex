@@ -8,9 +8,9 @@
 
 \lnTitlePage{22}{24}{hPZGoEAXwY0}
 
-\lnThought{The \ul{aesthetics} of code is a highly subjective matter\dots or is it?}
+\lnThought{The \emph{aesthetics} of code is a highly subjective matter\dots or is it?}
 
-\pptBanner{Which One \ul{Looks} Better for You?}
+\pptBanner{Which One \emph{Looks} Better for You?}
 \begin{pptWide}{3}
 C:\par
 {\small\begin{ffcode}
@@ -53,13 +53,13 @@ end
 \lnQuote
   [Dustin Boswell]
   {dustin-boswell}
-  {If one of these styles is chosen over the other, it doesn't substantially affect the readability of the codebase. But if these two styles are \ul{mixed} throughout the code, it does affect the readability. Consistent style is more important than the `right' style.}
+  {If one of these styles is chosen over the other, it doesn't substantially affect the readability of the codebase. But if these two styles are \emph{mixed} throughout the code, it does affect the readability. Consistent style is more important than the `right' style.}
   {boswell2011art}
 
 \lnQuote
   [\nospell{Krist{\'\i}n Fj{\'o}la T{\'o}masd{\'o}ttir}]
   {kristin-tomasdottir}
-  {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \ul{consistency}.}
+  {Every single interview participant mentioned that one of the reasons why they use a linter is to maintain code \emph{consistency}.}
   {tomasdottir2018adoption}
 \plush{\pptBanner{Why do JavaScript developers use linters?}
   \begin{itemize}
@@ -77,33 +77,33 @@ end
 \lnPitch{\includegraphics[width=.95\linewidth]{../23-static-analysis/rules.png}
   \lnSource{tomasdottir2018adoption}}
 
-\lnThought{Which matters more: code \ul{clarity} or \ul{efficiency}?}
+\lnThought{Which matters more: code \emph{clarity} or \emph{efficiency}?}
 
 \lnQuote
   [Brian Kernighan]
   {brian-kernighan}
-  {The harder it is for people to \ul{grasp the intent} of any given section, the longer it will be before the program becomes \ul{operational}. Trying to outsmart a compiler defeats much of the purpose of using one. Write clearly --- \ul{don't sacrifice} clarity for `efficiency.'}
+  {The harder it is for people to \emph{grasp the intent} of any given section, the longer it will be before the program becomes \emph{operational}. Trying to outsmart a compiler defeats much of the purpose of using one. Write clearly --- \emph{don't sacrifice} clarity for `efficiency.'}
   {kernighan1974elements}
 
 \lnQuote
   [David Marca]
   {david-marca}
-  {The effective utilization of extra spaces, blank lines, or special characters can \ul{illuminate} the logical structure of a program. So we should not be afraid to: indent, indent consistently (3 is a readable minimum), start each statement on a new line, put only one word on a line, use extra pages to visually collect code, put blank lines between code, align keywords, separate code from comments with white space.}
+  {The effective utilization of extra spaces, blank lines, or special characters can \emph{illuminate} the logical structure of a program. So we should not be afraid to: indent, indent consistently (3 is a readable minimum), start each statement on a new line, put only one word on a line, use extra pages to visually collect code, put blank lines between code, align keywords, separate code from comments with white space.}
   {marca1981some}
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.7\linewidth]{pascal.png}
   \par\columnbreak\par
-  ``The best style enforcer is the computer ... but \ul{only} if we can easily cope with its ever-present restrictions.''
+  ``The best style enforcer is the computer ... but \emph{only} if we can easily cope with its ever-present restrictions.''
   \lnSource{marca1981some}
   \end{multicols}}
 
-\lnThought{We can measure the quality of code formatting with a discrete \ul{metric}, can't we?}
+\lnThought{We can measure the quality of code formatting with a discrete \emph{metric}, can't we?}
 
 \lnQuote
   [Michael J. Rees]
   {michael-rees}
-  {STYLE was designed to input the source of a syntactically correct Pascal program, make simple measurements on a one-pass line-by-line basis, and yield a style \ul{mark} out of 100\%.}
+  {STYLE was designed to input the source of a syntactically correct Pascal program, make simple measurements on a one-pass line-by-line basis, and yield a style \emph{mark} out of 100\%.}
   {rees1982automatic}
 \lnPitch{
   \pptBanner{Rees Score, for Pascal}
@@ -116,7 +116,7 @@ end
 
 \lnQuote
   {../22-code-style/berry-meekings}
-  {The `elegance' or `style' of a program is sometimes considered a nebulous attribute that is somehow unquantifiable; a programmer has an \ul{instinctive} feel for a `good' or a `bad' program in much the same way as an artist distinguishes good and bad paintings.}
+  {The `elegance' or `style' of a program is sometimes considered a nebulous attribute that is somehow unquantifiable; a programmer has an \emph{instinctive} feel for a `good' or a `bad' program in much the same way as an artist distinguishes good and bad paintings.}
   {berry1985style}
 \lnPitch{
   \pptBanner{Berry-Meekings Score, for C Programs}
@@ -136,7 +136,7 @@ end
 \lnQuote
   [Henry Ledgard]
   {henry-ledgard}
-  {An individual's body language helps clarify the spoken word. In a similar sense, the programmer relies on \ul{white space}---what is not said directly---in the code to communicate logic, intent, and understanding.}
+  {An individual's body language helps clarify the spoken word. In a similar sense, the programmer relies on \emph{white space}---what is not said directly---in the code to communicate logic, intent, and understanding.}
   {green2011coding}
 \lnPitch{\includegraphics[width=.95\linewidth]{three-ifs.png}
   \lnSource{green2011coding}}
@@ -146,19 +146,19 @@ end
 \lnQuote
   [Warren Harrison]
   {warren-harrison}
-  {To determine the relationship (if any) between the style metric and error proneness of each module, we performed a simple correlation analysis. The results were discouraging in the sense that a correlation of only -0.052 existed between the observed error frequency and the style metric, suggesting that the style metric bore \ul{little relationship} to the error frequency encountered in our data.}
+  {To determine the relationship (if any) between the style metric and error proneness of each module, we performed a simple correlation analysis. The results were discouraging in the sense that a correlation of only -0.052 existed between the observed error frequency and the style metric, suggesting that the style metric bore \emph{little relationship} to the error frequency encountered in our data.}
   {harrison1986note}
 
 \lnQuote
   [Christian Collberg]
   {christian-collberg}
-  {Code obfuscation means one user runs an application through an \ul{obfuscator}, a program that transforms the application into one that is functionally identical to the original but which is much more difficult for another user to understand.}
+  {Code obfuscation means one user runs an application through an \emph{obfuscator}, a program that transforms the application into one that is functionally identical to the original but which is much more difficult for another user to understand.}
   {collberg1997taxonomy}
 
 \lnQuote
   [Raymond Buse]
   {raymond-buse}
-  {Formally, we can characterize software readability as a mapping from a code sample to a finite score domain. We presented human annotators with a sequence of short code selections, called snippets. The annotators were asked to individually score each snippet based on their personal estimation of readability. Our metric for readability is \ul{derived} (using ML) from these judgments.}
+  {Formally, we can characterize software readability as a mapping from a code sample to a finite score domain. We presented human annotators with a sequence of short code selections, called snippets. The annotators were asked to individually score each snippet based on their personal estimation of readability. Our metric for readability is \emph{derived} (using ML) from these judgments.}
   {buse2009learning}
 \lnPitch{
   \begin{multicols}{2}
@@ -171,15 +171,15 @@ end
 \lnQuote
   [Cathal Boogerd]
   {cathal-boogerd}
-  {First, there are 9 out of 72 rules for which violations were observed that perform significantly better than a random predictor at locating fault-related lines. Second, we observed a negative correlation between MISRA rule violations and observed faults. In addition, 29 out of 72 rules had a zero true positive rate. This makes it possible that adherence to the MISRA standard \ul{as a whole} would have made the software \ul{less reliable}.}
+  {First, there are 9 out of 72 rules for which violations were observed that perform significantly better than a random predictor at locating fault-related lines. Second, we observed a negative correlation between MISRA rule violations and observed faults. In addition, 29 out of 72 rules had a zero true positive rate. This makes it possible that adherence to the MISRA standard \emph{as a whole} would have made the software \emph{less reliable}.}
   {boogerd2008assessing}
 
 \lnQuote
   [Peter C. Rigby]
   {peter-rigby}
-  {We list the reasons why our interviewees \ul{rejected} a patch or required further modification before accepting it:
+  {We list the reasons why our interviewees \emph{rejected} a patch or required further modification before accepting it:
     Poor quality,
-    \ul{Violation of style},
+    \emph{Violation of style},
     Gratuitous changes mixed with `true' changes,
     Code does not do or fix what it claims to or introduces new bugs,
     Fix conflicts with existing code,
@@ -189,13 +189,13 @@ end
 \lnQuote
   [Vipin Balachandran]
   {vipin-balachandran}
-  {Through a user study, we show that integrating static analysis tools (Checkstyle, PMD, and FindBugs) with code review process can improve the \ul{quality of code review}. The developer feedback for a subset of comments from automatic reviews shows that the developers agree to fix 93\% of all the automatically generated comments.}
+  {Through a user study, we show that integrating static analysis tools (Checkstyle, PMD, and FindBugs) with code review process can improve the \emph{quality of code review}. The developer feedback for a subset of comments from automatic reviews shows that the developers agree to fix 93\% of all the automatically generated comments.}
   {balachandran2013reducing}
 
 \lnQuote
   [Moritz Beller]
   {moritz-beller}
-  {Most Automated Static Analysis Tools configurations deviate slightly from the \ul{default}, but hardly any introduce new custom analyses. }
+  {Most Automated Static Analysis Tools configurations deviate slightly from the \emph{default}, but hardly any introduce new custom analyses. }
   {beller2016analyzing}
 \lnPitch{\includegraphics[width=.9\linewidth]{configs.png}
   \lnSource{beller2016analyzing}}
@@ -205,19 +205,19 @@ end
 \lnQuote
   [Fiorella Zampetti]
   {fiorella-zampetti}
-  {Results indicate that build breakages due to static analysis tools are \ul{mainly} related to adherence to coding standards, and there is also some attention to missing licenses. Build failures related to tools identifying potential bugs or vulnerabilities occur \ul{less frequently}, and in some cases such tools are activated in a `softer' mode, without making the build fail.}
+  {Results indicate that build breakages due to static analysis tools are \emph{mainly} related to adherence to coding standards, and there is also some attention to missing licenses. Build failures related to tools identifying potential bugs or vulnerabilities occur \emph{less frequently}, and in some cases such tools are activated in a `softer' mode, without making the build fail.}
   {zampetti2017open}
 
 \lnQuote
   [Jennifer Bauer]
   {jennifer-bauer}
-  {While the perceptual processing of code is required to understand it, \ul{higher level processing}, such as understanding its semantics and reasoning about its functionality, affect program comprehensibility more strongly. The influence of indentation could have been masked by these side effects, so it might well be that the effect of indentation comes more into play when the code is \ul{longer} and \ul{more complex}.}
+  {While the perceptual processing of code is required to understand it, \emph{higher level processing}, such as understanding its semantics and reasoning about its functionality, affect program comprehensibility more strongly. The influence of indentation could have been masked by these side effects, so it might well be that the effect of indentation comes more into play when the code is \emph{longer} and \emph{more complex}.}
   {bauer2019indentation}
 
 \lnQuote
   [Weiqin Zou]
   {weiqin-zou}
-  {A pull request that is \ul{consistent} with the current code style tends to be merged into the codebase more \ul{easily} (faster).}
+  {A pull request that is \emph{consistent} with the current code style tends to be merged into the codebase more \emph{easily} (faster).}
   {bauer2019indentation}
 
 \lnQuote

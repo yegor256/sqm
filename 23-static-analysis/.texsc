@@ -6,7 +6,7 @@
 --ignore=ff
 --ignore=tabular:p
 --ignore=nospell
---ignore=citet,citep,bibentry
+--ignore=citet,citep
 --ignore=pptPic:pp
 --ignore=pptQuote:p
 --ignore=pptQuote:p

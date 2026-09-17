@@ -16,14 +16,14 @@
 \lnQuote
   [Steven Johnson]
   {steven-johnson}
-  {\textbf{Lint} is a command which examines C source programs, detecting a number of \ul{bugs} and \ul{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \ul{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \ul{wasteful}, or \ul{error prone}, constructions which nevertheless are, strictly speaking, legal.}
+  {\textbf{Lint} is a command which examines C source programs, detecting a number of \emph{bugs} and \emph{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \emph{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \emph{wasteful}, or \emph{error prone}, constructions which nevertheless are, strictly speaking, legal.}
   {johnson1977lint}
 
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{lint-material.png}
   \par\columnbreak\par
-  ``This is \ul{dryer lint} ({\selectlanguage{russian}ворс}), which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
+  ``This is \emph{dryer lint} ({\selectlanguage{russian}ворс}), which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
   \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
   \end{multicols}}
 
@@ -164,7 +164,7 @@ int f(int x) {
 \lnQuote
   [Brian Chess]
   {brian-chess}
-  {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \ul{couldn't find} any more bugs.'}
+  {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \emph{couldn't find} any more bugs.'}
   {chess2004static}
 
 \begin{lnSnippet}[div.java]
@@ -203,31 +203,31 @@ int f(int x) {
 \lnQuote
   [Sunghun Kim]
   {sunghun-kim}
-  {About \ul{90\%} of warnings remain in the program or are removed during non-fix changes --- likely \ul{false positive} warnings.}
+  {About \emph{90\%} of warnings remain in the program or are removed during non-fix changes --- likely \emph{false positive} warnings.}
   {kim2007warnings}
 
 \lnQuote
   [Brittany Johnson]
   {brittany-johnson}
-  {Our results confirmed that \ul{false positives} and developer \ul{overload} play a part in developers' dissatisfaction with current static analysis tools.}
+  {Our results confirmed that \emph{false positives} and developer \emph{overload} play a part in developers' dissatisfaction with current static analysis tools.}
   {johnson2013don}
 
 \lnQuote
   [Benjamin Livshits]
   {benjamin-livshits}
-  {We are not aware of a single realistic whole-program analysis tool that does not \ul{purposely} make unsound choices... \textcolor{orange}{Soundness} is \ul{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
+  {We are not aware of a single realistic whole-program analysis tool that does not \emph{purposely} make unsound choices... \textcolor{orange}{Soundness} is \emph{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
   {livshits2015defense}
 
 \lnQuote
   [Steven Arzt]
   {steven-arzt}
-  {In our experiments on DroidBench examples, TASMAN \ul{reduces} the number of false positives by about 80\% \ul{without pruning} any true positives.}
+  {In our experiments on DroidBench examples, TASMAN \emph{reduces} the number of false positives by about 80\% \emph{without pruning} any true positives.}
   {arzt2015using}
 
 \lnQuote
   [Nachiappan Nagappan]
   {nachiappan-nagappan}
-  {Our results show that the static analysis defect density is \ul{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \ul{predict} the pre-release defect density with a high degree of sensitivity.}
+  {Our results show that the static analysis defect density is \emph{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \emph{predict} the pre-release defect density with a high degree of sensitivity.}
   {nagappan2005static}
 
 \lnThought{Existing open-source static analyzers are less powerful than commercial ones.}
@@ -269,7 +269,7 @@ int f(int x) {
   \item \href{https://snyk.io/}{Snyk} (US)
   \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}\par
-  Usually, up to \ul{\$3,000} per developer per year.}
+  Usually, up to \emph{\$3,000} per developer per year.}
 
 \lnPitch{
   \pptBanner{SARIF}
@@ -296,7 +296,7 @@ int f(int x) {
 \lnQuote
   [\nospell{Florian Oberm{\"u}ller}]
   {florian-obermuller}
-  {We introduce the concept of \ul{code perfumes} as the counterpart to \ul{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
+  {We introduce the concept of \emph{code perfumes} as the counterpart to \emph{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
   {obermuller2021code}
 
 \end{document}
