@@ -7,7 +7,7 @@ There are slides for my series of lectures for
 [HSE University](https://www.hse.ru/en/) (Moscow, Russia).
 
 All recorded videos are in [this YouTube playlist][playlist]
-(все лекции по-русски!).
+(все лекции по-русски with English subtitles!).
 
 All compiled slide decks in PDF are [here](https://yegor256.github.io/sqm/).
 
