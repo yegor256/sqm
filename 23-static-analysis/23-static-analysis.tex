@@ -16,14 +16,14 @@
 \lnQuote
   [Steven Johnson]
   {steven-johnson}
-  {\textbf{Lint} is a command which examines C source programs, detecting a number of \emph{bugs} and \emph{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \emph{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \emph{wasteful}, or \emph{error prone}, constructions which nevertheless are, strictly speaking, legal.}
+  {\textbf{Lint} is a command which examines C source programs, detecting a number of \hs{bugs} and \hs{obscurities}. It enforces the type rules of C more strictly than the C compilers. It may also be used to enforce a number of \hs{portability restrictions} involved in moving programs between different machines and/or operating systems. Another option detects a number of \hs{wasteful}, or \hs{error prone}, constructions which nevertheless are, strictly speaking, legal.}
   {johnson1977lint}
 
 \lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.95\linewidth]{lint-material.png}
   \par\columnbreak\par
-  ``This is \emph{dryer lint} ({\selectlanguage{russian}ворс}), which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
+  ``This is \hs{dryer lint} ({\selectlanguage{russian}ворс}), which is scraped out of a clothes dryer filter after it has dried a few loads. The idea of the Lint tool is to get this sort of stuff out of your code by being very pedantic about warnings and advice on possible bad code constructions.'' ---
   \href{https://www.quora.com/In-programming-where-does-the-term-lint-come-from}{Quora}
   \end{multicols}}
 
@@ -164,7 +164,7 @@ int f(int x) {
 \lnQuote
   [Brian Chess]
   {brian-chess}
-  {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \emph{couldn't find} any more bugs.'}
+  {Beware of any tool that says something like, `zero defects found, your program is, rather, now secure.' The appropriate output is, `sorry, \hs{couldn't find} any more bugs.'}
   {chess2004static}
 
 \begin{lnSnippet}[div.java]
@@ -185,8 +185,8 @@ int f(int x) {
 
 \lnPitch{
   \pptBanner{Precision \& Recall}
-  \emph{Precision} is the fraction of relevant instances among the retrieved instances (100\% precision means \emph{soundness}).
-  \emph{Recall} is the fraction of relevant instances that were retrieved (100\% recall means \emph{completeness}).
+  \hs{Precision} is the fraction of relevant instances among the retrieved instances (100\% precision means \hs{soundness}).
+  \hs{Recall} is the fraction of relevant instances that were retrieved (100\% recall means \hs{completeness}).
   \begin{pptWideOne}
   \begin{gather*}
   \text{Precision} = \frac{TP}{TP + FP}
@@ -203,31 +203,31 @@ int f(int x) {
 \lnQuote
   [Sunghun Kim]
   {sunghun-kim}
-  {About \emph{90\%} of warnings remain in the program or are removed during non-fix changes --- likely \emph{false positive} warnings.}
+  {About \hs{90\%} of warnings remain in the program or are removed during non-fix changes --- likely \hs{false positive} warnings.}
   {kim2007warnings}
 
 \lnQuote
   [Brittany Johnson]
   {brittany-johnson}
-  {Our results confirmed that \emph{false positives} and developer \emph{overload} play a part in developers' dissatisfaction with current static analysis tools.}
+  {Our results confirmed that \hs{false positives} and developer \hs{overload} play a part in developers' dissatisfaction with current static analysis tools.}
   {johnson2013don}
 
 \lnQuote
   [Benjamin Livshits]
   {benjamin-livshits}
-  {We are not aware of a single realistic whole-program analysis tool that does not \emph{purposely} make unsound choices... \textcolor{orange}{Soundness} is \emph{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
+  {We are not aware of a single realistic whole-program analysis tool that does not \hs{purposely} make unsound choices... \textcolor{orange}{Soundness} is \hs{not even necessary} for most modern analysis applications, however, as many clients can tolerate unsoundness.}
   {livshits2015defense}
 
 \lnQuote
   [Steven Arzt]
   {steven-arzt}
-  {In our experiments on DroidBench examples, TASMAN \emph{reduces} the number of false positives by about 80\% \emph{without pruning} any true positives.}
+  {In our experiments on DroidBench examples, TASMAN \hs{reduces} the number of false positives by about 80\% \hs{without pruning} any true positives.}
   {arzt2015using}
 
 \lnQuote
   [Nachiappan Nagappan]
   {nachiappan-nagappan}
-  {Our results show that the static analysis defect density is \emph{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \emph{predict} the pre-release defect density with a high degree of sensitivity.}
+  {Our results show that the static analysis defect density is \hs{correlated} at statistically significant levels to the pre-release defect density determined by various testing activities. Further, the static analysis defect density can be used to \hs{predict} the pre-release defect density with a high degree of sensitivity.}
   {nagappan2005static}
 
 \lnThought{Existing open-source static analyzers are less powerful than commercial ones.}
@@ -269,7 +269,7 @@ int f(int x) {
   \item \href{https://snyk.io/}{Snyk} (US)
   \item \href{https://pvs-studio.com/en/pvs-studio/}{PVS-Studio} (Russia)
   \end{itemize}\par
-  Usually, up to \emph{\$3,000} per developer per year.}
+  Usually, up to \hs{\$3,000} per developer per year.}
 
 \lnPitch{
   \pptBanner{SARIF}
@@ -296,7 +296,7 @@ int f(int x) {
 \lnQuote
   [\nospell{Florian Oberm{\"u}ller}]
   {florian-obermuller}
-  {We introduce the concept of \emph{code perfumes} as the counterpart to \emph{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
+  {We introduce the concept of \hs{code perfumes} as the counterpart to \hs{code smells}, indicating the correct application of programming practices considered to be good. Using a catalogue of 25 code perfumes for, we empirically demonstrate that these represent frequent practices in, and we find that better programs indeed contain more code perfumes.}
   {obermuller2021code}
 
 \end{document}

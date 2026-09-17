@@ -28,7 +28,7 @@
 \lnQuote
   [Fernando Brito e Abreu]
   {fernando-brito-e-abreu}
-  {\textbf{Metrics for Object-Oriented Design (MOOD)}: Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \emph{heuristics}.}
+  {\textbf{Metrics for Object-Oriented Design (MOOD)}: Being able to predict some software quality characteristics based on the design, is one of our great motivations. This ability will allow the designing process to be guided, for instance, by means of \hs{heuristics}.}
   {brito1994object}
 
 \pptBanner{Method Hiding Factor (MHF)}
@@ -46,7 +46,7 @@ class Book {
 }
 \par\columnbreak\par
 \(\texttt{MHF}_\texttt{Book} = 1/2\)\par
-``MHF is defined as the ratio of the sum of the \emph{invisibilities} of all methods
+``MHF is defined as the ratio of the sum of the \hs{invisibilities} of all methods
 defined in all classes to the total number of methods defined in the system
 under consideration.''
 \end{multicols}
@@ -72,7 +72,7 @@ var t = b.title();
 }
 \par\columnbreak\par
 \(\texttt{AHF}_\texttt{Book} = 1/2\)\par
-``AHF is defined as the ratio of the sum of the \emph{invisibilities} of all attributes
+``AHF is defined as the ratio of the sum of the \hs{invisibilities} of all attributes
 defined in all classes to the total number of attributes defined in the system
 under consideration.''
 \end{multicols}
@@ -94,7 +94,7 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{MIF}_\texttt{Book} = 1/2\)\par
-``MIF is defined as the ratio of the sum of the \emph{inherited} methods in all classes of
+``MIF is defined as the ratio of the sum of the \hs{inherited} methods in all classes of
 the system under consideration to the total number of available methods
 (locally defined plus inherited) for all classes.''
 \end{multicols}
@@ -114,7 +114,7 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{AIF}_\texttt{Book} = 1/2\)\par
-``AIF is defined as the ratio of the sum of \emph{inherited} attributes in all classes of
+``AIF is defined as the ratio of the sum of \hs{inherited} attributes in all classes of
 the system under consideration to the total number of available attributes
 (locally defined plus inherited) for all classes.''
 \end{multicols}
@@ -138,7 +138,7 @@ class Book extends Material {
 }
 \par\columnbreak\par
 \(\texttt{PF}_\texttt{Book} = 0/1\)\par
-``PF is the number of methods that \emph{redefine} inherited methods, divided by the
+``PF is the number of methods that \hs{redefine} inherited methods, divided by the
 maximum number of possible distinct polymorphic situations.''
 \end{multicols}
 \plush{}
@@ -157,7 +157,7 @@ maximum number of possible distinct polymorphic situations.''
 \lnQuote
   [Chris F. Kemerer]
   {chris-kemerer}
-  {The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \emph{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}
+  {The inheritance hierarchy, a directed acyclic graph will be described as a tree structure with classes as nodes, leaves and a root. In any design application, there can be many possible \hs{hierarchies of classes}. Design choices on the hierarchy employed to represent the application are essentially choices about restricting or expanding the scope of properties of the objects in the application.}
   {chidamber1994metrics}
 
 \pptBanner{Weighted Methods per Class (WMC)}
@@ -196,7 +196,7 @@ class Book (*@\textcolor{orange}{extends Material}@*) {
 \par\columnbreak\par
 \(\texttt{DIT}_\texttt{Material} = 0\)\par
 \(\texttt{DIT}_\texttt{Book} = 1\)\par
-``DIT is a measure of how many \emph{ancestor} classes can potentially affect this class.''
+``DIT is a measure of how many \hs{ancestor} classes can potentially affect this class.''
 \end{multicols}
 \plush{}
 
@@ -219,7 +219,7 @@ class Book (*@\textcolor{orange}{extends Material}@*) {
 \par\columnbreak\par
 \(\texttt{NOC}_\texttt{Material} = 1\)\par
 \(\texttt{NOC}_\texttt{Book} = 0\)\par
-``NOC is a measure of how many \emph{sub-classes} are going to inherit the methods of the parent class.''
+``NOC is a measure of how many \hs{sub-classes} are going to inherit the methods of the parent class.''
 \end{multicols}
 \plush{}
 
@@ -240,7 +240,7 @@ class Book
 }
 \par\columnbreak\par
 \(\texttt{RFC}_\texttt{Book} = 3\)\par
-``RFC is the count of the set of \emph{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
+``RFC is the count of the set of \hs{all methods} that can be invoked in response to a message to an object of the class or by some method in the class.''
 \end{multicols}
 \plush{}
 

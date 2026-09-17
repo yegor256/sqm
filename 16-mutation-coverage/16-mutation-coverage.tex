@@ -102,25 +102,25 @@ int fibonacci(int n) {
 % \lnQuote
 %   [Jefferson A. Offutt]
 %   {richard-hamlet.jpg}
-%   {\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \emph{the first mutation-like testing system}.''}
+%   {\scriptsize ``Dr. Hamlet presented an early testing system that was embedded in a compiler and performed a version of instrumented weak mutation. Although the method differed significantly from later mutation systems, Hamlet's system seems to be \hs{the first mutation-like testing system}.''}
 %   {offutt1991}
 
 \lnQuote
   [Richard J. Lipton]
   {richard-lipton}
-  {Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has \emph{adequately} tested a Fortran program by direct measurement of the number and kinds of errors it is \emph{capable} of uncovering.}
+  {Our groups at Yale University and the Georgia Institute of Technology have constructed a system whereby we can determine the extent to which a given set of test data has \hs{adequately} tested a Fortran program by direct measurement of the number and kinds of errors it is \hs{capable} of uncovering.}
   {demillo1978hints}
 
 \lnQuote
   {timothy-budd}
-  {A test set is \emph{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \emph{small} syntactic modifications to the subject program.}
+  {A test set is \hs{adequate} if it can distinguish the subject program from a collection of similar programs, called mutants, obtained by making \hs{small} syntactic modifications to the subject program.}
   {budd1981mutation}
 
 \lnThought{Weak mutation testing is a lightweight alternative to strong mutation testing.}
 
 \lnQuote
   {william-howden}
-  {In \emph{weak mutation testing} method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}
+  {In \hs{weak mutation testing} method, tests are constructed which are guaranteed to force program statements which contain certain classes of errors to act incorrectly during the execution of the program over those tests.}
   {howden1982weak}
 
 \pptBanner{Weak vs. Strong Mutation Testing}
@@ -162,7 +162,7 @@ fibonacci(12) == 144;
 \lnQuote
   [Jeff Offutt]
   {jeff-offutt}
-  {Our results indicate that \emph{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}
+  {Our results indicate that \hs{weak mutation} can be applied in a manner that is almost as effective as mutation testing, and with significant computational savings.}
   {offutt1994empirical}
 
 \lnThought{Mutation operators may be classified.}
@@ -170,7 +170,7 @@ fibonacci(12) == 144;
 \lnQuote
   [Richard DeMillo]
   {richard-demillo}
-  {A mutant operator mutates \emph{one syntactic entity} of a program. Further, only one mutant operator
+  {A mutant operator mutates \hs{one syntactic entity} of a program. Further, only one mutant operator
 is applied at a time to the program under test.}
   {agrawal1989design}
 
@@ -192,7 +192,7 @@ is applied at a time to the program under test.}
 \lnQuote
   [Phyllis G. Frankl]
   {phyllis-frankl}
-  {Those mutants that compute precisely the same function are called \emph{equivalent} mutants and the others are called \emph{inequivalent} mutants.}
+  {Those mutants that compute precisely the same function are called \hs{equivalent} mutants and the others are called \hs{inequivalent} mutants.}
   {frankl1997all}
 
 \pptBanner{Equivalent Mutants, Example}
@@ -248,18 +248,18 @@ int fibonacci(int n) {
   \includegraphics[width=\linewidth]{duas.png}\par
   \lnSource{frankl1997all}
   \par\columnbreak\par
-  ``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\emph{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
+  ``Mutation coverage is more effective than dua coverage for five subjects, dua coverage --- for two others, and there is no significant difference for the remaining two. \par A definition-use association (\hs{dua} is a triple \(d\), \(u\), \(v\), such that \(d\) is a node in the program's flow graph in which variable \(v\) is defined, \(u\) is a node or edge in which \(v\) is used, and there is a definition-clear path with respect to \(v\) from \(d\) to \(u\).''\par
   \end{multicols}}
 
 \lnQuote
   [Lionel C. Briand]
   {lionel-briand}
-  {Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \emph{good indication} of the fault detection \emph{ability} of a test suite.}
+  {Our analysis suggests that mutants, when using carefully selected mutation operators and after removing equivalent mutants, can provide a \hs{good indication} of the fault detection \hs{ability} of a test suite.}
   {andrews2005}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=\linewidth]{faults.png}
   \par\columnbreak\par
-  ``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \emph{seeded faults}.''\par
+  ``Average differences range from 6\% to 34\%, with an average of 22\%. \par If one has used mutants to assess a test technique, it will likely look more effective at detecting faults than if one has used the \hs{seeded faults}.''\par
   \lnSource{andrews2005}
   \end{multicols}}
 
@@ -268,13 +268,13 @@ int fibonacci(int n) {
 \lnQuote
   [Yu-Seung Ma]
   {yu-seung-ma}
-  {Comparing with previous mutation systems for procedural programs, \emph{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}
+  {Comparing with previous mutation systems for procedural programs, \hs{MuJava} is very fast. However, it is relatively slow when it generates and runs lots of mutants.}
   {ma2006}
 \lnPitch{\begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{operators.png}
   \par\columnbreak\par
   \begin{spacing}{0.9}
-  ``\emph{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \emph{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
+  ``\hs{Method-level} mutation operators handle primitive features of programming languages. They modify expressions by replacing, deleting, and inserting primitive operators. \hs{Class-level} mutation operators handle object-oriented specific features such as inheritance, polymorphism and dynamic binding.''\par
   \end{spacing}
   \lnSource{ma2006}
   \end{multicols}}
@@ -283,7 +283,7 @@ int fibonacci(int n) {
   [Paul Ammann]
   {paul-ammann}
   {Three conditions must be present for a failure to be observed:
-  1)~The location in the program that contains the fault must be reached (\emph{\textbf{R}eachability}).
+  1)~The location in the program that contains the fault must be reached (\hs{\textbf{R}eachability}).
   2)~After executing the location, the state of the program must be incorrect (\textbf{I}nfection).
   3)~The infected state must propagate to cause some output of the program to be incorrect (\textbf{P}ropagation).}
   {ammann2008}
@@ -293,7 +293,7 @@ int fibonacci(int n) {
 \lnQuote
   [Mark Harman]
   {mark-harman}
-  {Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \emph{Higher order mutants} are created by the insertion of two or more faults.}
+  {Traditional mutation testing considers only first order mutants, created by the injection of a single fault. Often these first order mutants denote trivial faults that are easily killed. \hs{Higher order mutants} are created by the insertion of two or more faults.}
   {jia2009}
 
 \lnThought{Mutation testing is one of the most expensive methods of quality control.}
@@ -301,19 +301,19 @@ int fibonacci(int n) {
 \lnQuote
   [Yue Jia]
   {yue-jia}
-  {One \emph{problem} that prevents mutation testing from becoming a practical testing technique is the \emph{high computational cost} of executing the enormous number of mutants against a test set.}
+  {One \hs{problem} that prevents mutation testing from becoming a practical testing technique is the \hs{high computational cost} of executing the enormous number of mutants against a test set.}
   {jia2010}
 
 \lnQuote
   [Jie Zhang]
   {jie-zhang}
-  {PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \emph{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}
+  {PMT applies ML to build a predictive model by collecting a series of easy-to-access features (e.g., coverage and mutation operator) on already executed mutants of earlier versions of the project. Based on this model, PMT \hs{predicts} the mutation testing results (i.e., whether each mutant is killed or not) of a new version of project without executing its mutants at all.}
   {zhang2016}
 
 \lnQuote
   [Ren{\'e} Just]
   {rene-just}
-  {Our experiments used 357 real faults in 5 open-source applications that comprise a total of 321,000 lines of code. The results show a statistically \emph{significant} correlation between mutant detection and real fault detection, independently of code coverage.}
+  {Our experiments used 357 real faults in 5 open-source applications that comprise a total of 321,000 lines of code. The results show a statistically \hs{significant} correlation between mutant detection and real fault detection, independently of code coverage.}
   {just2014mutants}
 
 \lnPitch{\begin{multicols}{2}

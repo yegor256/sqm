@@ -76,54 +76,54 @@ void sayHello(int id) {
 \lnQuote
   [Edward Yourdon]
   {edward-yourdon}
-  {Whenever possible, we wish to maximize \emph{fan-in} during the design process. Fan-in is the \textit{raison d'\^{e}tre} of modularity: Each instance of multiple fan-in means that some \emph{duplicate code} has been avoided.}
+  {Whenever possible, we wish to maximize \hs{fan-in} during the design process. Fan-in is the \textit{raison d'\^{e}tre} of modularity: Each instance of multiple fan-in means that some \hs{duplicate code} has been avoided.}
   {yourdon1979structured}
 
 \lnQuote
   [Bertrand Meyer]
   {bertrand-meyer}
-  {The challenge of reusability is to avoid \emph{unneeded duplication} of software by taking advantage of the commonality between variants. If identical or near-identical fragments appear in different modules, it will be difficult to \emph{guarantee} their integrity and to ensure that changes or corrections \emph{get propagated} to all the needed places.}
+  {The challenge of reusability is to avoid \hs{unneeded duplication} of software by taking advantage of the commonality between variants. If identical or near-identical fragments appear in different modules, it will be difficult to \hs{guarantee} their integrity and to ensure that changes or corrections \hs{get propagated} to all the needed places.}
   {meyer1988object}
 
 \lnQuote
   [Andy Hunt]
   {andy-hunt}
-  {\textbf{Don't Repeat Yourself (DRY)}: Every piece of knowledge must have a \emph{single}, unambiguous, authoritative representation within a system.}
+  {\textbf{Don't Repeat Yourself (DRY)}: Every piece of knowledge must have a \hs{single}, unambiguous, authoritative representation within a system.}
   {hunt1999pragmatic}
 
 \lnQuote
   [Kent Beck]
   {kent-beck}
-  {\textbf{The Rule of Three}: The \emph{first} time you do something, you just do it. The \emph{second} time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The \emph{third} time you do something similar, you refactor.}
+  {\textbf{The Rule of Three}: The \hs{first} time you do something, you just do it. The \hs{second} time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The \hs{third} time you do something similar, you refactor.}
   {fowler1999refactoring}
 
 \lnQuote
   [Kent Beck]
   {kent-beck}
-  {You must find a way to eliminate all the duplicated logic in the system. This is the hardest part of design for me, because you first have to find the duplication, and then you have to find a way to eliminate it. Eliminating duplication naturally leads you to create \emph{lots of little objects} and lots of little methods, because otherwise there will inevitably be duplication.}
+  {You must find a way to eliminate all the duplicated logic in the system. This is the hardest part of design for me, because you first have to find the duplication, and then you have to find a way to eliminate it. Eliminating duplication naturally leads you to create \hs{lots of little objects} and lots of little methods, because otherwise there will inevitably be duplication.}
   {beck2000extreme}
 
 \lnQuote
   {steve-mcconnell}
-  {With code in one place, you save the space that would have been used by duplicated code. Modifications will be easier because you'll need to modify the code in \emph{only one location}. The code will be more reliable because you'll have to check only one place to ensure that the code is right.}
+  {With code in one place, you save the space that would have been used by duplicated code. Modifications will be easier because you'll need to modify the code in \hs{only one location}. The code will be more reliable because you'll have to check only one place to ensure that the code is right.}
   {mcconnell2004code}
 
 \lnQuote
   [Rainer Koschke]
   {rainer-koschke}
-  {The problem with code cloning is that errors in the original must be fixed in every copy. Other kinds of maintenance changes, for instance, extensions or adaptations, must be applied \emph{multiple times}, too. Yet, it is usually not documented \emph{where} code was copied.}
+  {The problem with code cloning is that errors in the original must be fixed in every copy. Other kinds of maintenance changes, for instance, extensions or adaptations, must be applied \hs{multiple times}, too. Yet, it is usually not documented \hs{where} code was copied.}
   {bellon2007}
 
 \lnQuote
   [Robert C. Martin]
   {robert-martin}
-  {Duplication is the \emph{primary enemy} of a well-designed system.}
+  {Duplication is the \hs{primary enemy} of a well-designed system.}
   {martin2008clean}
 
 % \lnQuote
 %   [Qurat Ul Ain]
 %   {qurat-ul-ain}
-%   {If a bug is identified in one segment of code, all the similar segments need to be \emph{checked} for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}
+%   {If a bug is identified in one segment of code, all the similar segments need to be \hs{checked} for the same bug. Consequently, code duplication may lead to bug propagation that significantly affects the maintenance cost.}
 %   {ain2019}
 
 \lnThought{Detecting clones in the source code may help understand the degree of code duplication.}
@@ -131,7 +131,7 @@ void sayHello(int id) {
 \lnQuote
   [Brenda S. Baker]
   {brenda-baker}
-  {Two lines of code are considered to be identical if they contain the same \emph{sequence of characters} after removing comments and white space; the \emph{semantics} of the program statements are not analyzed.}
+  {Two lines of code are considered to be identical if they contain the same \hs{sequence of characters} after removing comments and white space; the \hs{semantics} of the program statements are not analyzed.}
   {baker1993}
 \lnPitch{
   \pptBanner{Up to 38\% of lines are involved in duplicates}
@@ -139,7 +139,7 @@ void sayHello(int id) {
   \includegraphics[width=.9\columnwidth]{scatter.png}
   \par\columnbreak\par
   ``The plots are dense near the main diagonal, implying
-  that most copies tend to occur \emph{fairly locally}, e.g. within the
+  that most copies tend to occur \hs{fairly locally}, e.g. within the
   same file or module. However, certain line segments occur
   away from the main diagonal; it would be interesting to
   investigate why the corresponding sections of code are
@@ -150,7 +150,7 @@ void sayHello(int id) {
 \lnQuote
   [Yoshiki Higo]
   {yoshiki-higo}
-  {Code-clone analysis is a good vehicle to \emph{quantitatively} understand the differences and improvements between two versions of the same software system}
+  {Code-clone analysis is a good vehicle to \hs{quantitatively} understand the differences and improvements between two versions of the same software system}
   {livieri2007}
 
 \lnQuote
@@ -265,7 +265,7 @@ More than one code segments that are functionally similar but implemented by dif
 \lnQuote
   [Jens Krinke]
   {jens-krinke}
-  {For the three Java systems studied, the following results were found: 1)~cloned code is usually \emph{older} than non-cloned code, 2)~cloned code in a file is usually older than the non-cloned code in the same file. Both results suggest that cloned code is \emph{more stable} than non-cloned code.}
+  {For the three Java systems studied, the following results were found: 1)~cloned code is usually \hs{older} than non-cloned code, 2)~cloned code in a file is usually older than the non-cloned code in the same file. Both results suggest that cloned code is \hs{more stable} than non-cloned code.}
   {krinke2011}
 
 \lnPitch{
@@ -287,7 +287,7 @@ More than one code segments that are functionally similar but implemented by dif
   \begin{multicols}{2}
   \includegraphics[width=.9\columnwidth]{gpt-recall.png}
   \par\columnbreak\par
-  ``A correlation was observed between the GPTs' accuracy at identifying code clones and code similarity, with both GPT models exhibiting \emph{low effectiveness} in detecting the most complex Type-4 code clones.''
+  ``A correlation was observed between the GPTs' accuracy at identifying code clones and code similarity, with both GPT models exhibiting \hs{low effectiveness} in detecting the most complex Type-4 code clones.''
   \lnSource{zhang2024assessing}
   \end{multicols}}
 

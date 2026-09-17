@@ -13,7 +13,7 @@
 \lnQuote
   [Larry L. Constantine]
   {larry-constantine}
-  {The fewer and simpler the connections between modules, the easier it is to \emph{understand} each module without reference to other modules.}
+  {The fewer and simpler the connections between modules, the easier it is to \hs{understand} each module without reference to other modules.}
   {stevens1974structured}
 
 \lnPitch{
@@ -23,7 +23,7 @@
 \lnQuote
   [Glenford Myers]
   {glenford-myers}
-  {Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \emph{complicates} a system since a module is harder to \emph{understand}, \emph{change}, or \emph{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}
+  {Coupling is the measure of the strength of association established by a connection from one module to another. Strong coupling \hs{complicates} a system since a module is harder to \hs{understand}, \hs{change}, or \hs{correct} by itself if it is highly interrelated with other modules. Complexity can be reduced by designing systems with the weakest possible coupling between modules.}
   {stevens1974structured}
 
 \lnPitch{
@@ -33,7 +33,7 @@
 \lnQuote
   [Wayne P. Stevens]
   {wayne-stevens}
-  {The degree of coupling established by a particular connection is a function of several factors, and thus it is \emph{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}
+  {The degree of coupling established by a particular connection is a function of several factors, and thus it is \hs{difficult to establish} a simple index of coupling. Coupling depends (1)~on how complicated the connection is, (2)~on whether the connection refers to the module itself or something inside it, and (3)~on what is being sent or received.}
   {stevens1974structured}
 
 \lnPitch{
@@ -45,36 +45,36 @@
 \lnQuote
   [Grady Booch]
   {grady-booch}
-  {However, there is tension between the concepts of coupling and inheritance because inheritance introduces significant coupling. On the one hand, weakly coupled classes are desirable; on the other hand, inheritance---which \emph{tightly couples} superclasses and their subclasses---helps us to exploit the commonality among abstractions.}
+  {However, there is tension between the concepts of coupling and inheritance because inheritance introduces significant coupling. On the one hand, weakly coupled classes are desirable; on the other hand, inheritance---which \hs{tightly couples} superclasses and their subclasses---helps us to exploit the commonality among abstractions.}
   {booch1994object}
 
 \lnQuote
   [Martin Fowler]
   {martin-fowler}
-  {The biggest problems come from uncontrolled coupling at the \emph{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of \emph{dependency relationship} between the modules.}
+  {The biggest problems come from uncontrolled coupling at the \hs{upper levels}. I don't worry about the number of modules coupled together, but I look at the pattern of \hs{dependency relationship} between the modules.}
   {fowler2001}
 
 \lnQuote
   {david-west}
-  {Collaborations always involve some degree of coupling between both parties of the collaboration, so the \emph{number of collaborations} should be minimized to the greatest extent possible.}
+  {Collaborations always involve some degree of coupling between both parties of the collaboration, so the \hs{number of collaborations} should be minimized to the greatest extent possible.}
   {west2004object}
 
 \lnQuote
   {robert-martin}
-  {The lack of coupling means that the elements of our system are \emph{better isolated} from each other and from change. This isolation makes it easier to \emph{understand} each element of the system.}
+  {The lack of coupling means that the elements of our system are \hs{better isolated} from each other and from change. This isolation makes it easier to \hs{understand} each element of the system.}
   {martin2008clean}
 
 \lnQuote
   [Steve Freeman]
   {steve-freeman}
-  {Elements are coupled if a change in one \emph{forces} a change in the other. Loosely coupled features are easier to \emph{maintain}.}
+  {Elements are coupled if a change in one \hs{forces} a change in the other. Loosely coupled features are easier to \hs{maintain}.}
   {freeman2009growing}
 
 \lnThought{Measuring coupling is difficult, but possible.}
 
 \lnQuote
   {../06-coupling/cbo}
-  {\emph{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
+  {\hs{Coupling Between Objects (CBO)} --- for a class is a count of the number of other classes to which it is coupled.}
   {chidamber1994metrics}
 
 \lnQuote
@@ -85,13 +85,13 @@
 
 \lnQuote
   {../06-coupling/dcc}
-  {\emph{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
+  {\hs{Direct Class Coupling (DCC)} --- this metric is a count of the different number of classes that a class is directly related to. The metric includes classes that are directly related by attribute declarations and message passing (parameters) in methods.}
   {bansiya2002}
 
 \lnQuote
   [Steve McConnell]
   {steve-mcconnell}
-  {Low-to-medium \emph{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \emph{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}
+  {Low-to-medium \hs{fan-out} means having a given class use a low-to-medium number of other classes. High fan-out (more than about seven) indicates that a class uses a large number of other classes and may therefore be overly complex. High \hs{fan-in} refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.}
   {mcconnell2004code}
 
 \lnPitch{
@@ -126,15 +126,15 @@
   \pptBanner{Types of Coupling (some of them)}
   \begin{pptWide}{2}
   \scriptsize\begin{itemize}
-  \item \emph{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
-  \item \emph{Global Coupling} is when two modules share the same global data (e.g., a global variable).
-  \item \emph{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
-  \item \emph{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
-  \item \emph{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
-  \item \emph{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
-  \item \emph{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
-  \item \emph{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
-  \item \emph{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
+  \item \hs{Content Coupling} is when one module modifies or relies on the internal workings of another module (e.g., accessing local data of another module).
+  \item \hs{Global Coupling} is when two modules share the same global data (e.g., a global variable).
+  \item \hs{External Coupling} occurs when two modules share an externally imposed data format, communication protocol, or device interface.
+  \item \hs{Control Coupling} is one module controlling the flow of another, by passing it information on what to do (e.g., passing a what-to-do flag).
+  \item \hs{Stamp Coupling} is when modules share a composite data structure and use only a part of it, possibly a different part (e.g., passing a whole record to a function that only needs one field of it).
+  \item \hs{Data Coupling} is when modules share data through, for example, parameters. Each datum is an elementary piece, and these are the only data shared (e.g., passing an integer to a function that computes a square root).
+  \item \hs{Message Coupling} can be achieved by state decentralization (as in objects) and component communication is done via parameters or message passing (see Message passing).
+  \item \hs{Subclass Coupling} describes the relationship between a child and its parent. The child is connected to its parent, but the parent isn't connected to the child.
+  \item \hs{Temporal Coupling} is when two actions are bundled together into one module just because they happen to occur at the same time.
   \end{itemize}
   \end{pptWide}
   {\scriptsize Source: \url{https://wiki.edunitas.com/IT/en/114-10/Coupling-(computer-programming)_1430_eduNitas.html}\par}}
@@ -223,7 +223,7 @@ int t = Integer.parseInt(parts[0]);
 \end{ffcode}
 }
 \par\columnbreak\par
-``The larger the number, the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \emph{distance metric} will tell us how many times, and by how much, we violated the principle of loose coupling.''\par
+``The larger the number, the worse the design: in good design we are not supposed to take something out of a method and then do some complex processing. The \hs{distance metric} will tell us how many times, and by how much, we violated the principle of loose coupling.''\par
 \lnSource{bugayenko2020blog1027}
 \end{multicols}
 \plush{}
